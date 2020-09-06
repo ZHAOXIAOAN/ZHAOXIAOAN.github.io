@@ -142,6 +142,9 @@
 <li><code>npm install -save moduleName</code> : –save的意思是将模块安装到项目目录下，并在package文件的dependencies 节点写入依赖，-S为该命令的缩写</li>
 </ul>
 ]]></content>
+      <categories>
+        <category>学习</category>
+      </categories>
       <tags>
         <tag>vue</tag>
         <tag>环境配置</tag>
@@ -203,6 +206,9 @@
 <p>最后修改完成重启Typora即可。</p>
 </blockquote>
 ]]></content>
+      <categories>
+        <category>学习</category>
+      </categories>
       <tags>
         <tag>Typora</tag>
         <tag>个性化设置</tag>
@@ -462,6 +468,9 @@
 </blockquote>
 <p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/047.png" alt="QQ图片20200903120909"></p>
 ]]></content>
+      <categories>
+        <category>学习</category>
+      </categories>
       <tags>
         <tag>vue</tag>
       </tags>
@@ -769,6 +778,9 @@
 </li>
 </ul>
 ]]></content>
+      <categories>
+        <category>学习</category>
+      </categories>
       <tags>
         <tag>vue</tag>
       </tags>
