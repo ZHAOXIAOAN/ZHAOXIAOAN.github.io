@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2020-09-06T09:11:14.973Z</updated>
+  <updated>2020-09-06T09:48:34.937Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://example.com/2020/09/06/3.vue%E5%BC%80%E5%8F%91%E5%AE%9E%E4%BE%8B%E6%BC%94%E7%A4%BA/"/>
     <id>http://example.com/2020/09/06/3.vue%E5%BC%80%E5%8F%91%E5%AE%9E%E4%BE%8B%E6%BC%94%E7%A4%BA/</id>
     <published>2020-09-06T03:44:27.588Z</published>
-    <updated>2020-09-06T09:11:14.973Z</updated>
+    <updated>2020-09-06T09:48:34.937Z</updated>
     
     
     <summary type="html">&lt;h2 id=&quot;1-解剖初始化模板&quot;&gt;&lt;a href=&quot;#1-解剖初始化模板&quot; class=&quot;headerlink&quot; title=&quot;1.解剖初始化模板&quot;&gt;&lt;/a&gt;1.解剖初始化模板&lt;/h2&gt;&lt;h3 id=&quot;1-1-vue文件&quot;&gt;&lt;a href=&quot;#1-1-vue文件&quot; class=&quot;headerlink&quot; title=&quot;1.1 vue文件&quot;&gt;&lt;/a&gt;1.1 vue文件&lt;/h3&gt;&lt;ul&gt;
@@ -37,6 +37,8 @@
     
     
     
+    <category term="vue" scheme="http://example.com/tags/vue/"/>
+    
   </entry>
   
   <entry>
@@ -44,7 +46,7 @@
     <link href="http://example.com/2020/09/06/2.Vue%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/"/>
     <id>http://example.com/2020/09/06/2.Vue%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</id>
     <published>2020-09-06T03:44:24.267Z</published>
-    <updated>2020-09-06T09:03:34.449Z</updated>
+    <updated>2020-09-06T09:49:05.226Z</updated>
     
     
     <summary type="html">&lt;h2 id=&quot;1-Node-js下载&quot;&gt;&lt;a href=&quot;#1-Node-js下载&quot; class=&quot;headerlink&quot; title=&quot;1.Node.js下载&quot;&gt;&lt;/a&gt;1.Node.js下载&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;http://nodejs.cn/download/&quot;&gt;http://nodejs.cn/download/&lt;/a&gt;&lt;/p&gt;
@@ -56,6 +58,10 @@
     
     
     
+    <category term="vue" scheme="http://example.com/tags/vue/"/>
+    
+    <category term="环境配置" scheme="http://example.com/tags/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/"/>
+    
   </entry>
   
   <entry>
@@ -63,7 +69,7 @@
     <link href="http://example.com/2020/09/06/1.Vue%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/"/>
     <id>http://example.com/2020/09/06/1.Vue%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/</id>
     <published>2020-09-06T03:44:20.193Z</published>
-    <updated>2020-09-06T09:03:35.825Z</updated>
+    <updated>2020-09-06T09:48:16.745Z</updated>
     
     
     <summary type="html">&lt;h2 id=&quot;1-简介&quot;&gt;&lt;a href=&quot;#1-简介&quot; class=&quot;headerlink&quot; title=&quot;1.简介&quot;&gt;&lt;/a&gt;1.简介&lt;/h2&gt;&lt;h3 id=&quot;1-1-概念介绍&quot;&gt;&lt;a href=&quot;#1-1-概念介绍&quot; class=&quot;headerlink&quot; title=&quot;1.1 概念介绍&quot;&gt;&lt;/a&gt;1.1 概念介绍&lt;/h3&gt;&lt;ul&gt;
@@ -73,6 +79,8 @@
     
     
     
+    <category term="vue" scheme="http://example.com/tags/vue/"/>
+    
   </entry>
   
   <entry>
@@ -80,10 +88,10 @@
     <link href="http://example.com/2020/09/06/javascript%EF%BC%88%E5%90%ABjQuery%EF%BC%89/"/>
     <id>http://example.com/2020/09/06/javascript%EF%BC%88%E5%90%ABjQuery%EF%BC%89/</id>
     <published>2020-09-06T03:18:28.777Z</published>
-    <updated>2020-09-06T09:10:12.412Z</updated>
+    <updated>2020-09-06T10:59:10.081Z</updated>
     
     
-    <summary type="html">&lt;h1 id&gt;&lt;a href=&quot;#&quot; class=&quot;headerlink&quot; title&gt;&lt;/a&gt;&lt;/h1&gt;&lt;h2 id=&quot;1-引入script&quot;&gt;&lt;a href=&quot;#1-引入script&quot; class=&quot;headerlink&quot; title=&quot;1.引入script&quot;&gt;&lt;/a&gt;1.引入script&lt;/h2&gt;&lt;ul&gt;
+    <summary type="html">&lt;h2 id=&quot;1-引入script&quot;&gt;&lt;a href=&quot;#1-引入script&quot; class=&quot;headerlink&quot; title=&quot;1.引入script&quot;&gt;&lt;/a&gt;1.引入script&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;内部写入；&lt;/li&gt;
 &lt;li&gt;外部引入；&lt;/li&gt;
 &lt;/ul&gt;
@@ -92,6 +100,10 @@
     
     
     
+    <category term="javascript" scheme="http://example.com/tags/javascript/"/>
+    
+    <category term="jQuery" scheme="http://example.com/tags/jQuery/"/>
+    
   </entry>
   
   <entry>
@@ -99,7 +111,7 @@
     <link href="http://example.com/2020/09/06/Typora%E4%BF%AE%E6%94%B9CSS/"/>
     <id>http://example.com/2020/09/06/Typora%E4%BF%AE%E6%94%B9CSS/</id>
     <published>2020-09-06T03:18:23.876Z</published>
-    <updated>2020-09-06T09:04:08.657Z</updated>
+    <updated>2020-09-06T10:59:13.687Z</updated>
     
     
     <summary type="html">&lt;p&gt;&lt;strong&gt;这一期给大家讲讲怎样将Typora设置成自己喜欢的风格，这里以高亮颜色为例！&lt;/strong&gt;&lt;/p&gt;
@@ -110,6 +122,10 @@
     
     
     
+    
+    <category term="Typora" scheme="http://example.com/tags/Typora/"/>
+    
+    <category term="个性化设置" scheme="http://example.com/tags/%E4%B8%AA%E6%80%A7%E5%8C%96%E8%AE%BE%E7%BD%AE/"/>
     
   </entry>
   
