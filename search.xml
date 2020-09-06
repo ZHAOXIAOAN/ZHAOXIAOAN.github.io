@@ -148,24 +148,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Hello World</title>
-    <url>/2020/09/06/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
-  </entry>
-  <entry>
     <title>Typora修改CSS</title>
     <url>/2020/09/06/Typora%E4%BF%AE%E6%94%B9CSS/</url>
     <content><![CDATA[<p><strong>这一期给大家讲讲怎样将Typora设置成自己喜欢的风格，这里以高亮颜色为例！</strong></p>
@@ -207,6 +189,24 @@
         <tag>Typora</tag>
         <tag>个性化设置</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/2020/09/06/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
   </entry>
   <entry>
     <title>Vue基础入门</title>
@@ -1048,7 +1048,7 @@ person.hasOwnProperty(&#39;toString&#39;)
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">f2</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">let</span> x = <span class="string">&#x27;x&#x27;</span> + y;</span><br><span class="line">    <span class="built_in">console</span>.log(y);</span><br><span class="line">    <span class="keyword">let</span> y = <span class="string">&#x27;y&#x27;</span>;</span><br><span class="line">&#125;</span><br><span class="line">f2();</span><br><span class="line"></span><br><span class="line"><span class="comment">//未定义 let y = &#x27;y&#x27;; 时:ReferenceError: y is not defined</span></span><br><span class="line"><span class="comment">//定义 let y = &#x27;y&#x27;; 后:ReferenceError: Cannot access &#x27;y&#x27; before initialization</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//规范写法：将所有变量定义提前到作用域开头</span></span><br></pre></td></tr></table></figure>
 
 <ul>
-<li>在<script>中直接定义的全局变量（包括对象和函数），以及直接从库中调用的类似于alert()函数，实质上全部属于window全局对象：</li>
+<li>在<code>&lt;script&gt;</code>中直接定义的全局变量（包括对象和函数），以及直接从库中调用的类似于alert()函数，实质上全部属于window全局对象：</li>
 </ul>
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> x = <span class="string">&#x27;x&#x27;</span>;</span><br><span class="line">alert(x);</span><br><span class="line">alert(<span class="built_in">window</span>.x);</span><br><span class="line"><span class="built_in">window</span>.alert(<span class="built_in">window</span>.x);</span><br><span class="line"><span class="comment">//三条语句实质上等价</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> old_alert = <span class="built_in">window</span>.alert();</span><br><span class="line"><span class="built_in">window</span>.alert() = <span class="function"><span class="keyword">function</span> (<span class="params"></span>)</span>&#123;</span><br><span class="line">    </span><br><span class="line">&#125;<span class="comment">//给window.alert()赋予了新的函数，导致原函数失效</span></span><br><span class="line"><span class="built_in">window</span>.alert(<span class="number">123</span>);<span class="comment">//失效了无法显示弹窗</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//恢复window.alert()</span></span><br><span class="line"><span class="built_in">window</span>.alert = old_alert;</span><br><span class="line"><span class="built_in">window</span>.alert(<span class="number">456</span>);<span class="comment">//可以显示该弹窗</span></span><br></pre></td></tr></table></figure>
 
@@ -1450,7 +1450,10 @@ person.hasOwnProperty(&#39;toString&#39;)
 </ul>
 </li>
 </ul>
-</script></li></ul>]]></content>
+]]></content>
+      <categories>
+        <category>学习</category>
+      </categories>
       <tags>
         <tag>javascript</tag>
         <tag>jQuery</tag>
