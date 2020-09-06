@@ -1,6 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Typora修改CSS</title>
+    <url>/2020/09/06/Typora%E4%BF%AE%E6%94%B9CSS/</url>
+    <content><![CDATA[<p><strong>这一期给大家讲讲怎样将Typora设置成自己喜欢的风格，这里以高亮颜色为例！</strong></p>
+<blockquote>
+<p>打开 视图–&gt;开发者工具（快捷键 Shift+F12）得到网页元素：</p>
+</blockquote>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/082.png" alt="image-20200828154027327"></p>
+<a id="more"></a>
+
+<blockquote>
+<p>点亮这个图标：</p>
+</blockquote>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/083.png" alt="image-20200828154137307"></p>
+<blockquote>
+<p>移动鼠标至想要修改样式的地方，点击一次</p>
+</blockquote>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/084.png" alt="image-20200828154549041"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/085.png" alt="image-20200828154851984"></p>
+<blockquote>
+<p>一般有两种类型的地址，第一种：</p>
+</blockquote>
+<ul>
+<li>这种地址就直接按照地址中的位置寻找css文件，打开之后如图查找样式名即可</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/086.png" alt="image-20200828154927107"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/087.png" alt="image-20200828155231370"></p>
+<blockquote>
+<p>第二种：</p>
+</blockquote>
+<ul>
+<li>这种地址存放在<code>C:\Users\Acer\AppData\Roaming\Typora\themes</code> 目录下，修改此处才有效</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/088.png" alt="image-20200828155004523"></p>
+<blockquote>
+<p>最后修改完成重启Typora即可。</p>
+</blockquote>
+]]></content>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/2020/09/06/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+  </entry>
+  <entry>
     <title>Vue开发环境配置</title>
     <url>/2020/09/06/2.Vue%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</url>
     <content><![CDATA[<h2 id="1-Node-js下载"><a href="#1-Node-js下载" class="headerlink" title="1.Node.js下载"></a>1.Node.js下载</h2><p><a href="http://nodejs.cn/download/">http://nodejs.cn/download/</a></p>
@@ -144,63 +201,6 @@
 ]]></content>
   </entry>
   <entry>
-    <title>Typora修改CSS</title>
-    <url>/2020/09/06/Typora%E4%BF%AE%E6%94%B9CSS/</url>
-    <content><![CDATA[<p><strong>这一期给大家讲讲怎样将Typora设置成自己喜欢的风格，这里以高亮颜色为例！</strong></p>
-<blockquote>
-<p>打开 视图–&gt;开发者工具（快捷键 Shift+F12）得到网页元素：</p>
-</blockquote>
-<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/082.png" alt="image-20200828154027327"></p>
-<a id="more"></a>
-
-<blockquote>
-<p>点亮这个图标：</p>
-</blockquote>
-<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/083.png" alt="image-20200828154137307"></p>
-<blockquote>
-<p>移动鼠标至想要修改样式的地方，点击一次</p>
-</blockquote>
-<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/084.png" alt="image-20200828154549041"></p>
-<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/085.png" alt="image-20200828154851984"></p>
-<blockquote>
-<p>一般有两种类型的地址，第一种：</p>
-</blockquote>
-<ul>
-<li>这种地址就直接按照地址中的位置寻找css文件，打开之后如图查找样式名即可</li>
-</ul>
-<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/086.png" alt="image-20200828154927107"></p>
-<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/087.png" alt="image-20200828155231370"></p>
-<blockquote>
-<p>第二种：</p>
-</blockquote>
-<ul>
-<li>这种地址存放在<code>C:\Users\Acer\AppData\Roaming\Typora\themes</code> 目录下，修改此处才有效</li>
-</ul>
-<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/088.png" alt="image-20200828155004523"></p>
-<blockquote>
-<p>最后修改完成重启Typora即可。</p>
-</blockquote>
-]]></content>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>/2020/09/06/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
-  </entry>
-  <entry>
     <title>Vue基础入门</title>
     <url>/2020/09/06/1.Vue%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/</url>
     <content><![CDATA[<h2 id="1-简介"><a href="#1-简介" class="headerlink" title="1.简介"></a>1.简介</h2><h3 id="1-1-概念介绍"><a href="#1-1-概念介绍" class="headerlink" title="1.1 概念介绍"></a>1.1 概念介绍</h3><ul>
@@ -229,7 +229,7 @@
 <ul>
 <li><pre><code class="html">&lt;script src=&quot;https://cdn.jsdelivr.net/npm/vue@2.5.21/dist/vue.js&quot;&gt;&lt;/script&gt;
 &lt;script src=&quot;https://cdn.jsdelivr.net/npm/vue@2.5.21/dist/vue.min.js&quot;&gt;&lt;/script&gt;
-<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="bullet">-</span> 再在IDEA中 <span class="code">`settings-&gt;plugins`</span>中搜索安装vue.js：</span><br><span class="line">  ![<span class="string">image-20200830144613941</span>](<span class="link">https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img\031.png</span>)</span><br><span class="line"></span><br><span class="line"><span class="bullet">-</span> 安装之后重启再设置下一步：</span><br><span class="line"></span><br><span class="line">![<span class="string">å¨è¿éæå¥å¾çæè¿°</span>](<span class="link">https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img\032.png</span>)</span><br><span class="line"></span><br><span class="line">附模板：</span><br><span class="line"></span><br><span class="line"><span class="code">```vue</span></span><br><span class="line"><span class="code">&lt;template&gt;</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">&lt;/template&gt;</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">&lt;script&gt;</span></span><br><span class="line"><span class="code">    export default &#123;</span></span><br><span class="line"><span class="code">        name:&quot;$&#123;NAME&#125;&quot;</span></span><br><span class="line"><span class="code">    &#125;</span></span><br><span class="line"><span class="code">&lt;/script&gt;</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">&lt;style scoped&gt;</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">&lt;/style&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="bullet">-</span> 再在IDEA中 <span class="code">`settings-&gt;plugins`</span>中搜索安装vue.js：</span><br><span class="line">  ![<span class="string">image-20200830144613941</span>](<span class="link">https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/031.png</span>)</span><br><span class="line"></span><br><span class="line"><span class="bullet">-</span> 安装之后重启再设置下一步：</span><br><span class="line"></span><br><span class="line">![<span class="string">å¨è¿éæå¥å¾çæè¿°</span>](<span class="link">https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/032.png</span>)</span><br><span class="line"></span><br><span class="line">附模板：</span><br><span class="line"></span><br><span class="line"><span class="code">```vue</span></span><br><span class="line"><span class="code">&lt;template&gt;</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">&lt;/template&gt;</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">&lt;script&gt;</span></span><br><span class="line"><span class="code">    export default &#123;</span></span><br><span class="line"><span class="code">        name:&quot;$&#123;NAME&#125;&quot;</span></span><br><span class="line"><span class="code">    &#125;</span></span><br><span class="line"><span class="code">&lt;/script&gt;</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">&lt;style scoped&gt;</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">&lt;/style&gt;</span></span><br></pre></td></tr></table></figure>
 </code></pre>
 </li>
 </ul>
@@ -262,7 +262,7 @@
 </li>
 </ul>
 <h3 id="2-2-v-bind指令"><a href="#2-2-v-bind指令" class="headerlink" title="2.2 v-bind指令"></a>2.2 v-bind指令</h3><ul>
-<li>该指令的含义是绑定信息，如 <code>v-bind:title=&quot;massage&quot;</code> 就是绑定了标题信息，将鼠标移动到<span>标签语句悬停可显示其绑定信息；</span></li>
+<li>该指令的含义是绑定信息，如 <code>v-bind:title=&quot;massage&quot;</code> 就是绑定了标题信息，将鼠标移动到<code>&lt;span&gt;</code>标签语句悬停可显示其绑定信息；</li>
 <li><code>v-bind:</code>可以简写为 <code>:</code> ;</li>
 </ul>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!--使用v-bind指令可以自动引入v-bind使用链接--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span> <span class="attr">xmlns:v-bind</span>=<span class="string">&quot;http://www.w3.org/1999/xhtml&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!--view层，模板--&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- v- 都是vue指令 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;app&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">span</span> <span class="attr">v-bind:title</span>=<span class="string">&quot;massage&quot;</span>&gt;</span></span><br><span class="line">        鼠标悬停几秒查看此处绑定的信息</span><br><span class="line">    <span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!--导入vue.js包--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;../lib/vue.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">    <span class="keyword">let</span> vm = <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="javascript">        el: <span class="string">&quot;#app&quot;</span>,</span></span><br><span class="line">        data: &#123;</span><br><span class="line"><span class="javascript">            massage:<span class="string">&quot;hello,vue&quot;</span></span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
@@ -504,7 +504,7 @@
 <p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/059.png" alt="image-20200903172445440"></p>
 <ul>
 <li>这个<code>bundle.js</code>文件就是打包后得到的js文件，也就是最终拿来使用的文件；</li>
-<li>最后如上图创建<code>index.html</code>文件，作为整个程序的首页，添加<script>标签引入<code>bundle.js</code>文件：</li>
+<li>最后如上图创建<code>index.html</code>文件，作为整个程序的首页，添加<code>&lt;script&gt;</code>标签引入<code>bundle.js</code>文件：</li>
 </ul>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Title<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;dist/js/bundle.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/060.png" alt="image-20200903172940366"></p>
@@ -757,7 +757,7 @@
 <li><p>根据上述这段操作则可以实现从静态数据中获取数据，再结合前面几点内容融会贯通之后基本实现了前端的数据交互操作；</p>
 </li>
 </ul>
-</script></li></ul>]]></content>
+]]></content>
   </entry>
   <entry>
     <title>JavaScript</title>
@@ -856,7 +856,7 @@ str.toLpwerCase();
 <li><pre><code class="javascript">[)
 str.substring(1);        //从第一个字符直到最后一个字符
 str.substring(1,3);        //[1,3)
-<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="bullet">-</span> 字符串数组操作（不可变性）：</span><br><span class="line"></span><br><span class="line">  ![<span class="string">image-20200826134313146</span>](<span class="link">https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img\019.png</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="section">### 3.4布尔值</span></span><br><span class="line"></span><br><span class="line"><span class="bullet">-</span> true；</span><br><span class="line"><span class="bullet">-</span> false；</span><br><span class="line"><span class="bullet">-</span> 判断输出时显示；</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="section">### 3.5逻辑运算符</span></span><br><span class="line"></span><br><span class="line"><span class="code">```javascript</span></span><br><span class="line"><span class="code">&amp;&amp;	//与</span></span><br><span class="line"><span class="code">    </span></span><br><span class="line"><span class="code">||	//或</span></span><br><span class="line"><span class="code">    </span></span><br><span class="line"><span class="code">!	//非</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="bullet">-</span> 字符串数组操作（不可变性）：</span><br><span class="line"></span><br><span class="line">  ![<span class="string">image-20200826134313146</span>](<span class="link">https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/019.png</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="section">### 3.4布尔值</span></span><br><span class="line"></span><br><span class="line"><span class="bullet">-</span> true；</span><br><span class="line"><span class="bullet">-</span> false；</span><br><span class="line"><span class="bullet">-</span> 判断输出时显示；</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="section">### 3.5逻辑运算符</span></span><br><span class="line"></span><br><span class="line"><span class="code">```javascript</span></span><br><span class="line"><span class="code">&amp;&amp;	//与</span></span><br><span class="line"><span class="code">    </span></span><br><span class="line"><span class="code">||	//或</span></span><br><span class="line"><span class="code">    </span></span><br><span class="line"><span class="code">!	//非</span></span><br></pre></td></tr></table></figure>
 
 
 </code></pre>
@@ -985,7 +985,7 @@ person.hasOwnProperty(&#39;toString&#39;)
 
 
 <h3 id="3-12-严格检查模式"><a href="#3-12-严格检查模式" class="headerlink" title="3.12.严格检查模式"></a>3.12.严格检查模式</h3><ul>
-<li>是为了防止多个js文件中全局变量互相矛盾的问题，在每个js文件或<script>标签中都使用；</li>
+<li>是为了防止多个js文件中全局变量互相矛盾的问题，在每个js文件或<code>&lt;script&gt;</code>标签中都使用；</li>
 <li>在js代码第一行写入代码 <strong><em>‘use strict’;</em></strong> ，表明使用严格检查模式；</li>
 <li>定义变量时都定义为局部变量，建议使用<strong>let</strong>标识符而不使用<strong>var</strong>；</li>
 </ul>
@@ -1283,7 +1283,7 @@ person.hasOwnProperty(&#39;toString&#39;)
 <h3 id="8-5-插入DOM节点"><a href="#8-5-插入DOM节点" class="headerlink" title="8.5 ==插入DOM节点=="></a>8.5 ==插入DOM节点==</h3><ul>
 <li>前面学过的 innerHTML 属性会覆盖目标DOM下所有的标签；</li>
 <li>append：<ul>
-<li>通过append甚至可以插入<head>、<body>、<style>等标签，实现所有HTML、CSS功能；</li>
+<li>通过append甚至可以插入<code>&lt;head&gt;</code>、<code>&lt;body&gt;</code>、<code>&lt;style&gt;</code>等标签，实现所有HTML、CSS功能；</li>
 </ul>
 </li>
 </ul>
@@ -1305,7 +1305,7 @@ person.hasOwnProperty(&#39;toString&#39;)
 <li>是一个DOM树；</li>
 <li>具有如下属性：<ul>
 <li>文本框：text</li>
-<li>下拉框：<select></li>
+<li>下拉框：<code>&lt;select&gt;</code></li>
 <li>单选框：radio</li>
 <li>多选框：checkbox</li>
 <li>隐藏域：hidden</li>
@@ -1337,7 +1337,7 @@ person.hasOwnProperty(&#39;toString&#39;)
 <ul>
 <li>onsubmit：<ul>
 <li>onsubmit=”return f()” 固定格式，将函数返回值返回给表单，如果函数返回false，则不会跳转页面不会提交；</li>
-<li>注意一下<button>标签中<code>type</code>属性的变化；</li>
+<li>注意一下<code>&lt;button&gt;</code>标签中<code>type</code>属性的变化；</li>
 </ul>
 </li>
 </ul>
