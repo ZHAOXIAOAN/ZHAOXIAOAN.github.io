@@ -7,20 +7,20 @@
 <ul>
 <li>直接选择.msi 64位安装包下载并且直接安装即可，安装过程略</li>
 </ul>
-<p><img src="/2020/09/06/2.Vue%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/..%5CImg%5C048.png" alt="image-20200903133908554"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/048.png" alt="image-20200903133908554"></p>
 <a id="more"></a>
 
 
 <ul>
 <li>注意：选择自动添加到path路径，接着直接往下走不用更改；</li>
 </ul>
-<p><img src="/2020/09/06/2.Vue%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/..%5CImg%5C049.png" alt="image-20200903134106262"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/049.png" alt="image-20200903134106262"></p>
 <ul>
 <li>检查是否安装成功：</li>
 </ul>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">node -v 查看能否正常打印出版本号</span><br><span class="line">npm -v 安装node.js会自动安装npm包，同样查看即可</span><br><span class="line">npm是一个软件包管理工具，用于下载安装</span><br></pre></td></tr></table></figure>
 
-<p><img src="/2020/09/06/2.Vue%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/..%5CImg%5C050.png" alt="image-20200903142018014"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/050.png" alt="image-20200903142018014"></p>
 <hr>
 <h2 id="2-安装淘宝镜像加速器（cnpm）"><a href="#2-安装淘宝镜像加速器（cnpm）" class="headerlink" title="2.安装淘宝镜像加速器（cnpm）"></a>2.安装淘宝镜像加速器（cnpm）</h2><ul>
 <li>cnpm下载国外程序可能无法正常使用，所以一般都使用npm下载，npm下载无用时再使用cnpm</li>
@@ -31,7 +31,7 @@
 <ul>
 <li>同时与该加速器同级目录下还需下载其它模板：</li>
 </ul>
-<p><img src="/2020/09/06/2.Vue%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/..%5CImg%5C051.png" alt="image-20200903142549464"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/051.png" alt="image-20200903142549464"></p>
 <h2 id="3-安装vue-cli"><a href="#3-安装vue-cli" class="headerlink" title="3.安装vue-cli"></a>3.安装vue-cli</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">cnpm install vue-cli -g </span><br></pre></td></tr></table></figure>
 
 <ul>
@@ -49,7 +49,7 @@
 <li><p>安装成功后使用<code>vue list</code>命令可以查看模板：</p>
 </li>
 </ul>
-<p><img src="/2020/09/06/2.Vue%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/..%5CImg%5C052.png" alt="image-20200903143231971"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/052.png" alt="image-20200903143231971"></p>
 <ul>
 <li>如果无法显示该目录，则需要重新配置网络，重启电脑或者开启手机热点切换网络再重试，原因是网络问题，可多次重连尝试；</li>
 </ul>
@@ -77,11 +77,11 @@
 </ul>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm run dev 用于部署服务器，每次运行时都需使用该命令部署服务器</span><br></pre></td></tr></table></figure>
 
-<p><img src="/2020/09/06/2.Vue%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/..%5CImg%5C053.png" alt="image-20200903144930303"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/053.png" alt="image-20200903144930303"></p>
 <ul>
 <li>部署成功之后可通过端口8080直接访问：</li>
 </ul>
-<p><img src="/2020/09/06/2.Vue%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/..%5CImg%5C054.png" alt="image-20200903145037697"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/054.png" alt="image-20200903145037697"></p>
 <ul>
 <li>ctrl+c可选择关闭服务器；</li>
 </ul>
@@ -89,13 +89,13 @@
 <h2 id="5-IDEA初步认识文件"><a href="#5-IDEA初步认识文件" class="headerlink" title="5.IDEA初步认识文件"></a>5.IDEA初步认识文件</h2><ul>
 <li>使用IDEA打开上述新项目，目录结构如图：</li>
 </ul>
-<p><img src="/2020/09/06/2.Vue%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/..%5CImg%5C055.png" alt="image-20200903145259594"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/055.png" alt="image-20200903145259594"></p>
 <ul>
 <li><p>目录结构具体功能：</p>
 <ul>
 <li>index.html：是程序的主入口，内容不能随意修改：</li>
 </ul>
-<p><img src="/2020/09/06/2.Vue%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/..%5CImg%5C056.png" alt="image-20200903150423965"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/056.png" alt="image-20200903150423965"></p>
 <ul>
 <li>static：存放静态资源，如css、js、图片等；</li>
 <li>src：开发项目区域：<ul>
@@ -103,7 +103,7 @@
 </ul>
 </li>
 </ul>
-<p><img src="/2020/09/06/2.Vue%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/..%5CImg%5C057.png" alt="image-20200903150540591"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/057.png" alt="image-20200903150540591"></p>
 <ul>
 <li>package.json：打包时需要构建的版本信息等，不需修改；</li>
 <li>node_modules：存放之前下载的依赖组件；</li>
@@ -121,7 +121,7 @@
 </ul>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">webpack -v</span><br><span class="line">webpack-cli -v</span><br></pre></td></tr></table></figure>
 
-<p><img src="/2020/09/06/2.Vue%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/..%5CImg%5C058.png" alt="image-20200903165916564"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/058.png" alt="image-20200903165916564"></p>
 <h2 id="7-安装vue-router"><a href="#7-安装vue-router" class="headerlink" title="7.安装vue-router"></a>7.安装vue-router</h2><ul>
 <li>安装指令（需要在项目目录下执行）：</li>
 </ul>
@@ -130,11 +130,11 @@
 <ul>
 <li>发生错误按照提示执行指令即可：</li>
 </ul>
-<p><img src="/2020/09/06/2.Vue%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/..%5CImg%5C061.png" alt="image-20200904115933531"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/061.png" alt="image-20200904115933531"></p>
 <ul>
 <li>成功安装到模板内：</li>
 </ul>
-<p><img src="/2020/09/06/2.Vue%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/..%5CImg%5C062.png" alt="image-20200904120407376"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/062.png" alt="image-20200904120407376"></p>
 <h2 id="8-npm安装命令详解"><a href="#8-npm安装命令详解" class="headerlink" title="8.npm安装命令详解"></a>8.npm安装命令详解</h2><ul>
 <li><code>npm install moduleName</code> :安装模块到项目目录下</li>
 <li><code>npm install -g moduleName</code> : -g 的意思是将模块安装到全局，具体安装到磁盘哪个位置，要看npm config prefix的位置</li>
@@ -150,33 +150,33 @@
 <blockquote>
 <p>打开 视图–&gt;开发者工具（快捷键 Shift+F12）得到网页元素：</p>
 </blockquote>
-<p><img src="/2020/09/06/Typora%E4%BF%AE%E6%94%B9CSS/JavaStudy\Img\082.png" alt="image-20200828154027327"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/082.png" alt="image-20200828154027327"></p>
 <a id="more"></a>
 
 <blockquote>
 <p>点亮这个图标：</p>
 </blockquote>
-<p><img src="/2020/09/06/Typora%E4%BF%AE%E6%94%B9CSS/JavaStudy\Img\083.png" alt="image-20200828154137307"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/083.png" alt="image-20200828154137307"></p>
 <blockquote>
 <p>移动鼠标至想要修改样式的地方，点击一次</p>
 </blockquote>
-<p><img src="/2020/09/06/Typora%E4%BF%AE%E6%94%B9CSS/JavaStudy\Img\084.png" alt="image-20200828154549041"></p>
-<p><img src="/2020/09/06/Typora%E4%BF%AE%E6%94%B9CSS/JavaStudy\Img\085.png" alt="image-20200828154851984"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/084.png" alt="image-20200828154549041"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/085.png" alt="image-20200828154851984"></p>
 <blockquote>
 <p>一般有两种类型的地址，第一种：</p>
 </blockquote>
 <ul>
 <li>这种地址就直接按照地址中的位置寻找css文件，打开之后如图查找样式名即可</li>
 </ul>
-<p><img src="/2020/09/06/Typora%E4%BF%AE%E6%94%B9CSS/JavaStudy\Img\086.png" alt="image-20200828154927107"></p>
-<p><img src="/2020/09/06/Typora%E4%BF%AE%E6%94%B9CSS/JavaStudy\Img\087.png" alt="image-20200828155231370"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/086.png" alt="image-20200828154927107"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/087.png" alt="image-20200828155231370"></p>
 <blockquote>
 <p>第二种：</p>
 </blockquote>
 <ul>
 <li>这种地址存放在<code>C:\Users\Acer\AppData\Roaming\Typora\themes</code> 目录下，修改此处才有效</li>
 </ul>
-<p><img src="/2020/09/06/Typora%E4%BF%AE%E6%94%B9CSS/JavaStudy\Img\088.png" alt="image-20200828155004523"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/088.png" alt="image-20200828155004523"></p>
 <blockquote>
 <p>最后修改完成重启Typora即可。</p>
 </blockquote>
@@ -213,7 +213,8 @@
 <li>View:视图层，在这里表示DOM(HTML 操作的元素)；</li>
 <li>ViewModel:连接视图和数据的中间件，Vue.js 就是MVVM中的ViewModel层的实现者</li>
 </ul>
-<p><img src="/2020/09/06/1.Vue%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/Img/030.png" alt="image-20200830141507977"><br><img src="/2020/09/06/1.Vue%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/030.png" alt="image-20200830141507977"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/030.png" alt="image-20200830141507977"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/030.png" alt="image-20200830141507977"></p>
 <ul>
 <li>View层展现的不是Model层的数据，而是ViewModel的数据，由ViewNodel负责与 Model层交互，这就完全解耦了View层和Model层，这个解耦是至关重要的，它是前后端分离方案实施的重要一环。</li>
 </ul>
@@ -229,7 +230,7 @@
 <ul>
 <li><pre><code class="html">&lt;script src=&quot;https://cdn.jsdelivr.net/npm/vue@2.5.21/dist/vue.js&quot;&gt;&lt;/script&gt;
 &lt;script src=&quot;https://cdn.jsdelivr.net/npm/vue@2.5.21/dist/vue.min.js&quot;&gt;&lt;/script&gt;
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">- 再在IDEA中 &#96;settings-&gt;plugins&#96;中搜索安装vue.js：</span><br><span class="line">  ![image-20200830144613941](..\Img\031.png)</span><br><span class="line"></span><br><span class="line">- 安装之后重启再设置下一步：</span><br><span class="line"></span><br><span class="line">![å¨è¿éæå¥å¾çæè¿°](..\Img\032.png)</span><br><span class="line"></span><br><span class="line">附模板：</span><br><span class="line"></span><br><span class="line">&#96;&#96;&#96;vue</span><br><span class="line">&lt;template&gt;</span><br><span class="line"></span><br><span class="line">&lt;&#x2F;template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">    export default &#123;</span><br><span class="line">        name:&quot;$&#123;NAME&#125;&quot;</span><br><span class="line">    &#125;</span><br><span class="line">&lt;&#x2F;script&gt;</span><br><span class="line"></span><br><span class="line">&lt;style scoped&gt;</span><br><span class="line"></span><br><span class="line">&lt;&#x2F;style&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">- 再在IDEA中 &#96;settings-&gt;plugins&#96;中搜索安装vue.js：</span><br><span class="line">  ![image-20200830144613941](https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;gh&#x2F;ZHAOXIAOAN&#x2F;CDNBlog&#x2F;Img\031.png)</span><br><span class="line"></span><br><span class="line">- 安装之后重启再设置下一步：</span><br><span class="line"></span><br><span class="line">![å¨è¿éæå¥å¾çæè¿°](https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;gh&#x2F;ZHAOXIAOAN&#x2F;CDNBlog&#x2F;Img\032.png)</span><br><span class="line"></span><br><span class="line">附模板：</span><br><span class="line"></span><br><span class="line">&#96;&#96;&#96;vue</span><br><span class="line">&lt;template&gt;</span><br><span class="line"></span><br><span class="line">&lt;&#x2F;template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">    export default &#123;</span><br><span class="line">        name:&quot;$&#123;NAME&#125;&quot;</span><br><span class="line">    &#125;</span><br><span class="line">&lt;&#x2F;script&gt;</span><br><span class="line"></span><br><span class="line">&lt;style scoped&gt;</span><br><span class="line"></span><br><span class="line">&lt;&#x2F;style&gt;</span><br></pre></td></tr></table></figure>
 </code></pre>
 </li>
 </ul>
@@ -241,7 +242,7 @@
 <ul>
 <li>然后就可以在IDEA文件中new一个Vue Component文件啦！</li>
 </ul>
-<p><img src="/2020/09/06/1.Vue%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/..%5CImg%5C033.png" alt="image-20200830145017226"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/033.png" alt="image-20200830145017226"></p>
 <hr>
 <h2 id="2-基础语法"><a href="#2-基础语法" class="headerlink" title="2.基础语法"></a>2.基础语法</h2><h3 id="2-1-初步使用"><a href="#2-1-初步使用" class="headerlink" title="2.1 初步使用"></a>2.1 初步使用</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!--view层，模板--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;app&quot;</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--展示格式--&gt;</span></span><br><span class="line">    &#123;&#123;message&#125;&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!--导入vue.js包--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;../lib/vue.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">    <span class="keyword">let</span> vm = <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="javascript">        el: <span class="string">&quot;#app&quot;</span>,		<span class="comment">//el属性用于绑定id号，且双向绑定，vm绑定id的同时，id也绑定了vm，使id视图层能随时取到vm的值</span></span></span><br><span class="line"><span class="javascript">        data: &#123;			<span class="comment">//data属性为数据存储区</span></span></span><br><span class="line"><span class="javascript">            message:<span class="string">&quot;hello,vue!&quot;</span></span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line"></span><br><span class="line"><span class="javascript"><span class="comment">//页面内容能够随message数值改变而随时改变，不需要刷新页面</span></span></span><br><span class="line"><span class="javascript">vm.message = <span class="string">&#x27;hello zhaoxiaoan&#x27;</span></span></span><br><span class="line"><span class="javascript">&gt;<span class="string">&quot;hello zhaoxiaoan&quot;</span>  </span></span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
@@ -278,14 +279,14 @@
 </ul>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!--view层，模板--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;app&quot;</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--v-for=&quot;(item,index) in items&quot; 格式类似于forEach,定义item取items数组中每个元素,index取索引下标，不用可不取--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span> <span class="attr">v-for</span>=<span class="string">&quot;item in items&quot;</span>&gt;</span>  </span><br><span class="line">        <span class="comment">&lt;!--item.message用于展示--&gt;</span></span><br><span class="line">        &#123;&#123;item.message&#125;&#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!--导入vue.js包--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;../lib/vue.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">    <span class="keyword">let</span> vm = <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="javascript">        el: <span class="string">&quot;#app&quot;</span>,</span></span><br><span class="line">        data: &#123;</span><br><span class="line"><span class="javascript">            <span class="comment">//数组元素用来给列表li循环遍历</span></span></span><br><span class="line">            items: [</span><br><span class="line"><span class="javascript">                &#123;<span class="attr">message</span>:<span class="string">&quot;hello,vue&quot;</span>&#125;,</span></span><br><span class="line"><span class="javascript">                &#123;<span class="attr">message</span>:<span class="string">&quot;hello zhaoxiaoan&quot;</span>&#125;</span></span><br><span class="line">            ]</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
-<p><img src="/2020/09/06/1.Vue%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/..%5CImg%5C034.png" alt="image-20200830153345031"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/034.png" alt="image-20200830153345031"></p>
 <h3 id="2-5-v-on-绑定事件"><a href="#2-5-v-on-绑定事件" class="headerlink" title="2.5 v-on 绑定事件"></a>2.5 v-on 绑定事件</h3><ul>
 <li><code>v-on:</code> 用来绑定事件，如事件<code>click</code> ，其余事件可以查找jQuery事件文档（可以自己创建新事件）；</li>
 <li><code>v-on:</code>可以简写为 <code>@</code> ；</li>
 </ul>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span> <span class="attr">xmlns:v-on</span>=<span class="string">&quot;http://www.w3.org/1999/xhtml&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!--view层，模板--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;app&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">button</span> <span class="attr">v-on:click</span> = <span class="string">&quot;sayHi&quot;</span>&gt;</span>Click Me<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!--导入vue.js包--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;../lib/vue.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">    <span class="keyword">let</span> vm = <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="javascript">        el: <span class="string">&quot;#app&quot;</span>,</span></span><br><span class="line">        data: &#123;</span><br><span class="line"><span class="javascript">            message: <span class="string">&quot;hello,vue!&quot;</span></span></span><br><span class="line">        &#125;,</span><br><span class="line"><span class="javascript">        <span class="comment">//方法只能存放在methods中</span></span></span><br><span class="line">        methods: &#123;</span><br><span class="line"><span class="javascript">            sayHi:<span class="function"><span class="keyword">function</span> (<span class="params">envent</span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">                alert(<span class="built_in">this</span>.message);</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
-<p><img src="/2020/09/06/1.Vue%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/..%5CImg%5C035.png" alt="image-20200830155311872"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/035.png" alt="image-20200830155311872"></p>
 <hr>
 <h2 id="3-双向绑定（重点）"><a href="#3-双向绑定（重点）" class="headerlink" title="3.==双向绑定（重点）=="></a>3.==双向绑定（重点）==</h2><ul>
 <li>使用<code>v-model</code>指令；</li>
@@ -296,17 +297,17 @@
 </ul>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!--view层，模板--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;app&quot;</span>&gt;</span></span><br><span class="line">    输入的文本：<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">v-model</span>=<span class="string">&quot;message&quot;</span>&gt;</span></span><br><span class="line">    &#123;&#123;message&#125;&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!--导入vue.js包--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;../lib/vue.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">    <span class="keyword">let</span> vm = <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="javascript">        el: <span class="string">&quot;#app&quot;</span>,</span></span><br><span class="line">        data: &#123;</span><br><span class="line"><span class="javascript">            message: <span class="string">&quot;hello,vue!&quot;</span></span></span><br><span class="line">        &#125;,</span><br><span class="line">    &#125;);</span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
-<p><img src="/2020/09/06/1.Vue%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/..%5CImg%5C036.png" alt="image-20200830164055648"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/036.png" alt="image-20200830164055648"></p>
 <h3 id="3-2-textarea文本域"><a href="#3-2-textarea文本域" class="headerlink" title="3.2 textarea文本域"></a>3.2 textarea文本域</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!--view层，模板--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;app&quot;</span>&gt;</span></span><br><span class="line">    输入的文本：</span><br><span class="line">    <span class="tag">&lt;<span class="name">textarea</span>  <span class="attr">v-model</span>=<span class="string">&quot;message&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">textarea</span>&gt;</span>&gt;</span><br><span class="line">    &#123;&#123;message&#125;&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!--导入vue.js包--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;../lib/vue.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">    <span class="keyword">let</span> vm = <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="javascript">        el: <span class="string">&quot;#app&quot;</span>,</span></span><br><span class="line">        data: &#123;</span><br><span class="line"><span class="javascript">            message: <span class="string">&quot;hello,vue!&quot;</span></span></span><br><span class="line">        &#125;,</span><br><span class="line">    &#125;);</span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
-<p><img src="/2020/09/06/1.Vue%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/..%5CImg%5C037.png" alt="image-20200830164801393"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/037.png" alt="image-20200830164801393"></p>
 <h3 id="3-3-radio单选框"><a href="#3-3-radio单选框" class="headerlink" title="3.3 radio单选框"></a>3.3 radio单选框</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!--view层，模板--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;app&quot;</span>&gt;</span></span><br><span class="line">    性别：</span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;radio&quot;</span> <span class="attr">name</span>=<span class="string">&quot;sex&quot;</span> <span class="attr">value</span>=<span class="string">&quot;男&quot;</span> <span class="attr">v-model</span>=<span class="string">&quot;message&quot;</span>&gt;</span>男</span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;radio&quot;</span> <span class="attr">name</span>=<span class="string">&quot;sex&quot;</span> <span class="attr">value</span>=<span class="string">&quot;女&quot;</span> <span class="attr">v-model</span>=<span class="string">&quot;message&quot;</span>&gt;</span>女</span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    &#123;&#123;message&#125;&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!--导入vue.js包--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;../lib/vue.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">    <span class="keyword">let</span> vm = <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="javascript">        el: <span class="string">&quot;#app&quot;</span>,</span></span><br><span class="line">        data: &#123;</span><br><span class="line"><span class="javascript">            message: <span class="string">&quot;&quot;</span></span></span><br><span class="line">        &#125;,</span><br><span class="line">    &#125;);</span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
-<p><img src="/2020/09/06/1.Vue%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/..%5CImg%5C038.png" alt="image-20200830165053896"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/038.png" alt="image-20200830165053896"></p>
 <h3 id="3-4-select下拉框"><a href="#3-4-select下拉框" class="headerlink" title="3.4 select下拉框"></a>3.4 select下拉框</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!--view层，模板--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;app&quot;</span>&gt;</span></span><br><span class="line">    下拉框：</span><br><span class="line">    <span class="tag">&lt;<span class="name">select</span> <span class="attr">v-model</span>=<span class="string">&quot;message&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">&quot;&quot;</span> <span class="attr">disabled</span> &gt;</span>--请选择--<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">option</span>&gt;</span>A<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">option</span>&gt;</span>B<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">option</span>&gt;</span>C<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>选择了：&#123;&#123;message&#125;&#125;<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!--导入vue.js包--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;../lib/vue.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">    <span class="keyword">let</span> vm = <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="javascript">        el: <span class="string">&quot;#app&quot;</span>,</span></span><br><span class="line">        data: &#123;</span><br><span class="line"><span class="javascript">            message: <span class="string">&quot;&quot;</span></span></span><br><span class="line">        &#125;,</span><br><span class="line">    &#125;);</span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
-<p><img src="/2020/09/06/1.Vue%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/..%5CImg%5C039.png" alt="image-20200830165542144"></p>
-<p><img src="/2020/09/06/1.Vue%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/..%5CImg%5C040.png" alt="image-20200830165627407"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/039.png" alt="image-20200830165542144"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/040.png" alt="image-20200830165627407"></p>
 <hr>
 <h2 id="4-组件"><a href="#4-组件" class="headerlink" title="4.组件"></a>4.组件</h2><ul>
 <li>组件最大的作用就是其良好的复用性，但是复用性的本质只能复用框架外围，内在的本质数据必须从另一方获取，接下来讲述的就是获取数据的过程；</li>
@@ -339,7 +340,7 @@
 </blockquote>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!--view层，模板--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;app&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">zhaoxiaoan</span> <span class="attr">v-for</span>=<span class="string">&quot;item in items&quot;</span> <span class="attr">v-bind:item</span>=<span class="string">&quot;item&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">zhaoxiaoan</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!--导入vue.js包--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;../lib/vue.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">    Vue.component(<span class="string">&quot;zhaoxiaoan&quot;</span>,&#123;</span></span><br><span class="line"><span class="javascript">        props:[<span class="string">&#x27;item&#x27;</span>],</span></span><br><span class="line"><span class="handlebars"><span class="xml">        template: &#x27;<span class="tag">&lt;<span class="name">li</span>&gt;</span></span><span class="template-variable">&#123;&#123;<span class="name">item</span>&#125;&#125;</span><span class="xml"><span class="tag">&lt;/<span class="name">li</span>&gt;</span>&#x27;</span></span></span><br><span class="line">    &#125;)</span><br><span class="line"></span><br><span class="line"><span class="javascript">    <span class="keyword">let</span> vm = <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="javascript">        el: <span class="string">&quot;#app&quot;</span>,</span></span><br><span class="line">        data: &#123;</span><br><span class="line"><span class="javascript">            items: [<span class="string">&quot;Java&quot;</span>,<span class="string">&quot;Linux&quot;</span>,<span class="string">&quot;前端&quot;</span>]</span></span><br><span class="line">        &#125;,</span><br><span class="line">    &#125;);</span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
-<p><img src="/2020/09/06/1.Vue%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/..%5CImg%5C041.png" alt="image-20200830171934341"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/041.png" alt="image-20200830171934341"></p>
 <hr>
 <h2 id="5-Axios异步网络通信"><a href="#5-Axios异步网络通信" class="headerlink" title="5.==Axios异步网络通信=="></a>5.==Axios异步网络通信==</h2><h3 id="5-1-Axios简介"><a href="#5-1-Axios简介" class="headerlink" title="5.1 Axios简介"></a>5.1 Axios简介</h3><ul>
 <li><p>Axios是一个开源的可以用在浏览器端和 Node3S 的异步通信框架，它的主要作用就是实现 AJAX异步通信，其功能特点如下:</p>
@@ -360,7 +361,7 @@
 <h3 id="5-2-Vue实例生命周期图示介绍"><a href="#5-2-Vue实例生命周期图示介绍" class="headerlink" title="5.2 Vue实例生命周期图示介绍"></a>5.2 Vue实例生命周期图示介绍</h3><ul>
 <li>这是一个Vue实例生命周期，在生命周期过程中会执行相应的“钩子函数”，这些“钩子函数”是可以被外部调用进而影响到整个实例的；</li>
 </ul>
-<p><img src="/2020/09/06/1.Vue%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/..%5CImg%5C042_lifecycle.png" alt="lifecycle"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/042_lifecycle.png" alt="lifecycle"></p>
 <h3 id="5-3-引入Axios"><a href="#5-3-引入Axios" class="headerlink" title="5.3 引入Axios"></a>5.3 引入Axios</h3><ul>
 <li>外部cdn引入：</li>
 </ul>
@@ -401,7 +402,7 @@
 
 
 
-<p><img src="/2020/09/06/1.Vue%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/..%5CImg%5C043.png" alt="image-20200902223854253"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/043.png" alt="image-20200902223854253"></p>
 <ul>
 <li>json文件在编码时没有使用UTF-8编译，所以上述请求执行后会得到乱码内容，解决方法是将json文件用notepad++打开之后在视窗栏 编码-&gt;使用UTF-8编码和转为UTF-8编码；</li>
 </ul>
@@ -420,7 +421,7 @@
 
 
 
-<p><img src="/2020/09/06/1.Vue%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/..%5CImg%5C044.png" alt="image-20200903102347608"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/044.png" alt="image-20200903102347608"></p>
 <hr>
 <h2 id="7-插槽slot"><a href="#7-插槽slot" class="headerlink" title="7.插槽slot"></a>7.插槽slot</h2><ul>
 <li>插槽的本质就是嵌套组合复用；</li>
@@ -429,7 +430,7 @@
 
 
 
-<p><img src="/2020/09/06/1.Vue%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/..%5CImg%5C045.png" alt="image-20200903110407351"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/045.png" alt="image-20200903110407351"></p>
 <hr>
 <h2 id="8-自定义事件分发"><a href="#8-自定义事件分发" class="headerlink" title="8.自定义事件分发"></a>8.自定义事件分发</h2><ul>
 <li>实现在slot基础上的自定义删除事件；</li>
@@ -448,11 +449,11 @@
 <ul>
 <li>点击删除按钮能够动态删除data数据并且刷新页面显示：</li>
 </ul>
-<p><img src="/2020/09/06/1.Vue%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/..%5CImg%5C046.png" alt="image-20200903121218463"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/046.png" alt="image-20200903121218463"></p>
 <blockquote>
 <p>关系示意图：最终都是通过前端的view视图来连接</p>
 </blockquote>
-<p><img src="/2020/09/06/1.Vue%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/..%5CImg%5C047.png" alt="QQ图片20200903120909"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/047.png" alt="QQ图片20200903120909"></p>
 ]]></content>
   </entry>
   <entry>
@@ -466,7 +467,7 @@
 </ul>
 </li>
 </ul>
-<p><img src="/2020/09/06/3.vue%E5%BC%80%E5%8F%91%E5%AE%9E%E4%BE%8B%E6%BC%94%E7%A4%BA/..%5CImg%5C063.png" alt="image-20200904130511003"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/063.png" alt="image-20200904130511003"></p>
 <a id="more"></a>
 
 
@@ -475,7 +476,7 @@
 <li>App.vue中template模板相当于主模板，其中可以直接通过组件标签调用其它组件模板，相当于没有slot便签的限定而可以自由嵌套插槽；</li>
 <li>App.vue组件用来传递给main.js，main.js是webpack中设置的默认入口文件，它只需要绑定App.vue文件并且完成一些组件的初始化和申明使用即可；</li>
 </ul>
-<p><img src="/2020/09/06/3.vue%E5%BC%80%E5%8F%91%E5%AE%9E%E4%BE%8B%E6%BC%94%E7%A4%BA/..%5CImg%5C066.png" alt="image-20200904131915497"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/066.png" alt="image-20200904131915497"></p>
 <h2 id="2-webpack"><a href="#2-webpack" class="headerlink" title="2.webpack"></a>2.webpack</h2><h3 id="2-1-基础概念"><a href="#2-1-基础概念" class="headerlink" title="2.1 基础概念"></a>2.1 基础概念</h3><ul>
 <li>webpack的本质是将新版本的vue组件框架打包成ES5版本支持的js代码；</li>
 </ul>
@@ -501,13 +502,13 @@
 </ul>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">webpack</span><br></pre></td></tr></table></figure>
 
-<p><img src="/2020/09/06/3.vue%E5%BC%80%E5%8F%91%E5%AE%9E%E4%BE%8B%E6%BC%94%E7%A4%BA/..%5CImg%5C059.png" alt="image-20200903172445440"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/059.png" alt="image-20200903172445440"></p>
 <ul>
 <li>这个<code>bundle.js</code>文件就是打包后得到的js文件，也就是最终拿来使用的文件；</li>
 <li>最后如上图创建<code>index.html</code>文件，作为整个程序的首页，添加<script>标签引入<code>bundle.js</code>文件：</li>
 </ul>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Title<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;dist/js/bundle.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p><img src="..%5CImg%5C060.png" alt="image-20200903172940366"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/060.png" alt="image-20200903172940366"></p>
 <blockquote>
 <p>大功告成！整个过程一目了然。</p>
 </blockquote>
@@ -526,7 +527,7 @@
 <li><p>如图所示，只在<code>template</code>标签内加入一段标题即可：</p>
 </li>
 </ul>
-<p><img src="..%5CImg%5C063.png" alt="image-20200904123949339"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/063.png" alt="image-20200904123949339"></p>
 <ul>
 <li>在<code>src</code>目录下新建目录<code>router</code>，下建<code>index.js</code>文件，代码如下：</li>
 </ul>
@@ -545,11 +546,11 @@
 <ul>
 <li>部署服务器<code>npm run dev</code>后网页显示如图：</li>
 </ul>
-<p><img src="..%5CImg%5C064.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/064.png"></p>
 <ul>
 <li>附：最终目录，其余部分已删除：</li>
 </ul>
-<p><img src="..%5CImg%5C065.png" alt="image-20200904125959596"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/065.png" alt="image-20200904125959596"></p>
 <hr>
 <h2 id="4-实例工程（运用element-UI）"><a href="#4-实例工程（运用element-UI）" class="headerlink" title="4.实例工程（运用element-UI）"></a>4.实例工程（运用element-UI）</h2><h3 id="4-1-新建项目并配置依赖"><a href="#4-1-新建项目并配置依赖" class="headerlink" title="4.1 新建项目并配置依赖"></a>4.1 新建项目并配置依赖</h3><ul>
 <li><p>使用管理员模式运行命令行，并进入到目录下准备新建项目；</p>
@@ -567,7 +568,7 @@
 <h3 id="4-2-修改配置文件"><a href="#4-2-修改配置文件" class="headerlink" title="4.2 修改配置文件"></a>4.2 修改配置文件</h3><ul>
 <li>在IDEA中打开工程项目，并在<code>package.json</code>文件中修改以下内容（sass版本过高需手动调低）：</li>
 </ul>
-<p><img src="..%5CImg%5C067.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/067.png"></p>
 <ul>
 <li>修改完毕重新安装依赖：</li>
 </ul>
@@ -578,20 +579,20 @@
 <h3 id="4-3-修改初始src"><a href="#4-3-修改初始src" class="headerlink" title="4.3 修改初始src"></a>4.3 修改初始src</h3><ul>
 <li>按照<code>vue-router</code>删改，最终效果图如下：</li>
 </ul>
-<p><img src="..%5CImg%5C068.png" alt="image-20200904144820476"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/068.png" alt="image-20200904144820476"></p>
 <h3 id="4-4-新建目录及文件"><a href="#4-4-新建目录及文件" class="headerlink" title="4.4 新建目录及文件"></a>4.4 新建目录及文件</h3><ul>
 <li>新建项目目录router用来存放路由配置文件<code>index.js</code>；</li>
 <li>新建项目目录view用来存放视图组件，而components组件专门存放功能组件，明确分工；</li>
 <li>在view目录下新建<code>Login.vue</code>文件和<code>Main.vue</code>文件；</li>
 </ul>
-<p><img src="..%5CImg%5C069.png" alt="image-20200904145015407"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/069.png" alt="image-20200904145015407"></p>
 <h3 id="4-5-使用element-ui组件"><a href="#4-5-使用element-ui组件" class="headerlink" title="4.5 使用element-ui组件"></a>4.5 使用element-ui组件</h3><ul>
 <li><p>打开element组件：<a href="https://element.eleme.cn/#/zh-CN/component/installation">https://element.eleme.cn/#/zh-CN/component/installation</a>；</p>
 </li>
 <li><p>如图，复制表单代码完全覆盖Login.vue文件（在el-form标签外添加template标签，否则无法运行），并对<code>Main.vue</code>文件添加简单文字“首页”：</p>
 </li>
 </ul>
-<p><img src="..%5CImg%5C070.png" alt="image-20200904145542362"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/070.png" alt="image-20200904145542362"></p>
 <ul>
 <li>所有视图组件都是独立的，接下来配置路由<code>index.js</code>文件，使其能够联系起来：</li>
 </ul>
@@ -605,7 +606,7 @@
 <li>并在<code>App.vue</code>中添加路由显示；</li>
 <li>最终成果：</li>
 </ul>
-<p><img src="..%5CImg%5C071.png" alt="image-20200904153130970"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/071.png" alt="image-20200904153130970"></p>
 <hr>
 <h2 id="5-路由嵌套"><a href="#5-路由嵌套" class="headerlink" title="5.路由嵌套"></a>5.路由嵌套</h2><h3 id="5-1-基础概念"><a href="#5-1-基础概念" class="headerlink" title="5.1 基础概念"></a>5.1 基础概念</h3><ul>
 <li>路由嵌套可以实现外框架组件不变而仅改变内组件；</li>
@@ -614,7 +615,7 @@
 <li>接4工程；</li>
 <li>在view目录下创建子目录user，并在该目录下创建两个新文件，新文件中仅配置一行文字：</li>
 </ul>
-<p><img src="..%5CImg%5C073.png" alt="image-20200904162145636"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/073.png" alt="image-20200904162145636"></p>
 <ul>
 <li>在路由<code>index.js</code>文件中添加子路由：</li>
 </ul>
@@ -628,7 +629,7 @@
 <ul>
 <li>结果如图：</li>
 </ul>
-<p><img src="..%5CImg%5C072.png" alt="image-20200904161758727"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/072.png" alt="image-20200904161758727"></p>
 <hr>
 <h2 id="6-传参以及重定向"><a href="#6-传参以及重定向" class="headerlink" title="6.传参以及重定向"></a>6.传参以及重定向</h2><h3 id="6-1-传参"><a href="#6-1-传参" class="headerlink" title="6.1 传参"></a>6.1 传参</h3><ul>
 <li>先更改<code>Main.vue</code>文件中的路由器链接：</li>
@@ -648,7 +649,7 @@
 <ul>
 <li>最后显示：</li>
 </ul>
-<p><img src="..%5CImg%5C074.png" alt="image-20200904173718333"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/074.png" alt="image-20200904173718333"></p>
 <h3 id="6-2-重定向"><a href="#6-2-重定向" class="headerlink" title="6.2 重定向"></a>6.2 重定向</h3><ul>
 <li>只要在路由配置时添加一个新的路由配置重定向即可：</li>
 </ul>
@@ -661,7 +662,7 @@
 <ul>
 <li>得到结果：</li>
 </ul>
-<p><img src="..%5CImg%5C075.png" alt="image-20200904174020000"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/075.png" alt="image-20200904174020000"></p>
 <h3 id="6-3-账号传参"><a href="#6-3-账号传参" class="headerlink" title="6.3 账号传参"></a>6.3 账号传参</h3><ul>
 <li>先修改<code>Login.vue</code>文件，在跳转函数时添加代码：</li>
 </ul>
@@ -682,8 +683,8 @@
 <ul>
 <li>结果：</li>
 </ul>
-<p><img src="..%5CImg%5C076.png" alt="image-20200904184745405"></p>
-<p><img src="..%5CImg%5C077.png" alt="image-20200904184818425"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/076.png" alt="image-20200904184745405"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/077.png" alt="image-20200904184818425"></p>
 <h3 id="6-4-路由模式"><a href="#6-4-路由模式" class="headerlink" title="6.4 路由模式"></a>6.4 路由模式</h3><ul>
 <li><p>mode属性：</p>
 <ul>
@@ -699,7 +700,7 @@
 <ul>
 <li>图显：</li>
 </ul>
-<p><img src="..%5CImg%5C078.png" alt="image-20200904185239423"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/078.png" alt="image-20200904185239423"></p>
 <hr>
 <h2 id="7-404及钩子"><a href="#7-404及钩子" class="headerlink" title="7. 404及钩子"></a>7. 404及钩子</h2><h3 id="7-1-404"><a href="#7-1-404" class="headerlink" title="7.1 404"></a>7.1 404</h3><ul>
 <li>在view目录下新建<code>NotFound.vue</code>文件，添加文字即可；</li>
@@ -710,7 +711,7 @@
 <ul>
 <li>结果：</li>
 </ul>
-<p><img src="..%5CImg%5C079.png" alt="image-20200904194401030"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/079.png" alt="image-20200904194401030"></p>
 <h3 id="7-2-路由钩子与异步请求"><a href="#7-2-路由钩子与异步请求" class="headerlink" title="7.2 路由钩子与异步请求"></a>7.2 路由钩子与异步请求</h3><ul>
 <li>两个路由钩子：</li>
 </ul>
@@ -740,7 +741,7 @@
 <ul>
 <li>在<code>static</code>（静态数据，可以从网上读取并下载）目录下创建新目录<code>mock</code>（静态数据测试规范目录），新目录下创建新文件<code>data.json</code>（从Vue基础入门那里拿来使用），重新部署服务器之后能够通过文件目录读取到该文件（该步骤同样可测试axios是否完整安装，否则重装）；</li>
 </ul>
-<p><img src="..%5CImg%5C080.png" alt="image-20200904205141348"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/080.png" alt="image-20200904205141348"></p>
 <ul>
 <li>在<code>ListOne.vue</code>文件中添加以下代码：</li>
 </ul>
@@ -749,7 +750,7 @@
 <ul>
 <li>点击页面上“账号设置”之后则获取了该数据：</li>
 </ul>
-<p><img src="..%5CImg%5C081.png" alt="image-20200904210337482"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/081.png" alt="image-20200904210337482"></p>
 <ul>
 <li>并且正常输出了“进入路由之前”和“离开路由之前”提示；</li>
 </ul>
@@ -791,7 +792,7 @@
 </ul>
 </li>
 </ul>
-<p><img src="/2020/09/06/javascript%EF%BC%88%E5%90%ABjQuery%EF%BC%89/..%5CImg%5C018.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/018.png"></p>
 <hr>
 <h2 id="3-数据类型"><a href="#3-数据类型" class="headerlink" title="3.数据类型"></a>3.数据类型</h2><ul>
 <li>数值、文本、图形、音频、视频……</li>
@@ -856,7 +857,7 @@ str.toLpwerCase();
 <li><pre><code class="javascript">[)
 str.substring(1);        //从第一个字符直到最后一个字符
 str.substring(1,3);        //[1,3)
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">- 字符串数组操作（不可变性）：</span><br><span class="line"></span><br><span class="line">  ![image-20200826134313146](..\Img\019.png)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">### 3.4布尔值</span><br><span class="line"></span><br><span class="line">- true；</span><br><span class="line">- false；</span><br><span class="line">- 判断输出时显示；</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">### 3.5逻辑运算符</span><br><span class="line"></span><br><span class="line">&#96;&#96;&#96;javascript</span><br><span class="line">&amp;&amp;	&#x2F;&#x2F;与</span><br><span class="line">    </span><br><span class="line">||	&#x2F;&#x2F;或</span><br><span class="line">    </span><br><span class="line">!	&#x2F;&#x2F;非</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">- 字符串数组操作（不可变性）：</span><br><span class="line"></span><br><span class="line">  ![image-20200826134313146](https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;gh&#x2F;ZHAOXIAOAN&#x2F;CDNBlog&#x2F;Img\019.png)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">### 3.4布尔值</span><br><span class="line"></span><br><span class="line">- true；</span><br><span class="line">- false；</span><br><span class="line">- 判断输出时显示；</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">### 3.5逻辑运算符</span><br><span class="line"></span><br><span class="line">&#96;&#96;&#96;javascript</span><br><span class="line">&amp;&amp;	&#x2F;&#x2F;与</span><br><span class="line">    </span><br><span class="line">||	&#x2F;&#x2F;或</span><br><span class="line">    </span><br><span class="line">!	&#x2F;&#x2F;非</span><br></pre></td></tr></table></figure>
 
 
 </code></pre>
@@ -1020,13 +1021,13 @@ person.hasOwnProperty(&#39;toString&#39;)
 </ul>
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">f1</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; <span class="number">100</span>; i++) &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(i);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">console</span>.log(i);</span><br><span class="line">&#125;</span><br><span class="line">f1();</span><br><span class="line"><span class="comment">//结果如下，i值在函数f1()外依然可以调用</span></span><br></pre></td></tr></table></figure>
 
-<p><img src="..%5CImg%5C021.png" alt="image-20200827150554681"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/021.png" alt="image-20200827150554681"></p>
 <ul>
 <li>由此引入 let 关键字解决局部作用域冲突问题：</li>
 </ul>
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">f1</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; <span class="number">100</span>; i++) &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(i);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">console</span>.log(i);</span><br><span class="line">&#125;</span><br><span class="line">f1();</span><br><span class="line"><span class="comment">//let定义变量只在作用域内部有效，外部调用报错：ReferenceError: i is not defined</span></span><br></pre></td></tr></table></figure>
 
-<p><img src="..%5CImg%5C022.png" alt="image-20200827150804774"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/022.png" alt="image-20200827150804774"></p>
 </li>
 <li><p>作用域内部所有变量定义，无论位置，在 js 编译时都自动将定义提前，但并不会赋值初始化：</p>
 </li>
@@ -1141,7 +1142,7 @@ person.hasOwnProperty(&#39;toString&#39;)
 <h3 id="6-3-原型链"><a href="#6-3-原型链" class="headerlink" title="6.3 原型链"></a>6.3 原型链</h3><ul>
 <li>原型指向最终直到Object截止，再往后就是Object和Object原型互指；</li>
 </ul>
-<p><img src="..%5CImg%5C023.png" alt="image-20200827214732956"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/023.png" alt="image-20200827214732956"></p>
 <hr>
 <h2 id="7-操作BOM对象（重点）"><a href="#7-操作BOM对象（重点）" class="headerlink" title="7.操作BOM对象（重点）"></a>7.操作BOM对象（重点）</h2><h3 id="7-1-BOM"><a href="#7-1-BOM" class="headerlink" title="7.1 BOM"></a>7.1 BOM</h3><ul>
 <li>是浏览器对象模型；</li>
@@ -1216,7 +1217,7 @@ person.hasOwnProperty(&#39;toString&#39;)
 </ul>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dl</span> <span class="attr">id</span>=<span class="string">&quot;app&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">dt</span>&gt;</span>Java<span class="tag">&lt;/<span class="name">dt</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dd</span>&gt;</span>JavaSE<span class="tag">&lt;/<span class="name">dd</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dd</span>&gt;</span>JavaEE<span class="tag">&lt;/<span class="name">dd</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dl</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">    <span class="keyword">var</span> dl = <span class="built_in">document</span>.getElementById(<span class="string">&#x27;app&#x27;</span>);</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br><span class="line">dl:</span><br></pre></td></tr></table></figure>
 
-<p><img src="..%5CImg%5C024.png" alt="image-20200827225540957"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/024.png" alt="image-20200827225540957"></p>
 <ul>
 <li><strong>获取网页cookie：</strong></li>
 </ul>
@@ -1251,7 +1252,7 @@ person.hasOwnProperty(&#39;toString&#39;)
 </ul>
 </li>
 </ul>
-<p><img src="..%5CImg%5C025.png" alt="image-20200828115725992"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/025.png" alt="image-20200828115725992"></p>
 <h3 id="8-2-获得DOM节点"><a href="#8-2-获得DOM节点" class="headerlink" title="8.2 获得DOM节点"></a>8.2 获得DOM节点</h3><ul>
 <li>这是原生代码，之后一般都使用JQuery；</li>
 </ul>
@@ -1333,7 +1334,7 @@ person.hasOwnProperty(&#39;toString&#39;)
 </ul>
 </li>
 </ul>
-<p><img src="..%5CImg%5C026.png" alt="image-20200828175252659"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/026.png" alt="image-20200828175252659"></p>
 <ul>
 <li>onsubmit：<ul>
 <li>onsubmit=”return f()” 固定格式，将函数返回值返回给表单，如果函数返回false，则不会跳转页面不会提交；</li>
@@ -1386,11 +1387,11 @@ person.hasOwnProperty(&#39;toString&#39;)
 <ul>
 <li>鼠标事件</li>
 </ul>
-<p><img src="..%5CImg%5C028.png" alt="image-20200828195411498"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/028.png" alt="image-20200828195411498"></p>
 <ul>
 <li>键盘事件</li>
 </ul>
-<p><img src="..%5CImg%5C029.png" alt="image-20200828200054125"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/029.png" alt="image-20200828200054125"></p>
 <ul>
 <li>其它事件</li>
 </ul>
@@ -1401,7 +1402,7 @@ person.hasOwnProperty(&#39;toString&#39;)
 <ul>
 <li>结果：</li>
 </ul>
-<p><img src="..%5CImg%5C027.png" alt="image-20200828194948814"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/027.png" alt="image-20200828194948814"></p>
 <h3 id="10-5-jQuery操作DOM"><a href="#10-5-jQuery操作DOM" class="headerlink" title="10.5 jQuery操作DOM"></a>10.5 jQuery操作DOM</h3><ul>
 <li>节点文本操作：</li>
 </ul>
