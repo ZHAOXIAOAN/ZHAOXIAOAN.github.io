@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title>Vue开发环境配置</title>
-    <url>/child/2020/09/06/2.Vue%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</url>
+    <url>/2020/09/06/2.Vue%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</url>
     <content><![CDATA[<h2 id="1-Node-js下载"><a href="#1-Node-js下载" class="headerlink" title="1.Node.js下载"></a>1.Node.js下载</h2><p><a href="http://nodejs.cn/download/">http://nodejs.cn/download/</a></p>
 <ul>
 <li>直接选择.msi 64位安装包下载并且直接安装即可，安装过程略</li>
@@ -152,7 +152,7 @@
   </entry>
   <entry>
     <title>Typora修改CSS</title>
-    <url>/child/2020/09/06/Typora%E4%BF%AE%E6%94%B9CSS/</url>
+    <url>/2020/09/06/Typora%E4%BF%AE%E6%94%B9CSS/</url>
     <content><![CDATA[<p><strong>这一期给大家讲讲怎样将Typora设置成自己喜欢的风格，这里以高亮颜色为例！</strong></p>
 <blockquote>
 <p>打开 视图–&gt;开发者工具（快捷键 Shift+F12）得到网页元素：</p>
@@ -198,7 +198,7 @@
   </entry>
   <entry>
     <title>Hello World</title>
-    <url>/child/2020/09/06/hello-world/</url>
+    <url>/2020/09/06/hello-world/</url>
     <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
 <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
 
@@ -216,7 +216,7 @@
   </entry>
   <entry>
     <title>Vue基础入门</title>
-    <url>/child/2020/09/06/1.Vue%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/</url>
+    <url>/2020/09/06/1.Vue%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/</url>
     <content><![CDATA[<h2 id="1-简介"><a href="#1-简介" class="headerlink" title="1.简介"></a>1.简介</h2><h3 id="1-1-概念介绍"><a href="#1-1-概念介绍" class="headerlink" title="1.1 概念介绍"></a>1.1 概念介绍</h3><ul>
 <li>Vue 是一款渐进式JavaScript框架，所谓渐进式就是逐步实现新特性的意思，如实现模块化开发、路由、状态管理等新特性。其特点是综合了Angular（模块化）和React(虚拟DOM）的优点，与其它大型框架不同的是，Vue被设计为可以自底向上逐层应用。Vue的核心库只关注视图层，不仅易于上手，还便于与第三方库(如: vue-router，vue-resource，vuex）或既有项目整合。</li>
 </ul>
@@ -477,7 +477,7 @@
   </entry>
   <entry>
     <title>vue开发实例演示</title>
-    <url>/child/2020/09/06/3.vue%E5%BC%80%E5%8F%91%E5%AE%9E%E4%BE%8B%E6%BC%94%E7%A4%BA/</url>
+    <url>/2020/09/06/3.vue%E5%BC%80%E5%8F%91%E5%AE%9E%E4%BE%8B%E6%BC%94%E7%A4%BA/</url>
     <content><![CDATA[<h2 id="1-解剖初始化模板"><a href="#1-解剖初始化模板" class="headerlink" title="1.解剖初始化模板"></a>1.解剖初始化模板</h2><h3 id="1-1-vue文件"><a href="#1-1-vue文件" class="headerlink" title="1.1 vue文件"></a>1.1 vue文件</h3><ul>
 <li>如图所示，对于一个新建的vue文件而言，其中标签分为三个部分：<ul>
 <li>template标签：这一块模板区域用于编写html代码块，其实就是component组建中的template属性内容，用作模板显示，而这个模板component的名字就是该vue文件名，使用时导入即可；</li>
@@ -787,7 +787,7 @@
   </entry>
   <entry>
     <title>JavaScript</title>
-    <url>/child/2020/09/06/javascript%EF%BC%88%E5%90%ABjQuery%EF%BC%89/</url>
+    <url>/2020/09/06/javascript%EF%BC%88%E5%90%ABjQuery%EF%BC%89/</url>
     <content><![CDATA[<h2 id="1-引入script"><a href="#1-引入script" class="headerlink" title="1.引入script"></a>1.引入script</h2><ul>
 <li>内部写入；</li>
 <li>外部引入；</li>

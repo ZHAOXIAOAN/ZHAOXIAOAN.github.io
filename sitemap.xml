@@ -2,63 +2,63 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://example.com/child/about/index.html</loc>
+    <loc>http://example.com/about/index.html</loc>
     
     <lastmod>2020-09-06</lastmod>
     
   </url>
   
   <url>
-    <loc>http://example.com/child/2020/09/06/Typora%E4%BF%AE%E6%94%B9CSS/</loc>
+    <loc>http://example.com/2020/09/06/Typora%E4%BF%AE%E6%94%B9CSS/</loc>
     
     <lastmod>2020-09-06</lastmod>
     
   </url>
   
   <url>
-    <loc>http://example.com/child/2020/09/06/3.vue%E5%BC%80%E5%8F%91%E5%AE%9E%E4%BE%8B%E6%BC%94%E7%A4%BA/</loc>
+    <loc>http://example.com/2020/09/06/3.vue%E5%BC%80%E5%8F%91%E5%AE%9E%E4%BE%8B%E6%BC%94%E7%A4%BA/</loc>
     
     <lastmod>2020-09-06</lastmod>
     
   </url>
   
   <url>
-    <loc>http://example.com/child/2020/09/06/2.Vue%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</loc>
+    <loc>http://example.com/2020/09/06/2.Vue%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</loc>
     
     <lastmod>2020-09-06</lastmod>
     
   </url>
   
   <url>
-    <loc>http://example.com/child/2020/09/06/1.Vue%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/</loc>
+    <loc>http://example.com/2020/09/06/1.Vue%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/</loc>
     
     <lastmod>2020-09-06</lastmod>
     
   </url>
   
   <url>
-    <loc>http://example.com/child/categories/index.html</loc>
+    <loc>http://example.com/categories/index.html</loc>
     
     <lastmod>2020-09-06</lastmod>
     
   </url>
   
   <url>
-    <loc>http://example.com/child/2020/09/06/javascript%EF%BC%88%E5%90%ABjQuery%EF%BC%89/</loc>
+    <loc>http://example.com/2020/09/06/javascript%EF%BC%88%E5%90%ABjQuery%EF%BC%89/</loc>
     
     <lastmod>2020-09-06</lastmod>
     
   </url>
   
   <url>
-    <loc>http://example.com/child/tags/index.html</loc>
+    <loc>http://example.com/tags/index.html</loc>
     
     <lastmod>2020-09-06</lastmod>
     
   </url>
   
   <url>
-    <loc>http://example.com/child/2020/09/06/hello-world/</loc>
+    <loc>http://example.com/2020/09/06/hello-world/</loc>
     
     <lastmod>2020-09-06</lastmod>
     
@@ -66,7 +66,7 @@
   
 
   <url>
-    <loc>http://example.com/child</loc>
+    <loc>http://example.com/</loc>
     <lastmod>2020-09-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
@@ -74,42 +74,42 @@
 
   
   <url>
-    <loc>http://example.com/child/tags/vue/</loc>
+    <loc>http://example.com/tags/vue/</loc>
     <lastmod>2020-09-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://example.com/child/tags/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</loc>
+    <loc>http://example.com/tags/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</loc>
     <lastmod>2020-09-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://example.com/child/tags/Typora/</loc>
+    <loc>http://example.com/tags/Typora/</loc>
     <lastmod>2020-09-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://example.com/child/tags/%E4%B8%AA%E6%80%A7%E5%8C%96%E8%AE%BE%E7%BD%AE/</loc>
+    <loc>http://example.com/tags/%E4%B8%AA%E6%80%A7%E5%8C%96%E8%AE%BE%E7%BD%AE/</loc>
     <lastmod>2020-09-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://example.com/child/tags/javascript/</loc>
+    <loc>http://example.com/tags/javascript/</loc>
     <lastmod>2020-09-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://example.com/child/tags/jQuery/</loc>
+    <loc>http://example.com/tags/jQuery/</loc>
     <lastmod>2020-09-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -118,7 +118,7 @@
 
   
   <url>
-    <loc>http://example.com/child/categories/%E5%AD%A6%E4%B9%A0/</loc>
+    <loc>http://example.com/categories/%E5%AD%A6%E4%B9%A0/</loc>
     <lastmod>2020-09-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
