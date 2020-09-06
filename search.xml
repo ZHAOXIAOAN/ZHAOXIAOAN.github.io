@@ -214,7 +214,6 @@
 <li>ViewModel:连接视图和数据的中间件，Vue.js 就是MVVM中的ViewModel层的实现者</li>
 </ul>
 <p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/030.png" alt="image-20200830141507977"></p>
-<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/030.png" alt="image-20200830141507977"></p>
 <ul>
 <li>View层展现的不是Model层的数据，而是ViewModel的数据，由ViewNodel负责与 Model层交互，这就完全解耦了View层和Model层，这个解耦是至关重要的，它是前后端分离方案实施的重要一环。</li>
 </ul>
