@@ -465,6 +465,7 @@
 
 
       
+    <div class="comments" id="minivaline-comments"></div>
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -610,6 +611,66 @@ document.addEventListener('pjax:success', () => {
 
   
 
+
+<script>
+loadComments(document.querySelector('#minivaline-comments'), function(){
+	getScript('https://cdn.jsdelivr.net/gh/MiniValine/MiniValine@3.1.5/dist/MiniValine.min.js', function(){
+		new MiniValine({
+			el: '#minivaline-comments',
+			appId: '9JxB7GVqlwRNk6oWQAWRFukK-MdYXbMMI',
+			appKey: '0FRspDasEAKCPOgl62bwPGJ6',
+			mode: 'DesertsP',
+			placeholder: 'Write a Comment',
+			pathname: '/2020/09/06/hello-world/',
+			lang: '',
+			adminEmailMd5: '063e1b061dd2f94e9e9335b5df168d60',
+			tagMeta: ["管理员","小伙伴","访客",],
+			master: ["063e1b061dd2f94e9e9335b5df168d60",],
+			friends: [],
+			math: true,
+			md: true,
+			enableQQ: false,
+			NoRecordIP: false,
+			visitor: ,
+			maxNest: 6,
+			pageSize: 6,
+			serverURLs: '',
+			emoticonUrl: ["https://cdn.jsdelivr.net/npm/alus@latest","https://cdn.jsdelivr.net/gh/MiniValine/qq@latest","https://cdn.jsdelivr.net/gh/MiniValine/Bilibilis@latest","https://cdn.jsdelivr.net/gh/MiniValine/tieba@latest","https://cdn.jsdelivr.net/gh/MiniValine/twemoji@latest","https://cdn.jsdelivr.net/gh/MiniValine/weibo@latest",],
+		});
+	}, window.MiniValine);
+});
+function getScript(url, callback, condition) {
+	if (condition) {
+	  callback();
+	} else {
+	  var script = document.createElement('script');
+	  script.onload = script.onreadystatechange = function(_, isAbort) {
+		if (isAbort || !script.readyState || /loaded|complete/.test(script.readyState)) {
+		  script.onload = script.onreadystatechange = null;
+		  script = undefined;
+		  if (!isAbort && callback) setTimeout(callback, 0);
+		}
+	  };
+	  script.src = url;
+	  document.head.appendChild(script);
+	}
+}
+function loadComments(element, callback) {
+    if (!false || !element) {
+      callback();
+      return;
+    }
+    let intersectionObserver = new IntersectionObserver((entries, observer) => {
+      let entry = entries[0];
+      if (entry.isIntersecting) {
+        callback();
+        observer.disconnect();
+      }
+    });
+    intersectionObserver.observe(element);
+    return intersectionObserver;
+}
+</script>
 
   <script async src="/js/cursor/fireworks.js"></script>
 
