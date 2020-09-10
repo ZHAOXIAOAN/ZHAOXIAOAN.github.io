@@ -6,7 +6,7 @@
   <link href="http://kunpw.cn/atom.xml" rel="self"/>
   
   <link href="http://kunpw.cn/"/>
-  <updated>2020-09-10T14:41:02.876Z</updated>
+  <updated>2020-09-10T16:13:55.827Z</updated>
   <id>http://kunpw.cn/</id>
   
   <author>
@@ -21,16 +21,26 @@
     <link href="http://kunpw.cn/2020/09/10/scrapy%E7%AE%80%E8%A6%81%E4%BD%BF%E7%94%A8%E5%85%A5%E9%97%A8/"/>
     <id>http://kunpw.cn/2020/09/10/scrapy%E7%AE%80%E8%A6%81%E4%BD%BF%E7%94%A8%E5%85%A5%E9%97%A8/</id>
     <published>2020-09-10T14:38:39.662Z</published>
-    <updated>2020-09-10T14:41:02.876Z</updated>
+    <updated>2020-09-10T16:13:55.827Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;1-安装scrapy&quot;&gt;&lt;a href=&quot;#1-安装scrapy&quot; class=&quot;headerlink&quot;</summary>
-        
-      
+    <summary type="html">&lt;h2 id=&quot;1-安装scrapy&quot;&gt;&lt;a href=&quot;#1-安装scrapy&quot; class=&quot;headerlink&quot; title=&quot;1.安装scrapy&quot;&gt;&lt;/a&gt;1.安装scrapy&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;在cmd下一条语句即可完成安装；&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;pip install scrapy&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+
+
+&lt;blockquote&gt;
+&lt;p&gt;据说在安装过程中可能遇到各种问题，由于我自己并没有遇到，所以略过，出现问题请自行百度&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;直接在命令行输入&lt;code&gt;scrapy&lt;/code&gt;可以查看相关指令：&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&quot;https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/089.png&quot; alt=&quot;image-20200909084009265&quot;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;输入&lt;code&gt;scrapy bench&lt;/code&gt;用来验证安装是否成功，出现error则未成功，请自行百度解决方法；&lt;/li&gt;
+&lt;/ul&gt;</summary>
     
     
     
@@ -48,19 +58,19 @@
     <link href="http://kunpw.cn/2020/09/10/hero%20Img%E9%80%9A%E8%BF%87%E5%85%8D%E8%B4%B9cdn%E6%98%BE%E7%A4%BA/"/>
     <id>http://kunpw.cn/2020/09/10/hero%20Img%E9%80%9A%E8%BF%87%E5%85%8D%E8%B4%B9cdn%E6%98%BE%E7%A4%BA/</id>
     <published>2020-09-10T14:10:32.903Z</published>
-    <updated>2020-09-10T14:37:54.940Z</updated>
+    <updated>2020-09-10T16:13:37.473Z</updated>
     
     
-      
-      
-        
-        
     <summary type="html">&lt;blockquote&gt;
 &lt;p&gt;hexo在上传静态网页的时候markdown文本中的图片却一直无法显示，这个问题如何解决呢？&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h2 id=&quot;1-原因&quot;&gt;&lt;a href=&quot;#1-原因&quot; class=&quot;headerlink&quot;</summary>
-        
-      
+&lt;h2 id=&quot;1-原因&quot;&gt;&lt;a href=&quot;#1-原因&quot; class=&quot;headerlink&quot; title=&quot;1.原因&quot;&gt;&lt;/a&gt;1.原因&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;hexo只能上传md文本资源，并且最终转化为静态网页，而同级目录下的Img图片资源却无法上传至服务器；&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;2-解决办法&quot;&gt;&lt;a href=&quot;#2-解决办法&quot; class=&quot;headerlink&quot; title=&quot;2.解决办法&quot;&gt;&lt;/a&gt;2.解决办法&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;通过使用外部cdn引用图片即可完美地解决这个问题！但是像七牛云那些大型cdn网站都需要付费使用，这里给大家推荐一个免费且超级好用的cdn加速器：&lt;a href=&quot;https://www.jsdelivr.com/&quot;&gt;https://www.jsdelivr.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;要使用外部cdn引用，必须先将图片从自己个人电脑上传至网站服务器上，这里我们选择github服务器；&lt;/li&gt;
+&lt;/ul&gt;</summary>
     
     
     
@@ -76,11 +86,11 @@
   </entry>
   
   <entry>
-    <title>vue开发实例演示</title>
+    <title>vue开发实例演示（含webpack）</title>
     <link href="http://kunpw.cn/2020/09/06/3.vue%E5%BC%80%E5%8F%91%E5%AE%9E%E4%BE%8B%E6%BC%94%E7%A4%BA/"/>
     <id>http://kunpw.cn/2020/09/06/3.vue%E5%BC%80%E5%8F%91%E5%AE%9E%E4%BE%8B%E6%BC%94%E7%A4%BA/</id>
     <published>2020-09-06T03:44:27.588Z</published>
-    <updated>2020-09-06T11:46:54.091Z</updated>
+    <updated>2020-09-10T16:14:41.912Z</updated>
     
     
     <summary type="html">&lt;h2 id=&quot;1-解剖初始化模板&quot;&gt;&lt;a href=&quot;#1-解剖初始化模板&quot; class=&quot;headerlink&quot; title=&quot;1.解剖初始化模板&quot;&gt;&lt;/a&gt;1.解剖初始化模板&lt;/h2&gt;&lt;h3 id=&quot;1-1-vue文件&quot;&gt;&lt;a href=&quot;#1-1-vue文件&quot; class=&quot;headerlink&quot; title=&quot;1.1 vue文件&quot;&gt;&lt;/a&gt;1.1 vue文件&lt;/h3&gt;&lt;ul&gt;
@@ -100,14 +110,16 @@
     
     <category term="vue" scheme="http://kunpw.cn/tags/vue/"/>
     
+    <category term="webpack" scheme="http://kunpw.cn/tags/webpack/"/>
+    
   </entry>
   
   <entry>
-    <title>Vue开发环境配置</title>
+    <title>Vue开发环境配置(含node.js)</title>
     <link href="http://kunpw.cn/2020/09/06/2.Vue%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/"/>
     <id>http://kunpw.cn/2020/09/06/2.Vue%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</id>
     <published>2020-09-06T03:44:24.267Z</published>
-    <updated>2020-09-06T11:46:49.490Z</updated>
+    <updated>2020-09-10T16:12:23.978Z</updated>
     
     
     <summary type="html">&lt;h2 id=&quot;1-Node-js下载&quot;&gt;&lt;a href=&quot;#1-Node-js下载&quot; class=&quot;headerlink&quot; title=&quot;1.Node.js下载&quot;&gt;&lt;/a&gt;1.Node.js下载&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;http://nodejs.cn/download/&quot;&gt;http://nodejs.cn/download/&lt;/a&gt;&lt;/p&gt;
@@ -125,6 +137,8 @@
     
     <category term="环境配置" scheme="http://kunpw.cn/tags/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/"/>
     
+    <category term="node.js" scheme="http://kunpw.cn/tags/node-js/"/>
+    
   </entry>
   
   <entry>
@@ -132,7 +146,7 @@
     <link href="http://kunpw.cn/2020/09/06/1.Vue%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/"/>
     <id>http://kunpw.cn/2020/09/06/1.Vue%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/</id>
     <published>2020-09-06T03:44:20.193Z</published>
-    <updated>2020-09-10T06:45:01.055Z</updated>
+    <updated>2020-09-10T16:09:13.846Z</updated>
     
     
     <summary type="html">&lt;h2 id=&quot;1-简介&quot;&gt;&lt;a href=&quot;#1-简介&quot; class=&quot;headerlink&quot; title=&quot;1.简介&quot;&gt;&lt;/a&gt;1.简介&lt;/h2&gt;&lt;h3 id=&quot;1-1-概念介绍&quot;&gt;&lt;a href=&quot;#1-1-概念介绍&quot; class=&quot;headerlink&quot; title=&quot;1.1 概念介绍&quot;&gt;&lt;/a&gt;1.1 概念介绍&lt;/h3&gt;&lt;ul&gt;
@@ -153,7 +167,7 @@
     <link href="http://kunpw.cn/2020/09/06/javascript%EF%BC%88%E5%90%ABjQuery%EF%BC%89/"/>
     <id>http://kunpw.cn/2020/09/06/javascript%EF%BC%88%E5%90%ABjQuery%EF%BC%89/</id>
     <published>2020-09-06T03:18:28.777Z</published>
-    <updated>2020-09-10T06:48:46.532Z</updated>
+    <updated>2020-09-10T16:09:58.731Z</updated>
     
     
     <summary type="html">&lt;h2 id=&quot;1-引入script&quot;&gt;&lt;a href=&quot;#1-引入script&quot; class=&quot;headerlink&quot; title=&quot;1.引入script&quot;&gt;&lt;/a&gt;1.引入script&lt;/h2&gt;&lt;ul&gt;
