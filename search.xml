@@ -301,12 +301,12 @@
 
 <p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/035.png" alt="image-20200830155311872"></p>
 <hr>
-<h2 id="3-双向绑定（重点）"><a href="#3-双向绑定（重点）" class="headerlink" title="3.==双向绑定（重点）=="></a>3.==双向绑定（重点）==</h2><ul>
+<h2 id="3-双向绑定（重点）"><a href="#3-双向绑定（重点）" class="headerlink" title="3.双向绑定（重点）"></a>3.双向绑定（重点）</h2><ul>
 <li>使用<code>v-model</code>指令；</li>
 <li><code>v-model</code>指令会忽略所有表单元素的checked、selected等值，因此在下拉框中初始默认选择为空，必须设置一个disabled不可选中项并且设置其值为空来作为默认选择域；</li>
 </ul>
 <h3 id="3-1-文本"><a href="#3-1-文本" class="headerlink" title="3.1 文本"></a>3.1 文本</h3><ul>
-<li>本质是<code>&#123;&#123;message&#125;&#125;</code>用来绑定<code>data&#123;message&#125;</code>显示内容，而<code>message</code>又通过<code>v-model=&quot;message&quot;</code>绑定了<input>文本域，所以当<input>输入框值域变化时修改了<code>data&#123;message&#125;</code>数据，接着<code>message</code>就跟着变化；</li>
+<li>本质是<code>&#123;&#123;message&#125;&#125;</code>用来绑定<code>data&#123;message&#125;</code>显示内容，而<code>message</code>又通过<code>v-model=&quot;message&quot;</code>绑定了<code>&lt;input&gt;</code>文本域，所以当<code>&lt;input&gt;</code>输入框值域变化时修改了<code>data&#123;message&#125;</code>数据，接着<code>message</code>就跟着变化；</li>
 </ul>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!--view层，模板--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;app&quot;</span>&gt;</span></span><br><span class="line">    输入的文本：<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">v-model</span>=<span class="string">&quot;message&quot;</span>&gt;</span></span><br><span class="line">    &#123;&#123;message&#125;&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!--导入vue.js包--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;../lib/vue.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">    <span class="keyword">let</span> vm = <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="javascript">        el: <span class="string">&quot;#app&quot;</span>,</span></span><br><span class="line">        data: &#123;</span><br><span class="line"><span class="javascript">            message: <span class="string">&quot;hello,vue!&quot;</span></span></span><br><span class="line">        &#125;,</span><br><span class="line">    &#125;);</span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
@@ -355,7 +355,7 @@
 
 <p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/041.png" alt="image-20200830171934341"></p>
 <hr>
-<h2 id="5-Axios异步网络通信"><a href="#5-Axios异步网络通信" class="headerlink" title="5.==Axios异步网络通信=="></a>5.==Axios异步网络通信==</h2><h3 id="5-1-Axios简介"><a href="#5-1-Axios简介" class="headerlink" title="5.1 Axios简介"></a>5.1 Axios简介</h3><ul>
+<h2 id="5-Axios异步网络通信（重点）"><a href="#5-Axios异步网络通信（重点）" class="headerlink" title="5.Axios异步网络通信（重点）"></a>5.Axios异步网络通信（重点）</h2><h3 id="5-1-Axios简介"><a href="#5-1-Axios简介" class="headerlink" title="5.1 Axios简介"></a>5.1 Axios简介</h3><ul>
 <li><p>Axios是一个开源的可以用在浏览器端和 Node3S 的异步通信框架，它的主要作用就是实现 AJAX异步通信，其功能特点如下:</p>
 <ul>
 <li>从浏览器中创建 <code>XMLHttpRequests</code></li>
@@ -845,51 +845,39 @@
 </ul>
 </li>
 <li><p>转义字符：</p>
-<ul>
-<li><pre><code class="javascript">\&#39;
-\n
-\t
-\u        //\u#### Unicode字符
-\x        //Ascll字符
-<figure class="highlight autohotkey"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">- 多行字符串：</span><br><span class="line"></span><br><span class="line">  - ```javascript</span><br><span class="line">    //使用Esc下键``</span><br><span class="line">    var msg =</span><br><span class="line">        `hello</span><br><span class="line">    	world`</span><br></pre></td></tr></table></figure></code></pre>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">\<span class="string">&#x27;</span></span><br><span class="line"><span class="string">\n</span></span><br><span class="line"><span class="string">\t</span></span><br><span class="line"><span class="string">\u		//\u#### Unicode字符</span></span><br><span class="line"><span class="string">\x		//Ascll字符</span></span><br></pre></td></tr></table></figure>
 </li>
-</ul>
+<li><p>多行字符串：</p>
+ <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//使用Esc下键``</span></span><br><span class="line"><span class="keyword">var</span> msg =</span><br><span class="line">    <span class="string">`hello</span></span><br><span class="line"><span class="string">	world`</span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p>模板字符串：</p>
-<ul>
-<li><pre><code class="javascript">let name = &quot;zhaoxiaoan&quot;;
-let age = 3;
-
-//模板：$&#123;&#125;
-let msg = `hello,$&#123;name&#125;`;
-console.log(msg);
-//&gt;hello,zhaoxiaoan
-<figure class="highlight haml"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">-<span class="ruby"> 字符串长度：</span></span><br><span class="line"></span><br><span class="line"><span class="ruby">  - <span class="string">``</span><span class="string">`javascript</span></span></span><br><span class="line"><span class="ruby">    str.length;</span></span><br></pre></td></tr></table></figure></code></pre>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> name = <span class="string">&quot;zhaoxiaoan&quot;</span>;</span><br><span class="line"><span class="keyword">let</span> age = <span class="number">3</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">//模板：$&#123;&#125;</span></span><br><span class="line"><span class="keyword">let</span> msg = <span class="string">`hello,<span class="subst">$&#123;name&#125;</span>`</span>;</span><br><span class="line"><span class="built_in">console</span>.log(msg);</span><br><span class="line"><span class="comment">//&gt;hello,zhaoxiaoan</span></span><br></pre></td></tr></table></figure>
 </li>
-</ul>
+<li><p>字符串长度：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">str.length;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>大小写转换：</p>
-<ul>
-<li><pre><code class="javascript">//注意，此处是方法而不是属性
-str.toUpperCase();
-str.toLpwerCase();
-<figure class="highlight awk"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">- 该字符在字符串中第一次出现的位置：</span><br><span class="line"></span><br><span class="line">  - ```javascript</span><br><span class="line">    str.indexOf(<span class="string">&#x27;t&#x27;</span>);<span class="regexp">//</span>获得下标索引</span><br></pre></td></tr></table></figure></code></pre>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//注意，此处是方法而不是属性</span></span><br><span class="line">str.toUpperCase();</span><br><span class="line">str.toLpwerCase();</span><br></pre></td></tr></table></figure>
 </li>
-</ul>
+<li><p>该字符在字符串中第一次出现的位置：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">str.indexOf(<span class="string">&#x27;t&#x27;</span>);<span class="comment">//获得下标索引</span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p>substring：</p>
-<ul>
-<li><pre><code class="javascript">[)
-str.substring(1);        //从第一个字符直到最后一个字符
-str.substring(1,3);        //[1,3)
-<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="bullet">-</span> 字符串数组操作（不可变性）：</span><br><span class="line"></span><br><span class="line">  ![<span class="string">image-20200826134313146</span>](<span class="link">https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/019.png</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="section">### 3.4布尔值</span></span><br><span class="line"></span><br><span class="line"><span class="bullet">-</span> true；</span><br><span class="line"><span class="bullet">-</span> false；</span><br><span class="line"><span class="bullet">-</span> 判断输出时显示；</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="section">### 3.5逻辑运算符</span></span><br><span class="line"></span><br><span class="line"><span class="code">```javascript</span></span><br><span class="line"><span class="code">&amp;&amp;	//与</span></span><br><span class="line"><span class="code">    </span></span><br><span class="line"><span class="code">||	//或</span></span><br><span class="line"><span class="code">    </span></span><br><span class="line"><span class="code">!	//非</span></span><br></pre></td></tr></table></figure>
-
-
-</code></pre>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">[)</span><br><span class="line">str.substring(<span class="number">1</span>);		<span class="comment">//从第一个字符直到最后一个字符</span></span><br><span class="line">str.substring(<span class="number">1</span>,<span class="number">3</span>);		<span class="comment">//[1,3)</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>字符串数组操作（不可变性）：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/019.png" alt="image-20200826134313146"></p>
 </li>
 </ul>
-</li>
+<h3 id="3-4布尔值"><a href="#3-4布尔值" class="headerlink" title="3.4布尔值"></a>3.4布尔值</h3><ul>
+<li>true；</li>
+<li>false；</li>
+<li>判断输出时显示；</li>
 </ul>
+<h3 id="3-5逻辑运算符"><a href="#3-5逻辑运算符" class="headerlink" title="3.5逻辑运算符"></a>3.5逻辑运算符</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">&amp;&amp;	<span class="comment">//与</span></span><br><span class="line">    </span><br><span class="line">||	<span class="comment">//或</span></span><br><span class="line">    </span><br><span class="line">!	<span class="comment">//非</span></span><br></pre></td></tr></table></figure>
+
+
+
 <h3 id="3-6比较运算符"><a href="#3-6比较运算符" class="headerlink" title="3.6比较运算符"></a>3.6比较运算符</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">=		<span class="comment">//赋值符号</span></span><br><span class="line">==		<span class="comment">//等于（类型不一样，值一样，也会判断为true，如1==“1”得到true）</span></span><br><span class="line">===		<span class="comment">//绝对等于（类型一样，纸一样，才为true），所以一般使用===比较而不使用==</span></span><br></pre></td></tr></table></figure>
 
 <ul>
@@ -1306,7 +1294,7 @@ person.hasOwnProperty(&#39;toString&#39;)
 
 
 
-<h3 id="8-5-插入DOM节点"><a href="#8-5-插入DOM节点" class="headerlink" title="8.5 ==插入DOM节点=="></a>8.5 ==插入DOM节点==</h3><ul>
+<h3 id="8-5-插入DOM节点（重点）"><a href="#8-5-插入DOM节点（重点）" class="headerlink" title="8.5 ==插入DOM节点（重点）=="></a>8.5 ==插入DOM节点（重点）==</h3><ul>
 <li>前面学过的 innerHTML 属性会覆盖目标DOM下所有的标签；</li>
 <li>append：<ul>
 <li>通过append甚至可以插入<code>&lt;head&gt;</code>、<code>&lt;body&gt;</code>、<code>&lt;style&gt;</code>等标签，实现所有HTML、CSS功能；</li>
