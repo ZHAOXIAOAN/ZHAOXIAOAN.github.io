@@ -1,52 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Typora修改CSS</title>
-    <url>/2020/09/06/Typora%E4%BF%AE%E6%94%B9CSS/</url>
-    <content><![CDATA[<p><strong>这一期给大家讲讲怎样将Typora设置成自己喜欢的风格，这里以高亮颜色为例！</strong></p>
-<blockquote>
-<p>打开 视图–&gt;开发者工具（快捷键 Shift+F12）得到网页元素：</p>
-</blockquote>
-<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/082.png" alt="image-20200828154027327"></p>
-<a id="more"></a>
-
-<blockquote>
-<p>点亮这个图标：</p>
-</blockquote>
-<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/083.png" alt="image-20200828154137307"></p>
-<blockquote>
-<p>移动鼠标至想要修改样式的地方，点击一次</p>
-</blockquote>
-<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/084.png" alt="image-20200828154549041"></p>
-<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/085.png" alt="image-20200828154851984"></p>
-<blockquote>
-<p>一般有两种类型的地址，第一种：</p>
-</blockquote>
-<ul>
-<li>这种地址就直接按照地址中的位置寻找css文件，打开之后如图查找样式名即可</li>
-</ul>
-<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/086.png" alt="image-20200828154927107"></p>
-<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/087.png" alt="image-20200828155231370"></p>
-<blockquote>
-<p>第二种：</p>
-</blockquote>
-<ul>
-<li>这种地址存放在<code>C:\Users\Acer\AppData\Roaming\Typora\themes</code> 目录下，修改此处才有效</li>
-</ul>
-<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/088.png" alt="image-20200828155004523"></p>
-<blockquote>
-<p>最后修改完成重启Typora即可。</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>学习</category>
-      </categories>
-      <tags>
-        <tag>Typora</tag>
-        <tag>个性化设置</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Vue开发环境配置</title>
     <url>/2020/09/06/2.Vue%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</url>
     <content><![CDATA[<h2 id="1-Node-js下载"><a href="#1-Node-js下载" class="headerlink" title="1.Node.js下载"></a>1.Node.js下载</h2><p><a href="http://nodejs.cn/download/">http://nodejs.cn/download/</a></p>
@@ -194,6 +148,122 @@
       <tags>
         <tag>vue</tag>
         <tag>环境配置</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Typora修改CSS</title>
+    <url>/2020/09/06/Typora%E4%BF%AE%E6%94%B9CSS/</url>
+    <content><![CDATA[<p><strong>这一期给大家讲讲怎样将Typora设置成自己喜欢的风格，这里以高亮颜色为例！</strong></p>
+<blockquote>
+<p>打开 视图–&gt;开发者工具（快捷键 Shift+F12）得到网页元素：</p>
+</blockquote>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/082.png" alt="image-20200828154027327"></p>
+<a id="more"></a>
+
+<blockquote>
+<p>点亮这个图标：</p>
+</blockquote>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/083.png" alt="image-20200828154137307"></p>
+<blockquote>
+<p>移动鼠标至想要修改样式的地方，点击一次</p>
+</blockquote>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/084.png" alt="image-20200828154549041"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/085.png" alt="image-20200828154851984"></p>
+<blockquote>
+<p>一般有两种类型的地址，第一种：</p>
+</blockquote>
+<ul>
+<li>这种地址就直接按照地址中的位置寻找css文件，打开之后如图查找样式名即可</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/086.png" alt="image-20200828154927107"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/087.png" alt="image-20200828155231370"></p>
+<blockquote>
+<p>第二种：</p>
+</blockquote>
+<ul>
+<li>这种地址存放在<code>C:\Users\Acer\AppData\Roaming\Typora\themes</code> 目录下，修改此处才有效</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/088.png" alt="image-20200828155004523"></p>
+<blockquote>
+<p>最后修改完成重启Typora即可。</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>学习</category>
+      </categories>
+      <tags>
+        <tag>Typora</tag>
+        <tag>个性化设置</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/2020/09/06/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>hero等静态网站通过外部cdn引用图片</title>
+    <url>/2020/09/10/hero%20Img%E9%80%9A%E8%BF%87%E5%85%8D%E8%B4%B9cdn%E6%98%BE%E7%A4%BA/</url>
+    <content><![CDATA[<blockquote>
+<p>hexo在上传静态网页的时候markdown文本中的图片却一直无法显示，这个问题如何解决呢？</p>
+</blockquote>
+<h2 id="1-原因"><a href="#1-原因" class="headerlink" title="1.原因"></a>1.原因</h2><ul>
+<li>hexo只能上传md文本资源，并且最终转化为静态网页，而同级目录下的Img图片资源却无法上传至服务器；</li>
+</ul>
+<h2 id="2-解决办法"><a href="#2-解决办法" class="headerlink" title="2.解决办法"></a>2.解决办法</h2><ul>
+<li>通过使用外部cdn引用图片即可完美地解决这个问题！但是像七牛云那些大型cdn网站都需要付费使用，这里给大家推荐一个免费且超级好用的cdn加速器：<a href="https://www.jsdelivr.com/">https://www.jsdelivr.com</a></li>
+<li>要使用外部cdn引用，必须先将图片从自己个人电脑上传至网站服务器上，这里我们选择github服务器；</li>
+</ul>
+<h3 id="2-1-上传图片至github仓库"><a href="#2-1-上传图片至github仓库" class="headerlink" title="2.1 上传图片至github仓库"></a>2.1 上传图片至github仓库</h3><ul>
+<li><p>在github上新建仓库，参考博客：<a href="https://blog.csdn.net/weixin_44339531/article/details/103642380">https://blog.csdn.net/weixin_44339531/article/details/103642380</a></p>
+</li>
+<li><p>在<code>MyHexo</code>文件夹下新建一个文件夹<code>cdn</code>，在<code>cdn</code>文件夹下新建文件<code>CDNBlog</code>专门用来上传博客图片；</p>
+</li>
+<li><p>在<code>CDNBlog</code>文件目录下打开git bash，通过以下几个命令完成上传：</p>
+</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 自动将所有已经修改或者新增的文件添加到远程库中</span></span><br><span class="line">git add .</span><br><span class="line"><span class="comment"># 添加更新信息，message为更新信息</span></span><br><span class="line">git commit -m <span class="string">&quot;message&quot;</span></span><br><span class="line"><span class="comment"># 将远程库中的文件更新到远程master中</span></span><br><span class="line">git push origin master</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>高能预警！！！</p>
+</blockquote>
+<ul>
+<li>最后这一行命令可能出现以下问题：</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git@github.com: Permission denied (publickey). fatal: Could not <span class="built_in">read</span> from remote repository.</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>如果出现这样的场景，请执行以下操作：</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa -b 4096 -C <span class="string">&quot;your_email@example.com&quot;</span></span><br><span class="line"><span class="comment"># your_email@example.com 是你自己github绑定的邮箱</span></span><br><span class="line"><span class="comment"># 接着直接以默认路径文件存储到文件中，这个地方亲身试险！！！不能修改默认路径文件名</span></span><br><span class="line"><span class="comment"># 应该是github默认ssh只能配置此文件，可能可以修改该配置，但这里我免得麻烦直接回车</span></span><br><span class="line">clip &lt; ~/.ssh/id_rsa.pub</span><br><span class="line"><span class="comment"># 再使用此命令复制下公钥密匙，将此密匙添加到github中，本文前面的链接有细讲</span></span><br><span class="line">ssh -T git@github.com</span><br><span class="line"><span class="comment"># 使用此命令可以显示出正确的信息即可</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>完成这些操作之后重新git push应该就成功了；</li>
+</ul>
+<h3 id="2-2-markdown引用"><a href="#2-2-markdown引用" class="headerlink" title="2.2 markdown引用"></a>2.2 markdown引用</h3><ul>
+<li>使用<code>https://cdn.jsdelivr.net/gh/</code>+github名+仓库名+图片路径 即可正常引用图片啦！</li>
+</ul>
+]]></content>
+      <categories>
+        <category>学习</category>
+      </categories>
+      <tags>
+        <tag>个性化设置</tag>
+        <tag>hexo</tag>
+        <tag>github</tag>
       </tags>
   </entry>
   <entry>
@@ -389,76 +459,6 @@
       <tags>
         <tag>Scrapy</tag>
         <tag>Python</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>/2020/09/06/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>hero等静态网站通过外部cdn引用图片</title>
-    <url>/2020/09/10/hero%20Img%E9%80%9A%E8%BF%87%E5%85%8D%E8%B4%B9cdn%E6%98%BE%E7%A4%BA/</url>
-    <content><![CDATA[<blockquote>
-<p>hexo在上传静态网页的时候markdown文本中的图片却一直无法显示，这个问题如何解决呢？</p>
-</blockquote>
-<h2 id="1-原因"><a href="#1-原因" class="headerlink" title="1.原因"></a>1.原因</h2><ul>
-<li>hexo只能上传md文本资源，并且最终转化为静态网页，而同级目录下的Img图片资源却无法上传至服务器；</li>
-</ul>
-<h2 id="2-解决办法"><a href="#2-解决办法" class="headerlink" title="2.解决办法"></a>2.解决办法</h2><ul>
-<li>通过使用外部cdn引用图片即可完美地解决这个问题！但是像七牛云那些大型cdn网站都需要付费使用，这里给大家推荐一个免费且超级好用的cdn加速器：<a href="https://www.jsdelivr.com/">https://www.jsdelivr.com</a></li>
-<li>要使用外部cdn引用，必须先将图片从自己个人电脑上传至网站服务器上，这里我们选择github服务器；</li>
-</ul>
-<h3 id="2-1-上传图片至github仓库"><a href="#2-1-上传图片至github仓库" class="headerlink" title="2.1 上传图片至github仓库"></a>2.1 上传图片至github仓库</h3><ul>
-<li><p>在github上新建仓库，参考博客：<a href="https://blog.csdn.net/weixin_44339531/article/details/103642380">https://blog.csdn.net/weixin_44339531/article/details/103642380</a></p>
-</li>
-<li><p>在<code>MyHexo</code>文件夹下新建一个文件夹<code>cdn</code>，在<code>cdn</code>文件夹下新建文件<code>CDNBlog</code>专门用来上传博客图片；</p>
-</li>
-<li><p>在<code>CDNBlog</code>文件目录下打开git bash，通过以下几个命令完成上传：</p>
-</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 自动将所有已经修改或者新增的文件添加到远程库中</span></span><br><span class="line">git add .</span><br><span class="line"><span class="comment"># 添加更新信息，message为更新信息</span></span><br><span class="line">git commit -m <span class="string">&quot;message&quot;</span></span><br><span class="line"><span class="comment"># 将远程库中的文件更新到远程master中</span></span><br><span class="line">git push origin master</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>高能预警！！！</p>
-</blockquote>
-<ul>
-<li>最后这一行命令可能出现以下问题：</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git@github.com: Permission denied (publickey). fatal: Could not <span class="built_in">read</span> from remote repository.</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>如果出现这样的场景，请执行以下操作：</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa -b 4096 -C <span class="string">&quot;your_email@example.com&quot;</span></span><br><span class="line"><span class="comment"># your_email@example.com 是你自己github绑定的邮箱</span></span><br><span class="line"><span class="comment"># 接着直接以默认路径文件存储到文件中，这个地方亲身试险！！！不能修改默认路径文件名</span></span><br><span class="line"><span class="comment"># 应该是github默认ssh只能配置此文件，可能可以修改该配置，但这里我免得麻烦直接回车</span></span><br><span class="line">clip &lt; ~/.ssh/id_rsa.pub</span><br><span class="line"><span class="comment"># 再使用此命令复制下公钥密匙，将此密匙添加到github中，本文前面的链接有细讲</span></span><br><span class="line">ssh -T git@github.com</span><br><span class="line"><span class="comment"># 使用此命令可以显示出正确的信息即可</span></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>完成这些操作之后重新git push应该就成功了；</li>
-</ul>
-<h3 id="2-2-markdown引用"><a href="#2-2-markdown引用" class="headerlink" title="2.2 markdown引用"></a>2.2 markdown引用</h3><ul>
-<li>使用<code>https://cdn.jsdelivr.net/gh/</code>+github名+仓库名+图片路径 即可正常引用图片啦！</li>
-</ul>
-]]></content>
-      <categories>
-        <category>学习</category>
-      </categories>
-      <tags>
-        <tag>个性化设置</tag>
-        <tag>hexo</tag>
-        <tag>github</tag>
       </tags>
   </entry>
   <entry>
