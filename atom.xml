@@ -6,7 +6,7 @@
   <link href="http://kunpw.cn/atom.xml" rel="self"/>
   
   <link href="http://kunpw.cn/"/>
-  <updated>2020-09-10T16:13:55.827Z</updated>
+  <updated>2020-09-11T12:34:25.706Z</updated>
   <id>http://kunpw.cn/</id>
   
   <author>
@@ -21,26 +21,16 @@
     <link href="http://kunpw.cn/2020/09/10/scrapy%E7%AE%80%E8%A6%81%E4%BD%BF%E7%94%A8%E5%85%A5%E9%97%A8/"/>
     <id>http://kunpw.cn/2020/09/10/scrapy%E7%AE%80%E8%A6%81%E4%BD%BF%E7%94%A8%E5%85%A5%E9%97%A8/</id>
     <published>2020-09-10T14:38:39.662Z</published>
-    <updated>2020-09-10T16:13:55.827Z</updated>
+    <updated>2020-09-11T12:34:25.706Z</updated>
     
     
-    <summary type="html">&lt;h2 id=&quot;1-安装scrapy&quot;&gt;&lt;a href=&quot;#1-安装scrapy&quot; class=&quot;headerlink&quot; title=&quot;1.安装scrapy&quot;&gt;&lt;/a&gt;1.安装scrapy&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;在cmd下一条语句即可完成安装；&lt;/li&gt;
-&lt;/ul&gt;
-&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;pip install scrapy&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-
-
-&lt;blockquote&gt;
-&lt;p&gt;据说在安装过程中可能遇到各种问题，由于我自己并没有遇到，所以略过，出现问题请自行百度&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;直接在命令行输入&lt;code&gt;scrapy&lt;/code&gt;可以查看相关指令：&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img src=&quot;https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/089.png&quot; alt=&quot;image-20200909084009265&quot;&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;输入&lt;code&gt;scrapy bench&lt;/code&gt;用来验证安装是否成功，出现error则未成功，请自行百度解决方法；&lt;/li&gt;
-&lt;/ul&gt;</summary>
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;1-安装scrapy&quot;&gt;&lt;a href=&quot;#1-安装scrapy&quot; class=&quot;headerlink&quot;</summary>
+        
+      
     
     
     
