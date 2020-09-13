@@ -270,6 +270,80 @@
       </tags>
   </entry>
   <entry>
+    <title>Scrapy实战</title>
+    <url>/2020/09/13/scrapy%E5%AE%9E%E6%88%98/</url>
+    <content><![CDATA[<h2 id="1-新建项目yangguang"><a href="#1-新建项目yangguang" class="headerlink" title="1.新建项目yangguang"></a>1.新建项目yangguang</h2><h3 id="1-1-新建项目"><a href="#1-1-新建项目" class="headerlink" title="1.1 新建项目"></a>1.1 新建项目</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">scrapy startproject yangguang</span><br><span class="line"><span class="built_in">cd</span> yangguang <span class="comment"># 进入新建项目列表</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="1-2-新建爬虫文件"><a href="#1-2-新建爬虫文件" class="headerlink" title="1.2 新建爬虫文件"></a>1.2 新建爬虫文件</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">scrapy genspider yg wz.sun0769.com</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="1-3-初始化"><a href="#1-3-初始化" class="headerlink" title="1.3 初始化"></a>1.3 初始化</h3><ul>
+<li>更改<code>start_urls</code> ：</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">start_urls = [<span class="string">&#x27;http://wz.sun0769.com/political/index/politicsNewest?id=1&amp;page=1/&#x27;</span>]</span><br></pre></td></tr></table></figure>
+
+
+<ul>
+<li>在settings.py文件中添加日志过滤配置：</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">LOG_LEVEL = <span class="string">&quot;WARNING&quot;</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>（重要！！！）在settings.py文件中添加下载限速配置（笔者由于下载过快直接导致整个宿舍的ip被网站封了……）：</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 0.5是每次下载间隔0.5s</span></span><br><span class="line">DOWNLOAD_DELAY = <span class="number">0.5</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>写入访问请求头的用户代理（每个网站都不同，打开netWork随便选中一个链接都可看到）：</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">USER_AGENT = <span class="string">&#x27;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.132 Safari/537.36&#x27;</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h2 id="2-items-py"><a href="#2-items-py" class="headerlink" title="2.items.py"></a>2.items.py</h2><ul>
+<li>（分析网页）在<code>items.py</code>文件中定义字典元素：</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">YangguangItem</span>(<span class="params">scrapy.Item</span>):</span></span><br><span class="line">    <span class="comment"># define the fields for your item here like:</span></span><br><span class="line">    status = scrapy.Field()             <span class="comment"># 状态</span></span><br><span class="line">    title = scrapy.Field()              <span class="comment"># 标题</span></span><br><span class="line">    href = scrapy.Field()               <span class="comment"># 链接地址</span></span><br><span class="line">    publish_date = scrapy.Field()       <span class="comment"># 发布时间</span></span><br><span class="line">    content_img = scrapy.Field()        <span class="comment"># 内容图片</span></span><br><span class="line">    content_text = scrapy.Field()       <span class="comment"># 内容文本</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>在<code>yg.py</code>爬虫文件中导入刚刚定义的字典元素：</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> yangguang.items <span class="keyword">import</span> YangguangItem</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="3-正式爬取"><a href="#3-正式爬取" class="headerlink" title="3.正式爬取"></a>3.正式爬取</h2><h3 id="3-1-分组爬取列表页内容"><a href="#3-1-分组爬取列表页内容" class="headerlink" title="3.1 分组爬取列表页内容"></a>3.1 分组爬取列表页内容</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">parse</span>(<span class="params">self, response</span>):</span></span><br><span class="line">    <span class="comment"># 分组</span></span><br><span class="line">    url = <span class="string">&quot;http://wz.sun0769.com&quot;</span></span><br><span class="line">    li_list = response.xpath(<span class="string">&#x27;//*[@class=&quot;title-state-ul&quot;]/li&#x27;</span>)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> li <span class="keyword">in</span> li_list:</span><br><span class="line">        item = YangguangItem()  <span class="comment"># 实例化</span></span><br><span class="line">        item[<span class="string">&quot;status&quot;</span>] = li.xpath(<span class="string">&#x27;./*[@class=&quot;state2&quot;]/text()&#x27;</span>).extract_first()</span><br><span class="line">        item[<span class="string">&quot;title&quot;</span>] = li.xpath(<span class="string">&#x27;./*[@class=&quot;state3&quot;]/a/text()&#x27;</span>).extract_first()</span><br><span class="line">        item[<span class="string">&quot;href&quot;</span>] = li.xpath(<span class="string">&#x27;./*[@class=&quot;state3&quot;]/a/@href&#x27;</span>).extract_first()</span><br><span class="line">        item[<span class="string">&quot;publish_date&quot;</span>] = li.xpath(<span class="string">&#x27;./*[@class=&quot;state5 &quot;]/text()&#x27;</span>).extract_first()</span><br><span class="line"></span><br><span class="line">        <span class="comment"># href 不完整</span></span><br><span class="line">        item[<span class="string">&quot;href&quot;</span>] = url + str(item[<span class="string">&quot;href&quot;</span>])</span><br><span class="line">        print(item[<span class="string">&quot;href&quot;</span>])</span><br><span class="line"></span><br><span class="line">        <span class="keyword">yield</span> scrapy.Request(</span><br><span class="line">            str(item[<span class="string">&quot;href&quot;</span>]),</span><br><span class="line">            callback=self.parse_detail,</span><br><span class="line">            meta=&#123;<span class="string">&quot;item&quot;</span>: item&#125;  <span class="comment"># 将item数据通过meta传输给下一个处理函数</span></span><br><span class="line">        )</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="3-2-进一步爬取内容详情页"><a href="#3-2-进一步爬取内容详情页" class="headerlink" title="3.2 进一步爬取内容详情页"></a>3.2 进一步爬取内容详情页</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">parse_detail</span>(<span class="params">self, response</span>):</span></span><br><span class="line">    item = response.meta[<span class="string">&quot;item&quot;</span>]  <span class="comment"># 按照键值对的形式接收meta传过来的数据</span></span><br><span class="line">    <span class="comment"># 文本内容和图片都可能不止一段或一张</span></span><br><span class="line">    item[<span class="string">&quot;content_text&quot;</span>] = response.xpath(<span class="string">&#x27;//*[@class=&quot;details-box&quot;]/pre/text()&#x27;</span>).extract()</span><br><span class="line">    item[<span class="string">&quot;content_img&quot;</span>] = response.xpath(<span class="string">&#x27;//*[@class=&quot;clear details-img-list Picture-img&quot;]/img/@src&#x27;</span>).extract()</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 如果图片链接不完整，执行以下语句(上述图片地址完整)：</span></span><br><span class="line">    <span class="comment"># item[&quot;content_img&quot;] = [&quot;http://wz.sun0769.com&quot;+i for i in item[&quot;content_img&quot;]]</span></span><br><span class="line"></span><br><span class="line">    print(item[<span class="string">&quot;title&quot;</span>])</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="3-3-在parse函数最后实现翻页请求"><a href="#3-3-在parse函数最后实现翻页请求" class="headerlink" title="3.3 在parse函数最后实现翻页请求"></a>3.3 在parse函数最后实现翻页请求</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 翻页</span></span><br><span class="line">next_url = response.xpath(<span class="string">&#x27;//*[@class=&quot;arrow-page prov_rota&quot;]/@href&#x27;</span>).extract_first()</span><br><span class="line">next_url = url + next_url</span><br><span class="line"><span class="comment"># if next_url is not None:</span></span><br><span class="line"><span class="comment"># 这里直接从101跳到了第一页，所以不用上述</span></span><br><span class="line"><span class="keyword">if</span> response.xpath(<span class="string">&#x27;//*[@class=&quot;mr-three paging-box&quot;]/a[4]/text()&#x27;</span>) != <span class="string">&quot;3&quot;</span>:</span><br><span class="line">    <span class="keyword">yield</span> scrapy.Request(</span><br><span class="line">        next_url,</span><br><span class="line">        callback=self.parse</span><br><span class="line">    )</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="3-4-pipelines-py"><a href="#3-4-pipelines-py" class="headerlink" title="3.4 pipelines.py"></a>3.4 pipelines.py</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> re</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">YangguangPipeline</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">process_item</span>(<span class="params">self, item, spider</span>):</span></span><br><span class="line">        item[<span class="string">&quot;content_img&quot;</span>] = self.content_process(item[<span class="string">&quot;content_img&quot;</span>])</span><br><span class="line">        item[<span class="string">&quot;content_text&quot;</span>] = self.content_process(item[<span class="string">&quot;content_text&quot;</span>])</span><br><span class="line">        <span class="keyword">return</span> item</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">content_process</span>(<span class="params">self, content</span>):</span></span><br><span class="line">        <span class="comment"># re不太会用，可以百度</span></span><br><span class="line">        content = [re.sub(<span class="string">r&quot;\xa0|\s&quot;</span>, <span class="string">&quot;&quot;</span>, i) <span class="keyword">for</span> i <span class="keyword">in</span> content]</span><br><span class="line">        content = [i <span class="keyword">for</span> i <span class="keyword">in</span> content <span class="keyword">if</span> len(i) &gt; <span class="number">0</span>]  <span class="comment"># 去除列表中的空字符串</span></span><br><span class="line">        <span class="keyword">return</span> content</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="4-结果显示"><a href="#4-结果显示" class="headerlink" title="4.结果显示"></a>4.结果显示</h2><p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/102.png" alt="image-20200913213413120"></p>
+]]></content>
+      <categories>
+        <category>学习</category>
+      </categories>
+      <tags>
+        <tag>Scrapy</tag>
+        <tag>Python</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Vue基础入门</title>
     <url>/2020/09/06/1.Vue%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/</url>
     <content><![CDATA[<h2 id="1-简介"><a href="#1-简介" class="headerlink" title="1.简介"></a>1.简介</h2><h3 id="1-1-概念介绍"><a href="#1-1-概念介绍" class="headerlink" title="1.1 概念介绍"></a>1.1 概念介绍</h3><ul>

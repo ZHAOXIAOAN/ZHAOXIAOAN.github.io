@@ -6,7 +6,7 @@
   <link href="http://kunpw.cn/atom.xml" rel="self"/>
   
   <link href="http://kunpw.cn/"/>
-  <updated>2020-09-11T12:34:25.706Z</updated>
+  <updated>2020-09-13T13:36:19.987Z</updated>
   <id>http://kunpw.cn/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Scrapy实战</title>
+    <link href="http://kunpw.cn/2020/09/13/scrapy%E5%AE%9E%E6%88%98/"/>
+    <id>http://kunpw.cn/2020/09/13/scrapy%E5%AE%9E%E6%88%98/</id>
+    <published>2020-09-13T13:35:46.004Z</published>
+    <updated>2020-09-13T13:36:19.987Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;1-新建项目yangguang&quot;&gt;&lt;a href=&quot;#1-新建项目yangguang&quot; class=&quot;headerlink&quot; title=&quot;1.新建项目yangguang&quot;&gt;&lt;/a&gt;1.新建项目yangguang&lt;/h2&gt;&lt;h3 id=&quot;1-1-新建项目&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="学习" scheme="http://kunpw.cn/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="Scrapy" scheme="http://kunpw.cn/tags/Scrapy/"/>
+    
+    <category term="Python" scheme="http://kunpw.cn/tags/Python/"/>
+    
+  </entry>
   
   <entry>
     <title>Scrapy简要入门</title>
