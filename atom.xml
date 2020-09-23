@@ -6,7 +6,7 @@
   <link href="http://kunpw.cn/atom.xml" rel="self"/>
   
   <link href="http://kunpw.cn/"/>
-  <updated>2020-09-13T13:36:19.987Z</updated>
+  <updated>2020-09-23T03:53:09.632Z</updated>
   <id>http://kunpw.cn/</id>
   
   <author>
@@ -17,20 +17,68 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Scrapy实战</title>
+    <title>FFmpeg简要使用</title>
+    <link href="http://kunpw.cn/2020/09/23/ffmpeg/"/>
+    <id>http://kunpw.cn/2020/09/23/ffmpeg/</id>
+    <published>2020-09-23T03:50:43.807Z</published>
+    <updated>2020-09-23T03:53:09.632Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;1-简介&quot;&gt;&lt;a href=&quot;#1-简介&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="有趣的玩意儿" scheme="http://kunpw.cn/categories/%E6%9C%89%E8%B6%A3%E7%9A%84%E7%8E%A9%E6%84%8F%E5%84%BF/"/>
+    
+    
+    <category term="FFmpeg" scheme="http://kunpw.cn/tags/FFmpeg/"/>
+    
+    <category term="不实用" scheme="http://kunpw.cn/tags/%E4%B8%8D%E5%AE%9E%E7%94%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Scrapy（2.实战）</title>
     <link href="http://kunpw.cn/2020/09/13/scrapy%E5%AE%9E%E6%88%98/"/>
     <id>http://kunpw.cn/2020/09/13/scrapy%E5%AE%9E%E6%88%98/</id>
     <published>2020-09-13T13:35:46.004Z</published>
-    <updated>2020-09-13T13:36:19.987Z</updated>
+    <updated>2020-09-23T03:11:17.860Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;1-新建项目yangguang&quot;&gt;&lt;a href=&quot;#1-新建项目yangguang&quot; class=&quot;headerlink&quot; title=&quot;1.新建项目yangguang&quot;&gt;&lt;/a&gt;1.新建项目yangguang&lt;/h2&gt;&lt;h3 id=&quot;1-1-新建项目&quot;&gt;&lt;a</summary>
-        
-      
+    <summary type="html">&lt;h2 id=&quot;1-新建项目yangguang&quot;&gt;&lt;a href=&quot;#1-新建项目yangguang&quot; class=&quot;headerlink&quot; title=&quot;1.新建项目yangguang&quot;&gt;&lt;/a&gt;1.新建项目yangguang&lt;/h2&gt;&lt;h3 id=&quot;1-1-新建项目&quot;&gt;&lt;a href=&quot;#1-1-新建项目&quot; class=&quot;headerlink&quot; title=&quot;1.1 新建项目&quot;&gt;&lt;/a&gt;1.1 新建项目&lt;/h3&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;scrapy startproject yangguang&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;cd&lt;/span&gt; yangguang &lt;span class=&quot;comment&quot;&gt;# 进入新建项目列表&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+
+
+&lt;h3 id=&quot;1-2-新建爬虫文件&quot;&gt;&lt;a href=&quot;#1-2-新建爬虫文件&quot; class=&quot;headerlink&quot; title=&quot;1.2 新建爬虫文件&quot;&gt;&lt;/a&gt;1.2 新建爬虫文件&lt;/h3&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;scrapy genspider yg wz.sun0769.com&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+
+
+&lt;h3 id=&quot;1-3-初始化&quot;&gt;&lt;a href=&quot;#1-3-初始化&quot; class=&quot;headerlink&quot; title=&quot;1.3 初始化&quot;&gt;&lt;/a&gt;1.3 初始化&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;更改&lt;code&gt;start_urls&lt;/code&gt; ：&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;start_urls = [&lt;span class=&quot;string&quot;&gt;&amp;#x27;http://wz.sun0769.com/political/index/politicsNewest?id=1&amp;amp;page=1/&amp;#x27;&lt;/span&gt;]&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+
+&lt;ul&gt;
+&lt;li&gt;在settings.py文件中添加日志过滤配置：&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;LOG_LEVEL = &lt;span class=&quot;string&quot;&gt;&amp;quot;WARNING&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;ul&gt;
+&lt;li&gt;（重要！！！）在settings.py文件中添加下载限速配置（笔者由于下载过快直接导致整个宿舍的ip被网站封了……）：&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# 0.5是每次下载间隔0.5s&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;DOWNLOAD_DELAY = &lt;span class=&quot;number&quot;&gt;0.5&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;ul&gt;
+&lt;li&gt;写入访问请求头的用户代理（每个网站都不同，打开netWork随便选中一个链接都可看到）：&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;USER_AGENT = &lt;span class=&quot;string&quot;&gt;&amp;#x27;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.132 Safari/537.36&amp;#x27;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
     
     
     
@@ -44,20 +92,30 @@
   </entry>
   
   <entry>
-    <title>Scrapy简要入门</title>
+    <title>Scrapy（1.简要入门）</title>
     <link href="http://kunpw.cn/2020/09/10/scrapy%E7%AE%80%E8%A6%81%E4%BD%BF%E7%94%A8%E5%85%A5%E9%97%A8/"/>
     <id>http://kunpw.cn/2020/09/10/scrapy%E7%AE%80%E8%A6%81%E4%BD%BF%E7%94%A8%E5%85%A5%E9%97%A8/</id>
     <published>2020-09-10T14:38:39.662Z</published>
-    <updated>2020-09-11T12:34:25.706Z</updated>
+    <updated>2020-09-23T03:11:26.458Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;1-安装scrapy&quot;&gt;&lt;a href=&quot;#1-安装scrapy&quot; class=&quot;headerlink&quot;</summary>
-        
-      
+    <summary type="html">&lt;h2 id=&quot;1-安装scrapy&quot;&gt;&lt;a href=&quot;#1-安装scrapy&quot; class=&quot;headerlink&quot; title=&quot;1.安装scrapy&quot;&gt;&lt;/a&gt;1.安装scrapy&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;在cmd下一条语句即可完成安装；&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;pip install scrapy&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+
+
+&lt;blockquote&gt;
+&lt;p&gt;据说在安装过程中可能遇到各种问题，由于我自己并没有遇到，所以略过，出现问题请自行百度&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;直接在命令行输入&lt;code&gt;scrapy&lt;/code&gt;可以查看相关指令：&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&quot;https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/089.png&quot; alt=&quot;image-20200909084009265&quot;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;输入&lt;code&gt;scrapy bench&lt;/code&gt;用来验证安装是否成功，出现error则未成功，请自行百度解决方法；&lt;/li&gt;
+&lt;/ul&gt;</summary>
     
     
     
@@ -103,11 +161,11 @@
   </entry>
   
   <entry>
-    <title>vue开发实例演示（含webpack）</title>
+    <title>vue（3.开发实例演示(含webpack)）</title>
     <link href="http://kunpw.cn/2020/09/06/3.vue%E5%BC%80%E5%8F%91%E5%AE%9E%E4%BE%8B%E6%BC%94%E7%A4%BA/"/>
     <id>http://kunpw.cn/2020/09/06/3.vue%E5%BC%80%E5%8F%91%E5%AE%9E%E4%BE%8B%E6%BC%94%E7%A4%BA/</id>
     <published>2020-09-06T03:44:27.588Z</published>
-    <updated>2020-09-10T16:14:41.912Z</updated>
+    <updated>2020-09-23T03:11:01.418Z</updated>
     
     
     <summary type="html">&lt;h2 id=&quot;1-解剖初始化模板&quot;&gt;&lt;a href=&quot;#1-解剖初始化模板&quot; class=&quot;headerlink&quot; title=&quot;1.解剖初始化模板&quot;&gt;&lt;/a&gt;1.解剖初始化模板&lt;/h2&gt;&lt;h3 id=&quot;1-1-vue文件&quot;&gt;&lt;a href=&quot;#1-1-vue文件&quot; class=&quot;headerlink&quot; title=&quot;1.1 vue文件&quot;&gt;&lt;/a&gt;1.1 vue文件&lt;/h3&gt;&lt;ul&gt;
@@ -132,11 +190,11 @@
   </entry>
   
   <entry>
-    <title>Vue开发环境配置(含node.js)</title>
+    <title>Vue（2.开发环境配置(含node.js)）</title>
     <link href="http://kunpw.cn/2020/09/06/2.Vue%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/"/>
     <id>http://kunpw.cn/2020/09/06/2.Vue%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</id>
     <published>2020-09-06T03:44:24.267Z</published>
-    <updated>2020-09-10T16:12:23.978Z</updated>
+    <updated>2020-09-23T03:10:40.838Z</updated>
     
     
     <summary type="html">&lt;h2 id=&quot;1-Node-js下载&quot;&gt;&lt;a href=&quot;#1-Node-js下载&quot; class=&quot;headerlink&quot; title=&quot;1.Node.js下载&quot;&gt;&lt;/a&gt;1.Node.js下载&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;http://nodejs.cn/download/&quot;&gt;http://nodejs.cn/download/&lt;/a&gt;&lt;/p&gt;
@@ -159,11 +217,11 @@
   </entry>
   
   <entry>
-    <title>Vue基础入门</title>
+    <title>Vue（1.基础入门）</title>
     <link href="http://kunpw.cn/2020/09/06/1.Vue%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/"/>
     <id>http://kunpw.cn/2020/09/06/1.Vue%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/</id>
     <published>2020-09-06T03:44:20.193Z</published>
-    <updated>2020-09-10T16:09:13.846Z</updated>
+    <updated>2020-09-23T03:10:29.304Z</updated>
     
     
     <summary type="html">&lt;h2 id=&quot;1-简介&quot;&gt;&lt;a href=&quot;#1-简介&quot; class=&quot;headerlink&quot; title=&quot;1.简介&quot;&gt;&lt;/a&gt;1.简介&lt;/h2&gt;&lt;h3 id=&quot;1-1-概念介绍&quot;&gt;&lt;a href=&quot;#1-1-概念介绍&quot; class=&quot;headerlink&quot; title=&quot;1.1 概念介绍&quot;&gt;&lt;/a&gt;1.1 概念介绍&lt;/h3&gt;&lt;ul&gt;

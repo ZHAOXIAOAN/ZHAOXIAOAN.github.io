@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Vue开发环境配置(含node.js)</title>
+    <title>Vue（2.开发环境配置(含node.js)）</title>
     <url>/2020/09/06/2.Vue%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</url>
     <content><![CDATA[<h2 id="1-Node-js下载"><a href="#1-Node-js下载" class="headerlink" title="1.Node.js下载"></a>1.Node.js下载</h2><p><a href="http://nodejs.cn/download/">http://nodejs.cn/download/</a></p>
 <ul>
@@ -198,6 +198,158 @@
       </tags>
   </entry>
   <entry>
+    <title>FFmpeg简要使用</title>
+    <url>/2020/09/23/ffmpeg/</url>
+    <content><![CDATA[<h2 id="1-简介"><a href="#1-简介" class="headerlink" title="1.简介"></a>1.简介</h2><ul>
+<li>FFmpeg是一套可以用来记录、转换数字音频、视频，并能将其转化为流的开源计算机程序（——来源于百度百科）</li>
+</ul>
+<h2 id="2-下载并配置环境"><a href="#2-下载并配置环境" class="headerlink" title="2.下载并配置环境"></a>2.下载并配置环境</h2><ul>
+<li>直接百度进入官网下载即可；</li>
+<li>下载完成后将解压后的文件夹重命名为<code>ffmpeg</code>，并且放至自己电脑的环境目录下；</li>
+<li>前往配置环境目录<code>PATH</code>，连同ffmpeg目录下的bin目录路径一起粘贴到PATH配置下新的路径即可；</li>
+</ul>
+<h2 id="3-简要介绍"><a href="#3-简要介绍" class="headerlink" title="3.简要介绍"></a>3.简要介绍</h2><ul>
+<li>在bin目录下有三个文件：<ul>
+<li>ffmpeg.exe：用于操作、转换和流式传输多媒体内容；</li>
+<li>ffplay.exe：是一个简洁的视频音频播放器；</li>
+<li>ffprobe.exe：是一个媒体参数分析工具；</li>
+</ul>
+</li>
+</ul>
+<p><img src="/2020/09/23/ffmpeg/HexoBlog\cdn\CDNBlog\Img\103.png" alt="image-20200914203342793"></p>
+<h2 id="4-简要使用"><a href="#4-简要使用" class="headerlink" title="4.简要使用"></a>4.简要使用</h2><h3 id="4-1-ffmpeg"><a href="#4-1-ffmpeg" class="headerlink" title="4.1 ffmpeg"></a>4.1 ffmpeg</h3><ul>
+<li>是一个命令行程序，直接在命令行运行；</li>
+<li><code>ffmpeg -h</code>指令用来查看帮助信息，其余功能后续会讲到，其余指令自行百度；</li>
+</ul>
+<h3 id="4-2-ffplay"><a href="#4-2-ffplay" class="headerlink" title="4.2 ffplay"></a>4.2 ffplay</h3><ul>
+<li>在cmd中进入具体文件目录，执行指令<code>ffplay example.mp4</code>即自动播放该视频（程序端口播放，不会调用软件，有牌面）；</li>
+<li>播放完自动停留在最后一帧页面，<code>Esc</code>或者<code>q</code>按键退出，<code>p</code>键暂停；</li>
+<li>执行命令<code>ffplay example.mp3</code>即自动播放音频文件；</li>
+<li>方向键和鼠标都可以跳转播放位置，<code>f</code>键全屏，<code>p</code>键或者空格键暂停，<code>w</code>键切换显示模式；</li>
+</ul>
+<h3 id="4-3-ffprobe（不用细看……）"><a href="#4-3-ffprobe（不用细看……）" class="headerlink" title="4.3 ffprobe（不用细看……）"></a>4.3 ffprobe（不用细看……）</h3><ul>
+<li>在cmd中进入具体文件目录，执行指令<code>ffprobe example.mp4</code>，即可显示媒体文件的头文件，其中包括参数信息等，如图：<ul>
+<li>Metadata：媒体信息部分；<ul>
+<li>major_brand：容器格式为mp4-v2；</li>
+<li>Duration：持续时间，44分59秒44；</li>
+<li>start：开始时间，0；</li>
+<li>bitrate：比特率，16908kb/s；</li>
+</ul>
+</li>
+<li>Stream #0.0：视频流参数；<ul>
+<li>Video：编码，h264高规格编码；</li>
+<li>avc1封装；</li>
+<li>颜色空间为yuv420p；</li>
+<li>分辨率1920*1080；</li>
+<li>比特率，16776kb/s；</li>
+<li>帧率，29.61帧每秒</li>
+</ul>
+</li>
+<li>Stream #0.1：音频流参数；<ul>
+<li>aac编码；</li>
+<li>LC规格；</li>
+<li>mp4a封装；</li>
+<li>采样率，48000Hz；</li>
+<li>stereo双声道；</li>
+<li>fltp立体声；</li>
+<li>比特率，128kb/s；</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><img src="/2020/09/23/ffmpeg/HexoBlog\cdn\CDNBlog\Img\104.png" alt="image-20200914205207947"></p>
+<h2 id="5-转换格式"><a href="#5-转换格式" class="headerlink" title="5.转换格式"></a>5.转换格式</h2><ul>
+<li>文件后缀名是文件的封装格式，不同的封装格式具有不同的标准；</li>
+<li>视频文件格式表示封装某种编码格式的视频，如RMVB表示只支持Real、Video编码格式封装的视频；</li>
+</ul>
+<p><img src="/2020/09/23/ffmpeg/HexoBlog\cdn\CDNBlog\Img\105.png" alt="image-20200914211857129"></p>
+<ul>
+<li>直接执行指令 <code>ffmpeg -i input.mov output.mp4</code>即可；</li>
+<li>其中 <code>-i</code>指令的含义是将输入文件转换视频格式为输出文件的格式并且命名；</li>
+</ul>
+<h2 id="6-改变编码"><a href="#6-改变编码" class="headerlink" title="6.改变编码"></a>6.改变编码</h2><ul>
+<li>一般的视频网站都是采用（支持1080p分辨率及以下）：<ul>
+<li>mp4封装，H264视频编码+ACC音频编码；</li>
+<li>WebM封装，VP8视频编码+Vorbis音频编码；</li>
+<li>OGG封装，Theora视频编码+Vorbis音频编码；</li>
+</ul>
+</li>
+</ul>
+<h3 id="6-1-音频编码"><a href="#6-1-音频编码" class="headerlink" title="6.1 音频编码"></a>6.1 音频编码</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ffmpeg -i in.flac -acodec libmp31ame -ar 44100 -ab 320k -ac 2 out.mp3</span><br><span class="line"></span><br><span class="line"><span class="comment"># -i，表示输入文件，接参数in.flac</span></span><br><span class="line"><span class="comment"># -acodec，其中a是指音频audio，codec是编/解码器，这条指令是用来指定音频文件的编码器，后接参数libmp31ame就是说以mp3格式编码，实际上编码器会自动根据输出文件后缀自动寻找匹配的编码器</span></span><br><span class="line"><span class="comment"># -ar，设置音频采样率，不输入指令默认采用原音频的采样率，一般是44100和48000两种</span></span><br><span class="line"><span class="comment"># -ab，设置音频比特率，不输入指令则默认128k</span></span><br><span class="line"><span class="comment"># -ac，设置声道数，1为单声道，2为双声道立体声，默认采用原音频声道数</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="6-2-视频压制"><a href="#6-2-视频压制" class="headerlink" title="6.2 视频压制"></a>6.2 视频压制</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ffmpeg -i in.webm -s 1920x1080 -pix_fmt yuv420p -vcodec libx264 -preset medium -profile:v high-level:v4.1 -crf 23 -acodec aac -ar 44100 -ac 2 -b:a 128k out.mp4</span><br><span class="line"></span><br><span class="line"><span class="comment"># -s，缩放视频尺寸，1920*1080为新视频的宽高尺寸</span></span><br><span class="line"><span class="comment"># -pix_fmt，用来设置视频颜色空间，YUV（网络视频一般用这个）、NV、RGB等</span></span><br><span class="line"><span class="comment"># -vcodec，设置视频编码器，libx264是H264编码格式，一般都是使用这个编码</span></span><br><span class="line"><span class="comment"># -preset，编码器预设，调节预设可以改变编码算法的精度，精度越高，编码速度越慢，CPU占用率越多，有十个参数可选：ultrafast superfast veryfast faster fast slower veryslow placebo medium slow，默认是medium</span></span><br><span class="line"><span class="comment"># -profile:v，用来指定编码器的配置，主要和压缩比有关，超清视频设置为hegh即可</span></span><br><span class="line"><span class="comment"># -crf，设置码率控制模式</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="6-3-码率控制模式"><a href="#6-3-码率控制模式" class="headerlink" title="6.3 码率控制模式"></a>6.3 码率控制模式</h3><ul>
+<li><p>概念：码率控制就是决定为每一个帧画面分配多少比特数，这是在权衡文件体积和画面质量；</p>
+</li>
+<li><p>三种码率控制模式：</p>
+<ul>
+<li>-qp：恒定量化器模式，个人手动设置码率，不推荐</li>
+</ul>
+<p><img src="/2020/09/23/ffmpeg/HexoBlog\cdn\CDNBlog\Img\106.png" alt="image-20200923111749870"></p>
+<ul>
+<li>-crf：恒定速率因子模式，浮动的qp模式，对某些视觉敏感的画面提高码率，而其余部分降低码率，即可压缩体积，常用；</li>
+<li>-b：固定目标码率模式，对码率有限制，常用于视频网站控制视频体积及清晰度</li>
+</ul>
+</li>
+</ul>
+<h2 id="7-提取音视频原件"><a href="#7-提取音视频原件" class="headerlink" title="7.提取音视频原件"></a>7.提取音视频原件</h2><h3 id="7-1-提取去音频视频原件"><a href="#7-1-提取去音频视频原件" class="headerlink" title="7.1 提取去音频视频原件"></a>7.1 提取去音频视频原件</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ffmpeg -i in.mp4 -an -acodec copy v.mp4</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="7-2-提取去视频音频原件"><a href="#7-2-提取去视频音频原件" class="headerlink" title="7.2 提取去视频音频原件"></a>7.2 提取去视频音频原件</h3><ul>
+<li>有些音频有特殊格式，使用以下方法不可提取音频，可以观看原视频</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ffmpeg -i in.mp4 -vn -acodec copy a.mp3</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="7-3-合并音视频文件"><a href="#7-3-合并音视频文件" class="headerlink" title="7.3 合并音视频文件"></a>7.3 合并音视频文件</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ffmpeg -i v.mp4 -i -a.mp3 -c copy out.mp4 </span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="8-截取连接音视频"><a href="#8-截取连接音视频" class="headerlink" title="8.截取连接音视频"></a>8.截取连接音视频</h2><h3 id="8-1-截取音视频"><a href="#8-1-截取音视频" class="headerlink" title="8.1 截取音视频"></a>8.1 截取音视频</h3><ul>
+<li>第一种，其中-ss是开始时间，-to是结束时间，时间取<code>时:分:秒</code></li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ffmpeg -i in.mp3 -ss 00:01:00 -to 00:01:10 -acodec copy out.mp3</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>第二种，-t是截取时长，单位取秒</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ffmpeg -i in.mp3 -ss 00:01:00 -t 10 -acodec copy out.mp3</span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">-sseof指令可以从音视频末尾开始，结合 -t指令，更加灵活</span><br><span class="line">-copyts指令用来保留时间戳</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="8-2-连接音视频"><a href="#8-2-连接音视频" class="headerlink" title="8.2 连接音视频"></a>8.2 连接音视频</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ffmpeg -i <span class="string">&quot;concat:01.mp4|02.mp4|03.mp4&quot;</span> -c copy out.mp4</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<blockquote>
+<p>实话实说这个太底层了，虽然万能，但还不如直接用图形软件来的简单方便……</p>
+</blockquote>
+<p>视频链接：</p>
+<p><a href="https://www.bilibili.com/video/BV1Ft411s7Xa?p=8">https://www.bilibili.com/video/BV1Ft411s7Xa?p=8</a></p>
+]]></content>
+      <categories>
+        <category>有趣的玩意儿</category>
+      </categories>
+      <tags>
+        <tag>FFmpeg</tag>
+        <tag>不实用</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>hero等静态网站通过外部cdn引用图片</title>
     <url>/2020/09/10/hero%20Img%E9%80%9A%E8%BF%87%E5%85%8D%E8%B4%B9cdn%E6%98%BE%E7%A4%BA/</url>
     <content><![CDATA[<blockquote>
@@ -270,7 +422,7 @@
 ]]></content>
   </entry>
   <entry>
-    <title>Scrapy实战</title>
+    <title>Scrapy（2.实战）</title>
     <url>/2020/09/13/scrapy%E5%AE%9E%E6%88%98/</url>
     <content><![CDATA[<h2 id="1-新建项目yangguang"><a href="#1-新建项目yangguang" class="headerlink" title="1.新建项目yangguang"></a>1.新建项目yangguang</h2><h3 id="1-1-新建项目"><a href="#1-1-新建项目" class="headerlink" title="1.1 新建项目"></a>1.1 新建项目</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">scrapy startproject yangguang</span><br><span class="line"><span class="built_in">cd</span> yangguang <span class="comment"># 进入新建项目列表</span></span><br></pre></td></tr></table></figure>
 
@@ -303,7 +455,7 @@
 
 
 
-
+<a id="more"></a>
 
 <h2 id="2-items-py"><a href="#2-items-py" class="headerlink" title="2.items.py"></a>2.items.py</h2><ul>
 <li>（分析网页）在<code>items.py</code>文件中定义字典元素：</li>
@@ -344,7 +496,7 @@
       </tags>
   </entry>
   <entry>
-    <title>Vue基础入门</title>
+    <title>Vue（1.基础入门）</title>
     <url>/2020/09/06/1.Vue%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/</url>
     <content><![CDATA[<h2 id="1-简介"><a href="#1-简介" class="headerlink" title="1.简介"></a>1.简介</h2><h3 id="1-1-概念介绍"><a href="#1-1-概念介绍" class="headerlink" title="1.1 概念介绍"></a>1.1 概念介绍</h3><ul>
 <li>Vue 是一款渐进式JavaScript框架，所谓渐进式就是逐步实现新特性的意思，如实现模块化开发、路由、状态管理等新特性。其特点是综合了Angular（模块化）和React(虚拟DOM）的优点，与其它大型框架不同的是，Vue被设计为可以自底向上逐层应用。Vue的核心库只关注视图层，不仅易于上手，还便于与第三方库(如: vue-router，vue-resource，vuex）或既有项目整合。</li>
@@ -605,7 +757,7 @@
       </tags>
   </entry>
   <entry>
-    <title>vue开发实例演示（含webpack）</title>
+    <title>vue（3.开发实例演示(含webpack)）</title>
     <url>/2020/09/06/3.vue%E5%BC%80%E5%8F%91%E5%AE%9E%E4%BE%8B%E6%BC%94%E7%A4%BA/</url>
     <content><![CDATA[<h2 id="1-解剖初始化模板"><a href="#1-解剖初始化模板" class="headerlink" title="1.解剖初始化模板"></a>1.解剖初始化模板</h2><h3 id="1-1-vue文件"><a href="#1-1-vue文件" class="headerlink" title="1.1 vue文件"></a>1.1 vue文件</h3><ul>
 <li>如图所示，对于一个新建的vue文件而言，其中标签分为三个部分：<ul>
@@ -916,7 +1068,7 @@
       </tags>
   </entry>
   <entry>
-    <title>Scrapy简要入门</title>
+    <title>Scrapy（1.简要入门）</title>
     <url>/2020/09/10/scrapy%E7%AE%80%E8%A6%81%E4%BD%BF%E7%94%A8%E5%85%A5%E9%97%A8/</url>
     <content><![CDATA[<h2 id="1-安装scrapy"><a href="#1-安装scrapy" class="headerlink" title="1.安装scrapy"></a>1.安装scrapy</h2><ul>
 <li>在cmd下一条语句即可完成安装；</li>
@@ -935,6 +1087,8 @@
 <ul>
 <li>输入<code>scrapy bench</code>用来验证安装是否成功，出现error则未成功，请自行百度解决方法；</li>
 </ul>
+<a id="more"></a>
+
 <hr>
 <h2 id="2-scrapy原理"><a href="#2-scrapy原理" class="headerlink" title="2.scrapy原理"></a>2.scrapy原理</h2><ul>
 <li>直接上图：</li>
