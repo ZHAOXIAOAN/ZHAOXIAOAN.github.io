@@ -6,7 +6,7 @@
   <link href="http://kunpw.cn/atom.xml" rel="self"/>
   
   <link href="http://kunpw.cn/"/>
-  <updated>2020-09-23T03:53:09.632Z</updated>
+  <updated>2020-09-30T13:03:58.477Z</updated>
   <id>http://kunpw.cn/</id>
   
   <author>
@@ -17,20 +17,107 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>第一章.因特网</title>
+    <link href="http://kunpw.cn/2020/09/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E8%87%AA%E9%A1%B6%E5%90%91%E4%B8%8B%E6%96%B9%E6%B3%95/%E7%AC%AC%E4%B8%80%E7%AB%A0.%E5%9B%A0%E7%89%B9%E7%BD%91/"/>
+    <id>http://kunpw.cn/2020/09/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E8%87%AA%E9%A1%B6%E5%90%91%E4%B8%8B%E6%96%B9%E6%B3%95/%E7%AC%AC%E4%B8%80%E7%AB%A0.%E5%9B%A0%E7%89%B9%E7%BD%91/</id>
+    <published>2020-09-30T12:38:57.696Z</published>
+    <updated>2020-09-30T13:03:58.477Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;1-什么是因特网&quot;&gt;&lt;a href=&quot;#1-什么是因特网&quot; class=&quot;headerlink&quot; title=&quot;1.什么是因特网&quot;&gt;&lt;/a&gt;1.什么是因特网&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;因特网是一种特定的计算机网络（只是其中一种类型）；&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&quot;1-1-具体构成描述&quot;&gt;&lt;a href=&quot;#1-1-具体构成描述&quot; class=&quot;headerlink&quot; title=&quot;1.1 具体构成描述&quot;&gt;&lt;/a&gt;1.1 具体构成描述&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;主机（端系统）：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;接入到因特网的设备被称作主机；&lt;/li&gt;
+&lt;li&gt;由通信链路和分组交换机连接；&lt;/li&gt;
+&lt;li&gt;端系统通过ISP接入因特网；&lt;/li&gt;
+&lt;li&gt;因特网端系统包括：&lt;ul&gt;
+&lt;li&gt;桌面计算机（桌面PC、Mac和Linux设备）；&lt;/li&gt;
+&lt;li&gt;服务器（Web和电子邮件服务器）；&lt;/li&gt;
+&lt;li&gt;移动计算机（智能手机和平板电脑）；&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;分组：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;由发送端系统将数据进行分段，并为每段加上首部字节组成的信息包；&lt;/li&gt;
+&lt;li&gt;一个分组所经历的一系列通信链路和分组交换机称为通过该网络的路径(path/route)；&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;通信链路：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;由不同类型的物理媒体组成，物理媒体包括同轴电缆、光纤等；&lt;/li&gt;
+&lt;li&gt;不同的链路以不同的速率传输数据；&lt;/li&gt;
+&lt;li&gt;传输速度以比特/秒（bit/s或bps）为单位；&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;分组交换机：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;自身连接两段小型通信链路，用于连接外部真正的通信链路：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;入通信链路用来接收到达的分组；&lt;/li&gt;
+&lt;li&gt;出通信链路用来转发接收到的分组；&lt;/li&gt;
+&lt;li&gt;一般所说的路由器链路传输速率就是指出链路传输到通信链路的速率；&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;两种类型：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;路由器(router)；&lt;/li&gt;
+&lt;li&gt;链路层交换机；&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;作用是将特定的分组转发到特定的链路；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;通过时延图观察其构成：&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&quot;https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/ComputerNetWorking/001.png&quot; alt=&quot;image-20200929232833820&quot;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;因特网服务提供商(ISP)：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;每个ISP自身就是一个由多台分组交换机和多段通信链路组成的网络；&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;网络协议：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;用来控制因特网中信息的接收和发送的规则和标准；&lt;/li&gt;
+&lt;li&gt;因特网的主要协议统称为TCP/IP；&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</summary>
+    
+    
+    
+    <category term="计算机网络自顶向下方法" scheme="http://kunpw.cn/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E8%87%AA%E9%A1%B6%E5%90%91%E4%B8%8B%E6%96%B9%E6%B3%95/"/>
+    
+    
+    <category term="计算机网络自顶向下方法" scheme="http://kunpw.cn/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E8%87%AA%E9%A1%B6%E5%90%91%E4%B8%8B%E6%96%B9%E6%B3%95/"/>
+    
+    <category term="理论学习" scheme="http://kunpw.cn/tags/%E7%90%86%E8%AE%BA%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="教材" scheme="http://kunpw.cn/tags/%E6%95%99%E6%9D%90/"/>
+    
+  </entry>
+  
+  <entry>
     <title>FFmpeg简要使用</title>
     <link href="http://kunpw.cn/2020/09/23/ffmpeg/"/>
     <id>http://kunpw.cn/2020/09/23/ffmpeg/</id>
     <published>2020-09-23T03:50:43.807Z</published>
-    <updated>2020-09-23T03:53:09.632Z</updated>
+    <updated>2020-09-30T13:02:25.470Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;1-简介&quot;&gt;&lt;a href=&quot;#1-简介&quot; class=&quot;headerlink&quot;</summary>
-        
-      
+    <summary type="html">&lt;h2 id=&quot;1-简介&quot;&gt;&lt;a href=&quot;#1-简介&quot; class=&quot;headerlink&quot; title=&quot;1.简介&quot;&gt;&lt;/a&gt;1.简介&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;FFmpeg是一套可以用来记录、转换数字音频、视频，并能将其转化为流的开源计算机程序（——来源于百度百科）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;2-下载并配置环境&quot;&gt;&lt;a href=&quot;#2-下载并配置环境&quot; class=&quot;headerlink&quot; title=&quot;2.下载并配置环境&quot;&gt;&lt;/a&gt;2.下载并配置环境&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;直接百度进入官网下载即可；&lt;/li&gt;
+&lt;li&gt;下载完成后将解压后的文件夹重命名为&lt;code&gt;ffmpeg&lt;/code&gt;，并且放至自己电脑的环境目录下；&lt;/li&gt;
+&lt;li&gt;前往配置环境目录&lt;code&gt;PATH&lt;/code&gt;，连同ffmpeg目录下的bin目录路径一起粘贴到PATH配置下新的路径即可；&lt;/li&gt;
+&lt;/ul&gt;</summary>
     
     
     
