@@ -6,7 +6,7 @@
   <link href="http://kunpw.cn/atom.xml" rel="self"/>
   
   <link href="http://kunpw.cn/"/>
-  <updated>2020-09-30T13:03:58.477Z</updated>
+  <updated>2020-10-14T15:43:00.377Z</updated>
   <id>http://kunpw.cn/</id>
   
   <author>
@@ -15,6 +15,39 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>第二章.应用层</title>
+    <link href="http://kunpw.cn/2020/10/14/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E8%87%AA%E9%A1%B6%E5%90%91%E4%B8%8B%E6%96%B9%E6%B3%95/%E7%AC%AC%E4%BA%8C%E7%AB%A0.%E5%BA%94%E7%94%A8%E5%B1%82/"/>
+    <id>http://kunpw.cn/2020/10/14/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E8%87%AA%E9%A1%B6%E5%90%91%E4%B8%8B%E6%96%B9%E6%B3%95/%E7%AC%AC%E4%BA%8C%E7%AB%A0.%E5%BA%94%E7%94%A8%E5%B1%82/</id>
+    <published>2020-10-14T15:35:18.715Z</published>
+    <updated>2020-10-14T15:43:00.377Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;1-应用层协议原理&quot;&gt;&lt;a href=&quot;#1-应用层协议原理&quot; class=&quot;headerlink&quot; title=&quot;1.应用层协议原理&quot;&gt;&lt;/a&gt;1.应用层协议原理&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;研发网络应用程序的&lt;strong&gt;核心&lt;/strong&gt;是写出能够运行在不同端系统和通过网络彼此通信的程序：&lt;ul&gt;
+&lt;li&gt;Web应用程序中，有两个互相通信的不同的程序：运行在用户主机上的浏览器程序和运行在Web服务器主机上的Web服务器程序；&lt;/li&gt;
+&lt;li&gt;P2P文件共享系统，在参与文件共享的社区中的每台主机中都有一个程序；&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&quot;https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/ComputerNetWorking/011.png&quot; alt=&quot;image-20201013081228922&quot;&gt;&lt;/p&gt;
+&lt;h3 id=&quot;1-1-网络应用程序体系结构&quot;&gt;&lt;a href=&quot;#1-1-网络应用程序体系结构&quot; class=&quot;headerlink&quot; title=&quot;1.1 网络应用程序体系结构&quot;&gt;&lt;/a&gt;1.1 网络应用程序体系结构&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;应用程序体系结构由应用程序研发者设计，规定了如何在各种端系统上组织该应用程序&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="计算机网络自顶向下方法" scheme="http://kunpw.cn/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E8%87%AA%E9%A1%B6%E5%90%91%E4%B8%8B%E6%96%B9%E6%B3%95/"/>
+    
+    
+    <category term="计算机网络自顶向下方法" scheme="http://kunpw.cn/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E8%87%AA%E9%A1%B6%E5%90%91%E4%B8%8B%E6%96%B9%E6%B3%95/"/>
+    
+    <category term="理论学习" scheme="http://kunpw.cn/tags/%E7%90%86%E8%AE%BA%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="教材" scheme="http://kunpw.cn/tags/%E6%95%99%E6%9D%90/"/>
+    
+  </entry>
   
   <entry>
     <title>第一章.因特网</title>
@@ -132,8 +165,8 @@
   
   <entry>
     <title>Scrapy（2.实战）</title>
-    <link href="http://kunpw.cn/2020/09/13/scrapy%E5%AE%9E%E6%88%98/"/>
-    <id>http://kunpw.cn/2020/09/13/scrapy%E5%AE%9E%E6%88%98/</id>
+    <link href="http://kunpw.cn/2020/09/13/%E7%88%AC%E8%99%AB/scrapy%E5%AE%9E%E6%88%98/"/>
+    <id>http://kunpw.cn/2020/09/13/%E7%88%AC%E8%99%AB/scrapy%E5%AE%9E%E6%88%98/</id>
     <published>2020-09-13T13:35:46.004Z</published>
     <updated>2020-09-23T03:11:17.860Z</updated>
     
@@ -180,8 +213,8 @@
   
   <entry>
     <title>Scrapy（1.简要入门）</title>
-    <link href="http://kunpw.cn/2020/09/10/scrapy%E7%AE%80%E8%A6%81%E4%BD%BF%E7%94%A8%E5%85%A5%E9%97%A8/"/>
-    <id>http://kunpw.cn/2020/09/10/scrapy%E7%AE%80%E8%A6%81%E4%BD%BF%E7%94%A8%E5%85%A5%E9%97%A8/</id>
+    <link href="http://kunpw.cn/2020/09/10/%E7%88%AC%E8%99%AB/scrapy%E7%AE%80%E8%A6%81%E4%BD%BF%E7%94%A8%E5%85%A5%E9%97%A8/"/>
+    <id>http://kunpw.cn/2020/09/10/%E7%88%AC%E8%99%AB/scrapy%E7%AE%80%E8%A6%81%E4%BD%BF%E7%94%A8%E5%85%A5%E9%97%A8/</id>
     <published>2020-09-10T14:38:39.662Z</published>
     <updated>2020-09-23T03:11:26.458Z</updated>
     
@@ -249,8 +282,8 @@
   
   <entry>
     <title>vue（3.开发实例演示(含webpack)）</title>
-    <link href="http://kunpw.cn/2020/09/06/3.vue%E5%BC%80%E5%8F%91%E5%AE%9E%E4%BE%8B%E6%BC%94%E7%A4%BA/"/>
-    <id>http://kunpw.cn/2020/09/06/3.vue%E5%BC%80%E5%8F%91%E5%AE%9E%E4%BE%8B%E6%BC%94%E7%A4%BA/</id>
+    <link href="http://kunpw.cn/2020/09/06/vue/3.vue%E5%BC%80%E5%8F%91%E5%AE%9E%E4%BE%8B%E6%BC%94%E7%A4%BA/"/>
+    <id>http://kunpw.cn/2020/09/06/vue/3.vue%E5%BC%80%E5%8F%91%E5%AE%9E%E4%BE%8B%E6%BC%94%E7%A4%BA/</id>
     <published>2020-09-06T03:44:27.588Z</published>
     <updated>2020-09-23T03:11:01.418Z</updated>
     
@@ -278,8 +311,8 @@
   
   <entry>
     <title>Vue（2.开发环境配置(含node.js)）</title>
-    <link href="http://kunpw.cn/2020/09/06/2.Vue%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/"/>
-    <id>http://kunpw.cn/2020/09/06/2.Vue%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</id>
+    <link href="http://kunpw.cn/2020/09/06/vue/2.Vue%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/"/>
+    <id>http://kunpw.cn/2020/09/06/vue/2.Vue%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</id>
     <published>2020-09-06T03:44:24.267Z</published>
     <updated>2020-09-23T03:10:40.838Z</updated>
     
@@ -305,8 +338,8 @@
   
   <entry>
     <title>Vue（1.基础入门）</title>
-    <link href="http://kunpw.cn/2020/09/06/1.Vue%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/"/>
-    <id>http://kunpw.cn/2020/09/06/1.Vue%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/</id>
+    <link href="http://kunpw.cn/2020/09/06/vue/1.Vue%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/"/>
+    <id>http://kunpw.cn/2020/09/06/vue/1.Vue%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/</id>
     <published>2020-09-06T03:44:20.193Z</published>
     <updated>2020-09-23T03:10:29.304Z</updated>
     

@@ -1,157 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Vue（2.开发环境配置(含node.js)）</title>
-    <url>/2020/09/06/2.Vue%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</url>
-    <content><![CDATA[<h2 id="1-Node-js下载"><a href="#1-Node-js下载" class="headerlink" title="1.Node.js下载"></a>1.Node.js下载</h2><p><a href="http://nodejs.cn/download/">http://nodejs.cn/download/</a></p>
-<ul>
-<li>直接选择.msi 64位安装包下载并且直接安装即可，安装过程略</li>
-</ul>
-<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/048.png" alt="image-20200903133908554"></p>
-<a id="more"></a>
-
-
-<ul>
-<li>注意：选择自动添加到path路径，接着直接往下走不用更改；</li>
-</ul>
-<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/049.png" alt="image-20200903134106262"></p>
-<ul>
-<li>检查是否安装成功：</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">node -v 查看能否正常打印出版本号</span><br><span class="line">npm -v 安装node.js会自动安装npm包，同样查看即可</span><br><span class="line">npm是一个软件包管理工具，用于下载安装</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/050.png" alt="image-20200903142018014"></p>
-<hr>
-<h2 id="2-安装淘宝镜像加速器（cnpm）"><a href="#2-安装淘宝镜像加速器（cnpm）" class="headerlink" title="2.安装淘宝镜像加速器（cnpm）"></a>2.安装淘宝镜像加速器（cnpm）</h2><ul>
-<li>cnpm下载国外程序可能无法正常使用，所以一般都使用npm下载，npm下载无用时再使用cnpm</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install cnpm -g -g是全局安装，建议直接全局安装，安装需要花费一定时间，如果不成功就多次重新安装</span><br><span class="line"></span><br><span class="line">npm install --registry=https://registry.npm.taobao.org 或者每次下载时使用此参数可以单词调用加速器</span><br></pre></td></tr></table></figure>
-
-<p>安装之后的路径：<code>C:\Users\Acer\AppData\Roaming\npm\node_modules\cnpm</code></p>
-<ul>
-<li>同时与该加速器同级目录下还需下载其它模板：</li>
-</ul>
-<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/051.png" alt="image-20200903142549464"></p>
-<h2 id="3-安装vue-cli"><a href="#3-安装vue-cli" class="headerlink" title="3.安装vue-cli"></a>3.安装vue-cli</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">cnpm install vue-cli -g </span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><p>vue-cli官方提供的一个脚手架，用于快速生成一个vue的项目模板;预先定义好的目录结构及基础代码，就好比咱们在创建Maven项目时可以选择创建一个骨架项目，这个骨架项目就是脚手架,我们的开发更加的快速；也是接下来主要使用的部分；</p>
-</li>
-<li><p>主要的功能：</p>
-<ul>
-<li>统一的目录结构</li>
-<li>本地调试</li>
-<li>热部署</li>
-<li>单元测试</li>
-<li>集成打包上线</li>
-</ul>
-</li>
-<li><p>安装成功后使用<code>vue list</code>命令可以查看模板：</p>
-</li>
-</ul>
-<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/052.png" alt="image-20200903143231971"></p>
-<ul>
-<li>如果无法显示该目录，则需要重新配置网络，重启电脑或者开启手机热点切换网络再重试，原因是网络问题，可多次重连尝试；</li>
-</ul>
-<h2 id="4-使用vue-cli创建vue程序"><a href="#4-使用vue-cli创建vue程序" class="headerlink" title="4.使用vue-cli创建vue程序"></a>4.使用vue-cli创建vue程序</h2><ul>
-<li>先切换命令提示符路径至目标路径；</li>
-<li>使用命令：</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vue init webpack myvue 其中myvue为创建文件名</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><p>加载一会后会出现一系列相关信息，项目名、项目描述等都可以直接回车，使用默认信息即可，之后作者名可以自己更改，再往后Vue build选项选择第一项即可，之后所有选项直接选择 n，表示我们会手动部署其它文件（选择y就会自动部署）；</p>
-</li>
-<li><p>再进入新文件中：</p>
-</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> myvue</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>进入之后安装模板依赖：</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install 自动安装固定依赖</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>接着使用命令：</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm run dev 用于部署服务器，每次运行时都需使用该命令部署服务器</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/053.png" alt="image-20200903144930303"></p>
-<ul>
-<li>部署成功之后可通过端口8080直接访问：</li>
-</ul>
-<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/054.png" alt="image-20200903145037697"></p>
-<ul>
-<li>ctrl+c可选择关闭服务器；</li>
-</ul>
-<hr>
-<h2 id="5-IDEA初步认识文件"><a href="#5-IDEA初步认识文件" class="headerlink" title="5.IDEA初步认识文件"></a>5.IDEA初步认识文件</h2><ul>
-<li>使用IDEA打开上述新项目，目录结构如图：</li>
-</ul>
-<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/055.png" alt="image-20200903145259594"></p>
-<ul>
-<li><p>目录结构具体功能：</p>
-<ul>
-<li>index.html：是程序的主入口，内容不能随意修改：</li>
-</ul>
-<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/056.png" alt="image-20200903150423965"></p>
-<ul>
-<li>static：存放静态资源，如css、js、图片等；</li>
-<li>src：开发项目区域：<ul>
-<li>main.js：入口</li>
-</ul>
-</li>
-</ul>
-<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/057.png" alt="image-20200903150540591"></p>
-<ul>
-<li>package.json：打包时需要构建的版本信息等，不需修改；</li>
-<li>node_modules：存放之前下载的依赖组件；</li>
-<li>其余先不细讲，用到时再看；</li>
-</ul>
-</li>
-</ul>
-<h2 id="6-安装webpack"><a href="#6-安装webpack" class="headerlink" title="6.安装webpack"></a>6.安装webpack</h2><ul>
-<li>安装指令：</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install webpack -g</span><br><span class="line">npm install webpack-cli -g</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>测试安装成功：</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">webpack -v</span><br><span class="line">webpack-cli -v</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/058.png" alt="image-20200903165916564"></p>
-<h2 id="7-安装vue-router"><a href="#7-安装vue-router" class="headerlink" title="7.安装vue-router"></a>7.安装vue-router</h2><ul>
-<li>安装指令（需要在项目目录下执行）：</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install vue-router --save-dev</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>发生错误按照提示执行指令即可：</li>
-</ul>
-<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/061.png" alt="image-20200904115933531"></p>
-<ul>
-<li>成功安装到模板内：</li>
-</ul>
-<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/062.png" alt="image-20200904120407376"></p>
-<h2 id="8-npm安装命令详解"><a href="#8-npm安装命令详解" class="headerlink" title="8.npm安装命令详解"></a>8.npm安装命令详解</h2><ul>
-<li><code>npm install moduleName</code> :安装模块到项目目录下</li>
-<li><code>npm install -g moduleName</code> : -g 的意思是将模块安装到全局，具体安装到磁盘哪个位置，要看npm config prefix的位置</li>
-<li><code>npm install -save-dev moduleNam e</code>: –save-dev的意思是将模块安装到项目目录下，并在package文件的devDependencies 节点写入依赖，-D为该命令的缩</li>
-<li><code>npm install -save moduleName</code> : –save的意思是将模块安装到项目目录下，并在package文件的dependencies 节点写入依赖，-S为该命令的缩写</li>
-</ul>
-]]></content>
-      <categories>
-        <category>学习</category>
-      </categories>
-      <tags>
-        <tag>vue</tag>
-        <tag>环境配置</tag>
-        <tag>node.js</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Typora修改CSS</title>
     <url>/2020/09/06/Typora%E4%BF%AE%E6%94%B9CSS/</url>
     <content><![CDATA[<p><strong>这一期给大家讲讲怎样将Typora设置成自己喜欢的风格，这里以高亮颜色为例！</strong></p>
@@ -196,24 +45,6 @@
         <tag>Typora</tag>
         <tag>个性化设置</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>/2020/09/06/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
   </entry>
   <entry>
     <title>FFmpeg简要使用</title>
@@ -370,6 +201,24 @@
       </tags>
   </entry>
   <entry>
+    <title>Hello World</title>
+    <url>/2020/09/06/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+  </entry>
+  <entry>
     <title>hero等静态网站通过外部cdn引用图片</title>
     <url>/2020/09/10/hero%20Img%E9%80%9A%E8%BF%87%E5%85%8D%E8%B4%B9cdn%E6%98%BE%E7%A4%BA/</url>
     <content><![CDATA[<blockquote>
@@ -424,8 +273,159 @@
       </tags>
   </entry>
   <entry>
+    <title>Vue（2.开发环境配置(含node.js)）</title>
+    <url>/2020/09/06/vue/2.Vue%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</url>
+    <content><![CDATA[<h2 id="1-Node-js下载"><a href="#1-Node-js下载" class="headerlink" title="1.Node.js下载"></a>1.Node.js下载</h2><p><a href="http://nodejs.cn/download/">http://nodejs.cn/download/</a></p>
+<ul>
+<li>直接选择.msi 64位安装包下载并且直接安装即可，安装过程略</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/048.png" alt="image-20200903133908554"></p>
+<a id="more"></a>
+
+
+<ul>
+<li>注意：选择自动添加到path路径，接着直接往下走不用更改；</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/049.png" alt="image-20200903134106262"></p>
+<ul>
+<li>检查是否安装成功：</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">node -v 查看能否正常打印出版本号</span><br><span class="line">npm -v 安装node.js会自动安装npm包，同样查看即可</span><br><span class="line">npm是一个软件包管理工具，用于下载安装</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/050.png" alt="image-20200903142018014"></p>
+<hr>
+<h2 id="2-安装淘宝镜像加速器（cnpm）"><a href="#2-安装淘宝镜像加速器（cnpm）" class="headerlink" title="2.安装淘宝镜像加速器（cnpm）"></a>2.安装淘宝镜像加速器（cnpm）</h2><ul>
+<li>cnpm下载国外程序可能无法正常使用，所以一般都使用npm下载，npm下载无用时再使用cnpm</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install cnpm -g -g是全局安装，建议直接全局安装，安装需要花费一定时间，如果不成功就多次重新安装</span><br><span class="line"></span><br><span class="line">npm install --registry=https://registry.npm.taobao.org 或者每次下载时使用此参数可以单词调用加速器</span><br></pre></td></tr></table></figure>
+
+<p>安装之后的路径：<code>C:\Users\Acer\AppData\Roaming\npm\node_modules\cnpm</code></p>
+<ul>
+<li>同时与该加速器同级目录下还需下载其它模板：</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/051.png" alt="image-20200903142549464"></p>
+<h2 id="3-安装vue-cli"><a href="#3-安装vue-cli" class="headerlink" title="3.安装vue-cli"></a>3.安装vue-cli</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">cnpm install vue-cli -g </span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>vue-cli官方提供的一个脚手架，用于快速生成一个vue的项目模板;预先定义好的目录结构及基础代码，就好比咱们在创建Maven项目时可以选择创建一个骨架项目，这个骨架项目就是脚手架,我们的开发更加的快速；也是接下来主要使用的部分；</p>
+</li>
+<li><p>主要的功能：</p>
+<ul>
+<li>统一的目录结构</li>
+<li>本地调试</li>
+<li>热部署</li>
+<li>单元测试</li>
+<li>集成打包上线</li>
+</ul>
+</li>
+<li><p>安装成功后使用<code>vue list</code>命令可以查看模板：</p>
+</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/052.png" alt="image-20200903143231971"></p>
+<ul>
+<li>如果无法显示该目录，则需要重新配置网络，重启电脑或者开启手机热点切换网络再重试，原因是网络问题，可多次重连尝试；</li>
+</ul>
+<h2 id="4-使用vue-cli创建vue程序"><a href="#4-使用vue-cli创建vue程序" class="headerlink" title="4.使用vue-cli创建vue程序"></a>4.使用vue-cli创建vue程序</h2><ul>
+<li>先切换命令提示符路径至目标路径；</li>
+<li>使用命令：</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vue init webpack myvue 其中myvue为创建文件名</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>加载一会后会出现一系列相关信息，项目名、项目描述等都可以直接回车，使用默认信息即可，之后作者名可以自己更改，再往后Vue build选项选择第一项即可，之后所有选项直接选择 n，表示我们会手动部署其它文件（选择y就会自动部署）；</p>
+</li>
+<li><p>再进入新文件中：</p>
+</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> myvue</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>进入之后安装模板依赖：</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install 自动安装固定依赖</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>接着使用命令：</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm run dev 用于部署服务器，每次运行时都需使用该命令部署服务器</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/053.png" alt="image-20200903144930303"></p>
+<ul>
+<li>部署成功之后可通过端口8080直接访问：</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/054.png" alt="image-20200903145037697"></p>
+<ul>
+<li>ctrl+c可选择关闭服务器；</li>
+</ul>
+<hr>
+<h2 id="5-IDEA初步认识文件"><a href="#5-IDEA初步认识文件" class="headerlink" title="5.IDEA初步认识文件"></a>5.IDEA初步认识文件</h2><ul>
+<li>使用IDEA打开上述新项目，目录结构如图：</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/055.png" alt="image-20200903145259594"></p>
+<ul>
+<li><p>目录结构具体功能：</p>
+<ul>
+<li>index.html：是程序的主入口，内容不能随意修改：</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/056.png" alt="image-20200903150423965"></p>
+<ul>
+<li>static：存放静态资源，如css、js、图片等；</li>
+<li>src：开发项目区域：<ul>
+<li>main.js：入口</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/057.png" alt="image-20200903150540591"></p>
+<ul>
+<li>package.json：打包时需要构建的版本信息等，不需修改；</li>
+<li>node_modules：存放之前下载的依赖组件；</li>
+<li>其余先不细讲，用到时再看；</li>
+</ul>
+</li>
+</ul>
+<h2 id="6-安装webpack"><a href="#6-安装webpack" class="headerlink" title="6.安装webpack"></a>6.安装webpack</h2><ul>
+<li>安装指令：</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install webpack -g</span><br><span class="line">npm install webpack-cli -g</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>测试安装成功：</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">webpack -v</span><br><span class="line">webpack-cli -v</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/058.png" alt="image-20200903165916564"></p>
+<h2 id="7-安装vue-router"><a href="#7-安装vue-router" class="headerlink" title="7.安装vue-router"></a>7.安装vue-router</h2><ul>
+<li>安装指令（需要在项目目录下执行）：</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install vue-router --save-dev</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>发生错误按照提示执行指令即可：</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/061.png" alt="image-20200904115933531"></p>
+<ul>
+<li>成功安装到模板内：</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/062.png" alt="image-20200904120407376"></p>
+<h2 id="8-npm安装命令详解"><a href="#8-npm安装命令详解" class="headerlink" title="8.npm安装命令详解"></a>8.npm安装命令详解</h2><ul>
+<li><code>npm install moduleName</code> :安装模块到项目目录下</li>
+<li><code>npm install -g moduleName</code> : -g 的意思是将模块安装到全局，具体安装到磁盘哪个位置，要看npm config prefix的位置</li>
+<li><code>npm install -save-dev moduleNam e</code>: –save-dev的意思是将模块安装到项目目录下，并在package文件的devDependencies 节点写入依赖，-D为该命令的缩</li>
+<li><code>npm install -save moduleName</code> : –save的意思是将模块安装到项目目录下，并在package文件的dependencies 节点写入依赖，-S为该命令的缩写</li>
+</ul>
+]]></content>
+      <categories>
+        <category>学习</category>
+      </categories>
+      <tags>
+        <tag>vue</tag>
+        <tag>环境配置</tag>
+        <tag>node.js</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Scrapy（2.实战）</title>
-    <url>/2020/09/13/scrapy%E5%AE%9E%E6%88%98/</url>
+    <url>/2020/09/13/%E7%88%AC%E8%99%AB/scrapy%E5%AE%9E%E6%88%98/</url>
     <content><![CDATA[<h2 id="1-新建项目yangguang"><a href="#1-新建项目yangguang" class="headerlink" title="1.新建项目yangguang"></a>1.新建项目yangguang</h2><h3 id="1-1-新建项目"><a href="#1-1-新建项目" class="headerlink" title="1.1 新建项目"></a>1.1 新建项目</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">scrapy startproject yangguang</span><br><span class="line"><span class="built_in">cd</span> yangguang <span class="comment"># 进入新建项目列表</span></span><br></pre></td></tr></table></figure>
 
 
@@ -499,7 +499,7 @@
   </entry>
   <entry>
     <title>Vue（1.基础入门）</title>
-    <url>/2020/09/06/1.Vue%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/</url>
+    <url>/2020/09/06/vue/1.Vue%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/</url>
     <content><![CDATA[<h2 id="1-简介"><a href="#1-简介" class="headerlink" title="1.简介"></a>1.简介</h2><h3 id="1-1-概念介绍"><a href="#1-1-概念介绍" class="headerlink" title="1.1 概念介绍"></a>1.1 概念介绍</h3><ul>
 <li>Vue 是一款渐进式JavaScript框架，所谓渐进式就是逐步实现新特性的意思，如实现模块化开发、路由、状态管理等新特性。其特点是综合了Angular（模块化）和React(虚拟DOM）的优点，与其它大型框架不同的是，Vue被设计为可以自底向上逐层应用。Vue的核心库只关注视图层，不仅易于上手，还便于与第三方库(如: vue-router，vue-resource，vuex）或既有项目整合。</li>
 </ul>
@@ -760,7 +760,7 @@
   </entry>
   <entry>
     <title>vue（3.开发实例演示(含webpack)）</title>
-    <url>/2020/09/06/3.vue%E5%BC%80%E5%8F%91%E5%AE%9E%E4%BE%8B%E6%BC%94%E7%A4%BA/</url>
+    <url>/2020/09/06/vue/3.vue%E5%BC%80%E5%8F%91%E5%AE%9E%E4%BE%8B%E6%BC%94%E7%A4%BA/</url>
     <content><![CDATA[<h2 id="1-解剖初始化模板"><a href="#1-解剖初始化模板" class="headerlink" title="1.解剖初始化模板"></a>1.解剖初始化模板</h2><h3 id="1-1-vue文件"><a href="#1-1-vue文件" class="headerlink" title="1.1 vue文件"></a>1.1 vue文件</h3><ul>
 <li>如图所示，对于一个新建的vue文件而言，其中标签分为三个部分：<ul>
 <li>template标签：这一块模板区域用于编写html代码块，其实就是component组建中的template属性内容，用作模板显示，而这个模板component的名字就是该vue文件名，使用时导入即可；</li>
@@ -1071,7 +1071,7 @@
   </entry>
   <entry>
     <title>Scrapy（1.简要入门）</title>
-    <url>/2020/09/10/scrapy%E7%AE%80%E8%A6%81%E4%BD%BF%E7%94%A8%E5%85%A5%E9%97%A8/</url>
+    <url>/2020/09/10/%E7%88%AC%E8%99%AB/scrapy%E7%AE%80%E8%A6%81%E4%BD%BF%E7%94%A8%E5%85%A5%E9%97%A8/</url>
     <content><![CDATA[<h2 id="1-安装scrapy"><a href="#1-安装scrapy" class="headerlink" title="1.安装scrapy"></a>1.安装scrapy</h2><ul>
 <li>在cmd下一条语句即可完成安装；</li>
 </ul>
@@ -2389,6 +2389,748 @@ person.hasOwnProperty(&#39;toString&#39;)
       <tags>
         <tag>javascript</tag>
         <tag>jQuery</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>第二章.应用层</title>
+    <url>/2020/10/14/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E8%87%AA%E9%A1%B6%E5%90%91%E4%B8%8B%E6%96%B9%E6%B3%95/%E7%AC%AC%E4%BA%8C%E7%AB%A0.%E5%BA%94%E7%94%A8%E5%B1%82/</url>
+    <content><![CDATA[<h2 id="1-应用层协议原理"><a href="#1-应用层协议原理" class="headerlink" title="1.应用层协议原理"></a>1.应用层协议原理</h2><ul>
+<li>研发网络应用程序的<strong>核心</strong>是写出能够运行在不同端系统和通过网络彼此通信的程序：<ul>
+<li>Web应用程序中，有两个互相通信的不同的程序：运行在用户主机上的浏览器程序和运行在Web服务器主机上的Web服务器程序；</li>
+<li>P2P文件共享系统，在参与文件共享的社区中的每台主机中都有一个程序；</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/ComputerNetWorking/011.png" alt="image-20201013081228922"></p>
+<h3 id="1-1-网络应用程序体系结构"><a href="#1-1-网络应用程序体系结构" class="headerlink" title="1.1 网络应用程序体系结构"></a>1.1 网络应用程序体系结构</h3><blockquote>
+<p>应用程序体系结构由应用程序研发者设计，规定了如何在各种端系统上组织该应用程序</p>
+</blockquote>
+<a id="more"></a>
+
+
+
+<h4 id="1-11-客户-服务器体系结构"><a href="#1-11-客户-服务器体系结构" class="headerlink" title="1.11 客户-服务器体系结构"></a>1.11 客户-服务器体系结构</h4><ul>
+<li>服务器：一个总是打开的主机，服务于来自客户（一般不止一个）的主机请求：<ul>
+<li>由于一台单独的服务器主机无法处理所有的客户请求，因此常通过连接多台甚至数十万台主机主机服务器而形成的数据中心作为服务器集群来处理客户请求；</li>
+<li>如Web服务器服务于来自浏览器（运行在客户主机上）的请求，当Web服务器接收到来自某客户对某对象的请求时，它向该客户发送所请求的对象作为响应；</li>
+</ul>
+</li>
+<li>在该体系结构中，客户之间不能直接通信，客户只能与服务器直接通信；</li>
+<li>服务器具有固定的、周知的IP地址，客户就可以通过该服务器的IP地址向其发送分组进而与其联系（因此服务器必须总是打开）；</li>
+<li>应用程序：<ul>
+<li>Web；</li>
+<li>电子邮件；</li>
+<li>Telnet；</li>
+<li>FTP（文件传输协议，由FTP服务器和FTP客户端组成）；</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/ComputerNetWorking/012.png" alt="image-20201013082809331"></p>
+<h4 id="1-12-对等（P2P）体系结构"><a href="#1-12-对等（P2P）体系结构" class="headerlink" title="1.12 对等（P2P）体系结构"></a>1.12 对等（P2P）体系结构</h4><ul>
+<li>该体系结构中对于数据中心的专用服务器依赖性很小，客户可以直接和客户通信而没有必要经过服务器的第三方进行间接通信；</li>
+<li>对等方：应用程序在<strong>间断</strong>连接的主机对之间使用直接通信，这些主机被称为<strong>对等方</strong>，这些对等方并不为服务提供商所有；</li>
+<li>应用程序（流量密集型应用）：<ul>
+<li>文件共享（BitTorrent）；</li>
+<li>对等方协助下载加速器（迅雷，[百度网盘有中间服务器]）；</li>
+<li>因特网电话和视频会议（Skype）；</li>
+</ul>
+</li>
+<li>P2P应用于高度非集中式结构，面临安全性、性能、和可靠性等挑战，但它也不需要庞大的服务器基础设施和服务器带宽，成本相对较低；</li>
+<li>P2P<strong>自扩展性</strong>高，例如：在一个P2P文件共享应用中，尽管每个对等方都由于请求文件产生工作负载，但每个对等方通过向其它对等方分发文件，也为系统增加了服务功能；</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/ComputerNetWorking/013.png" alt="image-20201013084536055"></p>
+<blockquote>
+<p>某些应用具有混合的体系结构，结合了客户-服务器和P2P的元素，例如：对于许多即时讯息应用而言，服务器被用于跟踪用户的IP地址，但用户到用户的报文在用户主机之间（无需通过中间服务器）直接发送</p>
+</blockquote>
+<h3 id="1-2-进程通信"><a href="#1-2-进程通信" class="headerlink" title="1.2 进程通信"></a>1.2 进程通信</h3><blockquote>
+<p>运行在多个端系统中的程序是如何进行通信的呢？进行通信的实际上是进程而不是程序。同一台计算机主机上的多个进程通过操作系统制定的通信规则在进程间相互通信，而不同端系统上的两个进程，则需要通过跨越计算机网络交换报文而相互通信</p>
+</blockquote>
+<h4 id="1-21-客户和服务器进程"><a href="#1-21-客户和服务器进程" class="headerlink" title="1.21 客户和服务器进程"></a>1.21 客户和服务器进程</h4><ul>
+<li><p>客户：在一对进程通信会话场景中，发起通信的进程被标识为<strong>客户</strong>；</p>
+</li>
+<li><p>服务器：在一对进程通信会话场景中，在会话开始时等待联系的进程被标识为<strong>服务器</strong>；</p>
+</li>
+<li><p>而在P2P中，一个进程既能下载文件又能上传文件，即每一个对等方既是客户又是服务器，但是在单次通信会话过程中，服务器和客户都是唯一的；</p>
+</li>
+</ul>
+<h4 id="1-22-进程与计算机网络之间的接口"><a href="#1-22-进程与计算机网络之间的接口" class="headerlink" title="1.22 进程与计算机网络之间的接口"></a>1.22 进程与计算机网络之间的接口</h4><blockquote>
+<p>发送端的应用程序将报文推进套接字，运输层协议负责从接收进程的套接字中获取该报文</p>
+</blockquote>
+<ul>
+<li><p>套接字：</p>
+<ul>
+<li>进程通过一个称为<strong>套接字（socket）</strong>的软件接口向网络发送报文和接收报文；</li>
+<li>套接字是同一台主机内应用层和运输层之间的接口；</li>
+<li>套接字是建立网络应用程序的可编程接口，也被称为应用程序和网络之间的应用程序编程接口（API）；</li>
+<li>应用程序开发者可以控制套接字在应用层的一切，而对运输层的控制仅限于：<ul>
+<li>选择运输层协议；</li>
+<li>也许能设定几个运输层参数，如最大缓存和最大报文段长度；</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/ComputerNetWorking/014.png" alt="image-20201013091501105"></p>
+</li>
+</ul>
+<h4 id="1-23-进程寻址"><a href="#1-23-进程寻址" class="headerlink" title="1.23 进程寻址"></a>1.23 进程寻址</h4><ul>
+<li>为了标识接收进程，需要定义两种信息：<ul>
+<li>主机的地址：<ul>
+<li>由IP地址标识；</li>
+</ul>
+</li>
+<li>在目的主机中指定接收进程的标识符：<ul>
+<li>由目的地<strong>端口号</strong>标识；</li>
+<li>流行的应用已经分配好了固定的端口号；</li>
+<li>例如：Web服务器端口号为80，邮件服务器进程（使用SMTP协议）用端口号25来标识；</li>
+<li>标准端口号在该网址查看：<a href="http://www.iana.org/">http://www.iana.org</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="1-3-运输层协议提供的运输服务"><a href="#1-3-运输层协议提供的运输服务" class="headerlink" title="1.3 运输层协议提供的运输服务"></a>1.3 运输层协议提供的运输服务</h3><blockquote>
+<p>运输层协议能够为调用它的程序提供四类通用运输服务：可靠数据传输、吞吐量、定时和安全性</p>
+</blockquote>
+<h4 id="1-31-可靠数据传输"><a href="#1-31-可靠数据传输" class="headerlink" title="1.31 可靠数据传输"></a>1.31 可靠数据传输</h4><ul>
+<li>确保由应用程序的一端发送的数据正确、完全地交付给该应用程序的另一端的服务；</li>
+<li>电子邮件、文件传输、远程主机访问、金融应用等应用需要可靠数据传输，而另一些应用如多媒体应用则容忍丢失部分数据；</li>
+</ul>
+<h4 id="1-32-吞吐量"><a href="#1-32-吞吐量" class="headerlink" title="1.32 吞吐量"></a>1.32 吞吐量</h4><ul>
+<li>可用吞吐量就是发送进程能够向接收进程交付比特的速率，由于带宽共享，可用吞吐量将随时间产生波动；</li>
+<li>运输层协议能够以某种特定的速率提供确保的可用吞吐量的服务：<ul>
+<li>应用程序请求 r 比特/秒的吞吐量，则该运输层协议能够确保可用吞吐量总是为至少 r 比特/秒；</li>
+</ul>
+</li>
+<li>具有吞吐量要求的应用被称为<strong>带宽敏感的应用</strong>，许多多媒体应用是带宽敏感的；</li>
+</ul>
+<h4 id="1-33-定时"><a href="#1-33-定时" class="headerlink" title="1.33 定时"></a>1.33 定时</h4><ul>
+<li>运输层协议提供定时保证服务，比特传输具有最低时延；</li>
+</ul>
+<h4 id="1-34-安全性"><a href="#1-34-安全性" class="headerlink" title="1.34 安全性"></a>1.34 安全性</h4><ul>
+<li>运输层协议为应用程序提供安全性服务，如加密解密数据、数据完整性和端点鉴别；</li>
+</ul>
+<h3 id="1-4-因特网提供的运输服务"><a href="#1-4-因特网提供的运输服务" class="headerlink" title="1.4 因特网提供的运输服务"></a>1.4 因特网提供的运输服务</h3><blockquote>
+<p>具体考察由因特网提供的运输服务类型</p>
+</blockquote>
+<ul>
+<li>因特网（TCP/IP网络）为应用程序提供两个运输层协议：TCP、UDP；</li>
+</ul>
+<h4 id="1-41-TCP服务"><a href="#1-41-TCP服务" class="headerlink" title="1.41 TCP服务"></a>1.41 TCP服务</h4><ul>
+<li><p>TCP服务模型包括<strong>面向连接服务</strong>和<strong>可靠数据传输服务</strong>；</p>
+</li>
+<li><p>面向连接服务：</p>
+<ul>
+<li>在应用层数据报文开始流动之前，TCP让客户和服务器交换运输层控制信息，该<strong>握手阶段</strong>提醒客户和服务器，大量分组即将到来；</li>
+<li>握手阶段后，两个进程的套接字之间建立了一个<strong>TCP连接</strong>，这条连接时<strong>全双工</strong>的，连接双方的进程可以在此连接上同时进行报文收发；</li>
+<li>应用程序结束报文发送后，必须拆除该连接；</li>
+</ul>
+</li>
+<li><p>可靠数据传输服务：</p>
+<ul>
+<li>通信进程能够依靠TCP，无差错、按适当顺序交付所有发送的数据；</li>
+</ul>
+</li>
+<li><p>TCP还具有拥塞控制机制：</p>
+<ul>
+<li>能为因特网带来整体好处，而不一定给通信进程带来直接好处；</li>
+<li>当发送方和接收方之间的网络出现拥塞现象时，TCP的拥塞控制机制会抑制发送进程；</li>
+<li>TCP拥塞控制也试图限制每个TCP连接，使它们达到公平共享网络带宽的目的；</li>
+</ul>
+</li>
+<li><p>TCP的加强版本SSL在应用层提供了安全性服务；</p>
+</li>
+</ul>
+<h4 id="1-42-UDP服务"><a href="#1-42-UDP服务" class="headerlink" title="1.42 UDP服务"></a>1.42 UDP服务</h4><ul>
+<li>UDP是一种不提供不必要服务的轻量级运输协议，仅提供最小服务；</li>
+<li>UDP无连接、不可靠、且没有拥塞机制；</li>
+</ul>
+<h4 id="1-43-因特网运输协议不提供的服务"><a href="#1-43-因特网运输协议不提供的服务" class="headerlink" title="1.43 因特网运输协议不提供的服务"></a>1.43 因特网运输协议不提供的服务</h4><ul>
+<li>因特网TCP协议和UDP协议都不提供定时或带宽保证，但当下的因特网能够为时间敏感应用提供满意的服务；</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/ComputerNetWorking/015.png" alt="image-20201013144113724"></p>
+<h3 id="1-5-应用层协议"><a href="#1-5-应用层协议" class="headerlink" title="1.5 应用层协议"></a>1.5 应用层协议</h3><blockquote>
+<p>应用层协议定义了运行在不同端系统上的应用程序如何相互传递报文</p>
+</blockquote>
+<ul>
+<li>定义：<ul>
+<li>交换的报文类型，例如请求报文和响应报文；</li>
+<li>各种报文类型的语法，如报文中的各个字段和这些字段是如何描述的；</li>
+<li>字段的语义，即这些字段中的信息的含义；</li>
+<li>确定一个进程何时以及如何发送报文，对报文进行响应的规则；</li>
+</ul>
+</li>
+<li>有些应用层协议是由RFC文档定义的，位于公共域中，例如HTTP协议就作为一个RFC可供使用：<ul>
+<li>如果浏览器开发者遵从HTTP RFC规则，则该浏览器就能访问任何遵从该文档标准的Web服务器并获取相应的Web页面；</li>
+</ul>
+</li>
+<li>网络应用组成：<ul>
+<li>Web应用：<ul>
+<li>文档格式标准（HTML）;</li>
+<li>Web浏览器（Chrome等）；</li>
+<li>Web服务器（Apache、Microsoft等）；</li>
+<li>Web应用层协议（HTTP）；</li>
+</ul>
+</li>
+<li>电子邮件应用：<ul>
+<li>邮件服务器；</li>
+<li>邮件客户程序；</li>
+<li>定义电子邮件报文结构的标准；</li>
+<li>邮件应用层协议（不止一个，主要是SMTP）；</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="2-Web和HTTP"><a href="#2-Web和HTTP" class="headerlink" title="2.Web和HTTP"></a>2.Web和HTTP</h2><h3 id="2-1-HTTP概况"><a href="#2-1-HTTP概况" class="headerlink" title="2.1 HTTP概况"></a>2.1 HTTP概况</h3><ul>
+<li><p>HTTP全称为超文本传输协议，是Web的唯一应用层协议，也是Web的核心所在；</p>
+</li>
+<li><p>HTTP由两个程序实现：</p>
+<ul>
+<li>客户程序；</li>
+<li>服务器程序；</li>
+</ul>
+</li>
+<li><p>Web页面由<strong>对象</strong>组成，一个对象只是一个文件，例如一个HTML文件、一个JPEG图形、一个JAVA小程序等，其中除HTML基本文件外，其余对象都是<strong>引用对象</strong>，通过URL地址寻址的方式引用显示其它对象；</p>
+</li>
+<li><p>URL地址组成（以 <a href="http://jwglnew.hunnu.edu.cn/eams/home.action">http://jwglnew.hunnu.edu.cn/eams/home.action</a> 为例）：</p>
+<ul>
+<li>存放对象的服务器主机名，即 <a href="http://jwglnew.hunnu.edu.cn/">http://jwglnew.hunnu.edu.cn</a> ；</li>
+<li>对象的路径名，即 /eams/home.action ；</li>
+</ul>
+</li>
+<li><p>HTTP使用TCP作为它的支撑运输协议；</p>
+</li>
+<li><p>HTTP协议不担心数据丢失，也不关注TCP从网络的数据丢失和乱序故障中恢复的细节，这也是分层体系结构最大的优点；</p>
+</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/ComputerNetWorking/016.png" alt="image-20201013151721096"></p>
+<ul>
+<li>HTTP协议是一个无状态协议，服务器向客户发送被请求的文件，而不存储任何关于该客户的状态信息；</li>
+</ul>
+<h3 id="2-2-非持续连接和持续连接"><a href="#2-2-非持续连接和持续连接" class="headerlink" title="2.2 非持续连接和持续连接"></a>2.2 非持续连接和持续连接</h3><ul>
+<li><p>非持续连接：每个请求/响应对是经一个单独的TCP连接发送的；</p>
+</li>
+<li><p>持续连接：所有的请求/响应经过相同的一次TCP连接发送；</p>
+</li>
+<li><p>HTTP默认使用TCP持续连接，一段时间间隔未使用则自动关闭该TCP连接，该方式下，大部分浏览器打开5~10个并行的TCP连接，而每条连接处理一个请求响应事务，使用并行连接可以缩短响应时间；</p>
+</li>
+<li><p>往返时间（RTT）：一个短分组经客户-服务器-客户所花费的时间，包括分组传播时延、排队时延、分组处理时延；</p>
+</li>
+<li><p>请求并接收响应对象过程：</p>
+<ul>
+<li>客户想服务器发送一个小TCP报文段；</li>
+<li>服务器用一个小TCP报文段做出确认和响应；</li>
+<li>客户向服务器返回确认；</li>
+<li>服务器在该TCP连接上发送HTML文件（响应对象）；</li>
+<li>所以总响应时间就是两个RTT加上服务器传输HTML文件的时间；</li>
+<li>非持续连接每次重新连接TCP需要多花费前面一次握手RTT时间；</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/ComputerNetWorking/017.png" alt="image-20201013154326894"></p>
+<h3 id="2-3-HTTP报文格式"><a href="#2-3-HTTP报文格式" class="headerlink" title="2.3 HTTP报文格式"></a>2.3 HTTP报文格式</h3><h4 id="2-31-HTTP请求报文"><a href="#2-31-HTTP请求报文" class="headerlink" title="2.31 HTTP请求报文"></a>2.31 HTTP请求报文</h4><ul>
+<li>如图所示：<ul>
+<li>每一行结尾都以“/r/n”回车和换行符结束，图中未标明，但实际操作中有显示；</li>
+<li>请求行：请求报文的第一行，有三个字段：<ul>
+<li>方法字段：取值包括GET、POST、HEAD、PUT、DELETE，一般为GET，功能为请求获取；</li>
+<li>URL字段：请求对象的路径；</li>
+<li>HTTP版本字段：浏览器实现的HTTP版本；</li>
+</ul>
+</li>
+<li>首部行：请求报文的后续行，图例内容：<ul>
+<li>Host：主机名；</li>
+<li>Connection：是否持续连接，close的含义是要求服务器发送完请求之后就关闭连接；</li>
+<li>User-agent：指名用户代理，即向服务器发送请求的浏览器的类型，此处浏览器类型为Mozilla/5.0，即Firefox浏览器；</li>
+<li>Accept-language：用户想要接收的语言格式；</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/ComputerNetWorking/018.png" alt="image-20201013155636786"></p>
+<ul>
+<li><p>请求报文的通用格式：</p>
+<ul>
+<li>实体体：使用GET方法时为空，使用POST方法时才使用，POST方法常在表单中使用，此时实体体中包含的就是用户在表单字段中的输入值；</li>
+<li>表单使用GET方法时，假设两个字段填写值为“monkeys”和“bananas”，则提交时URL结构为：</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/ComputerNetWorking/020.png" alt="image-20201013161223787"></p>
+<ul>
+<li><p>HEAD方法类似于GET方法，但响应报文并不返回请求结果，开发者用HEAD方法调试跟踪；</p>
+</li>
+<li><p>PUT方法常与Web发型工具联合使用，允许用户上传对象到指定的Web服务器上指定的路径；</p>
+</li>
+<li><p>DELETE方法允许用户或者应用程序删除Web服务器上的对象；</p>
+</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/ComputerNetWorking/019.png" alt="image-20201013160733337"></p>
+<h4 id="2-32-HTTP响应报文"><a href="#2-32-HTTP响应报文" class="headerlink" title="2.32 HTTP响应报文"></a>2.32 HTTP响应报文</h4><ul>
+<li>如图所示：<ul>
+<li>状态行：响应报文的第一行，有三个部分：<ul>
+<li>协议版本字段：HTTP/1.1说明服务器使用的HTTP1.1版本；</li>
+<li>状态码：200；</li>
+<li>相应状态信息：OK；</li>
+</ul>
+</li>
+<li>首部行：<ul>
+<li>Connection：close，发送完报文即关闭TCP连接；</li>
+<li>Date：服务器从文件系统中检索到该对象，将该对象插入到响应报文，并发送到响应报文的时间；</li>
+<li>Server：对应于User-agent，Apache/2.2.3表示该报文由ApacheWeb服务器产生；</li>
+<li>Last-Modified：对象创建或者最后一次修改时间；</li>
+<li>Content-Length：被发送对象的字节数；</li>
+<li>Content-Type：指示实体体中的对象格式是HTML文本；</li>
+</ul>
+</li>
+<li>实体体：响应对象数据内容；</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/ComputerNetWorking/021.png" alt="image-20201013161655775"></p>
+<ul>
+<li><p>响应报文的通用格式：</p>
+<ul>
+<li>状态码：<img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/ComputerNetWorking/023.png" alt="image-20201013163522205"></li>
+</ul>
+</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/ComputerNetWorking/022.png" alt="image-20201013163435628"></p>
+<h3 id="2-4-cookie"><a href="#2-4-cookie" class="headerlink" title="2.4 cookie"></a>2.4 cookie</h3><ul>
+<li>弥补HTTP无状态的缺点，允许站点对用户进行跟踪，即cookie可以标识一个用户；</li>
+<li>cookie技术有四个组件：<ul>
+<li>在HTTP响应报文中有一个cookie首部行；</li>
+<li>在HTTP请求报文中有一个cookie首部行；</li>
+<li>在用户端系统中有一个cookie文件，由用户的浏览器进行管理；</li>
+<li>位于Web站点的一个后端数据库；</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/ComputerNetWorking/024.png" alt="image-20201013164240271"></p>
+<h3 id="2-5-Web缓存"><a href="#2-5-Web缓存" class="headerlink" title="2.5 Web缓存"></a>2.5 Web缓存</h3><ul>
+<li>Web缓存器也叫做代理服务器，能够代表初始Web服务器来满足HTTP请求的网络实体，它具有自己的磁盘存储空间，并在存储空间中保存最近请求过的对象的副本；</li>
+<li>Web缓存器既是服务器又是客户，它可以接收浏览器的请求并发送响应，也可以向初始服务器发送请求；</li>
+<li>Web缓存器通常由ISP购买并安装，例如，一所大学可能在它的校园网上安装一台缓存器，并且将所有校园网上的用户浏览器配置为指向它；</li>
+<li>部署Web缓存器有两个原因：<ul>
+<li>Web缓存器可以大量减少对客户请求的响应时间，特别是当客户与初始服务器之间的瓶颈带宽远低于客户与Web缓存器之间的瓶颈带宽时；</li>
+<li>Web缓存器能够大量减少一个机构的接入链路到因特网的通信量，减少通信量就可以不急于增加带宽，降低费用；</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/ComputerNetWorking/025.png" alt="image-20201013165414229"></p>
+<ul>
+<li>举例：假设对象的平均长度为1Mb，从机构内的浏览器对这些初始服务器的平均访问速率为每秒15个请求，且HTTP请求报文足够小而不会在网络中即接入链路产生通信量（无排队等时延），且从接入链路一侧转发HTTP请求报文到接收响应的平均因特网时延为2s：<ul>
+<li>总响应时间 = 局域网时延 + 接入时延 + 因特网时延；</li>
+<li>局域网流量强度：<ul>
+<li>（15个请求/s）×（1Mb/请求）/（100Mbps）= 0.15；</li>
+<li>0.15的通信量时延一般为几十毫秒，可以忽略；</li>
+</ul>
+</li>
+<li>接入链路流量强度：<ul>
+<li>（15个请求/s）×（1Mb/请求）/（15Mbps）= 1；</li>
+<li>1的通信量时延非常大且会无限增长；</li>
+</ul>
+</li>
+<li>解决方法：<ul>
+<li>将接入链路速率由15Mbps升级到100Mbps，代价很高；</li>
+<li>在机构网络中安装一个Web缓存器：<ul>
+<li>一个缓存器所满足的请求的比率通常在0.2~0.7之间，假设平均命中率为0.4；</li>
+<li>客户和缓存连接在同一个高速局域网上，这样40%的请求几乎立即完成响应，时延约在10ms以内；</li>
+<li>剩下的60%请求由初始服务器来完成响应，而且流量强度从1减少为0.6，时延较小，可忽略；</li>
+<li>一般而言，在15Mbps链路中，流量强度小于0.8时，时延较小，一般为几十毫秒；</li>
+<li>此时平均时延为：0.4 ×（0.010秒）+ 0.6 ×（2.01秒）= 1.2秒</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/ComputerNetWorking/026.png" alt="image-20201013170942842"></p>
+<h3 id="2-6-条件GET方法"><a href="#2-6-条件GET方法" class="headerlink" title="2.6 条件GET方法"></a>2.6 条件GET方法</h3><ul>
+<li>上述Web缓存中存在问题：存放在缓存器中的对象副本可能是陈旧的，而条件GET方法则是用来解决这个问题的；</li>
+<li>条件GET方法：<ul>
+<li>请求报文使用GET方法；</li>
+<li>请求报文中包含一个“If-Modified-Since：”首部行</li>
+</ul>
+</li>
+<li>过程：<ul>
+<li>代理缓存器代表一个请求浏览器向Web服务器发送一个请求报文；</li>
+<li>Web服务器向缓存器发送具有被请求对象的响应报文；</li>
+<li>一段时间后用户再次访问，但对象可能已经改变，缓存器通过发送一个条件GET执行最新检查，其中If-Modified-Since：首部行的值正好等于上一次发送过来的Last-Modified：首部行的值；</li>
+<li>如果两个时间相同，没有修改时，Web服务器向该缓存器发送一个响应报文回来，但并不发送所请求的对象，并且状态行为304 Not Modified；</li>
+</ul>
+</li>
+</ul>
+<h2 id="3-因特网中的电子邮件"><a href="#3-因特网中的电子邮件" class="headerlink" title="3.因特网中的电子邮件"></a>3.因特网中的电子邮件</h2><ul>
+<li>组成部分：<ul>
+<li>用户代理：<ul>
+<li>允许用户阅读、回复、转发、保存和撰写报文；</li>
+</ul>
+</li>
+<li>邮件服务器：<ul>
+<li>形成电子邮件体系结构的核心；</li>
+</ul>
+</li>
+<li>简单邮件传输协议（SMTP）；</li>
+</ul>
+</li>
+<li>一个典型的邮件发送过程：<ul>
+<li>从发送方的用户代理开始，传输到发送方的邮件服务器；</li>
+<li>再传输到接收方的邮件服务器；</li>
+<li>在接收方的邮件服务器被分发到接收方的邮箱中；</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-1-SMTP"><a href="#3-1-SMTP" class="headerlink" title="3.1 SMTP"></a>3.1 SMTP</h3><ul>
+<li><p>是因特网电子邮件中主要的应用层协议，也是因特网电子邮件的核心，使用TCP可靠数据传输服务；</p>
+</li>
+<li><p>每台邮件服务器上既运行SMTP客户端，也运行SMTP服务器端，SMTP用于从发送方的邮件服务器发送报文到接收方的邮件服务器；</p>
+</li>
+<li><p>缺陷：</p>
+<ul>
+<li>限制所有邮件报文的体部分只能采用简单的7比特ASCII码表示，在用SMTP传送邮件之前，需要将二进制多媒体数据编码为ASCII码，并且在使用SMTP传输后要求将相应的ASCII码邮件解码还原为多媒体数据，而使用HTTP传送前不需要编码为ASCII码；</li>
+</ul>
+</li>
+<li><p>SMTP一般不使用中间邮件服务器发送邮件，而是通过TCP直接连接，如果接收方邮件服务器没有开机，则该报文邮件会保存在发送方邮件客户端并等待进行新的连接请求尝试；</p>
+</li>
+<li><p>使用Telnet与一个SMTP服务器进行一次直接对话，使用命令：</p>
+</li>
+<li><pre><code class="bash">telnet SeverName 25
+//25 是端口号</code></pre>
+</li>
+</ul>
+<h3 id="3-2-与HTTP的对比"><a href="#3-2-与HTTP的对比" class="headerlink" title="3.2 与HTTP的对比"></a>3.2 与HTTP的对比</h3><ul>
+<li>HTTP：<ul>
+<li>从Web服务器向Web客户（通常是一个浏览器）传送文件；</li>
+<li>主要是一个<strong>拉协议</strong>，在方便的时候，某些人在Web服务器上装载信息，用户使用HTTP从该服务器拉取这些信息；</li>
+<li>不受7比特ASCII编码协议限制；</li>
+<li>处理既包含文本又包含图形的文档时，HTTP把每个对象封装到它自己的HTTP响应报文中；</li>
+</ul>
+</li>
+<li>SMTP：<ul>
+<li>从一个邮件服务器向另一个邮件服务器传送文件；</li>
+<li>基本上是一个<strong>推协议</strong>，发送邮件服务器把文件推向接收邮件服务器，这个TCP连接由要发送该文件的机器发起的；</li>
+<li>采用7比特ASCII字符编码发送；</li>
+<li>处理既包含文本又包含图形的文档时，SMTP把所有报文对象放在一个报文之中；</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-3-邮件报文格式"><a href="#3-3-邮件报文格式" class="headerlink" title="3.3 邮件报文格式"></a>3.3 邮件报文格式</h3><ul>
+<li>必须包含的首部行：<ul>
+<li>From：首部行；</li>
+<li>To：首部行；</li>
+<li>可能包含一个Subject：首部行；</li>
+<li>首部之后接一个空白行；</li>
+<li>再后面是一个以ASCII格式表示的报文体；</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-4-邮件访问协议"><a href="#3-4-邮件访问协议" class="headerlink" title="3.4 邮件访问协议"></a>3.4 邮件访问协议</h3><ul>
+<li><p>典型的用户通常在本地PC上运行一个用户代理程序，而它访问存储在总是保持开机的共享邮件服务器上的邮箱，该邮件服务器与其它用户共享，通常由用户的ISP进行维护（大学或公司）；</p>
+</li>
+<li><p>如图所示：</p>
+<ul>
+<li>问题一：发送方代理不能直接通过SMTP发送到接收方的邮件服务器，必须要考虑到目的地不可达时（是接收方服务器关机）情形，所以通过发送方邮件服务器进行中继，这样一来就可以一直重复发送，知道发送完毕为止；</li>
+<li>问题二：SMTP是一个推协议，而从接收方代理主动获取邮件是一个拉操作，只能通过第三方的特殊邮件访问协议进行；</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/ComputerNetWorking/027.png" alt="image-20201013222819767"></p>
+<h4 id="3-41-POP3"><a href="#3-41-POP3" class="headerlink" title="3.41 POP3"></a>3.41 POP3</h4><ul>
+<li>是一个极为简单的邮件访问协议，功能有限；</li>
+<li>将邮件下载到本地主机；</li>
+<li>工作的三个阶段：<ul>
+<li>特许：用户代理鉴别用户；</li>
+<li>事务处理：用户代理取回报文，对报文做或取消删除标记；</li>
+<li>更新：客户发送quit命令之后，结束POP3会话，删除标记删除的报文；</li>
+</ul>
+</li>
+</ul>
+<h4 id="3-42-IMAP"><a href="#3-42-IMAP" class="headerlink" title="3.42 IMAP"></a>3.42 IMAP</h4><ul>
+<li>IMAP协议服务器把每个报文与一个文件夹关联，可删除可移动可读取；</li>
+<li>为用户提供了在远程文件夹中查询邮件的命令；</li>
+<li>允许用户代理只获取报文某些部分；</li>
+<li>维护了IMAP会话的用户状态信息；</li>
+</ul>
+<h4 id="3-43-基于Web的电子邮件（HTTP）"><a href="#3-43-基于Web的电子邮件（HTTP）" class="headerlink" title="3.43 基于Web的电子邮件（HTTP）"></a>3.43 基于Web的电子邮件（HTTP）</h4><ul>
+<li>使用Web浏览器收发电子邮件；</li>
+<li>使用这种服务时：<ul>
+<li>用户代理就是普通的浏览器；</li>
+<li>用户和他自己远程邮箱之间的通信则通过HTTP进行；</li>
+</ul>
+</li>
+</ul>
+<h2 id="4-DNS：因特网的目录服务（重点）"><a href="#4-DNS：因特网的目录服务（重点）" class="headerlink" title="4.DNS：因特网的目录服务（重点）"></a>4.DNS：因特网的目录服务（重点）</h2><ul>
+<li>因特网上的主机可以使用多种方式进行标注：<ul>
+<li>主机名（服务器域名）：很少或几乎不提供主机在因特网中改的位置，适合人类标识；</li>
+<li>IP地址：从左到右扫描时能够获得越来越具体的关于主机在因特网中的位置，适合路由器标识；</li>
+</ul>
+</li>
+</ul>
+<h3 id="4-1-DNS提供的服务"><a href="#4-1-DNS提供的服务" class="headerlink" title="4.1 DNS提供的服务"></a>4.1 DNS提供的服务</h3><ul>
+<li><p>DNS全称为域名系统，能够进行主机名到IP地址转换的目录服务；</p>
+</li>
+<li><p>DNS协议是应用层协议，但通常由其它协议使用，将用户提供的主机名解析为IP地址；</p>
+</li>
+<li><p>DNS：</p>
+<ul>
+<li>一个由分层的DNS服务器实现的分布式数据库；</li>
+<li>一个使得主机能够查询分布式数据库的应用层协议；</li>
+<li>DNS协议运行在UDP上，使用53号端口；</li>
+</ul>
+</li>
+<li><p>浏览器调用DNS解析过程：</p>
+<ul>
+<li>DNS给使用它的因特网额外的时延；</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/ComputerNetWorking/028.png" alt="image-20201013225715686"></p>
+</li>
+<li><p>其它服务：</p>
+<ul>
+<li>主机别名：应用程序可以调用DNS来获取主机别名对应的规范主机名以及主机的IP地址；</li>
+<li>邮件服务器别名；</li>
+<li>负载分配：用于在冗余的服务器之间进行负载分配；</li>
+</ul>
+</li>
+</ul>
+<h3 id="4-2-DNS工作机理（IP地址转换）"><a href="#4-2-DNS工作机理（IP地址转换）" class="headerlink" title="4.2 DNS工作机理（IP地址转换）"></a>4.2 DNS工作机理（IP地址转换）</h3><ul>
+<li>集中式设计模型：整个因特网使用一个DNS服务器，该服务器包含所有映射，但是具有一定缺陷：<ul>
+<li>单点故障；</li>
+<li>通信容量；</li>
+<li>远距离的集中式数据库；</li>
+<li>维护；</li>
+</ul>
+</li>
+<li>在单一DNS服务器上运行集中式数据库缺少可扩展能力；</li>
+</ul>
+<h4 id="4-21-分布式、层次数据库"><a href="#4-21-分布式、层次数据库" class="headerlink" title="4.21 分布式、层次数据库"></a>4.21 分布式、层次数据库</h4><p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/ComputerNetWorking/029.png" alt="image-20201014164122021"></p>
+<ul>
+<li><p>大量DNS以层次结构组织分布于全世界；</p>
+</li>
+<li><p>服务器类型：</p>
+<ul>
+<li>根DNS服务器；</li>
+<li>顶级域服务器；</li>
+<li>权威DNS服务器；</li>
+</ul>
+</li>
+<li><p>举例分析获取 <a href="http://www.amazon.com/">www.amazon.com</a> IP地址：</p>
+<ul>
+<li>客户与根服务器之一联系，返回顶级域名 com 的TLD服务器IP地址；</li>
+<li>客户与这些返回的TLD服务器之一联系，返回 amazon.com 权威服务器IP地址；</li>
+<li>客户与 amazon.com 权威服务器之一联系，返回 <a href="http://www.amazon.com/">www.amazon.com</a> IP地址；</li>
+</ul>
+</li>
+<li><p>除此之外，每个ISP都有一台本地DNS服务器，本地DNS服务器不属于DNS服务器层次结构；</p>
+</li>
+<li><p>举例分析主机 cse.nyu.edu 获取 gaia.cs.umass.edu 的IP地址：</p>
+<ul>
+<li>cse.nyu.edu 主机向它的本地DNS服务器 dns.nyu.edu 发送一个DNS查询报文；</li>
+<li>本地DNS服务器将报文转发给根DNS服务器；</li>
+<li>根DNS服务器注意到 edu 前缀并向本地DNS服务器返回负责 edu 的TLD的IP地址列表；</li>
+<li>本地DNS服务器再次向这些TLD服务器之一发送查询报文；</li>
+<li>该TLD服务器注意到umass.edu前缀，用权威DNS服务器 dns.umass.edu 的IP地址进行响应；</li>
+<li>最后，本地DNS服务器直接向 dns.umass.edu 重发查询报文；</li>
+<li>dns.umass.edu 使用 gaia.cs.umass.edu IP地址进行响应，即查询完毕；</li>
+</ul>
+</li>
+<li><p>注意上述事例中，实际上TLD服务器并不一定知道目的主机的权威DNS服务器，而是知道中间的某个服务器，继续进行转换才能得到。上述例子的报文查询使用了递归查询和迭代查询的方式；</p>
+</li>
+</ul>
+<h4 id="4-22-DNS缓存"><a href="#4-22-DNS缓存" class="headerlink" title="4.22 DNS缓存"></a>4.22 DNS缓存</h4><blockquote>
+<p>为了改善时延性能并减少在因特网上到处传输的DNS报文数量，DNS广泛使用了缓存技术</p>
+</blockquote>
+<ul>
+<li>DNS缓存原理：在一个请求链中，当某DNS服务器接收一个DNS回答时，它能将映射缓存到本地DNS服务器，一段时间后再丢弃缓存的信息；</li>
+<li>本地DNS服务器也能缓存TLD服务器的IP地址，因此允许本地DNS绕过查询链中的根DNS服务器；</li>
+</ul>
+<h3 id="4-3-DNS记录和报文"><a href="#4-3-DNS记录和报文" class="headerlink" title="4.3 DNS记录和报文"></a>4.3 DNS记录和报文</h3><ul>
+<li>共同实现DNS分布式数据库的所有DNS服务器存储了资源记录（RR），RR提供了主机名到IP地址的映射；</li>
+<li>资源记录是一个包含下列字段的四元组：<ul>
+<li>(Name, Value, Type, TTL)；</li>
+<li>TTL是该记录的生存时间，它决定了资源记录应该从缓存中删除的时间；</li>
+<li>Name和Value的值取决于Type的值：<ul>
+<li>Type = A，Name是主机名，Value是该主机名对应的IP地址；</li>
+<li>Type = NS，Name是个域（如foo.com），Value是一个知道如何获取该域中主机IP地址的权威DNS服务器的主机名；</li>
+<li>Type = CNAME，Value是别名为Name的主机对应的规范主机名；</li>
+<li>Type = MX，Value是个别名为Name的邮件服务器的规范主机名；</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="4-31-DNS报文"><a href="#4-31-DNS报文" class="headerlink" title="4.31 DNS报文"></a>4.31 DNS报文</h4><blockquote>
+<p>DNS只有查询和回答报文，并且查询报文和回答报文格式相同</p>
+</blockquote>
+<ul>
+<li>报文格式图示：</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/ComputerNetWorking/030.png" alt="image-20201014180118935"></p>
+<ul>
+<li><p>前十二个字节是首部区域，有以下字段：</p>
+<ul>
+<li>标识符：16比特的数，用于表示该报文，查询报文中的标识符会被复制到回答报文中，以表示相匹配；</li>
+<li>标志：1比特指出查询报文（0）或回答报文（1），其余自查</li>
+<li>其余四个有关数量的字段，指出了在首部后的四类数据区域出现的数量；</li>
+</ul>
+</li>
+<li><p>问题区域包含正在进行的查询信息：</p>
+<ul>
+<li>名字字段：主机名；</li>
+<li>类型字段：该主机名正被询问的问题类型；</li>
+</ul>
+</li>
+<li><p>回答区域是回答报文拥有的，包含了对最初请求的名字的资源记录：</p>
+<ul>
+<li>回答报文中可以有多条RR，意味着一个主机名能拥有多个IP地址（冗余Web服务器）；</li>
+</ul>
+</li>
+<li><p>权威区域包含其它权威服务器的记录；</p>
+</li>
+<li><p>附加区域包含了其它有帮助的信息；</p>
+</li>
+<li><p>使用nslookup程序能够从正在工作的主机直接向某些DNS服务器发送一个查询报文；</p>
+</li>
+</ul>
+<ul>
+<li>除此之外，还可向DNS服务器插入资源记录；</li>
+</ul>
+<h2 id="5-P2P文件分发"><a href="#5-P2P文件分发" class="headerlink" title="5.P2P文件分发"></a>5.P2P文件分发</h2><ul>
+<li>使用P2P体系结构，对总是打开的基础设施服务器具有最小的依赖：<ul>
+<li>从单一服务器向大量主机（对等方）分发一个大文件，每个对等方能向任何其它对等方重新分发它已经收到的该文件的任何部分；</li>
+</ul>
+</li>
+</ul>
+<h3 id="5-1-P2P体系结构的扩展性"><a href="#5-1-P2P体系结构的扩展性" class="headerlink" title="5.1 P2P体系结构的扩展性"></a>5.1 P2P体系结构的扩展性</h3><ul>
+<li>图示实例：</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/ComputerNetWorking/031.png" alt="image-20201014210430123"></p>
+<ul>
+<li><p>将一个文件分发给固定对等方集合，u表示服务器或对等方接入链路的上载速率，d表示下载速率，被分发的文件长度为F（以比特为单位），N表示对等方数量，考虑所有理想化情形下，求其分发时间：</p>
+<ul>
+<li><p>客户-服务器体系结构：</p>
+<ul>
+<li>服务器必须向N个对等方每个传输该文件的一个副本，传输比特为N×F，由于服务器上载速率为u<sub>s</sub>，所以分发时间至少为N×F/u<sub>s</sub>；</li>
+<li>令d<sub>min</sub>表示具有最小下载速率的对等方的下载速率，即d<sub>min</sub> = min{d<sub>1</sub>，d<sub>p</sub>，···，d<sub>N</sub>}，因此具有最小下载速率的对等方下载时间为F/d<sub>min</sub>；</li>
+<li>综上，分发时间D<sub>cs</sub> &gt;= max{N×F/u<sub>s</sub>，F/d<sub>min</sub>}，而对于足够大的N，其分发时间由N×F/u<sub>s</sub>确定；</li>
+</ul>
+</li>
+<li><p>P2P：</p>
+<ul>
+<li>在分发初始，服务器至少发送一次该文件，最小分发时间为F/u<sub>s</sub>；</li>
+<li>具有最低下载速率的对等方获取文件最短分发时间为F/d<sub>min</sub>；</li>
+<li>系统整体的总上载能力等于服务器的上载速率加上每个单独的对等方的上载速率，即u<sub>total</sub> = u<sub>s</sub> + u<sub>1</sub> + ··· +u<sub>N</sub>，系统必须向N个对等方总共交付N×F比特，因此最小分发时间为N×F/u<sub>s</sub> + u<sub>1</sub> + ··· +u<sub>N</sub>；</li>
+<li>综上，最小分发时间D<sub>P2P</sub> = max{F/u<sub>s</sub>，F/d<sub>min</sub>，N×F/u<sub>s</sub> + u<sub>1</sub> + ··· +u<sub>N</sub>}；</li>
+</ul>
+</li>
+<li><p>效用关系如图：</p>
+</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/ComputerNetWorking/032.png" alt="image-20201014220402424"></p>
+</li>
+</ul>
+<h3 id="5-2-BitTorrent"><a href="#5-2-BitTorrent" class="headerlink" title="5.2 BitTorrent"></a>5.2 BitTorrent</h3><blockquote>
+<p>BitTorrent是一个用于文件分发的流行P2P协议</p>
+</blockquote>
+<ul>
+<li>洪流：参与一个特定文件分发的所有对等方的集合，在一个洪流中的对等方彼此下载等长度的文件块，任何对等方能够随时进出该洪流；</li>
+<li>追踪器：每个洪流具有的一个基础设施节点，在新对等方加入时注册标记，并且周期性地接收对等方的通知以确保对等方依然存在洪流中；</li>
+<li>BitTorrent运行过程：<ul>
+<li>一个新对等方加入洪流，追踪器随机从对等方集合中选择一个子集并将其IP地址发送给新对等方，使之与其创建TCP连接获取文件，创建TCP连接的对等方被称为新对等方的邻近对等方；</li>
+<li>由于对等方随时能离开与加入，因此一个对等方的邻近对等方将随时间而波动；</li>
+<li>该对等方能够使用<strong>最稀缺优先技术</strong>（最稀缺的块就是邻居中副本最少的块）首先请求最稀缺的块；</li>
+<li>该对等方使用对换算法根据当前能够以最高速率向它提供数据的邻居给与优先响应权，例如，响应接收传输速率排名前4的对等方的请求，并且每过一段时间重新替换新的对换伴侣，这些对等方被称为疏通；</li>
+</ul>
+</li>
+<li>另一种P2P应用——分布式散列表（DHT）：<ul>
+<li>分布式散列表是一种简单的数据库，其数据库记录分布在一个P2P系统的多个对等方上；</li>
+<li>DHT得到了广泛实现（如在BitTorrent中），并成为大量研究的主题；</li>
+</ul>
+</li>
+</ul>
+<h2 id="6-视频流和内容分发网"><a href="#6-视频流和内容分发网" class="headerlink" title="6.视频流和内容分发网"></a>6.视频流和内容分发网</h2><h3 id="6-1-因特网视频"><a href="#6-1-因特网视频" class="headerlink" title="6.1 因特网视频"></a>6.1 因特网视频</h3><ul>
+<li>在流式存储视频应用中，基础的媒体是预先录制的视频；</li>
+<li>视频是由一系列的图像，以一种恒定的速率（如每秒24张图像）来展现，而一幅未压缩、数字编码的图像由像素阵列组成，其中每个像素都是由一些比特编码来表示亮度和颜色；</li>
+<li>视频的一个重要特征就是能够被压缩，因而可用比特率来权衡视频质量；</li>
+<li>流式视频最为重要的性能度量是平均端到端吞吐量，为了提供连续不断的布局，网络必须为流式应用提供平均吞吐量，这个流式应用至少与压缩视频的比特率一样大；</li>
+</ul>
+<h3 id="6-2-HTTP流和DASH"><a href="#6-2-HTTP流和DASH" class="headerlink" title="6.2 HTTP流和DASH"></a>6.2 HTTP流和DASH</h3><ul>
+<li>在HTTP流中，视频只是存储在HTTP服务器中的一个普通的文件，每个文件具有一个特定的URL，但HTTP流所有客户接受到的视频编码版本相同，也就是比特率相同，显然并没有考虑用户带宽的问题；</li>
+<li>DASH解决了上述问题，DASH流中，将视频编码成几个不同的版本，每个版本具有不同的比特率，每一个版本都拥有属于自己的URL，DASH初始时根据用户带宽自定义选择一个版本的视频，并且允许用户更改版本；</li>
+</ul>
+<h3 id="6-3-内容分发网（CDN）"><a href="#6-3-内容分发网（CDN）" class="headerlink" title="6.3 内容分发网（CDN）"></a>6.3 内容分发网（CDN）</h3><ul>
+<li>建立大型单一的大规模数据中心存储所有视频并且直接传输给用户存在三个问题：<ul>
+<li>客户原理数据中心时，服务器到客户之间的其中一个通信链路提供的吞吐量如果小于视频消耗速率，则有强大的停滞时延；</li>
+<li>流行的视频可能经过相同的链路发送很多次，既浪费宽带，又需向ISP支付更多费用；</li>
+<li>单个数据中心可能发生单点故障；</li>
+</ul>
+</li>
+<li>CDN管理分布在多个地理位置上的服务器，在它的服务器上存储视频（包括其它Web内容）的副本，并且视图将每个用户请求定向到一个能提供最好用户体验的CDN位置；</li>
+<li>CDN两种类型：<ul>
+<li>专用CDN：由内容提供商拥有；</li>
+<li>第三方CDN，为多个内容提供商分发内容；</li>
+</ul>
+</li>
+<li>CDN两种服务器安置原则：<ul>
+<li>深入：<ul>
+<li>由Akamai首创，通过在遍及全球的接入ISP中部署服务器集群来深入到ISP的接入网中；</li>
+<li>目的是靠近端用户，通过减少端用户和CDN集群之间链路和路由器的数量，从而改善用户感受的时延和吞吐量；</li>
+<li>是一种高度分布式设计，维护和管理集群困难；</li>
+</ul>
+</li>
+<li>邀请做客：<ul>
+<li>由Limelight和其它CDN公司采用，通过在少量关键位置建造大集群来邀请ISP做客；</li>
+<li>不是将集群放在接入ISP中，这些CDN通常将它们的集群放置在因特网交换点（IXP）；</li>
+<li>产生较低的维护和管理开销，有可能以对端用户的较高时延和较低吞吐量为代价；</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>很多CDN没有将视频推入集群，而是通过一种简单的<strong>拉策略</strong>：<ul>
+<li>如果客户向未存储该视频的集群请求视频，该集群从某种新仓库或另一个集群检索该视频，向客户发送的同时存储副本到本地；</li>
+<li>存储器满时，删除不经常使用的视频；</li>
+<li>这个拉策略和因特网缓存与分页机制很像；</li>
+</ul>
+</li>
+</ul>
+<h4 id="6-31-CDN操作"><a href="#6-31-CDN操作" class="headerlink" title="6.31 CDN操作"></a>6.31 CDN操作</h4><ul>
+<li>当用户主机中的一个浏览器指令剑索一个特定视频（URL标识）时，CDN必须截获该请求：<ul>
+<li>确定此时适合用于该用户的CDN服务器集群；</li>
+<li>将客户的请求重定向到该集群的某台服务器；</li>
+</ul>
+</li>
+<li>截获和重定向机制，步骤：<ul>
+<li>用户访问视频网站；</li>
+<li>用户点击视频链接，发送DNS请求；</li>
+<li>用户本地DNS服务器（LDNS）将该请求中继到一台用于域名的权威DNS服务器，该权威CDN服务器返回CDN域的主机名；</li>
+<li>用户本地DNS服务器向该主机名发起第二个请求，CDN服务器的DNS返回CDN内容服务器的IP响应；</li>
+<li>用户本地DNS服务器向用户主机转发IP地址；</li>
+<li>建立TCP连接并发出HTTP GET请求；</li>
+<li>CDN响应；</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/ComputerNetWorking/033.png" alt="image-20201014231944805"></p>
+<h4 id="6-32-集群选择策略"><a href="#6-32-集群选择策略" class="headerlink" title="6.32 集群选择策略"></a>6.32 集群选择策略</h4><ul>
+<li><p>CDN部署的核心就是集群选择策略，即动态地将客户定向到CDN中某个服务器集群或数据中心的机制；</p>
+</li>
+<li><p>CDN在得到客户的LDNS服务器的IP地址后，需要基于该IP地址选择一个适当的集群，并将其IP响应给LDNS；</p>
+</li>
+<li><p>策略：</p>
+<ul>
+<li>指派到地理上最为邻近的集群，但地理邻近未必网络传输路径短；</li>
+<li>基于当前流量条件为客户决定最好的集群，CDN能够对其集群和客户之间的时延和丢包性能执行周期性的实时测量；</li>
+</ul>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>计算机网络自顶向下方法</category>
+      </categories>
+      <tags>
+        <tag>计算机网络自顶向下方法</tag>
+        <tag>理论学习</tag>
+        <tag>教材</tag>
       </tags>
   </entry>
 </search>

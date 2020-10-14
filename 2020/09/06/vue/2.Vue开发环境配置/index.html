@@ -23,24 +23,37 @@
     var CONFIG = {"hostname":"kunpw.cn","root":"/","scheme":"Gemini","version":"8.0.0","exturl":false,"sidebar":{"display":"always","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"valine","storage":true,"lazyload":false,"nav":null,"activeClass":"valine"},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
   </script>
 
-  <meta name="description" content="1.新建项目yangguang1.1 新建项目12scrapy startproject yangguangcd yangguang # 进入新建项目列表    1.2 新建爬虫文件1scrapy genspider yg wz.sun0769.com    1.3 初始化 更改start_urls ：  1start_urls &#x3D; [&amp;#x27;http:&#x2F;&#x2F;wz.sun0769.com&#x2F;pol">
+  <meta name="description" content="1.Node.js下载http:&#x2F;&#x2F;nodejs.cn&#x2F;download&#x2F;  直接选择.msi 64位安装包下载并且直接安装即可，安装过程略">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Scrapy（2.实战）">
-<meta property="og:url" content="http://kunpw.cn/2020/09/13/scrapy%E5%AE%9E%E6%88%98/index.html">
+<meta property="og:title" content="Vue（2.开发环境配置(含node.js)）">
+<meta property="og:url" content="http://kunpw.cn/2020/09/06/vue/2.Vue%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/index.html">
 <meta property="og:site_name" content="朝小闇的博客">
-<meta property="og:description" content="1.新建项目yangguang1.1 新建项目12scrapy startproject yangguangcd yangguang # 进入新建项目列表    1.2 新建爬虫文件1scrapy genspider yg wz.sun0769.com    1.3 初始化 更改start_urls ：  1start_urls &#x3D; [&amp;#x27;http:&#x2F;&#x2F;wz.sun0769.com&#x2F;pol">
+<meta property="og:description" content="1.Node.js下载http:&#x2F;&#x2F;nodejs.cn&#x2F;download&#x2F;  直接选择.msi 64位安装包下载并且直接安装即可，安装过程略">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/102.png">
-<meta property="article:published_time" content="2020-09-13T13:35:46.004Z">
-<meta property="article:modified_time" content="2020-09-23T03:11:17.860Z">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/048.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/049.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/050.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/051.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/052.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/053.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/054.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/055.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/056.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/057.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/058.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/061.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/062.png">
+<meta property="article:published_time" content="2020-09-06T03:44:24.267Z">
+<meta property="article:modified_time" content="2020-09-23T03:10:40.838Z">
 <meta property="article:author" content="Zhaoxiaoan">
-<meta property="article:tag" content="Scrapy">
-<meta property="article:tag" content="Python">
+<meta property="article:tag" content="vue">
+<meta property="article:tag" content="环境配置">
+<meta property="article:tag" content="node.js">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/102.png">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/048.png">
 
 
-<link rel="canonical" href="http://kunpw.cn/2020/09/13/scrapy%E5%AE%9E%E6%88%98/">
+<link rel="canonical" href="http://kunpw.cn/2020/09/06/vue/2.Vue%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/">
 
 
 <script data-pjax class="page-configurations">
@@ -53,7 +66,7 @@
   };
 </script>
 
-  <title>Scrapy（2.实战） | 朝小闇的博客</title>
+  <title>Vue（2.开发环境配置(含node.js)） | 朝小闇的博客</title>
   
 
 
@@ -160,7 +173,7 @@
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">11</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">12</span></a>
 
   </li>
         <li class="menu-item menu-item-essays">
@@ -224,7 +237,7 @@
 
       <!--noindex-->
       <section class="post-toc-wrap sidebar-panel">
-          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E6%96%B0%E5%BB%BA%E9%A1%B9%E7%9B%AEyangguang"><span class="nav-text">1.新建项目yangguang</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-%E6%96%B0%E5%BB%BA%E9%A1%B9%E7%9B%AE"><span class="nav-text">1.1 新建项目</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-%E6%96%B0%E5%BB%BA%E7%88%AC%E8%99%AB%E6%96%87%E4%BB%B6"><span class="nav-text">1.2 新建爬虫文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-3-%E5%88%9D%E5%A7%8B%E5%8C%96"><span class="nav-text">1.3 初始化</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-items-py"><span class="nav-text">2.items.py</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-%E6%AD%A3%E5%BC%8F%E7%88%AC%E5%8F%96"><span class="nav-text">3.正式爬取</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-%E5%88%86%E7%BB%84%E7%88%AC%E5%8F%96%E5%88%97%E8%A1%A8%E9%A1%B5%E5%86%85%E5%AE%B9"><span class="nav-text">3.1 分组爬取列表页内容</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-%E8%BF%9B%E4%B8%80%E6%AD%A5%E7%88%AC%E5%8F%96%E5%86%85%E5%AE%B9%E8%AF%A6%E6%83%85%E9%A1%B5"><span class="nav-text">3.2 进一步爬取内容详情页</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3-%E5%9C%A8parse%E5%87%BD%E6%95%B0%E6%9C%80%E5%90%8E%E5%AE%9E%E7%8E%B0%E7%BF%BB%E9%A1%B5%E8%AF%B7%E6%B1%82"><span class="nav-text">3.3 在parse函数最后实现翻页请求</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-4-pipelines-py"><span class="nav-text">3.4 pipelines.py</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-%E7%BB%93%E6%9E%9C%E6%98%BE%E7%A4%BA"><span class="nav-text">4.结果显示</span></a></li></ol></div>
+          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-Node-js%E4%B8%8B%E8%BD%BD"><span class="nav-text">1.Node.js下载</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-%E5%AE%89%E8%A3%85%E6%B7%98%E5%AE%9D%E9%95%9C%E5%83%8F%E5%8A%A0%E9%80%9F%E5%99%A8%EF%BC%88cnpm%EF%BC%89"><span class="nav-text">2.安装淘宝镜像加速器（cnpm）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-%E5%AE%89%E8%A3%85vue-cli"><span class="nav-text">3.安装vue-cli</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-%E4%BD%BF%E7%94%A8vue-cli%E5%88%9B%E5%BB%BAvue%E7%A8%8B%E5%BA%8F"><span class="nav-text">4.使用vue-cli创建vue程序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-IDEA%E5%88%9D%E6%AD%A5%E8%AE%A4%E8%AF%86%E6%96%87%E4%BB%B6"><span class="nav-text">5.IDEA初步认识文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-%E5%AE%89%E8%A3%85webpack"><span class="nav-text">6.安装webpack</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-%E5%AE%89%E8%A3%85vue-router"><span class="nav-text">7.安装vue-router</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-npm%E5%AE%89%E8%A3%85%E5%91%BD%E4%BB%A4%E8%AF%A6%E8%A7%A3"><span class="nav-text">8.npm安装命令详解</span></a></li></ol></div>
       </section>
       <!--/noindex-->
 
@@ -240,7 +253,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">11</span>
+          <span class="site-state-item-count">12</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -278,6 +291,10 @@
         
         
           <li>
+            <a href="/2020/10/14/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E8%87%AA%E9%A1%B6%E5%90%91%E4%B8%8B%E6%96%B9%E6%B3%95/%E7%AC%AC%E4%BA%8C%E7%AB%A0.%E5%BA%94%E7%94%A8%E5%B1%82/" title="第二章.应用层" target="_blank">第二章.应用层</a>
+          </li>
+        
+          <li>
             <a href="/2020/09/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E8%87%AA%E9%A1%B6%E5%90%91%E4%B8%8B%E6%96%B9%E6%B3%95/%E7%AC%AC%E4%B8%80%E7%AB%A0.%E5%9B%A0%E7%89%B9%E7%BD%91/" title="第一章.因特网" target="_blank">第一章.因特网</a>
           </li>
         
@@ -286,15 +303,11 @@
           </li>
         
           <li>
-            <a href="/2020/09/13/scrapy%E5%AE%9E%E6%88%98/" title="Scrapy（2.实战）" target="_blank">Scrapy（2.实战）</a>
+            <a href="/2020/09/13/%E7%88%AC%E8%99%AB/scrapy%E5%AE%9E%E6%88%98/" title="Scrapy（2.实战）" target="_blank">Scrapy（2.实战）</a>
           </li>
         
           <li>
-            <a href="/2020/09/10/scrapy%E7%AE%80%E8%A6%81%E4%BD%BF%E7%94%A8%E5%85%A5%E9%97%A8/" title="Scrapy（1.简要入门）" target="_blank">Scrapy（1.简要入门）</a>
-          </li>
-        
-          <li>
-            <a href="/2020/09/10/hero%20Img%E9%80%9A%E8%BF%87%E5%85%8D%E8%B4%B9cdn%E6%98%BE%E7%A4%BA/" title="hero等静态网站通过外部cdn引用图片" target="_blank">hero等静态网站通过外部cdn引用图片</a>
+            <a href="/2020/09/10/%E7%88%AC%E8%99%AB/scrapy%E7%AE%80%E8%A6%81%E4%BD%BF%E7%94%A8%E5%85%A5%E9%97%A8/" title="Scrapy（1.简要入门）" target="_blank">Scrapy（1.简要入门）</a>
           </li>
         
       </ul>
@@ -334,7 +347,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://kunpw.cn/2020/09/13/scrapy%E5%AE%9E%E6%88%98/">
+    <link itemprop="mainEntityOfPage" href="http://kunpw.cn/2020/09/06/vue/2.Vue%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/PubuLan.png">
@@ -350,7 +363,7 @@
     
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Scrapy（2.实战）
+          Vue（2.开发环境配置(含node.js)）
         </h1>
 
         <div class="post-meta-container">
@@ -361,14 +374,14 @@
       </span>
       <span class="post-meta-item-text">发表于</span>
 
-      <time title="创建时间：2020-09-13 21:35:46" itemprop="dateCreated datePublished" datetime="2020-09-13T21:35:46+08:00">2020-09-13</time>
+      <time title="创建时间：2020-09-06 11:44:24" itemprop="dateCreated datePublished" datetime="2020-09-06T11:44:24+08:00">2020-09-06</time>
     </span>
       <span class="post-meta-item">
         <span class="post-meta-item-icon">
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2020-09-23 11:11:17" itemprop="dateModified" datetime="2020-09-23T11:11:17+08:00">2020-09-23</time>
+        <time title="修改时间：2020-09-23 11:10:40" itemprop="dateModified" datetime="2020-09-23T11:10:40+08:00">2020-09-23</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -396,8 +409,8 @@
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/2020/09/13/scrapy%E5%AE%9E%E6%88%98/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2020/09/13/scrapy%E5%AE%9E%E6%88%98/" itemprop="commentCount"></span>
+    <a title="valine" href="/2020/09/06/vue/2.Vue%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2020/09/06/vue/2.Vue%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -409,14 +422,14 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>3.1k</span>
+      <span>1.7k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>3 分钟</span>
+      <span>2 分钟</span>
     </span>
 </div>
 
@@ -427,68 +440,144 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h2 id="1-新建项目yangguang"><a href="#1-新建项目yangguang" class="headerlink" title="1.新建项目yangguang"></a>1.新建项目yangguang</h2><h3 id="1-1-新建项目"><a href="#1-1-新建项目" class="headerlink" title="1.1 新建项目"></a>1.1 新建项目</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">scrapy startproject yangguang</span><br><span class="line"><span class="built_in">cd</span> yangguang <span class="comment"># 进入新建项目列表</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="1-2-新建爬虫文件"><a href="#1-2-新建爬虫文件" class="headerlink" title="1.2 新建爬虫文件"></a>1.2 新建爬虫文件</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">scrapy genspider yg wz.sun0769.com</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="1-3-初始化"><a href="#1-3-初始化" class="headerlink" title="1.3 初始化"></a>1.3 初始化</h3><ul>
-<li>更改<code>start_urls</code> ：</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">start_urls = [<span class="string">&#x27;http://wz.sun0769.com/political/index/politicsNewest?id=1&amp;page=1/&#x27;</span>]</span><br></pre></td></tr></table></figure>
-
-
+        <h2 id="1-Node-js下载"><a href="#1-Node-js下载" class="headerlink" title="1.Node.js下载"></a>1.Node.js下载</h2><p><a target="_blank" rel="noopener external nofollow noreferrer" href="http://nodejs.cn/download/">http://nodejs.cn/download/</a></p>
 <ul>
-<li>在settings.py文件中添加日志过滤配置：</li>
+<li>直接选择.msi 64位安装包下载并且直接安装即可，安装过程略</li>
 </ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">LOG_LEVEL = <span class="string">&quot;WARNING&quot;</span></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>（重要！！！）在settings.py文件中添加下载限速配置（笔者由于下载过快直接导致整个宿舍的ip被网站封了……）：</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 0.5是每次下载间隔0.5s</span></span><br><span class="line">DOWNLOAD_DELAY = <span class="number">0.5</span></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>写入访问请求头的用户代理（每个网站都不同，打开netWork随便选中一个链接都可看到）：</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">USER_AGENT = <span class="string">&#x27;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.132 Safari/537.36&#x27;</span></span><br></pre></td></tr></table></figure>
-
-
-
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/048.png" alt="image-20200903133908554"></p>
 <a id="more"></a>
 
-<h2 id="2-items-py"><a href="#2-items-py" class="headerlink" title="2.items.py"></a>2.items.py</h2><ul>
-<li>（分析网页）在<code>items.py</code>文件中定义字典元素：</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">YangguangItem</span>(<span class="params">scrapy.Item</span>):</span></span><br><span class="line">    <span class="comment"># define the fields for your item here like:</span></span><br><span class="line">    status = scrapy.Field()             <span class="comment"># 状态</span></span><br><span class="line">    title = scrapy.Field()              <span class="comment"># 标题</span></span><br><span class="line">    href = scrapy.Field()               <span class="comment"># 链接地址</span></span><br><span class="line">    publish_date = scrapy.Field()       <span class="comment"># 发布时间</span></span><br><span class="line">    content_img = scrapy.Field()        <span class="comment"># 内容图片</span></span><br><span class="line">    content_text = scrapy.Field()       <span class="comment"># 内容文本</span></span><br></pre></td></tr></table></figure>
 
 <ul>
-<li>在<code>yg.py</code>爬虫文件中导入刚刚定义的字典元素：</li>
+<li>注意：选择自动添加到path路径，接着直接往下走不用更改；</li>
 </ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> yangguang.items <span class="keyword">import</span> YangguangItem</span><br></pre></td></tr></table></figure>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/049.png" alt="image-20200903134106262"></p>
+<ul>
+<li>检查是否安装成功：</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">node -v 查看能否正常打印出版本号</span><br><span class="line">npm -v 安装node.js会自动安装npm包，同样查看即可</span><br><span class="line">npm是一个软件包管理工具，用于下载安装</span><br></pre></td></tr></table></figure>
 
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/050.png" alt="image-20200903142018014"></p>
+<hr>
+<h2 id="2-安装淘宝镜像加速器（cnpm）"><a href="#2-安装淘宝镜像加速器（cnpm）" class="headerlink" title="2.安装淘宝镜像加速器（cnpm）"></a>2.安装淘宝镜像加速器（cnpm）</h2><ul>
+<li>cnpm下载国外程序可能无法正常使用，所以一般都使用npm下载，npm下载无用时再使用cnpm</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">npm install cnpm -g -g是全局安装，建议直接全局安装，安装需要花费一定时间，如果不成功就多次重新安装</span><br><span class="line"></span><br><span class="line">npm install --registry=https://registry.npm.taobao.org 或者每次下载时使用此参数可以单词调用加速器</span><br></pre></td></tr></table></figure>
 
+<p>安装之后的路径：<code>C:\Users\Acer\AppData\Roaming\npm\node_modules\cnpm</code></p>
+<ul>
+<li>同时与该加速器同级目录下还需下载其它模板：</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/051.png" alt="image-20200903142549464"></p>
+<h2 id="3-安装vue-cli"><a href="#3-安装vue-cli" class="headerlink" title="3.安装vue-cli"></a>3.安装vue-cli</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm install vue-cli -g </span><br></pre></td></tr></table></figure>
 
-<h2 id="3-正式爬取"><a href="#3-正式爬取" class="headerlink" title="3.正式爬取"></a>3.正式爬取</h2><h3 id="3-1-分组爬取列表页内容"><a href="#3-1-分组爬取列表页内容" class="headerlink" title="3.1 分组爬取列表页内容"></a>3.1 分组爬取列表页内容</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">parse</span>(<span class="params">self, response</span>):</span></span><br><span class="line">    <span class="comment"># 分组</span></span><br><span class="line">    url = <span class="string">&quot;http://wz.sun0769.com&quot;</span></span><br><span class="line">    li_list = response.xpath(<span class="string">&#x27;//*[@class=&quot;title-state-ul&quot;]/li&#x27;</span>)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> li <span class="keyword">in</span> li_list:</span><br><span class="line">        item = YangguangItem()  <span class="comment"># 实例化</span></span><br><span class="line">        item[<span class="string">&quot;status&quot;</span>] = li.xpath(<span class="string">&#x27;./*[@class=&quot;state2&quot;]/text()&#x27;</span>).extract_first()</span><br><span class="line">        item[<span class="string">&quot;title&quot;</span>] = li.xpath(<span class="string">&#x27;./*[@class=&quot;state3&quot;]/a/text()&#x27;</span>).extract_first()</span><br><span class="line">        item[<span class="string">&quot;href&quot;</span>] = li.xpath(<span class="string">&#x27;./*[@class=&quot;state3&quot;]/a/@href&#x27;</span>).extract_first()</span><br><span class="line">        item[<span class="string">&quot;publish_date&quot;</span>] = li.xpath(<span class="string">&#x27;./*[@class=&quot;state5 &quot;]/text()&#x27;</span>).extract_first()</span><br><span class="line"></span><br><span class="line">        <span class="comment"># href 不完整</span></span><br><span class="line">        item[<span class="string">&quot;href&quot;</span>] = url + str(item[<span class="string">&quot;href&quot;</span>])</span><br><span class="line">        print(item[<span class="string">&quot;href&quot;</span>])</span><br><span class="line"></span><br><span class="line">        <span class="keyword">yield</span> scrapy.Request(</span><br><span class="line">            str(item[<span class="string">&quot;href&quot;</span>]),</span><br><span class="line">            callback=self.parse_detail,</span><br><span class="line">            meta=&#123;<span class="string">&quot;item&quot;</span>: item&#125;  <span class="comment"># 将item数据通过meta传输给下一个处理函数</span></span><br><span class="line">        )</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>vue-cli官方提供的一个脚手架，用于快速生成一个vue的项目模板;预先定义好的目录结构及基础代码，就好比咱们在创建Maven项目时可以选择创建一个骨架项目，这个骨架项目就是脚手架,我们的开发更加的快速；也是接下来主要使用的部分；</p>
+</li>
+<li><p>主要的功能：</p>
+<ul>
+<li>统一的目录结构</li>
+<li>本地调试</li>
+<li>热部署</li>
+<li>单元测试</li>
+<li>集成打包上线</li>
+</ul>
+</li>
+<li><p>安装成功后使用<code>vue list</code>命令可以查看模板：</p>
+</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/052.png" alt="image-20200903143231971"></p>
+<ul>
+<li>如果无法显示该目录，则需要重新配置网络，重启电脑或者开启手机热点切换网络再重试，原因是网络问题，可多次重连尝试；</li>
+</ul>
+<h2 id="4-使用vue-cli创建vue程序"><a href="#4-使用vue-cli创建vue程序" class="headerlink" title="4.使用vue-cli创建vue程序"></a>4.使用vue-cli创建vue程序</h2><ul>
+<li>先切换命令提示符路径至目标路径；</li>
+<li>使用命令：</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vue init webpack myvue 其中myvue为创建文件名</span><br></pre></td></tr></table></figure>
 
+<ul>
+<li><p>加载一会后会出现一系列相关信息，项目名、项目描述等都可以直接回车，使用默认信息即可，之后作者名可以自己更改，再往后Vue build选项选择第一项即可，之后所有选项直接选择 n，表示我们会手动部署其它文件（选择y就会自动部署）；</p>
+</li>
+<li><p>再进入新文件中：</p>
+</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> myvue</span><br></pre></td></tr></table></figure>
 
+<ul>
+<li>进入之后安装模板依赖：</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install 自动安装固定依赖</span><br></pre></td></tr></table></figure>
 
-<h3 id="3-2-进一步爬取内容详情页"><a href="#3-2-进一步爬取内容详情页" class="headerlink" title="3.2 进一步爬取内容详情页"></a>3.2 进一步爬取内容详情页</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">parse_detail</span>(<span class="params">self, response</span>):</span></span><br><span class="line">    item = response.meta[<span class="string">&quot;item&quot;</span>]  <span class="comment"># 按照键值对的形式接收meta传过来的数据</span></span><br><span class="line">    <span class="comment"># 文本内容和图片都可能不止一段或一张</span></span><br><span class="line">    item[<span class="string">&quot;content_text&quot;</span>] = response.xpath(<span class="string">&#x27;//*[@class=&quot;details-box&quot;]/pre/text()&#x27;</span>).extract()</span><br><span class="line">    item[<span class="string">&quot;content_img&quot;</span>] = response.xpath(<span class="string">&#x27;//*[@class=&quot;clear details-img-list Picture-img&quot;]/img/@src&#x27;</span>).extract()</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 如果图片链接不完整，执行以下语句(上述图片地址完整)：</span></span><br><span class="line">    <span class="comment"># item[&quot;content_img&quot;] = [&quot;http://wz.sun0769.com&quot;+i for i in item[&quot;content_img&quot;]]</span></span><br><span class="line"></span><br><span class="line">    print(item[<span class="string">&quot;title&quot;</span>])</span><br></pre></td></tr></table></figure>
+<ul>
+<li>接着使用命令：</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm run dev 用于部署服务器，每次运行时都需使用该命令部署服务器</span><br></pre></td></tr></table></figure>
 
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/053.png" alt="image-20200903144930303"></p>
+<ul>
+<li>部署成功之后可通过端口8080直接访问：</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/054.png" alt="image-20200903145037697"></p>
+<ul>
+<li>ctrl+c可选择关闭服务器；</li>
+</ul>
+<hr>
+<h2 id="5-IDEA初步认识文件"><a href="#5-IDEA初步认识文件" class="headerlink" title="5.IDEA初步认识文件"></a>5.IDEA初步认识文件</h2><ul>
+<li>使用IDEA打开上述新项目，目录结构如图：</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/055.png" alt="image-20200903145259594"></p>
+<ul>
+<li><p>目录结构具体功能：</p>
+<ul>
+<li>index.html：是程序的主入口，内容不能随意修改：</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/056.png" alt="image-20200903150423965"></p>
+<ul>
+<li>static：存放静态资源，如css、js、图片等；</li>
+<li>src：开发项目区域：<ul>
+<li>main.js：入口</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/057.png" alt="image-20200903150540591"></p>
+<ul>
+<li>package.json：打包时需要构建的版本信息等，不需修改；</li>
+<li>node_modules：存放之前下载的依赖组件；</li>
+<li>其余先不细讲，用到时再看；</li>
+</ul>
+</li>
+</ul>
+<h2 id="6-安装webpack"><a href="#6-安装webpack" class="headerlink" title="6.安装webpack"></a>6.安装webpack</h2><ul>
+<li>安装指令：</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install webpack -g</span><br><span class="line">npm install webpack-cli -g</span><br></pre></td></tr></table></figure>
 
+<ul>
+<li>测试安装成功：</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">webpack -v</span><br><span class="line">webpack-cli -v</span><br></pre></td></tr></table></figure>
 
-<h3 id="3-3-在parse函数最后实现翻页请求"><a href="#3-3-在parse函数最后实现翻页请求" class="headerlink" title="3.3 在parse函数最后实现翻页请求"></a>3.3 在parse函数最后实现翻页请求</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 翻页</span></span><br><span class="line">next_url = response.xpath(<span class="string">&#x27;//*[@class=&quot;arrow-page prov_rota&quot;]/@href&#x27;</span>).extract_first()</span><br><span class="line">next_url = url + next_url</span><br><span class="line"><span class="comment"># if next_url is not None:</span></span><br><span class="line"><span class="comment"># 这里直接从101跳到了第一页，所以不用上述</span></span><br><span class="line"><span class="keyword">if</span> response.xpath(<span class="string">&#x27;//*[@class=&quot;mr-three paging-box&quot;]/a[4]/text()&#x27;</span>) != <span class="string">&quot;3&quot;</span>:</span><br><span class="line">    <span class="keyword">yield</span> scrapy.Request(</span><br><span class="line">        next_url,</span><br><span class="line">        callback=self.parse</span><br><span class="line">    )</span><br></pre></td></tr></table></figure>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/058.png" alt="image-20200903165916564"></p>
+<h2 id="7-安装vue-router"><a href="#7-安装vue-router" class="headerlink" title="7.安装vue-router"></a>7.安装vue-router</h2><ul>
+<li>安装指令（需要在项目目录下执行）：</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install vue-router --save-dev</span><br></pre></td></tr></table></figure>
 
-
-
-<h3 id="3-4-pipelines-py"><a href="#3-4-pipelines-py" class="headerlink" title="3.4 pipelines.py"></a>3.4 pipelines.py</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> re</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">YangguangPipeline</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">process_item</span>(<span class="params">self, item, spider</span>):</span></span><br><span class="line">        item[<span class="string">&quot;content_img&quot;</span>] = self.content_process(item[<span class="string">&quot;content_img&quot;</span>])</span><br><span class="line">        item[<span class="string">&quot;content_text&quot;</span>] = self.content_process(item[<span class="string">&quot;content_text&quot;</span>])</span><br><span class="line">        <span class="keyword">return</span> item</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">content_process</span>(<span class="params">self, content</span>):</span></span><br><span class="line">        <span class="comment"># re不太会用，可以百度</span></span><br><span class="line">        content = [re.sub(<span class="string">r&quot;\xa0|\s&quot;</span>, <span class="string">&quot;&quot;</span>, i) <span class="keyword">for</span> i <span class="keyword">in</span> content]</span><br><span class="line">        content = [i <span class="keyword">for</span> i <span class="keyword">in</span> content <span class="keyword">if</span> len(i) &gt; <span class="number">0</span>]  <span class="comment"># 去除列表中的空字符串</span></span><br><span class="line">        <span class="keyword">return</span> content</span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="4-结果显示"><a href="#4-结果显示" class="headerlink" title="4.结果显示"></a>4.结果显示</h2><p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/102.png" alt="image-20200913213413120"></p>
+<ul>
+<li>发生错误按照提示执行指令即可：</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/061.png" alt="image-20200904115933531"></p>
+<ul>
+<li>成功安装到模板内：</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/062.png" alt="image-20200904120407376"></p>
+<h2 id="8-npm安装命令详解"><a href="#8-npm安装命令详解" class="headerlink" title="8.npm安装命令详解"></a>8.npm安装命令详解</h2><ul>
+<li><code>npm install moduleName</code> :安装模块到项目目录下</li>
+<li><code>npm install -g moduleName</code> : -g 的意思是将模块安装到全局，具体安装到磁盘哪个位置，要看npm config prefix的位置</li>
+<li><code>npm install -save-dev moduleNam e</code>: –save-dev的意思是将模块安装到项目目录下，并在package文件的devDependencies 节点写入依赖，-D为该命令的缩</li>
+<li><code>npm install -save moduleName</code> : –save的意思是将模块安装到项目目录下，并在package文件的dependencies 节点写入依赖，-S为该命令的缩写</li>
+</ul>
 
     </div>
 
@@ -514,7 +603,10 @@
   <div class="popular-posts-header">相关文章推荐# Custom header, leave empty to use the default one</div>
   <ul class="popular-posts">
     <li class="popular-posts-item">
-      <div class="popular-posts-title"><a href="\2020\09\10\scrapy简要使用入门\" rel="bookmark">Scrapy（1.简要入门）</a></div>
+      <div class="popular-posts-title"><a href="\2020\09\06\vue\1.Vue基础入门\" rel="bookmark">Vue（1.基础入门）</a></div>
+    </li>
+    <li class="popular-posts-item">
+      <div class="popular-posts-title"><a href="\2020\09\06\vue\3.vue开发实例演示\" rel="bookmark">vue（3.开发实例演示(含webpack)）</a></div>
     </li>
   </ul>
 
@@ -532,7 +624,7 @@
   </li>
   <li class="post-copyright-link">
       <strong>本文链接：</strong>
-      <a href="http://kunpw.cn/2020/09/13/scrapy%E5%AE%9E%E6%88%98/" title="Scrapy（2.实战）">http://kunpw.cn/2020/09/13/scrapy实战/</a>
+      <a href="http://kunpw.cn/2020/09/06/vue/2.Vue%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/" title="Vue（2.开发环境配置(含node.js)）">http://kunpw.cn/2020/09/06/vue/2.Vue开发环境配置/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener external nofollow noreferrer" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -541,21 +633,22 @@
 </div>
 
           <div class="post-tags">
-              <a href="/tags/Scrapy/" rel="tag"><i class="fa fa-tag"></i> Scrapy</a>
-              <a href="/tags/Python/" rel="tag"><i class="fa fa-tag"></i> Python</a>
+              <a href="/tags/vue/" rel="tag"><i class="fa fa-tag"></i> vue</a>
+              <a href="/tags/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/" rel="tag"><i class="fa fa-tag"></i> 环境配置</a>
+              <a href="/tags/node-js/" rel="tag"><i class="fa fa-tag"></i> node.js</a>
           </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2020/09/10/scrapy%E7%AE%80%E8%A6%81%E4%BD%BF%E7%94%A8%E5%85%A5%E9%97%A8/" rel="prev" title="Scrapy（1.简要入门）">
-                  <i class="fa fa-chevron-left"></i> Scrapy（1.简要入门）
+                <a href="/2020/09/06/vue/1.Vue%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/" rel="prev" title="Vue（1.基础入门）">
+                  <i class="fa fa-chevron-left"></i> Vue（1.基础入门）
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2020/09/23/ffmpeg/" rel="next" title="FFmpeg简要使用">
-                  FFmpeg简要使用 <i class="fa fa-chevron-right"></i>
+                <a href="/2020/09/06/vue/3.vue%E5%BC%80%E5%8F%91%E5%AE%9E%E4%BE%8B%E6%BC%94%E7%A4%BA/" rel="next" title="vue（3.开发实例演示(含webpack)）">
+                  vue（3.开发实例演示(含webpack)） <i class="fa fa-chevron-right"></i>
                 </a>
             </div>
           </div>
@@ -649,14 +742,14 @@ setInterval("createtime()",250);
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">76k</span>
+    <span title="站点总字数">88k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">1:09</span>
+    <span title="站点阅读时长">1:20</span>
   </span>
 </div>
 <div class="busuanzi-count">
@@ -759,7 +852,7 @@ NexT.utils.loadComments('#valine-comments', () => {
   NexT.utils.getScript('//cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js', () => {
     new Valine(Object.assign({
       el  : '#valine-comments',
-      path: "/2020/09/13/scrapy%E5%AE%9E%E6%88%98/",
+      path: "/2020/09/06/vue/2.Vue%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/",
     }, {"enable":true,"appId":"9JxB7GVqlwRNk6oWQAWRFukK-MdYXbMMI","appKey":"0FRspDasEAKCPOgl62bwPGJ6","placeholder":"评论区走一波","avatar":"mm","meta":["nick","mail","link"],"pageSize":10,"lang":"zh-cn","visitor":false,"comment_count":true,"recordIP":false,"serverURLs":null,"enableQQ":false,"requiredFields":[],"emoticonUrl":["https://cdn.jsdelivr.net/npm/alus@latest","https://cdn.jsdelivr.net/gh/MiniValine/qq@latest","https://cdn.jsdelivr.net/gh/MiniValine/Bilibilis@latest","https://cdn.jsdelivr.net/gh/MiniValine/tieba@latest","https://cdn.jsdelivr.net/gh/MiniValine/twemoji@latest","https://cdn.jsdelivr.net/gh/MiniValine/weibo@latest"]}
     ));
   }, window.Valine);
