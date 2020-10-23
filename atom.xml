@@ -6,7 +6,7 @@
   <link href="http://kunpw.cn/atom.xml" rel="self"/>
   
   <link href="http://kunpw.cn/"/>
-  <updated>2020-10-14T15:43:00.377Z</updated>
+  <updated>2020-10-23T09:08:16.520Z</updated>
   <id>http://kunpw.cn/</id>
   
   <author>
@@ -17,11 +17,90 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>第二章.应用层</title>
+    <title>SpringBoot(一)</title>
+    <link href="http://kunpw.cn/2020/10/23/SpringBoot/SpringBoot%EF%BC%88%E4%B8%80%EF%BC%89/"/>
+    <id>http://kunpw.cn/2020/10/23/SpringBoot/SpringBoot%EF%BC%88%E4%B8%80%EF%BC%89/</id>
+    <published>2020-10-23T09:06:44.507Z</published>
+    <updated>2020-10-23T09:08:16.520Z</updated>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;SpringBoot&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;官方文档：&lt;a href=&quot;https://docs.spring.io/spring-boot/docs/2.1.6.RELEASE/reference/htmlsingle/#boot-features-external-config&quot;&gt;https://docs.spring.io/spring-boot/docs/2.1.6.RELEASE/reference/htmlsingle/#boot-features-external-config&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;1-创建SpringBoot文件&quot;&gt;&lt;a href=&quot;#1-创建SpringBoot文件&quot; class=&quot;headerlink&quot; title=&quot;1.创建SpringBoot文件&quot;&gt;&lt;/a&gt;1.创建SpringBoot文件&lt;/h2&gt;&lt;h3 id=&quot;1-1-官网创建文件并下载，使用IDEA打开&quot;&gt;&lt;a href=&quot;#1-1-官网创建文件并下载，使用IDEA打开&quot; class=&quot;headerlink&quot; title=&quot;1.1 官网创建文件并下载，使用IDEA打开&quot;&gt;&lt;/a&gt;1.1 官网创建文件并下载，使用IDEA打开&lt;/h3&gt;&lt;h3 id=&quot;1-2-IDEA创建&quot;&gt;&lt;a href=&quot;#1-2-IDEA创建&quot; class=&quot;headerlink&quot; title=&quot;1.2 IDEA创建&quot;&gt;&lt;/a&gt;1.2 IDEA创建&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;New Project -&amp;gt; Spring Initializr（本质也是从官网下载的模板格式）；&lt;/li&gt;
+&lt;li&gt;添加 java web 依赖；&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;2-文件简析&quot;&gt;&lt;a href=&quot;#2-文件简析&quot; class=&quot;headerlink&quot; title=&quot;2.文件简析&quot;&gt;&lt;/a&gt;2.文件简析&lt;/h2&gt;&lt;h3 id=&quot;2-1-pom-xml&quot;&gt;&lt;a href=&quot;#2-1-pom-xml&quot; class=&quot;headerlink&quot; title=&quot;2.1 pom.xml&quot;&gt;&lt;/a&gt;2.1 pom.xml&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;配置文件，主要有四个部分：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;项目元数据信息：创建时输入的Project Metadata部分，也就是Meaven项目的基本元素，包括groupId、artifactId、version、name、description等；&lt;/li&gt;
+&lt;li&gt;parent：继承&lt;code&gt;spring-boot-starter-parent&lt;/code&gt;的依赖管理、控制版本和打包等内容；&lt;/li&gt;
+&lt;li&gt;dependencies：项目具体依赖，下面包含了&lt;code&gt;spring-boot-starter-web&lt;/code&gt;用于实现HTTP接口（该依赖包含了Spring MVC，且使用Tomcat作为默认嵌入式容器），&lt;code&gt;spring-boot-starter-test&lt;/code&gt;是用于编写后续单元测试的依赖包：&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&quot;highlight xml&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;&amp;lt;!--  在这个标签中添加  --&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;dependencies&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;comment&quot;&gt;&amp;lt;!--  添加依赖，格式为 spring-boot-starter- 这是springboot启动器的标准格式     --&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    	&lt;span class=&quot;comment&quot;&gt;&amp;lt;!--  web依赖，tomcat      --&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;dependency&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;groupId&lt;/span&gt;&amp;gt;&lt;/span&gt;org.springframework.boot&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;groupId&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;artifactId&lt;/span&gt;&amp;gt;&lt;/span&gt;spring-boot-starter-web&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;artifactId&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;dependency&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    	&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;dependency&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;groupId&lt;/span&gt;&amp;gt;&lt;/span&gt;org.springframework.boot&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;groupId&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;artifactId&lt;/span&gt;&amp;gt;&lt;/span&gt;spring-boot-starter-test&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;artifactId&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;scope&lt;/span&gt;&amp;gt;&lt;/span&gt;test&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;scope&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;exclusions&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;exclusion&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                    &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;groupId&lt;/span&gt;&amp;gt;&lt;/span&gt;org.junit.vintage&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;groupId&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                    &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;artifactId&lt;/span&gt;&amp;gt;&lt;/span&gt;junit-vintage-engine&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;artifactId&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                &lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;exclusion&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;exclusions&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;dependency&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;dependencies&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;ul&gt;
+&lt;li&gt;build：构件配置部分，默认使用了&lt;code&gt;spring-boot-maven-plugin&lt;/code&gt;，即打jar包插件；&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</summary>
+    
+    
+    
+    <category term="学习" scheme="http://kunpw.cn/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="java" scheme="http://kunpw.cn/tags/java/"/>
+    
+    <category term="SpringBoot" scheme="http://kunpw.cn/tags/SpringBoot/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>注解和反射</title>
+    <link href="http://kunpw.cn/2020/10/23/java/%E6%B3%A8%E8%A7%A3%E5%92%8C%E5%8F%8D%E5%B0%84/"/>
+    <id>http://kunpw.cn/2020/10/23/java/%E6%B3%A8%E8%A7%A3%E5%92%8C%E5%8F%8D%E5%B0%84/</id>
+    <published>2020-10-23T09:04:24.564Z</published>
+    <updated>2020-10-23T09:05:58.087Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;注解&quot;&gt;&lt;a href=&quot;#注解&quot; class=&quot;headerlink&quot; title=&quot;注解&quot;&gt;&lt;/a&gt;注解&lt;/h2&gt;&lt;h3 id=&quot;定义&quot;&gt;&lt;a href=&quot;#定义&quot; class=&quot;headerlink&quot; title=&quot;定义&quot;&gt;&lt;/a&gt;定义&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;Annotation是从JDK5.0开始引入的新技术；&lt;/li&gt;
+&lt;li&gt;Annotation的作用：&lt;ul&gt;
+&lt;li&gt;可以被其它程序（编译器等）读取；&lt;/li&gt;
+&lt;li&gt;不是程序本身，可以对程序作出解释（这一点和注释（comment）没什么区别）；&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Annotation格式：&lt;ul&gt;
+&lt;li&gt;注解是以“@注释名”在代码中存在的，可以添加一些参数值，如：@SuppressWarnings(value=”unchecked”).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Annotation在哪里使用：&lt;ul&gt;
+&lt;li&gt;可以附加在package、class、method、filed等上面，相当于给他们添加了额外的辅助信息，可以通过反射机制编程实现对这些元数据的访问；&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</summary>
+    
+    
+    
+    <category term="学习" scheme="http://kunpw.cn/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="java" scheme="http://kunpw.cn/tags/java/"/>
+    
+    <category term="注解和反射" scheme="http://kunpw.cn/tags/%E6%B3%A8%E8%A7%A3%E5%92%8C%E5%8F%8D%E5%B0%84/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>计算机网络自顶向下方法学习笔记（二）应用层</title>
     <link href="http://kunpw.cn/2020/10/14/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E8%87%AA%E9%A1%B6%E5%90%91%E4%B8%8B%E6%96%B9%E6%B3%95/%E7%AC%AC%E4%BA%8C%E7%AB%A0.%E5%BA%94%E7%94%A8%E5%B1%82/"/>
     <id>http://kunpw.cn/2020/10/14/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E8%87%AA%E9%A1%B6%E5%90%91%E4%B8%8B%E6%96%B9%E6%B3%95/%E7%AC%AC%E4%BA%8C%E7%AB%A0.%E5%BA%94%E7%94%A8%E5%B1%82/</id>
     <published>2020-10-14T15:35:18.715Z</published>
-    <updated>2020-10-14T15:43:00.377Z</updated>
+    <updated>2020-10-17T09:28:18.936Z</updated>
     
     
     <summary type="html">&lt;h2 id=&quot;1-应用层协议原理&quot;&gt;&lt;a href=&quot;#1-应用层协议原理&quot; class=&quot;headerlink&quot; title=&quot;1.应用层协议原理&quot;&gt;&lt;/a&gt;1.应用层协议原理&lt;/h2&gt;&lt;ul&gt;
@@ -50,11 +129,11 @@
   </entry>
   
   <entry>
-    <title>第一章.因特网</title>
+    <title>计算机网络自顶向下方法学习笔记（一）因特网</title>
     <link href="http://kunpw.cn/2020/09/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E8%87%AA%E9%A1%B6%E5%90%91%E4%B8%8B%E6%96%B9%E6%B3%95/%E7%AC%AC%E4%B8%80%E7%AB%A0.%E5%9B%A0%E7%89%B9%E7%BD%91/"/>
     <id>http://kunpw.cn/2020/09/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E8%87%AA%E9%A1%B6%E5%90%91%E4%B8%8B%E6%96%B9%E6%B3%95/%E7%AC%AC%E4%B8%80%E7%AB%A0.%E5%9B%A0%E7%89%B9%E7%BD%91/</id>
     <published>2020-09-30T12:38:57.696Z</published>
-    <updated>2020-09-30T13:03:58.477Z</updated>
+    <updated>2020-10-17T09:28:24.668Z</updated>
     
     
     <summary type="html">&lt;h2 id=&quot;1-什么是因特网&quot;&gt;&lt;a href=&quot;#1-什么是因特网&quot; class=&quot;headerlink&quot; title=&quot;1.什么是因特网&quot;&gt;&lt;/a&gt;1.什么是因特网&lt;/h2&gt;&lt;blockquote&gt;
@@ -164,11 +243,11 @@
   </entry>
   
   <entry>
-    <title>Scrapy（2.实战）</title>
+    <title>爬虫之Scrapy（2.实战）</title>
     <link href="http://kunpw.cn/2020/09/13/%E7%88%AC%E8%99%AB/scrapy%E5%AE%9E%E6%88%98/"/>
     <id>http://kunpw.cn/2020/09/13/%E7%88%AC%E8%99%AB/scrapy%E5%AE%9E%E6%88%98/</id>
     <published>2020-09-13T13:35:46.004Z</published>
-    <updated>2020-09-23T03:11:17.860Z</updated>
+    <updated>2020-10-17T09:19:03.381Z</updated>
     
     
     <summary type="html">&lt;h2 id=&quot;1-新建项目yangguang&quot;&gt;&lt;a href=&quot;#1-新建项目yangguang&quot; class=&quot;headerlink&quot; title=&quot;1.新建项目yangguang&quot;&gt;&lt;/a&gt;1.新建项目yangguang&lt;/h2&gt;&lt;h3 id=&quot;1-1-新建项目&quot;&gt;&lt;a href=&quot;#1-1-新建项目&quot; class=&quot;headerlink&quot; title=&quot;1.1 新建项目&quot;&gt;&lt;/a&gt;1.1 新建项目&lt;/h3&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;scrapy startproject yangguang&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;cd&lt;/span&gt; yangguang &lt;span class=&quot;comment&quot;&gt;# 进入新建项目列表&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
@@ -212,11 +291,11 @@
   </entry>
   
   <entry>
-    <title>Scrapy（1.简要入门）</title>
+    <title>爬虫之Scrapy（1.简要入门）</title>
     <link href="http://kunpw.cn/2020/09/10/%E7%88%AC%E8%99%AB/scrapy%E7%AE%80%E8%A6%81%E4%BD%BF%E7%94%A8%E5%85%A5%E9%97%A8/"/>
     <id>http://kunpw.cn/2020/09/10/%E7%88%AC%E8%99%AB/scrapy%E7%AE%80%E8%A6%81%E4%BD%BF%E7%94%A8%E5%85%A5%E9%97%A8/</id>
     <published>2020-09-10T14:38:39.662Z</published>
-    <updated>2020-09-23T03:11:26.458Z</updated>
+    <updated>2020-10-17T09:28:39.124Z</updated>
     
     
     <summary type="html">&lt;h2 id=&quot;1-安装scrapy&quot;&gt;&lt;a href=&quot;#1-安装scrapy&quot; class=&quot;headerlink&quot; title=&quot;1.安装scrapy&quot;&gt;&lt;/a&gt;1.安装scrapy&lt;/h2&gt;&lt;ul&gt;
