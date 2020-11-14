@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.1.1">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/MuyunHui.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/MuyunHui.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/MuyunHui.png">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
+  <link rel="stylesheet" href="//cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-flash.min.css">
+  <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+
+<script class="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"kunpw.cn","root":"/","scheme":"Gemini","version":"8.0.0","exturl":false,"sidebar":{"display":"always","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"valine","storage":true,"lazyload":false,"nav":null,"activeClass":"valine"},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
+  </script>
+
+  <meta name="description" content="工作流程 本次数据分析目标是对大量的txt文本匹配查询一系列词汇出现的总频次，并从另一个大型二维数组（第一列元素存储了一系列文件名，需要将第二列和第三列元素相应添加到Excel表格中）中对每个文件名做相应的匹配查询  使用python进行数据分析工作，主要工作流程如下：  从a1、a2文本中读取内容（中文情感词汇，积极词汇表和消极词汇表）并以键值对形式存入两个大的字典中，键用取出来的词语表示，值则">
+<meta property="og:type" content="article">
+<meta property="og:title" content="使用Python数据分析遇到的部分问题">
+<meta property="og:url" content="http://kunpw.cn/2020/11/14/Python/Python%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E6%97%B6%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/index.html">
+<meta property="og:site_name" content="朝小闇的博客">
+<meta property="og:description" content="工作流程 本次数据分析目标是对大量的txt文本匹配查询一系列词汇出现的总频次，并从另一个大型二维数组（第一列元素存储了一系列文件名，需要将第二列和第三列元素相应添加到Excel表格中）中对每个文件名做相应的匹配查询  使用python进行数据分析工作，主要工作流程如下：  从a1、a2文本中读取内容（中文情感词汇，积极词汇表和消极词汇表）并以键值对形式存入两个大的字典中，键用取出来的词语表示，值则">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-11-14T11:02:41.986Z">
+<meta property="article:modified_time" content="2020-11-14T13:19:35.589Z">
+<meta property="article:author" content="Zhaoxiaoan">
+<meta property="article:tag" content="数据分析">
+<meta property="article:tag" content="Python">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://kunpw.cn/2020/11/14/Python/Python%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E6%97%B6%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/">
+
+
+<script data-pjax class="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>使用Python数据分析遇到的部分问题 | 朝小闇的博客</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  body { margin-top: 2rem; }
+
+  .use-motion .menu-item,
+  .use-motion .sidebar,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header {
+    visibility: visible;
+  }
+
+  .use-motion .header,
+  .use-motion .site-brand-container .toggle,
+  .use-motion .footer { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle,
+  .use-motion .custom-logo-image {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line {
+    transform: scaleX(1);
+  }
+
+  .search-pop-overlay, .sidebar-nav { display: none; }
+  .sidebar-panel { display: block; }
+  </style>
+</noscript>
+
+  
+	<script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+  
+
+<link rel="alternate" href="/atom.xml" title="朝小闇的博客" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">朝小闇的博客</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">海上月是天上月，眼前人是心上人</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">21</span></a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">3</span></a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">16</span></a>
+
+  </li>
+        <li class="menu-item menu-item-essays">
+
+    <a href="/essays" rel="section"><i class="fa fa-heart fa-fw"></i>随笔</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <section class="post-toc-wrap sidebar-panel">
+          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%A8%8B"><span class="nav-text">工作流程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%97%AE%E9%A2%98%E5%8F%8A%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95"><span class="nav-text">问题及解决方法</span></a></li></ol></div>
+      </section>
+      <!--/noindex-->
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Zhaoxiaoan"
+      src="/images/PubuLan.png">
+  <p class="site-author-name" itemprop="name">Zhaoxiaoan</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">16</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">21</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+
+
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/ZHAOXIAOAN" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;ZHAOXIAOAN" rel="noopener external nofollow noreferrer" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+  </div>
+
+
+
+    <div class="links-of-blogroll motion-element links-of-blogroll-block">
+      <div class="links-of-blogroll-title">
+        <!-- modify icon to fire by szw -->
+        <i class="fa fa-history fa-" aria-hidden="true"></i>
+        近期文章
+      </div>
+      <ul class="links-of-blogroll-list">
+        
+        
+          <li>
+            <a href="/2020/11/14/Python/Python%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E6%97%B6%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/" title="使用Python数据分析遇到的部分问题" target="_blank">使用Python数据分析遇到的部分问题</a>
+          </li>
+        
+          <li>
+            <a href="/2020/11/05/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E8%87%AA%E9%A1%B6%E5%90%91%E4%B8%8B%E6%96%B9%E6%B3%95/%E7%AC%AC%E4%B8%89%E7%AB%A0.%E8%BF%90%E8%BE%93%E5%B1%82/" title="计算机网络自顶向下方法学习笔记（三）运输层" target="_blank">计算机网络自顶向下方法学习笔记（三）运输层</a>
+          </li>
+        
+          <li>
+            <a href="/2020/10/23/SpringBoot/SpringBoot%EF%BC%88%E4%B8%80%EF%BC%89/" title="SpringBoot(一)" target="_blank">SpringBoot(一)</a>
+          </li>
+        
+          <li>
+            <a href="/2020/10/23/java/%E6%B3%A8%E8%A7%A3%E5%92%8C%E5%8F%8D%E5%B0%84/" title="注解和反射" target="_blank">注解和反射</a>
+          </li>
+        
+          <li>
+            <a href="/2020/10/14/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E8%87%AA%E9%A1%B6%E5%90%91%E4%B8%8B%E6%96%B9%E6%B3%95/%E7%AC%AC%E4%BA%8C%E7%AB%A0.%E5%BA%94%E7%94%A8%E5%B1%82/" title="计算机网络自顶向下方法学习笔记（二）应用层" target="_blank">计算机网络自顶向下方法学习笔记（二）应用层</a>
+          </li>
+        
+      </ul>
+    </div>
+
+
+      </section><div>
+  <canvas id="canvasDiyBlock" style="width:60%;">当前浏览器不支持canvas，请更换浏览器后再试</canvas><script src="/js/custom/clock.js"></script>
+</div>
+
+
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+      
+
+      
+
+    
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://kunpw.cn/2020/11/14/Python/Python%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E6%97%B6%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/PubuLan.png">
+      <meta itemprop="name" content="Zhaoxiaoan">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="朝小闇的博客">
+    </span>
+
+    
+    
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          使用Python数据分析遇到的部分问题
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2020-11-14 19:02:41 / 修改时间：21:19:35" itemprop="dateCreated datePublished" datetime="2020-11-14T19:02:41+08:00">2020-11-14</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index"><span itemprop="name">学习</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2020/11/14/Python/Python%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E6%97%B6%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2020/11/14/Python/Python%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E6%97%B6%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>11k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>10 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h2 id="工作流程"><a href="#工作流程" class="headerlink" title="工作流程"></a>工作流程</h2><blockquote>
+<p>本次数据分析目标是对大量的txt文本匹配查询一系列词汇出现的总频次，并从另一个大型二维数组（第一列元素存储了一系列文件名，需要将第二列和第三列元素相应添加到Excel表格中）中对每个文件名做相应的匹配查询</p>
+</blockquote>
+<p>使用python进行数据分析工作，主要工作流程如下：</p>
+<ol>
+<li><p>从<code>a1</code>、<code>a2</code>文本中读取内容（中文情感词汇，积极词汇表和消极词汇表）并以键值对形式存入两个大的字典中，键用取出来的词语表示，值则初始化赋值为0，用来对目标文本进行匹配分析对应词语出现次数：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">includesPositive = &#123;&#125;</span><br><span class="line">includesNegative = &#123;&#125;</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">readNegativeFile</span>(<span class="params">path</span>):</span></span><br><span class="line">    txt = open(path, <span class="string">&#x27;r&#x27;</span>, encoding=<span class="string">&#x27;UTF-8&#x27;</span>).readlines()</span><br><span class="line">    <span class="keyword">for</span> key <span class="keyword">in</span> txt:</span><br><span class="line">        key = key.replace(<span class="string">&#x27;\n&#x27;</span>, <span class="string">&#x27;&#x27;</span>)</span><br><span class="line">        print(key)</span><br><span class="line">        includesNegative[key] = <span class="number">0</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">readNegativeFile</span>(<span class="params">path</span>):</span></span><br><span class="line">    txt = open(path, <span class="string">&#x27;r&#x27;</span>, encoding=<span class="string">&#x27;UTF-8&#x27;</span>).readlines()</span><br><span class="line">    <span class="keyword">for</span> key <span class="keyword">in</span> txt:</span><br><span class="line">        key = key.replace(<span class="string">&#x27;\n&#x27;</span>, <span class="string">&#x27;&#x27;</span>)</span><br><span class="line">        print(key)</span><br><span class="line">        includesNegative[key] = <span class="number">0</span></span><br></pre></td></tr></table></figure>
+<a id="more"></a></li>
+<li><p>从<code>b</code>文本中读取内容并存入一个大的二维数组中，其中文本每一行以符号<code>,</code>分隔三个字符串，并存入二维数组一行中，其中第一个字符串是文件名，第二个字符串是一段数字代码，第三个字符串是时间，并过滤文件名中特殊符号<code>\n</code>、<code>*</code>：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 问题一：定义全局变量后，在函数中赋值，离开函数后却失效</span></span><br><span class="line">data = [[] <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">4149</span>)]</span><br><span class="line"><span class="comment"># 实现按行读取文件，并使用分隔符号将每行字符串分割成二维数组一行存储</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">data_storage</span>(<span class="params">path</span>):</span></span><br><span class="line">    txt = open(path, <span class="string">&#x27;r&#x27;</span>, encoding=<span class="string">&#x27;UTF-8&#x27;</span>).readlines()</span><br><span class="line">    i = <span class="number">0</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> row <span class="keyword">in</span> txt:</span><br><span class="line">        row = row.replace(<span class="string">&#x27;\n&#x27;</span>,<span class="string">&#x27;&#x27;</span>)</span><br><span class="line">        row = row.replace(<span class="string">&#x27;*&#x27;</span>,<span class="string">&#x27;&#x27;</span>)</span><br><span class="line">        data[i] = row.split(<span class="string">&#x27;,&#x27;</span>)</span><br><span class="line">        print(data[i])</span><br><span class="line">        i = i + <span class="number">1</span></span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ol>
+<ol start="3">
+<li><p>循环遍历目标文件夹下所有目标文件且自动过滤非txt格式以及含有敏感词汇<code>英语</code>的文件，并记录其文件路径：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 循环遍历指定目录下所有文件</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">ergodic</span>():</span></span><br><span class="line">    paths = <span class="string">r&#x27;.\00\005&#x27;</span></span><br><span class="line">    <span class="comment"># paths = r&#x27;.\test&#x27;</span></span><br><span class="line">    fns = [os.path.join(root, fn) <span class="keyword">for</span> root, dirs, files <span class="keyword">in</span> os.walk(paths) <span class="keyword">for</span> fn <span class="keyword">in</span> files]</span><br><span class="line">    <span class="keyword">for</span> path <span class="keyword">in</span> fns:</span><br><span class="line">        <span class="keyword">if</span> path[len(path) - <span class="number">4</span>:len(path)].lower() == <span class="string">&#x27;.txt&#x27;</span>:</span><br><span class="line">            print(path)</span><br><span class="line">            <span class="comment"># 去除英文版</span></span><br><span class="line">            <span class="keyword">if</span> path.find(<span class="string">&quot;英文&quot;</span>) == <span class="number">-1</span>:</span><br><span class="line">                search_word(path)</span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ol>
+<ol start="4">
+<li><p>对循环得到的每一个有效文件路径实现以下功能：</p>
+<ol>
+<li>从相应的路径名中取出文件名（不含格式后缀）并存入字符串<code>name</code>中，并对<code>name</code>进行过滤特殊字符操作，该<code>name</code>用来从第二步获取的二维数组中匹配文件名，匹配正确则记录下该行中相应的数字代码和时间；</li>
+<li>过滤特殊字符；</li>
+<li>创建一个字典用<code>wordAndNum</code>来存储所有积极词汇和消极词汇分别出现的次数；</li>
+<li>以该文件路径读取该文件并全部存入<code>txt</code>字符串中；</li>
+<li>对<code>txt</code>使用结巴分词并将结果存入<code>words</code>中，对每一个单词分别与积极词汇<code>includesPositive</code>和消极词汇<code>includesNegative</code>进行比对，匹配成功则分别加入积极词汇字典<code>countsOfPositive</code>和消极词汇字典<code>countsOfNegative</code>中，并将字典中每一个键值对分别存入相应的积极消极元组<code>itemsOfPositive</code>、<code>itemsOfNegative</code>中；</li>
+<li>分别遍历元组元素，将所有积极词汇出现的次数叠加存入最初的<code>wordAndNum</code>字典中，并计算相应的<code>TONE</code>值；</li>
+<li>创建列表<code>li</code>并将文件名、匹配的数字代码、匹配的时间、积极词汇总数、消极词汇总数、TONE存入其中，最后将列表<code>li</code>追加存储到表格中；</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">search_word</span>(<span class="params">path</span>):</span></span><br><span class="line">    name = get_name(path)</span><br><span class="line">    <span class="comment"># 去除特殊字符的干扰</span></span><br><span class="line">    name = name.replace(<span class="string">&#x27;-&#x27;</span>,<span class="string">&#x27;&#x27;</span>)</span><br><span class="line">    name = name.replace(<span class="string">&#x27;_&#x27;</span>,<span class="string">&#x27;&#x27;</span>)</span><br><span class="line">    name = name.replace(<span class="string">&#x27;*&#x27;</span>,<span class="string">&#x27;&#x27;</span>)</span><br><span class="line"></span><br><span class="line">    data_num = match_name(name)</span><br><span class="line">    data_match = [<span class="string">&#x27;&#x27;</span>,<span class="string">&#x27;&#x27;</span>]</span><br><span class="line">    <span class="keyword">if</span>(data_num == <span class="number">10000</span>):</span><br><span class="line">        data_match = [<span class="string">&#x27;NO&#x27;</span>,<span class="string">&#x27;NO&#x27;</span>]</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        print(data_num)</span><br><span class="line">        print(data[data_num][<span class="number">0</span>])</span><br><span class="line">        data_match[<span class="number">0</span>] = data[data_num][<span class="number">1</span>]</span><br><span class="line">        data_match[<span class="number">1</span>] = data[data_num][<span class="number">2</span>]</span><br><span class="line">        print(data_match)</span><br><span class="line">        <span class="comment"># 删除已匹配行</span></span><br><span class="line">        <span class="keyword">del</span> data[data_num]</span><br><span class="line">        print(<span class="string">&quot;匹配数据源还剩下:&quot;</span>+str(len(data))+<span class="string">&quot;，加油！&quot;</span>)</span><br><span class="line"></span><br><span class="line">    wordAndNum = &#123;<span class="string">&#x27;Positive&#x27;</span>: <span class="number">0</span>, <span class="string">&#x27;Negative&#x27;</span>: <span class="number">0</span>, <span class="string">&#x27;TONE&#x27;</span>: <span class="number">0</span>&#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 问题二：读取时编码错误则会直接结束进程</span></span><br><span class="line">    encoding = detectCode(path)</span><br><span class="line">    print(encoding)</span><br><span class="line">    print(path)</span><br><span class="line">    <span class="keyword">if</span> encoding == <span class="string">&quot;UTF-16&quot;</span>:</span><br><span class="line">        txt = open(path, <span class="string">&quot;r&quot;</span>, encoding=<span class="string">&quot;utf-16-le&quot;</span> ).read()</span><br><span class="line">    <span class="keyword">elif</span> encoding == <span class="string">&quot;UTF-8&quot;</span>:</span><br><span class="line">        txt = open(path, <span class="string">&quot;r&quot;</span>, encoding=<span class="string">&quot;utf-8&quot;</span>).read()</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        txt = open(path, <span class="string">&quot;rb&quot;</span>).read()</span><br><span class="line">    </span><br><span class="line">    words = jieba.lcut(txt)</span><br><span class="line">    countsOfPositive = &#123;&#125;</span><br><span class="line">    countsOfNegative = &#123;&#125;</span><br><span class="line">    <span class="keyword">for</span> word <span class="keyword">in</span> words:</span><br><span class="line">        <span class="comment"># 分别处理属于词汇列表中的积极和消极词汇</span></span><br><span class="line">        <span class="keyword">if</span> word <span class="keyword">in</span> includesPositive:</span><br><span class="line">            countsOfPositive[word] = countsOfPositive.get(word, <span class="number">0</span>) + <span class="number">1</span></span><br><span class="line">        <span class="keyword">if</span> word <span class="keyword">in</span> includesNegative:</span><br><span class="line">            countsOfNegative[word] = countsOfNegative.get(word, <span class="number">0</span>) + <span class="number">1</span></span><br><span class="line"></span><br><span class="line">    dictsOfPositive = dict(countsOfPositive.items())</span><br><span class="line">    itemsOfPositive = dictsOfPositive.items()</span><br><span class="line"></span><br><span class="line">    dictsOfNegative = dict(countsOfNegative.items())</span><br><span class="line">    itemsOfNegative = dictsOfNegative.items()</span><br><span class="line"></span><br><span class="line">    print(itemsOfPositive)</span><br><span class="line">    print(itemsOfNegative)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> item <span class="keyword">in</span> itemsOfPositive:</span><br><span class="line">        ls = list(item)</span><br><span class="line">        <span class="comment"># print(ls)</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(len(ls)):</span><br><span class="line">            <span class="keyword">if</span> i % <span class="number">2</span> == <span class="number">1</span>:</span><br><span class="line">                wordAndNum[<span class="string">&#x27;Positive&#x27;</span>] = wordAndNum[<span class="string">&#x27;Positive&#x27;</span>] + ls[i]</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> item <span class="keyword">in</span> itemsOfNegative:</span><br><span class="line">        ls = list(item)</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(len(ls)):</span><br><span class="line">            <span class="keyword">if</span> i % <span class="number">2</span> == <span class="number">1</span>:</span><br><span class="line">                wordAndNum[<span class="string">&#x27;Negative&#x27;</span>] = wordAndNum[<span class="string">&#x27;Negative&#x27;</span>] + ls[i]</span><br><span class="line">    <span class="comment"># 问题三：分母不能为0</span></span><br><span class="line">    <span class="keyword">if</span>(wordAndNum[<span class="string">&#x27;Positive&#x27;</span>] + wordAndNum[<span class="string">&#x27;Negative&#x27;</span>] != <span class="number">0</span>):</span><br><span class="line">        wordAndNum[<span class="string">&#x27;TONE&#x27;</span>] = abs(</span><br><span class="line">        (wordAndNum[<span class="string">&#x27;Positive&#x27;</span>] - wordAndNum[<span class="string">&#x27;Negative&#x27;</span>]) / (wordAndNum[<span class="string">&#x27;Positive&#x27;</span>] + wordAndNum[<span class="string">&#x27;Negative&#x27;</span>]))</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        wordAndNum[<span class="string">&#x27;TONE&#x27;</span>] = <span class="number">0</span></span><br><span class="line"></span><br><span class="line">    li = [name,data_match[<span class="number">0</span>],data_match[<span class="number">1</span>]]</span><br><span class="line">    <span class="keyword">for</span> key <span class="keyword">in</span> wordAndNum:</span><br><span class="line">        li.append(key)</span><br><span class="line">        li.append(str(wordAndNum[key]))</span><br><span class="line">    <span class="comment"># fo = open(&quot;002.csv&quot;, &quot;a&quot;),a表示追加，w表示重新写入</span></span><br><span class="line">    fo = open(<span class="string">&quot;年报数据.csv&quot;</span>, <span class="string">&quot;a&quot;</span>)</span><br><span class="line">    fo.write(<span class="string">&quot;,&quot;</span>.join(li) + <span class="string">&quot;\n&quot;</span>)</span><br><span class="line">    fo.close()</span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ol>
+<h2 id="问题及解决方法"><a href="#问题及解决方法" class="headerlink" title="问题及解决方法"></a>问题及解决方法</h2><blockquote>
+<p>问题一：定义全局变量后，在函数中赋值，离开函数后却失效</p>
+</blockquote>
+<p><strong>问题具体描述：</strong></p>
+<p>二维列表<code>data</code>是用来存储从文件<code>b</code>中获取的文件名、数字代码和时间的，文件中每一行三个字符串要存储为<code>data</code>的一行，从文件中取出来的内容最初存在<code>txt</code>列表中，每一行存储为列表中的一个元素，所以是可以直接计算该<code>txt</code>元素长度并实现自动申请相应的内存给二维列表<code>data</code>，于是我做出了以下操作：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">data = []</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">data_storage</span>(<span class="params">path</span>):</span></span><br><span class="line">    txt = open(path, <span class="string">&#x27;r&#x27;</span>, encoding=<span class="string">&#x27;UTF-8&#x27;</span>).readlines()</span><br><span class="line">    data = [[] <span class="keyword">for</span> i <span class="keyword">in</span> range(len(txt))]</span><br><span class="line">    i = <span class="number">0</span></span><br><span class="line">    <span class="keyword">for</span> row <span class="keyword">in</span> txt:</span><br><span class="line">        row = row.replace(<span class="string">&#x27;\n&#x27;</span>,<span class="string">&#x27;&#x27;</span>)</span><br><span class="line">        row = row.replace(<span class="string">&#x27;*&#x27;</span>,<span class="string">&#x27;&#x27;</span>)</span><br><span class="line">        data[i] = row.split(<span class="string">&#x27;,&#x27;</span>)</span><br><span class="line">        print(data[i])</span><br><span class="line">        i = i + <span class="number">1</span></span><br></pre></td></tr></table></figure>
+
+<p>即定义全局变量<code>data</code>，并且在函数内部对该全局变量<code>data</code>先申请具体空间再进行每一行每一列的赋值操作，结果导致离开该函数后，<code>data</code>元素长度为空。</p>
+<p><strong>原因：</strong></p>
+<p>这应该是在函数中重新给变量<code>data</code>申请空间这个操作引起的问题，即因为<code>data = [[] for i in range(len(txt))]</code>这段代码的初始化与全局变量<code>data = []</code>初始化冲突了，于是程序将其定义为一个新的局部变量，导致内部使用的<code>data</code>的值无法在该函数之外调用。</p>
+<p><strong>解决方法：</strong></p>
+<p>就是我们现在代码修改的这样，直接最开始就给全局变量初始化具体空间，优点是简单不费脑，缺点是不够友好。</p>
+<blockquote>
+<p>问题二：读取文件时由于编码错误直接结束进程</p>
+</blockquote>
+<p><strong>问题具体描述：</strong></p>
+<p>最初是在跑数据的过程中突然中断结束，显示以UTF-16编码格式打开文件时内容编码出错，于是以为是整个文本编码格式是UTF-8，结果发现文本编码格式是UTF-16，但是其中某个数据存储格式不符合UTF-16的编码格式，才报的错。解决方案是直接删掉那一个出错的文本/滑稽。</p>
+<p>解决这个出错的问题时使用了二进制读取文本的方式，虽然正常运行程序了，但是最后却发现得不到想要的数据，于是百度了二进制编码以及unicode也就是UTF-8和UTF-16编码的区别。</p>
+<p><strong>拓展：</strong>二进制读取文件和Unicode编码以及读取文件的区别：</p>
+<p>所有的文件最终存储形式都是二进制，以二进制形式读取文件内容就是不对文本做任何处理而直接读取。Unicode编码是指对文件内容进行固定格式的转换，如UTF-16编码就是对文字以固定两个字节16个比特进行转换存储的，只能通过UTF-16编码格式打开读取，并且会对数据进行转换字符串操作。再简单点来说，二进制形式读取出来的数据就是二进制字符集合，而使用Unicode编码读取出来的数据则是经过转换的字符串集合。所以一般以二进制直接存储的二进制文件最好使用二进制形式读取，而文本文件由于是二进制之上的字符串集合，最好使用Unicode编码格式读取，否则容易出错。UTF-8针对的一般是英文文本内容，UTF-16是针对汉字处理的。</p>
+<blockquote>
+<p>问题三：分母不能为0</p>
+</blockquote>
+<p><strong>问题具体描述：</strong></p>
+<p>对于<code>wordAndNum[&#39;Positive&#39;] - wordAndNum[&#39;Negative&#39;]) / (wordAndNum[&#39;Positive&#39;] + wordAndNum[&#39;Negative&#39;])</code>语句来说，即使分母相加的两个值都是大于等于0的存在，但同样是有可能出现分母为0的情形的，在本次数据处理中，由于情感词汇表给出的都是中文词汇，而处理的文本数据却有英文版，因此出现了分母为0的情形，于是直接对文件路径做了过滤处理，而且为了防止再出现此类错误，做了简单的出错处理。</p>
+<p>完整代码如下：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># -*- coding:utf-8</span></span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">import</span> jieba</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> chardet</span><br><span class="line"></span><br><span class="line">includesPositive = &#123;&#125;</span><br><span class="line">includesNegative = &#123;&#125;</span><br><span class="line">data = [[] <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">4149</span>)]</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">readPositiveFile</span>(<span class="params">path</span>):</span></span><br><span class="line">    txt = open(path, <span class="string">&#x27;r&#x27;</span>, encoding=<span class="string">&#x27;UTF-8&#x27;</span>).readlines()</span><br><span class="line">    <span class="keyword">for</span> key <span class="keyword">in</span> txt:</span><br><span class="line">        key = key.replace(<span class="string">&#x27;\n&#x27;</span>, <span class="string">&#x27;&#x27;</span>)</span><br><span class="line">        print(key)</span><br><span class="line">        includesPositive[key] = <span class="number">0</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">readNegativeFile</span>(<span class="params">path</span>):</span></span><br><span class="line">    txt = open(path, <span class="string">&#x27;r&#x27;</span>, encoding=<span class="string">&#x27;UTF-8&#x27;</span>).readlines()</span><br><span class="line">    <span class="keyword">for</span> key <span class="keyword">in</span> txt:</span><br><span class="line">        key = key.replace(<span class="string">&#x27;\n&#x27;</span>, <span class="string">&#x27;&#x27;</span>)</span><br><span class="line">        print(key)</span><br><span class="line">        includesNegative[key] = <span class="number">0</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 实现按行读取文件，并使用分隔符号将每行字符串分割成二维数组一行存储</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">data_storage</span>(<span class="params">path</span>):</span></span><br><span class="line">    txt = open(path, <span class="string">&#x27;r&#x27;</span>, encoding=<span class="string">&#x27;UTF-8&#x27;</span>).readlines()</span><br><span class="line">    <span class="comment"># data = [[] for i in range(len(txt))]</span></span><br><span class="line">    i = <span class="number">0</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> row <span class="keyword">in</span> txt:</span><br><span class="line">        row = row.replace(<span class="string">&#x27;\n&#x27;</span>,<span class="string">&#x27;&#x27;</span>)</span><br><span class="line">        row = row.replace(<span class="string">&#x27;*&#x27;</span>,<span class="string">&#x27;&#x27;</span>)</span><br><span class="line">        data[i] = row.split(<span class="string">&#x27;,&#x27;</span>)</span><br><span class="line">        print(data[i])</span><br><span class="line">        i = i + <span class="number">1</span></span><br><span class="line">    <span class="comment"># print(len(data))</span></span><br><span class="line">    <span class="comment"># del data[1]</span></span><br><span class="line">    <span class="comment"># print(len(data))</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">detectCode</span>(<span class="params">path</span>):</span></span><br><span class="line">	<span class="keyword">with</span> open(path, <span class="string">&#x27;rb&#x27;</span>) <span class="keyword">as</span> file:</span><br><span class="line">		data = file.read(<span class="number">200000</span>)</span><br><span class="line">		dicts = chardet.detect(data)</span><br><span class="line">	<span class="keyword">return</span> dicts[<span class="string">&quot;encoding&quot;</span>]</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">parse</span>():</span></span><br><span class="line">    readPositiveFile(<span class="string">&#x27;F:\PythonSpiders\Word\_file\_positive_simplified.txt&#x27;</span>)</span><br><span class="line">    readNegativeFile(<span class="string">&#x27;F:\PythonSpiders\Word\_file\_negative_simplified.txt&#x27;</span>)</span><br><span class="line">    <span class="comment"># print(len(includesPositive))</span></span><br><span class="line">    <span class="comment"># print(includesPositive.keys())</span></span><br><span class="line">    <span class="comment"># print(len(includesNegative))</span></span><br><span class="line">    <span class="comment"># print(includesNegative.keys())</span></span><br><span class="line">    data_storage(<span class="string">&#x27;0.txt&#x27;</span>)</span><br><span class="line">    ergodic()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 循环遍历指定目录下所有文件</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">ergodic</span>():</span></span><br><span class="line">    paths = <span class="string">r&#x27;.\00\005&#x27;</span></span><br><span class="line">    <span class="comment"># paths = r&#x27;.\test&#x27;</span></span><br><span class="line">    fns = [os.path.join(root, fn) <span class="keyword">for</span> root, dirs, files <span class="keyword">in</span> os.walk(paths) <span class="keyword">for</span> fn <span class="keyword">in</span> files]</span><br><span class="line">    <span class="keyword">for</span> path <span class="keyword">in</span> fns:</span><br><span class="line">        <span class="keyword">if</span> path[len(path) - <span class="number">4</span>:len(path)].lower() == <span class="string">&#x27;.txt&#x27;</span>:</span><br><span class="line">            print(path)</span><br><span class="line">            <span class="comment"># 去除英文版</span></span><br><span class="line">            <span class="keyword">if</span> path.find(<span class="string">&quot;英文&quot;</span>) == <span class="number">-1</span>:</span><br><span class="line">                search_word(path)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">search_word</span>(<span class="params">path</span>):</span></span><br><span class="line">    name = get_name(path)</span><br><span class="line">    <span class="comment"># 去除特殊字符的干扰</span></span><br><span class="line">    name = name.replace(<span class="string">&#x27;-&#x27;</span>,<span class="string">&#x27;&#x27;</span>)</span><br><span class="line">    name = name.replace(<span class="string">&#x27;_&#x27;</span>,<span class="string">&#x27;&#x27;</span>)</span><br><span class="line">    name = name.replace(<span class="string">&#x27;*&#x27;</span>,<span class="string">&#x27;&#x27;</span>)</span><br><span class="line"></span><br><span class="line">    data_num = match_name(name)</span><br><span class="line">    data_match = [<span class="string">&#x27;&#x27;</span>,<span class="string">&#x27;&#x27;</span>]</span><br><span class="line">    <span class="keyword">if</span>(data_num == <span class="number">10000</span>):</span><br><span class="line">        data_match = [<span class="string">&#x27;NO&#x27;</span>,<span class="string">&#x27;NO&#x27;</span>]</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        print(data_num)</span><br><span class="line">        print(data[data_num][<span class="number">0</span>])</span><br><span class="line">        data_match[<span class="number">0</span>] = data[data_num][<span class="number">1</span>]</span><br><span class="line">        data_match[<span class="number">1</span>] = data[data_num][<span class="number">2</span>]</span><br><span class="line">        print(data_match)</span><br><span class="line">        <span class="comment"># 删除已匹配行</span></span><br><span class="line">        <span class="keyword">del</span> data[data_num]</span><br><span class="line">        print(<span class="string">&quot;匹配数据源还剩下:&quot;</span>+str(len(data))+<span class="string">&quot;，加油！&quot;</span>)</span><br><span class="line"></span><br><span class="line">    wordAndNum = &#123;<span class="string">&#x27;Positive&#x27;</span>: <span class="number">0</span>, <span class="string">&#x27;Negative&#x27;</span>: <span class="number">0</span>, <span class="string">&#x27;TONE&#x27;</span>: <span class="number">0</span>&#125;</span><br><span class="line"></span><br><span class="line">    encoding = detectCode(path)</span><br><span class="line">    print(encoding)</span><br><span class="line">    print(path)</span><br><span class="line">    <span class="keyword">if</span> encoding == <span class="string">&quot;UTF-16&quot;</span>:</span><br><span class="line">        txt = open(path, <span class="string">&quot;r&quot;</span>, encoding=<span class="string">&quot;utf-16-le&quot;</span> ).read()</span><br><span class="line">    <span class="keyword">elif</span> encoding == <span class="string">&quot;UTF-8&quot;</span>:</span><br><span class="line">        txt = open(path, <span class="string">&quot;r&quot;</span>, encoding=<span class="string">&quot;utf-8&quot;</span>).read()</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        txt = open(path, <span class="string">&quot;rb&quot;</span>).read()</span><br><span class="line">    words = jieba.lcut(txt)</span><br><span class="line">    countsOfPositive = &#123;&#125;</span><br><span class="line">    countsOfNegative = &#123;&#125;</span><br><span class="line">    <span class="keyword">for</span> word <span class="keyword">in</span> words:</span><br><span class="line">        <span class="comment"># 分别处理属于词汇列表中的积极和消极词汇</span></span><br><span class="line">        <span class="keyword">if</span> word <span class="keyword">in</span> includesPositive:</span><br><span class="line">            countsOfPositive[word] = countsOfPositive.get(word, <span class="number">0</span>) + <span class="number">1</span></span><br><span class="line">        <span class="keyword">if</span> word <span class="keyword">in</span> includesNegative:</span><br><span class="line">            countsOfNegative[word] = countsOfNegative.get(word, <span class="number">0</span>) + <span class="number">1</span></span><br><span class="line"></span><br><span class="line">    dictsOfPositive = dict(countsOfPositive.items())</span><br><span class="line">    itemsOfPositive = dictsOfPositive.items()</span><br><span class="line"></span><br><span class="line">    dictsOfNegative = dict(countsOfNegative.items())</span><br><span class="line">    itemsOfNegative = dictsOfNegative.items()</span><br><span class="line"></span><br><span class="line">    print(itemsOfPositive)</span><br><span class="line">    print(itemsOfNegative)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> item <span class="keyword">in</span> itemsOfPositive:</span><br><span class="line">        ls = list(item)</span><br><span class="line">        <span class="comment"># print(ls)</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(len(ls)):</span><br><span class="line">            <span class="keyword">if</span> i % <span class="number">2</span> == <span class="number">1</span>:</span><br><span class="line">                wordAndNum[<span class="string">&#x27;Positive&#x27;</span>] = wordAndNum[<span class="string">&#x27;Positive&#x27;</span>] + ls[i]</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> item <span class="keyword">in</span> itemsOfNegative:</span><br><span class="line">        ls = list(item)</span><br><span class="line">        <span class="comment"># print(ls)</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(len(ls)):</span><br><span class="line">            <span class="keyword">if</span> i % <span class="number">2</span> == <span class="number">1</span>:</span><br><span class="line">                wordAndNum[<span class="string">&#x27;Negative&#x27;</span>] = wordAndNum[<span class="string">&#x27;Negative&#x27;</span>] + ls[i]</span><br><span class="line">    <span class="keyword">if</span>(wordAndNum[<span class="string">&#x27;Positive&#x27;</span>] + wordAndNum[<span class="string">&#x27;Negative&#x27;</span>] != <span class="number">0</span>):</span><br><span class="line">        wordAndNum[<span class="string">&#x27;TONE&#x27;</span>] = abs(</span><br><span class="line">        (wordAndNum[<span class="string">&#x27;Positive&#x27;</span>] - wordAndNum[<span class="string">&#x27;Negative&#x27;</span>]) / (wordAndNum[<span class="string">&#x27;Positive&#x27;</span>] + wordAndNum[<span class="string">&#x27;Negative&#x27;</span>]))</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        wordAndNum[<span class="string">&#x27;TONE&#x27;</span>] = <span class="number">0</span></span><br><span class="line"></span><br><span class="line">    li = [name,data_match[<span class="number">0</span>],data_match[<span class="number">1</span>]]</span><br><span class="line">    <span class="keyword">for</span> key <span class="keyword">in</span> wordAndNum:</span><br><span class="line">        li.append(key)</span><br><span class="line">        li.append(str(wordAndNum[key]))</span><br><span class="line">    <span class="comment"># fo = open(&quot;002.csv&quot;, &quot;a&quot;),a表示追加，w表示重新写入</span></span><br><span class="line">    fo = open(<span class="string">&quot;年报数据.csv&quot;</span>, <span class="string">&quot;a&quot;</span>)</span><br><span class="line">    fo.write(<span class="string">&quot;,&quot;</span>.join(li) + <span class="string">&quot;\n&quot;</span>)</span><br><span class="line">    fo.close()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 遍历data数据中文件名，对比传入name，相同则返回下标，未匹配到则返回固定值10000</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">match_name</span>(<span class="params">name</span>):</span></span><br><span class="line">    print(name)</span><br><span class="line">    print(len(data))</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(len(data)):</span><br><span class="line">        <span class="keyword">if</span> name == data[i][<span class="number">0</span>]:</span><br><span class="line">            print(data[i][<span class="number">0</span>])</span><br><span class="line">            <span class="keyword">return</span> i</span><br><span class="line">        <span class="keyword">elif</span> i==len(data)<span class="number">-1</span>:</span><br><span class="line">            <span class="keyword">return</span> <span class="number">10000</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 返回文件名</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_name</span>(<span class="params">path</span>):</span></span><br><span class="line">    nameNum = last_char(path)</span><br><span class="line">    name = path[nameNum + <span class="number">1</span>:len(path) - <span class="number">4</span>]</span><br><span class="line">    <span class="keyword">return</span> name</span><br><span class="line"></span><br><span class="line"><span class="comment"># 返回最后一次出现该字符的序号</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">last_char</span>(<span class="params">str</span>):</span></span><br><span class="line">    lastNum = <span class="number">0</span></span><br><span class="line">    num = <span class="number">0</span></span><br><span class="line">    char = <span class="string">&quot;\\&quot;</span></span><br><span class="line">    <span class="keyword">for</span> ch <span class="keyword">in</span> str:</span><br><span class="line">        <span class="keyword">if</span> char == ch:</span><br><span class="line">            lastNum = num</span><br><span class="line">        num = num + <span class="number">1</span></span><br><span class="line">    <span class="keyword">return</span> lastNum</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    parse()</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+    
+    
+    
+
+  
+         <div>
+           <div>
+  
+    <div style="text-align:center;color:#bfbfbf;font-size:16px;">
+      <span>-------- 本文结束 </span>
+      <i class="fa fa-paw"></i>
+      <span> 感谢阅读 --------</span>
+    </div>
+  
+</div>
+
+         </div>
+       
+      
+  <div class="popular-posts-header">相关文章推荐# Custom header, leave empty to use the default one</div>
+  <ul class="popular-posts">
+    <li class="popular-posts-item">
+      <div class="popular-posts-title"><a href="\2020\09\13\Python\scrapy实战\" rel="bookmark">爬虫之Scrapy（2.实战）</a></div>
+    </li>
+    <li class="popular-posts-item">
+      <div class="popular-posts-title"><a href="\2020\09\10\Python\scrapy简要使用入门\" rel="bookmark">爬虫之Scrapy（1.简要入门）</a></div>
+    </li>
+  </ul>
+
+
+
+
+
+    <footer class="post-footer">
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>Zhaoxiaoan
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="http://kunpw.cn/2020/11/14/Python/Python%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E6%97%B6%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/" title="使用Python数据分析遇到的部分问题">http://kunpw.cn/2020/11/14/Python/Python数据分析时遇到的问题/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener external nofollow noreferrer" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/" rel="tag"><i class="fa fa-tag"></i> 数据分析</a>
+              <a href="/tags/Python/" rel="tag"><i class="fa fa-tag"></i> Python</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2020/11/05/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E8%87%AA%E9%A1%B6%E5%90%91%E4%B8%8B%E6%96%B9%E6%B3%95/%E7%AC%AC%E4%B8%89%E7%AB%A0.%E8%BF%90%E8%BE%93%E5%B1%82/" rel="prev" title="计算机网络自顶向下方法学习笔记（三）运输层">
+                  <i class="fa fa-chevron-left"></i> 计算机网络自顶向下方法学习笔记（三）运输层
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+
+  
+  
+  
+
+
+
+      
+    <div class="comments" id="valine-comments"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      const activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      const commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      
+
+      
+
+<span id="timeDate" style="color: green;">载入天数...</span>
+<span id="times" style="color: green;">载入时分秒...</span>
+<script>
+    var now = new Date();
+    function createtime() {
+        var grt= new Date("09/06/2020 13:38:49");//在此处修改你的建站时间，格式：月/日/年 时:分:秒
+        now.setTime(now.getTime()+250);
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
+        document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 ";
+        document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
+    }
+setInterval("createtime()",250);
+</script>
+
+
+
+<div>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<span id="busuanzi_container_site_pv" style='display:none'>
+    本站总访问量 <span id="busuanzi_value_site_pv"></span> 次
+    <span class="post-meta-divider">|</span>
+</span>
+<span id="busuanzi_container_site_uv" style='display:none'>
+    有<span id="busuanzi_value_site_uv"></span>人看过我的博客啦
+</span>
+</div>
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Zhaoxiaoan</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+      <span>站点总字数：</span>
+    <span title="站点总字数">149k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span>站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">2:16</span>
+  </span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener external nofollow noreferrer" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" class="theme-link" rel="noopener external nofollow noreferrer" target="_blank">NexT.Gemini</a> 强力驱动
+  </div><script color="0,0,255" opacity="0.5" zIndex="-1" count="99" src="https://cdn.jsdelivr.net/npm/canvas-nest.js@1/dist/canvas-nest.js"></script>
+
+    </div>
+  </footer>
+
+  
+  <script src="//cdn.jsdelivr.net/npm/animejs@3.2.0/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/@next-theme/pjax@0.4.0/pjax.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+  <script>
+var pjax = new Pjax({
+  selectors: [
+    'head title',
+    '.page-configurations',
+    '.main-inner',
+    '.post-toc-wrap',
+    '.languages',
+    '.pjax'
+  ],
+  analytics: false,
+  cacheBust: false,
+  scrollRestoration: false,
+  scrollTo: !CONFIG.bookmark.enable
+});
+
+document.addEventListener('pjax:success', () => {
+  pjax.executeScripts(document.querySelectorAll('script[data-pjax], .pjax script'));
+  NexT.boot.refresh();
+  // Define Motion Sequence & Bootstrap Motion.
+  if (CONFIG.motion.enable) {
+    NexT.motion.integrator
+      .init()
+      .add(NexT.motion.middleWares.subMenu)
+      .add(NexT.motion.middleWares.postList)
+      .bootstrap();
+  }
+  const hasTOC = document.querySelector('.post-toc');
+  document.querySelector('.sidebar-inner').classList.toggle('sidebar-nav-active', hasTOC);
+  document.querySelector(hasTOC ? '.sidebar-nav-toc' : '.sidebar-nav-overview').click();
+  NexT.utils.updateSidebarPosition();
+});
+</script>
+
+
+  
+
+
+
+
+  <script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script data-pjax async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+
+
+
+    <div class="pjax">
+  
+
+  
+<script>
+NexT.utils.loadComments('#valine-comments', () => {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js', () => {
+    new Valine(Object.assign({
+      el  : '#valine-comments',
+      path: "/2020/11/14/Python/Python%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E6%97%B6%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/",
+    }, {"enable":true,"appId":"9JxB7GVqlwRNk6oWQAWRFukK-MdYXbMMI","appKey":"0FRspDasEAKCPOgl62bwPGJ6","placeholder":"评论区走一波","avatar":"mm","meta":["nick","mail","link"],"pageSize":10,"lang":"zh-cn","visitor":false,"comment_count":true,"recordIP":false,"serverURLs":null,"enableQQ":false,"requiredFields":[],"emoticonUrl":["https://cdn.jsdelivr.net/npm/alus@latest","https://cdn.jsdelivr.net/gh/MiniValine/qq@latest","https://cdn.jsdelivr.net/gh/MiniValine/Bilibilis@latest","https://cdn.jsdelivr.net/gh/MiniValine/tieba@latest","https://cdn.jsdelivr.net/gh/MiniValine/twemoji@latest","https://cdn.jsdelivr.net/gh/MiniValine/weibo@latest"]}
+    ));
+  }, window.Valine);
+});
+</script>
+
+
+
+<script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+<script type="text/javascript">
+jinrishici.load(function(result) {
+	var jrsc_plac =  result.data.content + "\n「" + result.data.origin.title + "」" + result.data.origin.dynasty + " · " + result.data.origin.author
+	document.getElementById("veditor").setAttribute("placeholder",jrsc_plac);
+});
+</script>
+
+
+  <script async src="/js/cursor/fireworks.js"></script>
+
+
+
+
+  <script src="/js/write/activate-power-mode.min.js"></script>
+  <script>
+    POWERMODE.colorful = true;
+    POWERMODE.shake = false;
+    document.body.addEventListener('input', POWERMODE);
+  </script>
+
+
+    </div>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/hijiki.model.json"},"display":{"position":"left","width":150,"height":300},"mobile":{"show":true},"react":{"opacity":1},"log":false});</script></body>
+</html>
