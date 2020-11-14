@@ -31,10 +31,10 @@
 <meta property="og:description" content="工作流程 本次数据分析目标是对大量的txt文本匹配查询一系列词汇出现的总频次，并从另一个大型二维数组（第一列元素存储了一系列文件名，需要将第二列和第三列元素相应添加到Excel表格中）中对每个文件名做相应的匹配查询  使用python进行数据分析工作，主要工作流程如下：  从a1、a2文本中读取内容（中文情感词汇，积极词汇表和消极词汇表）并以键值对形式存入两个大的字典中，键用取出来的词语表示，值则">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-11-14T11:02:41.986Z">
-<meta property="article:modified_time" content="2020-11-14T13:19:35.589Z">
+<meta property="article:modified_time" content="2020-11-14T13:27:09.545Z">
 <meta property="article:author" content="Zhaoxiaoan">
-<meta property="article:tag" content="数据分析">
 <meta property="article:tag" content="Python">
+<meta property="article:tag" content="数据分析">
 <meta name="twitter:card" content="summary">
 
 
@@ -360,7 +360,7 @@
       <span class="post-meta-item-text">发表于</span>
       
 
-      <time title="创建时间：2020-11-14 19:02:41 / 修改时间：21:19:35" itemprop="dateCreated datePublished" datetime="2020-11-14T19:02:41+08:00">2020-11-14</time>
+      <time title="创建时间：2020-11-14 19:02:41 / 修改时间：21:27:09" itemprop="dateCreated datePublished" datetime="2020-11-14T19:02:41+08:00">2020-11-14</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -401,14 +401,14 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>11k</span>
+      <span>13k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>10 分钟</span>
+      <span>12 分钟</span>
     </span>
 </div>
 
@@ -491,6 +491,14 @@
 
 
 
+<blockquote>
+<p>小彩蛋</p>
+</blockquote>
+<p>贴上一个批量pdf转txt的代码，实话实说这种简单转换不是很完善，只能当做娱乐，不如使用软件：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># -*- coding:utf-8</span></span><br><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"><span class="keyword">import</span> importlib</span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"></span><br><span class="line">importlib.reload(sys)</span><br><span class="line"><span class="keyword">from</span> pdfminer.pdfparser <span class="keyword">import</span> PDFParser, PDFDocument</span><br><span class="line"><span class="keyword">from</span> pdfminer.pdfinterp <span class="keyword">import</span> PDFResourceManager, PDFPageInterpreter</span><br><span class="line"><span class="keyword">from</span> pdfminer.converter <span class="keyword">import</span> PDFPageAggregator</span><br><span class="line"><span class="keyword">from</span> pdfminer.layout <span class="keyword">import</span> LTTextBoxHorizontal, LAParams</span><br><span class="line"><span class="keyword">from</span> pdfminer.pdfinterp <span class="keyword">import</span> PDFTextExtractionNotAllowed</span><br><span class="line"></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string"> 解析pdf 文本，保存到txt文件中</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># path = r&#x27;001.pdf&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 循环遍历指定目录下所有文件</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">parse</span>():</span></span><br><span class="line">    paths = <span class="string">r&#x27;F:\年报00\年报01\年报&#x27;</span></span><br><span class="line">    fns = [os.path.join(root, fn) <span class="keyword">for</span> root, dirs, files <span class="keyword">in</span> os.walk(paths) <span class="keyword">for</span> fn <span class="keyword">in</span> files]</span><br><span class="line">    <span class="keyword">for</span> path <span class="keyword">in</span> fns:</span><br><span class="line">        <span class="keyword">if</span> path[len(path)<span class="number">-4</span>:len(path)].lower()==<span class="string">&#x27;.pdf&#x27;</span>:</span><br><span class="line">            print(path)</span><br><span class="line">            parse_next(path)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 返回文件名</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_name</span>(<span class="params">path</span>):</span></span><br><span class="line">    nameNum = last_char(path)</span><br><span class="line">    name = path[nameNum+<span class="number">1</span>:len(path)<span class="number">-4</span>] + <span class="string">&#x27;.txt&#x27;</span></span><br><span class="line">    <span class="keyword">return</span> name</span><br><span class="line"></span><br><span class="line"><span class="comment"># 返回倒数第二次出现该字符的序号</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">last_char</span>(<span class="params">str</span>):</span></span><br><span class="line">    beforeNum = <span class="number">0</span></span><br><span class="line">    afterNum = <span class="number">0</span></span><br><span class="line">    num = <span class="number">0</span></span><br><span class="line">    char = <span class="string">&quot;\\&quot;</span></span><br><span class="line">    <span class="keyword">for</span> ch <span class="keyword">in</span> str:</span><br><span class="line">        <span class="keyword">if</span> char == ch:</span><br><span class="line">            beforeNum = afterNum</span><br><span class="line">            afterNum = num</span><br><span class="line">        num = num + <span class="number">1</span></span><br><span class="line">    <span class="keyword">return</span> beforeNum</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">parse_next</span>(<span class="params">path</span>):</span></span><br><span class="line">    name = get_name(path)</span><br><span class="line">    fp = open(path, <span class="string">&#x27;rb&#x27;</span>)  <span class="comment"># 以二进制读模式打开</span></span><br><span class="line">    <span class="comment"># 用文件对象来创建一个pdf文档分析器</span></span><br><span class="line">    praser = PDFParser(fp)</span><br><span class="line">    <span class="comment"># 创建一个PDF文档</span></span><br><span class="line">    doc = PDFDocument()</span><br><span class="line">    <span class="comment"># 连接分析器 与文档对象</span></span><br><span class="line">    praser.set_document(doc)</span><br><span class="line">    doc.set_parser(praser)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 提供初始化密码</span></span><br><span class="line">    <span class="comment"># 如果没有密码 就创建一个空的字符串</span></span><br><span class="line">    doc.initialize()</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 检测文档是否提供txt转换，不提供就忽略</span></span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">not</span> doc.is_extractable:</span><br><span class="line">        <span class="keyword">raise</span> PDFTextExtractionNotAllowed</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="comment"># 创建PDf 资源管理器 来管理共享资源</span></span><br><span class="line">        rsrcmgr = PDFResourceManager()</span><br><span class="line">        <span class="comment"># 创建一个PDF设备对象</span></span><br><span class="line">        laparams = LAParams()</span><br><span class="line">        device = PDFPageAggregator(rsrcmgr, laparams=laparams)</span><br><span class="line">        <span class="comment"># 创建一个PDF解释器对象</span></span><br><span class="line">        interpreter = PDFPageInterpreter(rsrcmgr, device)</span><br><span class="line"></span><br><span class="line">        <span class="comment"># 循环遍历列表，每次处理一个page的内容</span></span><br><span class="line">        <span class="keyword">for</span> page <span class="keyword">in</span> doc.get_pages():  <span class="comment"># doc.get_pages() 获取page列表</span></span><br><span class="line">            interpreter.process_page(page)</span><br><span class="line">            <span class="comment"># 接受该页面的LTPage对象</span></span><br><span class="line">            layout = device.get_result()</span><br><span class="line">            <span class="comment"># 这里layout是一个LTPage对象 里面存放着 这个page解析出的各种对象 一般包括LTTextBox, LTFigure, LTImage, LTTextBoxHorizontal 等等 想要获取文本就获得对象的text属性，</span></span><br><span class="line">            <span class="keyword">for</span> x <span class="keyword">in</span> layout:</span><br><span class="line">                <span class="keyword">if</span> (isinstance(x, LTTextBoxHorizontal)):</span><br><span class="line">                    <span class="keyword">with</span> open(name, <span class="string">&#x27;a&#x27;</span>, encoding=<span class="string">&#x27;utf-8&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line">                        results = x.get_text()</span><br><span class="line">                        f.write(results + <span class="string">&#x27;\n&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    parse()</span><br></pre></td></tr></table></figure>
+
+
+
 
 
 
@@ -554,8 +562,8 @@
 </div>
 
           <div class="post-tags">
-              <a href="/tags/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/" rel="tag"><i class="fa fa-tag"></i> 数据分析</a>
               <a href="/tags/Python/" rel="tag"><i class="fa fa-tag"></i> Python</a>
+              <a href="/tags/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/" rel="tag"><i class="fa fa-tag"></i> 数据分析</a>
           </div>
 
         
@@ -659,14 +667,14 @@ setInterval("createtime()",250);
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">149k</span>
+    <span title="站点总字数">152k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">2:16</span>
+    <span title="站点阅读时长">2:18</span>
   </span>
 </div>
 <div class="busuanzi-count">

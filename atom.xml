@@ -6,7 +6,7 @@
   <link href="http://kunpw.cn/atom.xml" rel="self"/>
   
   <link href="http://kunpw.cn/"/>
-  <updated>2020-11-14T13:19:35.589Z</updated>
+  <updated>2020-11-14T13:27:09.545Z</updated>
   <id>http://kunpw.cn/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://kunpw.cn/2020/11/14/Python/Python%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E6%97%B6%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/"/>
     <id>http://kunpw.cn/2020/11/14/Python/Python%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E6%97%B6%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/</id>
     <published>2020-11-14T11:02:41.986Z</published>
-    <updated>2020-11-14T13:19:35.589Z</updated>
+    <updated>2020-11-14T13:27:09.545Z</updated>
     
     
     <summary type="html">&lt;h2 id=&quot;工作流程&quot;&gt;&lt;a href=&quot;#工作流程&quot; class=&quot;headerlink&quot; title=&quot;工作流程&quot;&gt;&lt;/a&gt;工作流程&lt;/h2&gt;&lt;blockquote&gt;
@@ -37,9 +37,9 @@
     <category term="学习" scheme="http://kunpw.cn/categories/%E5%AD%A6%E4%B9%A0/"/>
     
     
-    <category term="数据分析" scheme="http://kunpw.cn/tags/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/"/>
-    
     <category term="Python" scheme="http://kunpw.cn/tags/Python/"/>
+    
+    <category term="数据分析" scheme="http://kunpw.cn/tags/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/"/>
     
   </entry>
   
@@ -352,9 +352,9 @@
     <category term="学习" scheme="http://kunpw.cn/categories/%E5%AD%A6%E4%B9%A0/"/>
     
     
-    <category term="Python" scheme="http://kunpw.cn/tags/Python/"/>
-    
     <category term="Scrapy" scheme="http://kunpw.cn/tags/Scrapy/"/>
+    
+    <category term="Python" scheme="http://kunpw.cn/tags/Python/"/>
     
   </entry>
   
@@ -389,9 +389,9 @@
     <category term="学习" scheme="http://kunpw.cn/categories/%E5%AD%A6%E4%B9%A0/"/>
     
     
-    <category term="Python" scheme="http://kunpw.cn/tags/Python/"/>
-    
     <category term="Scrapy" scheme="http://kunpw.cn/tags/Scrapy/"/>
+    
+    <category term="Python" scheme="http://kunpw.cn/tags/Python/"/>
     
   </entry>
   

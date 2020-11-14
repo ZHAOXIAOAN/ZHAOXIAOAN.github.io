@@ -1,52 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Typora修改CSS</title>
-    <url>/2020/09/06/Typora%E4%BF%AE%E6%94%B9CSS/</url>
-    <content><![CDATA[<p><strong>这一期给大家讲讲怎样将Typora设置成自己喜欢的风格，这里以高亮颜色为例！</strong></p>
-<blockquote>
-<p>打开 视图–&gt;开发者工具（快捷键 Shift+F12）得到网页元素：</p>
-</blockquote>
-<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/082.png" alt="image-20200828154027327"></p>
-<a id="more"></a>
-
-<blockquote>
-<p>点亮这个图标：</p>
-</blockquote>
-<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/083.png" alt="image-20200828154137307"></p>
-<blockquote>
-<p>移动鼠标至想要修改样式的地方，点击一次</p>
-</blockquote>
-<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/084.png" alt="image-20200828154549041"></p>
-<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/085.png" alt="image-20200828154851984"></p>
-<blockquote>
-<p>一般有两种类型的地址，第一种：</p>
-</blockquote>
-<ul>
-<li>这种地址就直接按照地址中的位置寻找css文件，打开之后如图查找样式名即可</li>
-</ul>
-<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/086.png" alt="image-20200828154927107"></p>
-<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/087.png" alt="image-20200828155231370"></p>
-<blockquote>
-<p>第二种：</p>
-</blockquote>
-<ul>
-<li>这种地址存放在<code>C:\Users\Acer\AppData\Roaming\Typora\themes</code> 目录下，修改此处才有效</li>
-</ul>
-<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/088.png" alt="image-20200828155004523"></p>
-<blockquote>
-<p>最后修改完成重启Typora即可。</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>学习</category>
-      </categories>
-      <tags>
-        <tag>Typora</tag>
-        <tag>个性化设置</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>FFmpeg简要使用</title>
     <url>/2020/09/23/ffmpeg/</url>
     <content><![CDATA[<h2 id="1-简介"><a href="#1-简介" class="headerlink" title="1.简介"></a>1.简介</h2><ul>
@@ -201,6 +155,52 @@
       </tags>
   </entry>
   <entry>
+    <title>Typora修改CSS</title>
+    <url>/2020/09/06/Typora%E4%BF%AE%E6%94%B9CSS/</url>
+    <content><![CDATA[<p><strong>这一期给大家讲讲怎样将Typora设置成自己喜欢的风格，这里以高亮颜色为例！</strong></p>
+<blockquote>
+<p>打开 视图–&gt;开发者工具（快捷键 Shift+F12）得到网页元素：</p>
+</blockquote>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/082.png" alt="image-20200828154027327"></p>
+<a id="more"></a>
+
+<blockquote>
+<p>点亮这个图标：</p>
+</blockquote>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/083.png" alt="image-20200828154137307"></p>
+<blockquote>
+<p>移动鼠标至想要修改样式的地方，点击一次</p>
+</blockquote>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/084.png" alt="image-20200828154549041"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/085.png" alt="image-20200828154851984"></p>
+<blockquote>
+<p>一般有两种类型的地址，第一种：</p>
+</blockquote>
+<ul>
+<li>这种地址就直接按照地址中的位置寻找css文件，打开之后如图查找样式名即可</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/086.png" alt="image-20200828154927107"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/087.png" alt="image-20200828155231370"></p>
+<blockquote>
+<p>第二种：</p>
+</blockquote>
+<ul>
+<li>这种地址存放在<code>C:\Users\Acer\AppData\Roaming\Typora\themes</code> 目录下，修改此处才有效</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/088.png" alt="image-20200828155004523"></p>
+<blockquote>
+<p>最后修改完成重启Typora即可。</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>学习</category>
+      </categories>
+      <tags>
+        <tag>Typora</tag>
+        <tag>个性化设置</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hello World</title>
     <url>/2020/09/06/hello-world/</url>
     <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
@@ -273,98 +273,6 @@
       </tags>
   </entry>
   <entry>
-    <title>使用Python数据分析遇到的部分问题</title>
-    <url>/2020/11/14/Python/Python%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E6%97%B6%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/</url>
-    <content><![CDATA[<h2 id="工作流程"><a href="#工作流程" class="headerlink" title="工作流程"></a>工作流程</h2><blockquote>
-<p>本次数据分析目标是对大量的txt文本匹配查询一系列词汇出现的总频次，并从另一个大型二维数组（第一列元素存储了一系列文件名，需要将第二列和第三列元素相应添加到Excel表格中）中对每个文件名做相应的匹配查询</p>
-</blockquote>
-<p>使用python进行数据分析工作，主要工作流程如下：</p>
-<ol>
-<li><p>从<code>a1</code>、<code>a2</code>文本中读取内容（中文情感词汇，积极词汇表和消极词汇表）并以键值对形式存入两个大的字典中，键用取出来的词语表示，值则初始化赋值为0，用来对目标文本进行匹配分析对应词语出现次数：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">includesPositive = &#123;&#125;</span><br><span class="line">includesNegative = &#123;&#125;</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">readNegativeFile</span>(<span class="params">path</span>):</span></span><br><span class="line">    txt = open(path, <span class="string">&#x27;r&#x27;</span>, encoding=<span class="string">&#x27;UTF-8&#x27;</span>).readlines()</span><br><span class="line">    <span class="keyword">for</span> key <span class="keyword">in</span> txt:</span><br><span class="line">        key = key.replace(<span class="string">&#x27;\n&#x27;</span>, <span class="string">&#x27;&#x27;</span>)</span><br><span class="line">        print(key)</span><br><span class="line">        includesNegative[key] = <span class="number">0</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">readNegativeFile</span>(<span class="params">path</span>):</span></span><br><span class="line">    txt = open(path, <span class="string">&#x27;r&#x27;</span>, encoding=<span class="string">&#x27;UTF-8&#x27;</span>).readlines()</span><br><span class="line">    <span class="keyword">for</span> key <span class="keyword">in</span> txt:</span><br><span class="line">        key = key.replace(<span class="string">&#x27;\n&#x27;</span>, <span class="string">&#x27;&#x27;</span>)</span><br><span class="line">        print(key)</span><br><span class="line">        includesNegative[key] = <span class="number">0</span></span><br></pre></td></tr></table></figure>
-<a id="more"></a></li>
-<li><p>从<code>b</code>文本中读取内容并存入一个大的二维数组中，其中文本每一行以符号<code>,</code>分隔三个字符串，并存入二维数组一行中，其中第一个字符串是文件名，第二个字符串是一段数字代码，第三个字符串是时间，并过滤文件名中特殊符号<code>\n</code>、<code>*</code>：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 问题一：定义全局变量后，在函数中赋值，离开函数后却失效</span></span><br><span class="line">data = [[] <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">4149</span>)]</span><br><span class="line"><span class="comment"># 实现按行读取文件，并使用分隔符号将每行字符串分割成二维数组一行存储</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">data_storage</span>(<span class="params">path</span>):</span></span><br><span class="line">    txt = open(path, <span class="string">&#x27;r&#x27;</span>, encoding=<span class="string">&#x27;UTF-8&#x27;</span>).readlines()</span><br><span class="line">    i = <span class="number">0</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> row <span class="keyword">in</span> txt:</span><br><span class="line">        row = row.replace(<span class="string">&#x27;\n&#x27;</span>,<span class="string">&#x27;&#x27;</span>)</span><br><span class="line">        row = row.replace(<span class="string">&#x27;*&#x27;</span>,<span class="string">&#x27;&#x27;</span>)</span><br><span class="line">        data[i] = row.split(<span class="string">&#x27;,&#x27;</span>)</span><br><span class="line">        print(data[i])</span><br><span class="line">        i = i + <span class="number">1</span></span><br></pre></td></tr></table></figure>
-
-
-
-</li>
-</ol>
-<ol start="3">
-<li><p>循环遍历目标文件夹下所有目标文件且自动过滤非txt格式以及含有敏感词汇<code>英语</code>的文件，并记录其文件路径：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 循环遍历指定目录下所有文件</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">ergodic</span>():</span></span><br><span class="line">    paths = <span class="string">r&#x27;.\00\005&#x27;</span></span><br><span class="line">    <span class="comment"># paths = r&#x27;.\test&#x27;</span></span><br><span class="line">    fns = [os.path.join(root, fn) <span class="keyword">for</span> root, dirs, files <span class="keyword">in</span> os.walk(paths) <span class="keyword">for</span> fn <span class="keyword">in</span> files]</span><br><span class="line">    <span class="keyword">for</span> path <span class="keyword">in</span> fns:</span><br><span class="line">        <span class="keyword">if</span> path[len(path) - <span class="number">4</span>:len(path)].lower() == <span class="string">&#x27;.txt&#x27;</span>:</span><br><span class="line">            print(path)</span><br><span class="line">            <span class="comment"># 去除英文版</span></span><br><span class="line">            <span class="keyword">if</span> path.find(<span class="string">&quot;英文&quot;</span>) == <span class="number">-1</span>:</span><br><span class="line">                search_word(path)</span><br></pre></td></tr></table></figure>
-
-
-
-</li>
-</ol>
-<ol start="4">
-<li><p>对循环得到的每一个有效文件路径实现以下功能：</p>
-<ol>
-<li>从相应的路径名中取出文件名（不含格式后缀）并存入字符串<code>name</code>中，并对<code>name</code>进行过滤特殊字符操作，该<code>name</code>用来从第二步获取的二维数组中匹配文件名，匹配正确则记录下该行中相应的数字代码和时间；</li>
-<li>过滤特殊字符；</li>
-<li>创建一个字典用<code>wordAndNum</code>来存储所有积极词汇和消极词汇分别出现的次数；</li>
-<li>以该文件路径读取该文件并全部存入<code>txt</code>字符串中；</li>
-<li>对<code>txt</code>使用结巴分词并将结果存入<code>words</code>中，对每一个单词分别与积极词汇<code>includesPositive</code>和消极词汇<code>includesNegative</code>进行比对，匹配成功则分别加入积极词汇字典<code>countsOfPositive</code>和消极词汇字典<code>countsOfNegative</code>中，并将字典中每一个键值对分别存入相应的积极消极元组<code>itemsOfPositive</code>、<code>itemsOfNegative</code>中；</li>
-<li>分别遍历元组元素，将所有积极词汇出现的次数叠加存入最初的<code>wordAndNum</code>字典中，并计算相应的<code>TONE</code>值；</li>
-<li>创建列表<code>li</code>并将文件名、匹配的数字代码、匹配的时间、积极词汇总数、消极词汇总数、TONE存入其中，最后将列表<code>li</code>追加存储到表格中；</li>
-</ol>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">search_word</span>(<span class="params">path</span>):</span></span><br><span class="line">    name = get_name(path)</span><br><span class="line">    <span class="comment"># 去除特殊字符的干扰</span></span><br><span class="line">    name = name.replace(<span class="string">&#x27;-&#x27;</span>,<span class="string">&#x27;&#x27;</span>)</span><br><span class="line">    name = name.replace(<span class="string">&#x27;_&#x27;</span>,<span class="string">&#x27;&#x27;</span>)</span><br><span class="line">    name = name.replace(<span class="string">&#x27;*&#x27;</span>,<span class="string">&#x27;&#x27;</span>)</span><br><span class="line"></span><br><span class="line">    data_num = match_name(name)</span><br><span class="line">    data_match = [<span class="string">&#x27;&#x27;</span>,<span class="string">&#x27;&#x27;</span>]</span><br><span class="line">    <span class="keyword">if</span>(data_num == <span class="number">10000</span>):</span><br><span class="line">        data_match = [<span class="string">&#x27;NO&#x27;</span>,<span class="string">&#x27;NO&#x27;</span>]</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        print(data_num)</span><br><span class="line">        print(data[data_num][<span class="number">0</span>])</span><br><span class="line">        data_match[<span class="number">0</span>] = data[data_num][<span class="number">1</span>]</span><br><span class="line">        data_match[<span class="number">1</span>] = data[data_num][<span class="number">2</span>]</span><br><span class="line">        print(data_match)</span><br><span class="line">        <span class="comment"># 删除已匹配行</span></span><br><span class="line">        <span class="keyword">del</span> data[data_num]</span><br><span class="line">        print(<span class="string">&quot;匹配数据源还剩下:&quot;</span>+str(len(data))+<span class="string">&quot;，加油！&quot;</span>)</span><br><span class="line"></span><br><span class="line">    wordAndNum = &#123;<span class="string">&#x27;Positive&#x27;</span>: <span class="number">0</span>, <span class="string">&#x27;Negative&#x27;</span>: <span class="number">0</span>, <span class="string">&#x27;TONE&#x27;</span>: <span class="number">0</span>&#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 问题二：读取时编码错误则会直接结束进程</span></span><br><span class="line">    encoding = detectCode(path)</span><br><span class="line">    print(encoding)</span><br><span class="line">    print(path)</span><br><span class="line">    <span class="keyword">if</span> encoding == <span class="string">&quot;UTF-16&quot;</span>:</span><br><span class="line">        txt = open(path, <span class="string">&quot;r&quot;</span>, encoding=<span class="string">&quot;utf-16-le&quot;</span> ).read()</span><br><span class="line">    <span class="keyword">elif</span> encoding == <span class="string">&quot;UTF-8&quot;</span>:</span><br><span class="line">        txt = open(path, <span class="string">&quot;r&quot;</span>, encoding=<span class="string">&quot;utf-8&quot;</span>).read()</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        txt = open(path, <span class="string">&quot;rb&quot;</span>).read()</span><br><span class="line">    </span><br><span class="line">    words = jieba.lcut(txt)</span><br><span class="line">    countsOfPositive = &#123;&#125;</span><br><span class="line">    countsOfNegative = &#123;&#125;</span><br><span class="line">    <span class="keyword">for</span> word <span class="keyword">in</span> words:</span><br><span class="line">        <span class="comment"># 分别处理属于词汇列表中的积极和消极词汇</span></span><br><span class="line">        <span class="keyword">if</span> word <span class="keyword">in</span> includesPositive:</span><br><span class="line">            countsOfPositive[word] = countsOfPositive.get(word, <span class="number">0</span>) + <span class="number">1</span></span><br><span class="line">        <span class="keyword">if</span> word <span class="keyword">in</span> includesNegative:</span><br><span class="line">            countsOfNegative[word] = countsOfNegative.get(word, <span class="number">0</span>) + <span class="number">1</span></span><br><span class="line"></span><br><span class="line">    dictsOfPositive = dict(countsOfPositive.items())</span><br><span class="line">    itemsOfPositive = dictsOfPositive.items()</span><br><span class="line"></span><br><span class="line">    dictsOfNegative = dict(countsOfNegative.items())</span><br><span class="line">    itemsOfNegative = dictsOfNegative.items()</span><br><span class="line"></span><br><span class="line">    print(itemsOfPositive)</span><br><span class="line">    print(itemsOfNegative)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> item <span class="keyword">in</span> itemsOfPositive:</span><br><span class="line">        ls = list(item)</span><br><span class="line">        <span class="comment"># print(ls)</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(len(ls)):</span><br><span class="line">            <span class="keyword">if</span> i % <span class="number">2</span> == <span class="number">1</span>:</span><br><span class="line">                wordAndNum[<span class="string">&#x27;Positive&#x27;</span>] = wordAndNum[<span class="string">&#x27;Positive&#x27;</span>] + ls[i]</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> item <span class="keyword">in</span> itemsOfNegative:</span><br><span class="line">        ls = list(item)</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(len(ls)):</span><br><span class="line">            <span class="keyword">if</span> i % <span class="number">2</span> == <span class="number">1</span>:</span><br><span class="line">                wordAndNum[<span class="string">&#x27;Negative&#x27;</span>] = wordAndNum[<span class="string">&#x27;Negative&#x27;</span>] + ls[i]</span><br><span class="line">    <span class="comment"># 问题三：分母不能为0</span></span><br><span class="line">    <span class="keyword">if</span>(wordAndNum[<span class="string">&#x27;Positive&#x27;</span>] + wordAndNum[<span class="string">&#x27;Negative&#x27;</span>] != <span class="number">0</span>):</span><br><span class="line">        wordAndNum[<span class="string">&#x27;TONE&#x27;</span>] = abs(</span><br><span class="line">        (wordAndNum[<span class="string">&#x27;Positive&#x27;</span>] - wordAndNum[<span class="string">&#x27;Negative&#x27;</span>]) / (wordAndNum[<span class="string">&#x27;Positive&#x27;</span>] + wordAndNum[<span class="string">&#x27;Negative&#x27;</span>]))</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        wordAndNum[<span class="string">&#x27;TONE&#x27;</span>] = <span class="number">0</span></span><br><span class="line"></span><br><span class="line">    li = [name,data_match[<span class="number">0</span>],data_match[<span class="number">1</span>]]</span><br><span class="line">    <span class="keyword">for</span> key <span class="keyword">in</span> wordAndNum:</span><br><span class="line">        li.append(key)</span><br><span class="line">        li.append(str(wordAndNum[key]))</span><br><span class="line">    <span class="comment"># fo = open(&quot;002.csv&quot;, &quot;a&quot;),a表示追加，w表示重新写入</span></span><br><span class="line">    fo = open(<span class="string">&quot;年报数据.csv&quot;</span>, <span class="string">&quot;a&quot;</span>)</span><br><span class="line">    fo.write(<span class="string">&quot;,&quot;</span>.join(li) + <span class="string">&quot;\n&quot;</span>)</span><br><span class="line">    fo.close()</span><br></pre></td></tr></table></figure>
-
-
-
-</li>
-</ol>
-<h2 id="问题及解决方法"><a href="#问题及解决方法" class="headerlink" title="问题及解决方法"></a>问题及解决方法</h2><blockquote>
-<p>问题一：定义全局变量后，在函数中赋值，离开函数后却失效</p>
-</blockquote>
-<p><strong>问题具体描述：</strong></p>
-<p>二维列表<code>data</code>是用来存储从文件<code>b</code>中获取的文件名、数字代码和时间的，文件中每一行三个字符串要存储为<code>data</code>的一行，从文件中取出来的内容最初存在<code>txt</code>列表中，每一行存储为列表中的一个元素，所以是可以直接计算该<code>txt</code>元素长度并实现自动申请相应的内存给二维列表<code>data</code>，于是我做出了以下操作：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">data = []</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">data_storage</span>(<span class="params">path</span>):</span></span><br><span class="line">    txt = open(path, <span class="string">&#x27;r&#x27;</span>, encoding=<span class="string">&#x27;UTF-8&#x27;</span>).readlines()</span><br><span class="line">    data = [[] <span class="keyword">for</span> i <span class="keyword">in</span> range(len(txt))]</span><br><span class="line">    i = <span class="number">0</span></span><br><span class="line">    <span class="keyword">for</span> row <span class="keyword">in</span> txt:</span><br><span class="line">        row = row.replace(<span class="string">&#x27;\n&#x27;</span>,<span class="string">&#x27;&#x27;</span>)</span><br><span class="line">        row = row.replace(<span class="string">&#x27;*&#x27;</span>,<span class="string">&#x27;&#x27;</span>)</span><br><span class="line">        data[i] = row.split(<span class="string">&#x27;,&#x27;</span>)</span><br><span class="line">        print(data[i])</span><br><span class="line">        i = i + <span class="number">1</span></span><br></pre></td></tr></table></figure>
-
-<p>即定义全局变量<code>data</code>，并且在函数内部对该全局变量<code>data</code>先申请具体空间再进行每一行每一列的赋值操作，结果导致离开该函数后，<code>data</code>元素长度为空。</p>
-<p><strong>原因：</strong></p>
-<p>这应该是在函数中重新给变量<code>data</code>申请空间这个操作引起的问题，即因为<code>data = [[] for i in range(len(txt))]</code>这段代码的初始化与全局变量<code>data = []</code>初始化冲突了，于是程序将其定义为一个新的局部变量，导致内部使用的<code>data</code>的值无法在该函数之外调用。</p>
-<p><strong>解决方法：</strong></p>
-<p>就是我们现在代码修改的这样，直接最开始就给全局变量初始化具体空间，优点是简单不费脑，缺点是不够友好。</p>
-<blockquote>
-<p>问题二：读取文件时由于编码错误直接结束进程</p>
-</blockquote>
-<p><strong>问题具体描述：</strong></p>
-<p>最初是在跑数据的过程中突然中断结束，显示以UTF-16编码格式打开文件时内容编码出错，于是以为是整个文本编码格式是UTF-8，结果发现文本编码格式是UTF-16，但是其中某个数据存储格式不符合UTF-16的编码格式，才报的错。解决方案是直接删掉那一个出错的文本/滑稽。</p>
-<p>解决这个出错的问题时使用了二进制读取文本的方式，虽然正常运行程序了，但是最后却发现得不到想要的数据，于是百度了二进制编码以及unicode也就是UTF-8和UTF-16编码的区别。</p>
-<p><strong>拓展：</strong>二进制读取文件和Unicode编码以及读取文件的区别：</p>
-<p>所有的文件最终存储形式都是二进制，以二进制形式读取文件内容就是不对文本做任何处理而直接读取。Unicode编码是指对文件内容进行固定格式的转换，如UTF-16编码就是对文字以固定两个字节16个比特进行转换存储的，只能通过UTF-16编码格式打开读取，并且会对数据进行转换字符串操作。再简单点来说，二进制形式读取出来的数据就是二进制字符集合，而使用Unicode编码读取出来的数据则是经过转换的字符串集合。所以一般以二进制直接存储的二进制文件最好使用二进制形式读取，而文本文件由于是二进制之上的字符串集合，最好使用Unicode编码格式读取，否则容易出错。UTF-8针对的一般是英文文本内容，UTF-16是针对汉字处理的。</p>
-<blockquote>
-<p>问题三：分母不能为0</p>
-</blockquote>
-<p><strong>问题具体描述：</strong></p>
-<p>对于<code>wordAndNum[&#39;Positive&#39;] - wordAndNum[&#39;Negative&#39;]) / (wordAndNum[&#39;Positive&#39;] + wordAndNum[&#39;Negative&#39;])</code>语句来说，即使分母相加的两个值都是大于等于0的存在，但同样是有可能出现分母为0的情形的，在本次数据处理中，由于情感词汇表给出的都是中文词汇，而处理的文本数据却有英文版，因此出现了分母为0的情形，于是直接对文件路径做了过滤处理，而且为了防止再出现此类错误，做了简单的出错处理。</p>
-<p>完整代码如下：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># -*- coding:utf-8</span></span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">import</span> jieba</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> chardet</span><br><span class="line"></span><br><span class="line">includesPositive = &#123;&#125;</span><br><span class="line">includesNegative = &#123;&#125;</span><br><span class="line">data = [[] <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">4149</span>)]</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">readPositiveFile</span>(<span class="params">path</span>):</span></span><br><span class="line">    txt = open(path, <span class="string">&#x27;r&#x27;</span>, encoding=<span class="string">&#x27;UTF-8&#x27;</span>).readlines()</span><br><span class="line">    <span class="keyword">for</span> key <span class="keyword">in</span> txt:</span><br><span class="line">        key = key.replace(<span class="string">&#x27;\n&#x27;</span>, <span class="string">&#x27;&#x27;</span>)</span><br><span class="line">        print(key)</span><br><span class="line">        includesPositive[key] = <span class="number">0</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">readNegativeFile</span>(<span class="params">path</span>):</span></span><br><span class="line">    txt = open(path, <span class="string">&#x27;r&#x27;</span>, encoding=<span class="string">&#x27;UTF-8&#x27;</span>).readlines()</span><br><span class="line">    <span class="keyword">for</span> key <span class="keyword">in</span> txt:</span><br><span class="line">        key = key.replace(<span class="string">&#x27;\n&#x27;</span>, <span class="string">&#x27;&#x27;</span>)</span><br><span class="line">        print(key)</span><br><span class="line">        includesNegative[key] = <span class="number">0</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 实现按行读取文件，并使用分隔符号将每行字符串分割成二维数组一行存储</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">data_storage</span>(<span class="params">path</span>):</span></span><br><span class="line">    txt = open(path, <span class="string">&#x27;r&#x27;</span>, encoding=<span class="string">&#x27;UTF-8&#x27;</span>).readlines()</span><br><span class="line">    <span class="comment"># data = [[] for i in range(len(txt))]</span></span><br><span class="line">    i = <span class="number">0</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> row <span class="keyword">in</span> txt:</span><br><span class="line">        row = row.replace(<span class="string">&#x27;\n&#x27;</span>,<span class="string">&#x27;&#x27;</span>)</span><br><span class="line">        row = row.replace(<span class="string">&#x27;*&#x27;</span>,<span class="string">&#x27;&#x27;</span>)</span><br><span class="line">        data[i] = row.split(<span class="string">&#x27;,&#x27;</span>)</span><br><span class="line">        print(data[i])</span><br><span class="line">        i = i + <span class="number">1</span></span><br><span class="line">    <span class="comment"># print(len(data))</span></span><br><span class="line">    <span class="comment"># del data[1]</span></span><br><span class="line">    <span class="comment"># print(len(data))</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">detectCode</span>(<span class="params">path</span>):</span></span><br><span class="line">	<span class="keyword">with</span> open(path, <span class="string">&#x27;rb&#x27;</span>) <span class="keyword">as</span> file:</span><br><span class="line">		data = file.read(<span class="number">200000</span>)</span><br><span class="line">		dicts = chardet.detect(data)</span><br><span class="line">	<span class="keyword">return</span> dicts[<span class="string">&quot;encoding&quot;</span>]</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">parse</span>():</span></span><br><span class="line">    readPositiveFile(<span class="string">&#x27;F:\PythonSpiders\Word\_file\_positive_simplified.txt&#x27;</span>)</span><br><span class="line">    readNegativeFile(<span class="string">&#x27;F:\PythonSpiders\Word\_file\_negative_simplified.txt&#x27;</span>)</span><br><span class="line">    <span class="comment"># print(len(includesPositive))</span></span><br><span class="line">    <span class="comment"># print(includesPositive.keys())</span></span><br><span class="line">    <span class="comment"># print(len(includesNegative))</span></span><br><span class="line">    <span class="comment"># print(includesNegative.keys())</span></span><br><span class="line">    data_storage(<span class="string">&#x27;0.txt&#x27;</span>)</span><br><span class="line">    ergodic()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 循环遍历指定目录下所有文件</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">ergodic</span>():</span></span><br><span class="line">    paths = <span class="string">r&#x27;.\00\005&#x27;</span></span><br><span class="line">    <span class="comment"># paths = r&#x27;.\test&#x27;</span></span><br><span class="line">    fns = [os.path.join(root, fn) <span class="keyword">for</span> root, dirs, files <span class="keyword">in</span> os.walk(paths) <span class="keyword">for</span> fn <span class="keyword">in</span> files]</span><br><span class="line">    <span class="keyword">for</span> path <span class="keyword">in</span> fns:</span><br><span class="line">        <span class="keyword">if</span> path[len(path) - <span class="number">4</span>:len(path)].lower() == <span class="string">&#x27;.txt&#x27;</span>:</span><br><span class="line">            print(path)</span><br><span class="line">            <span class="comment"># 去除英文版</span></span><br><span class="line">            <span class="keyword">if</span> path.find(<span class="string">&quot;英文&quot;</span>) == <span class="number">-1</span>:</span><br><span class="line">                search_word(path)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">search_word</span>(<span class="params">path</span>):</span></span><br><span class="line">    name = get_name(path)</span><br><span class="line">    <span class="comment"># 去除特殊字符的干扰</span></span><br><span class="line">    name = name.replace(<span class="string">&#x27;-&#x27;</span>,<span class="string">&#x27;&#x27;</span>)</span><br><span class="line">    name = name.replace(<span class="string">&#x27;_&#x27;</span>,<span class="string">&#x27;&#x27;</span>)</span><br><span class="line">    name = name.replace(<span class="string">&#x27;*&#x27;</span>,<span class="string">&#x27;&#x27;</span>)</span><br><span class="line"></span><br><span class="line">    data_num = match_name(name)</span><br><span class="line">    data_match = [<span class="string">&#x27;&#x27;</span>,<span class="string">&#x27;&#x27;</span>]</span><br><span class="line">    <span class="keyword">if</span>(data_num == <span class="number">10000</span>):</span><br><span class="line">        data_match = [<span class="string">&#x27;NO&#x27;</span>,<span class="string">&#x27;NO&#x27;</span>]</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        print(data_num)</span><br><span class="line">        print(data[data_num][<span class="number">0</span>])</span><br><span class="line">        data_match[<span class="number">0</span>] = data[data_num][<span class="number">1</span>]</span><br><span class="line">        data_match[<span class="number">1</span>] = data[data_num][<span class="number">2</span>]</span><br><span class="line">        print(data_match)</span><br><span class="line">        <span class="comment"># 删除已匹配行</span></span><br><span class="line">        <span class="keyword">del</span> data[data_num]</span><br><span class="line">        print(<span class="string">&quot;匹配数据源还剩下:&quot;</span>+str(len(data))+<span class="string">&quot;，加油！&quot;</span>)</span><br><span class="line"></span><br><span class="line">    wordAndNum = &#123;<span class="string">&#x27;Positive&#x27;</span>: <span class="number">0</span>, <span class="string">&#x27;Negative&#x27;</span>: <span class="number">0</span>, <span class="string">&#x27;TONE&#x27;</span>: <span class="number">0</span>&#125;</span><br><span class="line"></span><br><span class="line">    encoding = detectCode(path)</span><br><span class="line">    print(encoding)</span><br><span class="line">    print(path)</span><br><span class="line">    <span class="keyword">if</span> encoding == <span class="string">&quot;UTF-16&quot;</span>:</span><br><span class="line">        txt = open(path, <span class="string">&quot;r&quot;</span>, encoding=<span class="string">&quot;utf-16-le&quot;</span> ).read()</span><br><span class="line">    <span class="keyword">elif</span> encoding == <span class="string">&quot;UTF-8&quot;</span>:</span><br><span class="line">        txt = open(path, <span class="string">&quot;r&quot;</span>, encoding=<span class="string">&quot;utf-8&quot;</span>).read()</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        txt = open(path, <span class="string">&quot;rb&quot;</span>).read()</span><br><span class="line">    words = jieba.lcut(txt)</span><br><span class="line">    countsOfPositive = &#123;&#125;</span><br><span class="line">    countsOfNegative = &#123;&#125;</span><br><span class="line">    <span class="keyword">for</span> word <span class="keyword">in</span> words:</span><br><span class="line">        <span class="comment"># 分别处理属于词汇列表中的积极和消极词汇</span></span><br><span class="line">        <span class="keyword">if</span> word <span class="keyword">in</span> includesPositive:</span><br><span class="line">            countsOfPositive[word] = countsOfPositive.get(word, <span class="number">0</span>) + <span class="number">1</span></span><br><span class="line">        <span class="keyword">if</span> word <span class="keyword">in</span> includesNegative:</span><br><span class="line">            countsOfNegative[word] = countsOfNegative.get(word, <span class="number">0</span>) + <span class="number">1</span></span><br><span class="line"></span><br><span class="line">    dictsOfPositive = dict(countsOfPositive.items())</span><br><span class="line">    itemsOfPositive = dictsOfPositive.items()</span><br><span class="line"></span><br><span class="line">    dictsOfNegative = dict(countsOfNegative.items())</span><br><span class="line">    itemsOfNegative = dictsOfNegative.items()</span><br><span class="line"></span><br><span class="line">    print(itemsOfPositive)</span><br><span class="line">    print(itemsOfNegative)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> item <span class="keyword">in</span> itemsOfPositive:</span><br><span class="line">        ls = list(item)</span><br><span class="line">        <span class="comment"># print(ls)</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(len(ls)):</span><br><span class="line">            <span class="keyword">if</span> i % <span class="number">2</span> == <span class="number">1</span>:</span><br><span class="line">                wordAndNum[<span class="string">&#x27;Positive&#x27;</span>] = wordAndNum[<span class="string">&#x27;Positive&#x27;</span>] + ls[i]</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> item <span class="keyword">in</span> itemsOfNegative:</span><br><span class="line">        ls = list(item)</span><br><span class="line">        <span class="comment"># print(ls)</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(len(ls)):</span><br><span class="line">            <span class="keyword">if</span> i % <span class="number">2</span> == <span class="number">1</span>:</span><br><span class="line">                wordAndNum[<span class="string">&#x27;Negative&#x27;</span>] = wordAndNum[<span class="string">&#x27;Negative&#x27;</span>] + ls[i]</span><br><span class="line">    <span class="keyword">if</span>(wordAndNum[<span class="string">&#x27;Positive&#x27;</span>] + wordAndNum[<span class="string">&#x27;Negative&#x27;</span>] != <span class="number">0</span>):</span><br><span class="line">        wordAndNum[<span class="string">&#x27;TONE&#x27;</span>] = abs(</span><br><span class="line">        (wordAndNum[<span class="string">&#x27;Positive&#x27;</span>] - wordAndNum[<span class="string">&#x27;Negative&#x27;</span>]) / (wordAndNum[<span class="string">&#x27;Positive&#x27;</span>] + wordAndNum[<span class="string">&#x27;Negative&#x27;</span>]))</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        wordAndNum[<span class="string">&#x27;TONE&#x27;</span>] = <span class="number">0</span></span><br><span class="line"></span><br><span class="line">    li = [name,data_match[<span class="number">0</span>],data_match[<span class="number">1</span>]]</span><br><span class="line">    <span class="keyword">for</span> key <span class="keyword">in</span> wordAndNum:</span><br><span class="line">        li.append(key)</span><br><span class="line">        li.append(str(wordAndNum[key]))</span><br><span class="line">    <span class="comment"># fo = open(&quot;002.csv&quot;, &quot;a&quot;),a表示追加，w表示重新写入</span></span><br><span class="line">    fo = open(<span class="string">&quot;年报数据.csv&quot;</span>, <span class="string">&quot;a&quot;</span>)</span><br><span class="line">    fo.write(<span class="string">&quot;,&quot;</span>.join(li) + <span class="string">&quot;\n&quot;</span>)</span><br><span class="line">    fo.close()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 遍历data数据中文件名，对比传入name，相同则返回下标，未匹配到则返回固定值10000</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">match_name</span>(<span class="params">name</span>):</span></span><br><span class="line">    print(name)</span><br><span class="line">    print(len(data))</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(len(data)):</span><br><span class="line">        <span class="keyword">if</span> name == data[i][<span class="number">0</span>]:</span><br><span class="line">            print(data[i][<span class="number">0</span>])</span><br><span class="line">            <span class="keyword">return</span> i</span><br><span class="line">        <span class="keyword">elif</span> i==len(data)<span class="number">-1</span>:</span><br><span class="line">            <span class="keyword">return</span> <span class="number">10000</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 返回文件名</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_name</span>(<span class="params">path</span>):</span></span><br><span class="line">    nameNum = last_char(path)</span><br><span class="line">    name = path[nameNum + <span class="number">1</span>:len(path) - <span class="number">4</span>]</span><br><span class="line">    <span class="keyword">return</span> name</span><br><span class="line"></span><br><span class="line"><span class="comment"># 返回最后一次出现该字符的序号</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">last_char</span>(<span class="params">str</span>):</span></span><br><span class="line">    lastNum = <span class="number">0</span></span><br><span class="line">    num = <span class="number">0</span></span><br><span class="line">    char = <span class="string">&quot;\\&quot;</span></span><br><span class="line">    <span class="keyword">for</span> ch <span class="keyword">in</span> str:</span><br><span class="line">        <span class="keyword">if</span> char == ch:</span><br><span class="line">            lastNum = num</span><br><span class="line">        num = num + <span class="number">1</span></span><br><span class="line">    <span class="keyword">return</span> lastNum</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    parse()</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-
-
-
-
-
-
-
-
-]]></content>
-      <categories>
-        <category>学习</category>
-      </categories>
-      <tags>
-        <tag>数据分析</tag>
-        <tag>Python</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>爬虫之Scrapy（2.实战）</title>
     <url>/2020/09/13/Python/scrapy%E5%AE%9E%E6%88%98/</url>
     <content><![CDATA[<h2 id="1-新建项目yangguang"><a href="#1-新建项目yangguang" class="headerlink" title="1.新建项目yangguang"></a>1.新建项目yangguang</h2><h3 id="1-1-新建项目"><a href="#1-1-新建项目" class="headerlink" title="1.1 新建项目"></a>1.1 新建项目</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">scrapy startproject yangguang</span><br><span class="line"><span class="built_in">cd</span> yangguang <span class="comment"># 进入新建项目列表</span></span><br></pre></td></tr></table></figure>
@@ -434,8 +342,8 @@
         <category>学习</category>
       </categories>
       <tags>
-        <tag>Python</tag>
         <tag>Scrapy</tag>
+        <tag>Python</tag>
       </tags>
   </entry>
   <entry>
@@ -587,6 +495,352 @@
         <tag>vue</tag>
         <tag>环境配置</tag>
         <tag>node.js</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>使用Python数据分析遇到的部分问题</title>
+    <url>/2020/11/14/Python/Python%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E6%97%B6%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/</url>
+    <content><![CDATA[<h2 id="工作流程"><a href="#工作流程" class="headerlink" title="工作流程"></a>工作流程</h2><blockquote>
+<p>本次数据分析目标是对大量的txt文本匹配查询一系列词汇出现的总频次，并从另一个大型二维数组（第一列元素存储了一系列文件名，需要将第二列和第三列元素相应添加到Excel表格中）中对每个文件名做相应的匹配查询</p>
+</blockquote>
+<p>使用python进行数据分析工作，主要工作流程如下：</p>
+<ol>
+<li><p>从<code>a1</code>、<code>a2</code>文本中读取内容（中文情感词汇，积极词汇表和消极词汇表）并以键值对形式存入两个大的字典中，键用取出来的词语表示，值则初始化赋值为0，用来对目标文本进行匹配分析对应词语出现次数：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">includesPositive = &#123;&#125;</span><br><span class="line">includesNegative = &#123;&#125;</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">readNegativeFile</span>(<span class="params">path</span>):</span></span><br><span class="line">    txt = open(path, <span class="string">&#x27;r&#x27;</span>, encoding=<span class="string">&#x27;UTF-8&#x27;</span>).readlines()</span><br><span class="line">    <span class="keyword">for</span> key <span class="keyword">in</span> txt:</span><br><span class="line">        key = key.replace(<span class="string">&#x27;\n&#x27;</span>, <span class="string">&#x27;&#x27;</span>)</span><br><span class="line">        print(key)</span><br><span class="line">        includesNegative[key] = <span class="number">0</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">readNegativeFile</span>(<span class="params">path</span>):</span></span><br><span class="line">    txt = open(path, <span class="string">&#x27;r&#x27;</span>, encoding=<span class="string">&#x27;UTF-8&#x27;</span>).readlines()</span><br><span class="line">    <span class="keyword">for</span> key <span class="keyword">in</span> txt:</span><br><span class="line">        key = key.replace(<span class="string">&#x27;\n&#x27;</span>, <span class="string">&#x27;&#x27;</span>)</span><br><span class="line">        print(key)</span><br><span class="line">        includesNegative[key] = <span class="number">0</span></span><br></pre></td></tr></table></figure>
+<a id="more"></a></li>
+<li><p>从<code>b</code>文本中读取内容并存入一个大的二维数组中，其中文本每一行以符号<code>,</code>分隔三个字符串，并存入二维数组一行中，其中第一个字符串是文件名，第二个字符串是一段数字代码，第三个字符串是时间，并过滤文件名中特殊符号<code>\n</code>、<code>*</code>：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 问题一：定义全局变量后，在函数中赋值，离开函数后却失效</span></span><br><span class="line">data = [[] <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">4149</span>)]</span><br><span class="line"><span class="comment"># 实现按行读取文件，并使用分隔符号将每行字符串分割成二维数组一行存储</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">data_storage</span>(<span class="params">path</span>):</span></span><br><span class="line">    txt = open(path, <span class="string">&#x27;r&#x27;</span>, encoding=<span class="string">&#x27;UTF-8&#x27;</span>).readlines()</span><br><span class="line">    i = <span class="number">0</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> row <span class="keyword">in</span> txt:</span><br><span class="line">        row = row.replace(<span class="string">&#x27;\n&#x27;</span>,<span class="string">&#x27;&#x27;</span>)</span><br><span class="line">        row = row.replace(<span class="string">&#x27;*&#x27;</span>,<span class="string">&#x27;&#x27;</span>)</span><br><span class="line">        data[i] = row.split(<span class="string">&#x27;,&#x27;</span>)</span><br><span class="line">        print(data[i])</span><br><span class="line">        i = i + <span class="number">1</span></span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ol>
+<ol start="3">
+<li><p>循环遍历目标文件夹下所有目标文件且自动过滤非txt格式以及含有敏感词汇<code>英语</code>的文件，并记录其文件路径：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 循环遍历指定目录下所有文件</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">ergodic</span>():</span></span><br><span class="line">    paths = <span class="string">r&#x27;.\00\005&#x27;</span></span><br><span class="line">    <span class="comment"># paths = r&#x27;.\test&#x27;</span></span><br><span class="line">    fns = [os.path.join(root, fn) <span class="keyword">for</span> root, dirs, files <span class="keyword">in</span> os.walk(paths) <span class="keyword">for</span> fn <span class="keyword">in</span> files]</span><br><span class="line">    <span class="keyword">for</span> path <span class="keyword">in</span> fns:</span><br><span class="line">        <span class="keyword">if</span> path[len(path) - <span class="number">4</span>:len(path)].lower() == <span class="string">&#x27;.txt&#x27;</span>:</span><br><span class="line">            print(path)</span><br><span class="line">            <span class="comment"># 去除英文版</span></span><br><span class="line">            <span class="keyword">if</span> path.find(<span class="string">&quot;英文&quot;</span>) == <span class="number">-1</span>:</span><br><span class="line">                search_word(path)</span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ol>
+<ol start="4">
+<li><p>对循环得到的每一个有效文件路径实现以下功能：</p>
+<ol>
+<li>从相应的路径名中取出文件名（不含格式后缀）并存入字符串<code>name</code>中，并对<code>name</code>进行过滤特殊字符操作，该<code>name</code>用来从第二步获取的二维数组中匹配文件名，匹配正确则记录下该行中相应的数字代码和时间；</li>
+<li>过滤特殊字符；</li>
+<li>创建一个字典用<code>wordAndNum</code>来存储所有积极词汇和消极词汇分别出现的次数；</li>
+<li>以该文件路径读取该文件并全部存入<code>txt</code>字符串中；</li>
+<li>对<code>txt</code>使用结巴分词并将结果存入<code>words</code>中，对每一个单词分别与积极词汇<code>includesPositive</code>和消极词汇<code>includesNegative</code>进行比对，匹配成功则分别加入积极词汇字典<code>countsOfPositive</code>和消极词汇字典<code>countsOfNegative</code>中，并将字典中每一个键值对分别存入相应的积极消极元组<code>itemsOfPositive</code>、<code>itemsOfNegative</code>中；</li>
+<li>分别遍历元组元素，将所有积极词汇出现的次数叠加存入最初的<code>wordAndNum</code>字典中，并计算相应的<code>TONE</code>值；</li>
+<li>创建列表<code>li</code>并将文件名、匹配的数字代码、匹配的时间、积极词汇总数、消极词汇总数、TONE存入其中，最后将列表<code>li</code>追加存储到表格中；</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">search_word</span>(<span class="params">path</span>):</span></span><br><span class="line">    name = get_name(path)</span><br><span class="line">    <span class="comment"># 去除特殊字符的干扰</span></span><br><span class="line">    name = name.replace(<span class="string">&#x27;-&#x27;</span>,<span class="string">&#x27;&#x27;</span>)</span><br><span class="line">    name = name.replace(<span class="string">&#x27;_&#x27;</span>,<span class="string">&#x27;&#x27;</span>)</span><br><span class="line">    name = name.replace(<span class="string">&#x27;*&#x27;</span>,<span class="string">&#x27;&#x27;</span>)</span><br><span class="line"></span><br><span class="line">    data_num = match_name(name)</span><br><span class="line">    data_match = [<span class="string">&#x27;&#x27;</span>,<span class="string">&#x27;&#x27;</span>]</span><br><span class="line">    <span class="keyword">if</span>(data_num == <span class="number">10000</span>):</span><br><span class="line">        data_match = [<span class="string">&#x27;NO&#x27;</span>,<span class="string">&#x27;NO&#x27;</span>]</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        print(data_num)</span><br><span class="line">        print(data[data_num][<span class="number">0</span>])</span><br><span class="line">        data_match[<span class="number">0</span>] = data[data_num][<span class="number">1</span>]</span><br><span class="line">        data_match[<span class="number">1</span>] = data[data_num][<span class="number">2</span>]</span><br><span class="line">        print(data_match)</span><br><span class="line">        <span class="comment"># 删除已匹配行</span></span><br><span class="line">        <span class="keyword">del</span> data[data_num]</span><br><span class="line">        print(<span class="string">&quot;匹配数据源还剩下:&quot;</span>+str(len(data))+<span class="string">&quot;，加油！&quot;</span>)</span><br><span class="line"></span><br><span class="line">    wordAndNum = &#123;<span class="string">&#x27;Positive&#x27;</span>: <span class="number">0</span>, <span class="string">&#x27;Negative&#x27;</span>: <span class="number">0</span>, <span class="string">&#x27;TONE&#x27;</span>: <span class="number">0</span>&#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 问题二：读取时编码错误则会直接结束进程</span></span><br><span class="line">    encoding = detectCode(path)</span><br><span class="line">    print(encoding)</span><br><span class="line">    print(path)</span><br><span class="line">    <span class="keyword">if</span> encoding == <span class="string">&quot;UTF-16&quot;</span>:</span><br><span class="line">        txt = open(path, <span class="string">&quot;r&quot;</span>, encoding=<span class="string">&quot;utf-16-le&quot;</span> ).read()</span><br><span class="line">    <span class="keyword">elif</span> encoding == <span class="string">&quot;UTF-8&quot;</span>:</span><br><span class="line">        txt = open(path, <span class="string">&quot;r&quot;</span>, encoding=<span class="string">&quot;utf-8&quot;</span>).read()</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        txt = open(path, <span class="string">&quot;rb&quot;</span>).read()</span><br><span class="line">    </span><br><span class="line">    words = jieba.lcut(txt)</span><br><span class="line">    countsOfPositive = &#123;&#125;</span><br><span class="line">    countsOfNegative = &#123;&#125;</span><br><span class="line">    <span class="keyword">for</span> word <span class="keyword">in</span> words:</span><br><span class="line">        <span class="comment"># 分别处理属于词汇列表中的积极和消极词汇</span></span><br><span class="line">        <span class="keyword">if</span> word <span class="keyword">in</span> includesPositive:</span><br><span class="line">            countsOfPositive[word] = countsOfPositive.get(word, <span class="number">0</span>) + <span class="number">1</span></span><br><span class="line">        <span class="keyword">if</span> word <span class="keyword">in</span> includesNegative:</span><br><span class="line">            countsOfNegative[word] = countsOfNegative.get(word, <span class="number">0</span>) + <span class="number">1</span></span><br><span class="line"></span><br><span class="line">    dictsOfPositive = dict(countsOfPositive.items())</span><br><span class="line">    itemsOfPositive = dictsOfPositive.items()</span><br><span class="line"></span><br><span class="line">    dictsOfNegative = dict(countsOfNegative.items())</span><br><span class="line">    itemsOfNegative = dictsOfNegative.items()</span><br><span class="line"></span><br><span class="line">    print(itemsOfPositive)</span><br><span class="line">    print(itemsOfNegative)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> item <span class="keyword">in</span> itemsOfPositive:</span><br><span class="line">        ls = list(item)</span><br><span class="line">        <span class="comment"># print(ls)</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(len(ls)):</span><br><span class="line">            <span class="keyword">if</span> i % <span class="number">2</span> == <span class="number">1</span>:</span><br><span class="line">                wordAndNum[<span class="string">&#x27;Positive&#x27;</span>] = wordAndNum[<span class="string">&#x27;Positive&#x27;</span>] + ls[i]</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> item <span class="keyword">in</span> itemsOfNegative:</span><br><span class="line">        ls = list(item)</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(len(ls)):</span><br><span class="line">            <span class="keyword">if</span> i % <span class="number">2</span> == <span class="number">1</span>:</span><br><span class="line">                wordAndNum[<span class="string">&#x27;Negative&#x27;</span>] = wordAndNum[<span class="string">&#x27;Negative&#x27;</span>] + ls[i]</span><br><span class="line">    <span class="comment"># 问题三：分母不能为0</span></span><br><span class="line">    <span class="keyword">if</span>(wordAndNum[<span class="string">&#x27;Positive&#x27;</span>] + wordAndNum[<span class="string">&#x27;Negative&#x27;</span>] != <span class="number">0</span>):</span><br><span class="line">        wordAndNum[<span class="string">&#x27;TONE&#x27;</span>] = abs(</span><br><span class="line">        (wordAndNum[<span class="string">&#x27;Positive&#x27;</span>] - wordAndNum[<span class="string">&#x27;Negative&#x27;</span>]) / (wordAndNum[<span class="string">&#x27;Positive&#x27;</span>] + wordAndNum[<span class="string">&#x27;Negative&#x27;</span>]))</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        wordAndNum[<span class="string">&#x27;TONE&#x27;</span>] = <span class="number">0</span></span><br><span class="line"></span><br><span class="line">    li = [name,data_match[<span class="number">0</span>],data_match[<span class="number">1</span>]]</span><br><span class="line">    <span class="keyword">for</span> key <span class="keyword">in</span> wordAndNum:</span><br><span class="line">        li.append(key)</span><br><span class="line">        li.append(str(wordAndNum[key]))</span><br><span class="line">    <span class="comment"># fo = open(&quot;002.csv&quot;, &quot;a&quot;),a表示追加，w表示重新写入</span></span><br><span class="line">    fo = open(<span class="string">&quot;年报数据.csv&quot;</span>, <span class="string">&quot;a&quot;</span>)</span><br><span class="line">    fo.write(<span class="string">&quot;,&quot;</span>.join(li) + <span class="string">&quot;\n&quot;</span>)</span><br><span class="line">    fo.close()</span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ol>
+<h2 id="问题及解决方法"><a href="#问题及解决方法" class="headerlink" title="问题及解决方法"></a>问题及解决方法</h2><blockquote>
+<p>问题一：定义全局变量后，在函数中赋值，离开函数后却失效</p>
+</blockquote>
+<p><strong>问题具体描述：</strong></p>
+<p>二维列表<code>data</code>是用来存储从文件<code>b</code>中获取的文件名、数字代码和时间的，文件中每一行三个字符串要存储为<code>data</code>的一行，从文件中取出来的内容最初存在<code>txt</code>列表中，每一行存储为列表中的一个元素，所以是可以直接计算该<code>txt</code>元素长度并实现自动申请相应的内存给二维列表<code>data</code>，于是我做出了以下操作：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">data = []</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">data_storage</span>(<span class="params">path</span>):</span></span><br><span class="line">    txt = open(path, <span class="string">&#x27;r&#x27;</span>, encoding=<span class="string">&#x27;UTF-8&#x27;</span>).readlines()</span><br><span class="line">    data = [[] <span class="keyword">for</span> i <span class="keyword">in</span> range(len(txt))]</span><br><span class="line">    i = <span class="number">0</span></span><br><span class="line">    <span class="keyword">for</span> row <span class="keyword">in</span> txt:</span><br><span class="line">        row = row.replace(<span class="string">&#x27;\n&#x27;</span>,<span class="string">&#x27;&#x27;</span>)</span><br><span class="line">        row = row.replace(<span class="string">&#x27;*&#x27;</span>,<span class="string">&#x27;&#x27;</span>)</span><br><span class="line">        data[i] = row.split(<span class="string">&#x27;,&#x27;</span>)</span><br><span class="line">        print(data[i])</span><br><span class="line">        i = i + <span class="number">1</span></span><br></pre></td></tr></table></figure>
+
+<p>即定义全局变量<code>data</code>，并且在函数内部对该全局变量<code>data</code>先申请具体空间再进行每一行每一列的赋值操作，结果导致离开该函数后，<code>data</code>元素长度为空。</p>
+<p><strong>原因：</strong></p>
+<p>这应该是在函数中重新给变量<code>data</code>申请空间这个操作引起的问题，即因为<code>data = [[] for i in range(len(txt))]</code>这段代码的初始化与全局变量<code>data = []</code>初始化冲突了，于是程序将其定义为一个新的局部变量，导致内部使用的<code>data</code>的值无法在该函数之外调用。</p>
+<p><strong>解决方法：</strong></p>
+<p>就是我们现在代码修改的这样，直接最开始就给全局变量初始化具体空间，优点是简单不费脑，缺点是不够友好。</p>
+<blockquote>
+<p>问题二：读取文件时由于编码错误直接结束进程</p>
+</blockquote>
+<p><strong>问题具体描述：</strong></p>
+<p>最初是在跑数据的过程中突然中断结束，显示以UTF-16编码格式打开文件时内容编码出错，于是以为是整个文本编码格式是UTF-8，结果发现文本编码格式是UTF-16，但是其中某个数据存储格式不符合UTF-16的编码格式，才报的错。解决方案是直接删掉那一个出错的文本/滑稽。</p>
+<p>解决这个出错的问题时使用了二进制读取文本的方式，虽然正常运行程序了，但是最后却发现得不到想要的数据，于是百度了二进制编码以及unicode也就是UTF-8和UTF-16编码的区别。</p>
+<p><strong>拓展：</strong>二进制读取文件和Unicode编码以及读取文件的区别：</p>
+<p>所有的文件最终存储形式都是二进制，以二进制形式读取文件内容就是不对文本做任何处理而直接读取。Unicode编码是指对文件内容进行固定格式的转换，如UTF-16编码就是对文字以固定两个字节16个比特进行转换存储的，只能通过UTF-16编码格式打开读取，并且会对数据进行转换字符串操作。再简单点来说，二进制形式读取出来的数据就是二进制字符集合，而使用Unicode编码读取出来的数据则是经过转换的字符串集合。所以一般以二进制直接存储的二进制文件最好使用二进制形式读取，而文本文件由于是二进制之上的字符串集合，最好使用Unicode编码格式读取，否则容易出错。UTF-8针对的一般是英文文本内容，UTF-16是针对汉字处理的。</p>
+<blockquote>
+<p>问题三：分母不能为0</p>
+</blockquote>
+<p><strong>问题具体描述：</strong></p>
+<p>对于<code>wordAndNum[&#39;Positive&#39;] - wordAndNum[&#39;Negative&#39;]) / (wordAndNum[&#39;Positive&#39;] + wordAndNum[&#39;Negative&#39;])</code>语句来说，即使分母相加的两个值都是大于等于0的存在，但同样是有可能出现分母为0的情形的，在本次数据处理中，由于情感词汇表给出的都是中文词汇，而处理的文本数据却有英文版，因此出现了分母为0的情形，于是直接对文件路径做了过滤处理，而且为了防止再出现此类错误，做了简单的出错处理。</p>
+<p>完整代码如下：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># -*- coding:utf-8</span></span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">import</span> jieba</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> chardet</span><br><span class="line"></span><br><span class="line">includesPositive = &#123;&#125;</span><br><span class="line">includesNegative = &#123;&#125;</span><br><span class="line">data = [[] <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">4149</span>)]</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">readPositiveFile</span>(<span class="params">path</span>):</span></span><br><span class="line">    txt = open(path, <span class="string">&#x27;r&#x27;</span>, encoding=<span class="string">&#x27;UTF-8&#x27;</span>).readlines()</span><br><span class="line">    <span class="keyword">for</span> key <span class="keyword">in</span> txt:</span><br><span class="line">        key = key.replace(<span class="string">&#x27;\n&#x27;</span>, <span class="string">&#x27;&#x27;</span>)</span><br><span class="line">        print(key)</span><br><span class="line">        includesPositive[key] = <span class="number">0</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">readNegativeFile</span>(<span class="params">path</span>):</span></span><br><span class="line">    txt = open(path, <span class="string">&#x27;r&#x27;</span>, encoding=<span class="string">&#x27;UTF-8&#x27;</span>).readlines()</span><br><span class="line">    <span class="keyword">for</span> key <span class="keyword">in</span> txt:</span><br><span class="line">        key = key.replace(<span class="string">&#x27;\n&#x27;</span>, <span class="string">&#x27;&#x27;</span>)</span><br><span class="line">        print(key)</span><br><span class="line">        includesNegative[key] = <span class="number">0</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 实现按行读取文件，并使用分隔符号将每行字符串分割成二维数组一行存储</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">data_storage</span>(<span class="params">path</span>):</span></span><br><span class="line">    txt = open(path, <span class="string">&#x27;r&#x27;</span>, encoding=<span class="string">&#x27;UTF-8&#x27;</span>).readlines()</span><br><span class="line">    <span class="comment"># data = [[] for i in range(len(txt))]</span></span><br><span class="line">    i = <span class="number">0</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> row <span class="keyword">in</span> txt:</span><br><span class="line">        row = row.replace(<span class="string">&#x27;\n&#x27;</span>,<span class="string">&#x27;&#x27;</span>)</span><br><span class="line">        row = row.replace(<span class="string">&#x27;*&#x27;</span>,<span class="string">&#x27;&#x27;</span>)</span><br><span class="line">        data[i] = row.split(<span class="string">&#x27;,&#x27;</span>)</span><br><span class="line">        print(data[i])</span><br><span class="line">        i = i + <span class="number">1</span></span><br><span class="line">    <span class="comment"># print(len(data))</span></span><br><span class="line">    <span class="comment"># del data[1]</span></span><br><span class="line">    <span class="comment"># print(len(data))</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">detectCode</span>(<span class="params">path</span>):</span></span><br><span class="line">	<span class="keyword">with</span> open(path, <span class="string">&#x27;rb&#x27;</span>) <span class="keyword">as</span> file:</span><br><span class="line">		data = file.read(<span class="number">200000</span>)</span><br><span class="line">		dicts = chardet.detect(data)</span><br><span class="line">	<span class="keyword">return</span> dicts[<span class="string">&quot;encoding&quot;</span>]</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">parse</span>():</span></span><br><span class="line">    readPositiveFile(<span class="string">&#x27;F:\PythonSpiders\Word\_file\_positive_simplified.txt&#x27;</span>)</span><br><span class="line">    readNegativeFile(<span class="string">&#x27;F:\PythonSpiders\Word\_file\_negative_simplified.txt&#x27;</span>)</span><br><span class="line">    <span class="comment"># print(len(includesPositive))</span></span><br><span class="line">    <span class="comment"># print(includesPositive.keys())</span></span><br><span class="line">    <span class="comment"># print(len(includesNegative))</span></span><br><span class="line">    <span class="comment"># print(includesNegative.keys())</span></span><br><span class="line">    data_storage(<span class="string">&#x27;0.txt&#x27;</span>)</span><br><span class="line">    ergodic()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 循环遍历指定目录下所有文件</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">ergodic</span>():</span></span><br><span class="line">    paths = <span class="string">r&#x27;.\00\005&#x27;</span></span><br><span class="line">    <span class="comment"># paths = r&#x27;.\test&#x27;</span></span><br><span class="line">    fns = [os.path.join(root, fn) <span class="keyword">for</span> root, dirs, files <span class="keyword">in</span> os.walk(paths) <span class="keyword">for</span> fn <span class="keyword">in</span> files]</span><br><span class="line">    <span class="keyword">for</span> path <span class="keyword">in</span> fns:</span><br><span class="line">        <span class="keyword">if</span> path[len(path) - <span class="number">4</span>:len(path)].lower() == <span class="string">&#x27;.txt&#x27;</span>:</span><br><span class="line">            print(path)</span><br><span class="line">            <span class="comment"># 去除英文版</span></span><br><span class="line">            <span class="keyword">if</span> path.find(<span class="string">&quot;英文&quot;</span>) == <span class="number">-1</span>:</span><br><span class="line">                search_word(path)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">search_word</span>(<span class="params">path</span>):</span></span><br><span class="line">    name = get_name(path)</span><br><span class="line">    <span class="comment"># 去除特殊字符的干扰</span></span><br><span class="line">    name = name.replace(<span class="string">&#x27;-&#x27;</span>,<span class="string">&#x27;&#x27;</span>)</span><br><span class="line">    name = name.replace(<span class="string">&#x27;_&#x27;</span>,<span class="string">&#x27;&#x27;</span>)</span><br><span class="line">    name = name.replace(<span class="string">&#x27;*&#x27;</span>,<span class="string">&#x27;&#x27;</span>)</span><br><span class="line"></span><br><span class="line">    data_num = match_name(name)</span><br><span class="line">    data_match = [<span class="string">&#x27;&#x27;</span>,<span class="string">&#x27;&#x27;</span>]</span><br><span class="line">    <span class="keyword">if</span>(data_num == <span class="number">10000</span>):</span><br><span class="line">        data_match = [<span class="string">&#x27;NO&#x27;</span>,<span class="string">&#x27;NO&#x27;</span>]</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        print(data_num)</span><br><span class="line">        print(data[data_num][<span class="number">0</span>])</span><br><span class="line">        data_match[<span class="number">0</span>] = data[data_num][<span class="number">1</span>]</span><br><span class="line">        data_match[<span class="number">1</span>] = data[data_num][<span class="number">2</span>]</span><br><span class="line">        print(data_match)</span><br><span class="line">        <span class="comment"># 删除已匹配行</span></span><br><span class="line">        <span class="keyword">del</span> data[data_num]</span><br><span class="line">        print(<span class="string">&quot;匹配数据源还剩下:&quot;</span>+str(len(data))+<span class="string">&quot;，加油！&quot;</span>)</span><br><span class="line"></span><br><span class="line">    wordAndNum = &#123;<span class="string">&#x27;Positive&#x27;</span>: <span class="number">0</span>, <span class="string">&#x27;Negative&#x27;</span>: <span class="number">0</span>, <span class="string">&#x27;TONE&#x27;</span>: <span class="number">0</span>&#125;</span><br><span class="line"></span><br><span class="line">    encoding = detectCode(path)</span><br><span class="line">    print(encoding)</span><br><span class="line">    print(path)</span><br><span class="line">    <span class="keyword">if</span> encoding == <span class="string">&quot;UTF-16&quot;</span>:</span><br><span class="line">        txt = open(path, <span class="string">&quot;r&quot;</span>, encoding=<span class="string">&quot;utf-16-le&quot;</span> ).read()</span><br><span class="line">    <span class="keyword">elif</span> encoding == <span class="string">&quot;UTF-8&quot;</span>:</span><br><span class="line">        txt = open(path, <span class="string">&quot;r&quot;</span>, encoding=<span class="string">&quot;utf-8&quot;</span>).read()</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        txt = open(path, <span class="string">&quot;rb&quot;</span>).read()</span><br><span class="line">    words = jieba.lcut(txt)</span><br><span class="line">    countsOfPositive = &#123;&#125;</span><br><span class="line">    countsOfNegative = &#123;&#125;</span><br><span class="line">    <span class="keyword">for</span> word <span class="keyword">in</span> words:</span><br><span class="line">        <span class="comment"># 分别处理属于词汇列表中的积极和消极词汇</span></span><br><span class="line">        <span class="keyword">if</span> word <span class="keyword">in</span> includesPositive:</span><br><span class="line">            countsOfPositive[word] = countsOfPositive.get(word, <span class="number">0</span>) + <span class="number">1</span></span><br><span class="line">        <span class="keyword">if</span> word <span class="keyword">in</span> includesNegative:</span><br><span class="line">            countsOfNegative[word] = countsOfNegative.get(word, <span class="number">0</span>) + <span class="number">1</span></span><br><span class="line"></span><br><span class="line">    dictsOfPositive = dict(countsOfPositive.items())</span><br><span class="line">    itemsOfPositive = dictsOfPositive.items()</span><br><span class="line"></span><br><span class="line">    dictsOfNegative = dict(countsOfNegative.items())</span><br><span class="line">    itemsOfNegative = dictsOfNegative.items()</span><br><span class="line"></span><br><span class="line">    print(itemsOfPositive)</span><br><span class="line">    print(itemsOfNegative)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> item <span class="keyword">in</span> itemsOfPositive:</span><br><span class="line">        ls = list(item)</span><br><span class="line">        <span class="comment"># print(ls)</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(len(ls)):</span><br><span class="line">            <span class="keyword">if</span> i % <span class="number">2</span> == <span class="number">1</span>:</span><br><span class="line">                wordAndNum[<span class="string">&#x27;Positive&#x27;</span>] = wordAndNum[<span class="string">&#x27;Positive&#x27;</span>] + ls[i]</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> item <span class="keyword">in</span> itemsOfNegative:</span><br><span class="line">        ls = list(item)</span><br><span class="line">        <span class="comment"># print(ls)</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(len(ls)):</span><br><span class="line">            <span class="keyword">if</span> i % <span class="number">2</span> == <span class="number">1</span>:</span><br><span class="line">                wordAndNum[<span class="string">&#x27;Negative&#x27;</span>] = wordAndNum[<span class="string">&#x27;Negative&#x27;</span>] + ls[i]</span><br><span class="line">    <span class="keyword">if</span>(wordAndNum[<span class="string">&#x27;Positive&#x27;</span>] + wordAndNum[<span class="string">&#x27;Negative&#x27;</span>] != <span class="number">0</span>):</span><br><span class="line">        wordAndNum[<span class="string">&#x27;TONE&#x27;</span>] = abs(</span><br><span class="line">        (wordAndNum[<span class="string">&#x27;Positive&#x27;</span>] - wordAndNum[<span class="string">&#x27;Negative&#x27;</span>]) / (wordAndNum[<span class="string">&#x27;Positive&#x27;</span>] + wordAndNum[<span class="string">&#x27;Negative&#x27;</span>]))</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        wordAndNum[<span class="string">&#x27;TONE&#x27;</span>] = <span class="number">0</span></span><br><span class="line"></span><br><span class="line">    li = [name,data_match[<span class="number">0</span>],data_match[<span class="number">1</span>]]</span><br><span class="line">    <span class="keyword">for</span> key <span class="keyword">in</span> wordAndNum:</span><br><span class="line">        li.append(key)</span><br><span class="line">        li.append(str(wordAndNum[key]))</span><br><span class="line">    <span class="comment"># fo = open(&quot;002.csv&quot;, &quot;a&quot;),a表示追加，w表示重新写入</span></span><br><span class="line">    fo = open(<span class="string">&quot;年报数据.csv&quot;</span>, <span class="string">&quot;a&quot;</span>)</span><br><span class="line">    fo.write(<span class="string">&quot;,&quot;</span>.join(li) + <span class="string">&quot;\n&quot;</span>)</span><br><span class="line">    fo.close()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 遍历data数据中文件名，对比传入name，相同则返回下标，未匹配到则返回固定值10000</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">match_name</span>(<span class="params">name</span>):</span></span><br><span class="line">    print(name)</span><br><span class="line">    print(len(data))</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(len(data)):</span><br><span class="line">        <span class="keyword">if</span> name == data[i][<span class="number">0</span>]:</span><br><span class="line">            print(data[i][<span class="number">0</span>])</span><br><span class="line">            <span class="keyword">return</span> i</span><br><span class="line">        <span class="keyword">elif</span> i==len(data)<span class="number">-1</span>:</span><br><span class="line">            <span class="keyword">return</span> <span class="number">10000</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 返回文件名</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_name</span>(<span class="params">path</span>):</span></span><br><span class="line">    nameNum = last_char(path)</span><br><span class="line">    name = path[nameNum + <span class="number">1</span>:len(path) - <span class="number">4</span>]</span><br><span class="line">    <span class="keyword">return</span> name</span><br><span class="line"></span><br><span class="line"><span class="comment"># 返回最后一次出现该字符的序号</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">last_char</span>(<span class="params">str</span>):</span></span><br><span class="line">    lastNum = <span class="number">0</span></span><br><span class="line">    num = <span class="number">0</span></span><br><span class="line">    char = <span class="string">&quot;\\&quot;</span></span><br><span class="line">    <span class="keyword">for</span> ch <span class="keyword">in</span> str:</span><br><span class="line">        <span class="keyword">if</span> char == ch:</span><br><span class="line">            lastNum = num</span><br><span class="line">        num = num + <span class="number">1</span></span><br><span class="line">    <span class="keyword">return</span> lastNum</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    parse()</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<blockquote>
+<p>小彩蛋</p>
+</blockquote>
+<p>贴上一个批量pdf转txt的代码，实话实说这种简单转换不是很完善，只能当做娱乐，不如使用软件：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># -*- coding:utf-8</span></span><br><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"><span class="keyword">import</span> importlib</span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"></span><br><span class="line">importlib.reload(sys)</span><br><span class="line"><span class="keyword">from</span> pdfminer.pdfparser <span class="keyword">import</span> PDFParser, PDFDocument</span><br><span class="line"><span class="keyword">from</span> pdfminer.pdfinterp <span class="keyword">import</span> PDFResourceManager, PDFPageInterpreter</span><br><span class="line"><span class="keyword">from</span> pdfminer.converter <span class="keyword">import</span> PDFPageAggregator</span><br><span class="line"><span class="keyword">from</span> pdfminer.layout <span class="keyword">import</span> LTTextBoxHorizontal, LAParams</span><br><span class="line"><span class="keyword">from</span> pdfminer.pdfinterp <span class="keyword">import</span> PDFTextExtractionNotAllowed</span><br><span class="line"></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string"> 解析pdf 文本，保存到txt文件中</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># path = r&#x27;001.pdf&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 循环遍历指定目录下所有文件</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">parse</span>():</span></span><br><span class="line">    paths = <span class="string">r&#x27;F:\年报00\年报01\年报&#x27;</span></span><br><span class="line">    fns = [os.path.join(root, fn) <span class="keyword">for</span> root, dirs, files <span class="keyword">in</span> os.walk(paths) <span class="keyword">for</span> fn <span class="keyword">in</span> files]</span><br><span class="line">    <span class="keyword">for</span> path <span class="keyword">in</span> fns:</span><br><span class="line">        <span class="keyword">if</span> path[len(path)<span class="number">-4</span>:len(path)].lower()==<span class="string">&#x27;.pdf&#x27;</span>:</span><br><span class="line">            print(path)</span><br><span class="line">            parse_next(path)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 返回文件名</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_name</span>(<span class="params">path</span>):</span></span><br><span class="line">    nameNum = last_char(path)</span><br><span class="line">    name = path[nameNum+<span class="number">1</span>:len(path)<span class="number">-4</span>] + <span class="string">&#x27;.txt&#x27;</span></span><br><span class="line">    <span class="keyword">return</span> name</span><br><span class="line"></span><br><span class="line"><span class="comment"># 返回倒数第二次出现该字符的序号</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">last_char</span>(<span class="params">str</span>):</span></span><br><span class="line">    beforeNum = <span class="number">0</span></span><br><span class="line">    afterNum = <span class="number">0</span></span><br><span class="line">    num = <span class="number">0</span></span><br><span class="line">    char = <span class="string">&quot;\\&quot;</span></span><br><span class="line">    <span class="keyword">for</span> ch <span class="keyword">in</span> str:</span><br><span class="line">        <span class="keyword">if</span> char == ch:</span><br><span class="line">            beforeNum = afterNum</span><br><span class="line">            afterNum = num</span><br><span class="line">        num = num + <span class="number">1</span></span><br><span class="line">    <span class="keyword">return</span> beforeNum</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">parse_next</span>(<span class="params">path</span>):</span></span><br><span class="line">    name = get_name(path)</span><br><span class="line">    fp = open(path, <span class="string">&#x27;rb&#x27;</span>)  <span class="comment"># 以二进制读模式打开</span></span><br><span class="line">    <span class="comment"># 用文件对象来创建一个pdf文档分析器</span></span><br><span class="line">    praser = PDFParser(fp)</span><br><span class="line">    <span class="comment"># 创建一个PDF文档</span></span><br><span class="line">    doc = PDFDocument()</span><br><span class="line">    <span class="comment"># 连接分析器 与文档对象</span></span><br><span class="line">    praser.set_document(doc)</span><br><span class="line">    doc.set_parser(praser)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 提供初始化密码</span></span><br><span class="line">    <span class="comment"># 如果没有密码 就创建一个空的字符串</span></span><br><span class="line">    doc.initialize()</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 检测文档是否提供txt转换，不提供就忽略</span></span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">not</span> doc.is_extractable:</span><br><span class="line">        <span class="keyword">raise</span> PDFTextExtractionNotAllowed</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="comment"># 创建PDf 资源管理器 来管理共享资源</span></span><br><span class="line">        rsrcmgr = PDFResourceManager()</span><br><span class="line">        <span class="comment"># 创建一个PDF设备对象</span></span><br><span class="line">        laparams = LAParams()</span><br><span class="line">        device = PDFPageAggregator(rsrcmgr, laparams=laparams)</span><br><span class="line">        <span class="comment"># 创建一个PDF解释器对象</span></span><br><span class="line">        interpreter = PDFPageInterpreter(rsrcmgr, device)</span><br><span class="line"></span><br><span class="line">        <span class="comment"># 循环遍历列表，每次处理一个page的内容</span></span><br><span class="line">        <span class="keyword">for</span> page <span class="keyword">in</span> doc.get_pages():  <span class="comment"># doc.get_pages() 获取page列表</span></span><br><span class="line">            interpreter.process_page(page)</span><br><span class="line">            <span class="comment"># 接受该页面的LTPage对象</span></span><br><span class="line">            layout = device.get_result()</span><br><span class="line">            <span class="comment"># 这里layout是一个LTPage对象 里面存放着 这个page解析出的各种对象 一般包括LTTextBox, LTFigure, LTImage, LTTextBoxHorizontal 等等 想要获取文本就获得对象的text属性，</span></span><br><span class="line">            <span class="keyword">for</span> x <span class="keyword">in</span> layout:</span><br><span class="line">                <span class="keyword">if</span> (isinstance(x, LTTextBoxHorizontal)):</span><br><span class="line">                    <span class="keyword">with</span> open(name, <span class="string">&#x27;a&#x27;</span>, encoding=<span class="string">&#x27;utf-8&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line">                        results = x.get_text()</span><br><span class="line">                        f.write(results + <span class="string">&#x27;\n&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    parse()</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+
+
+
+
+]]></content>
+      <categories>
+        <category>学习</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>数据分析</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>爬虫之Scrapy（1.简要入门）</title>
+    <url>/2020/09/10/Python/scrapy%E7%AE%80%E8%A6%81%E4%BD%BF%E7%94%A8%E5%85%A5%E9%97%A8/</url>
+    <content><![CDATA[<h2 id="1-安装scrapy"><a href="#1-安装scrapy" class="headerlink" title="1.安装scrapy"></a>1.安装scrapy</h2><ul>
+<li>在cmd下一条语句即可完成安装；</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pip install scrapy</span><br></pre></td></tr></table></figure>
+
+
+
+<blockquote>
+<p>据说在安装过程中可能遇到各种问题，由于我自己并没有遇到，所以略过，出现问题请自行百度</p>
+</blockquote>
+<ul>
+<li>直接在命令行输入<code>scrapy</code>可以查看相关指令：</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/089.png" alt="image-20200909084009265"></p>
+<ul>
+<li>输入<code>scrapy bench</code>用来验证安装是否成功，出现error则未成功，请自行百度解决方法；</li>
+</ul>
+<a id="more"></a>
+
+<hr>
+<h2 id="2-scrapy原理"><a href="#2-scrapy原理" class="headerlink" title="2.scrapy原理"></a>2.scrapy原理</h2><ul>
+<li>直接上图：</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/090.png" alt="image-20200910212314248"></p>
+<ul>
+<li>讲解一下整个项目运行的过程，看完整篇博客再回来这里更有收获哟~<ul>
+<li>Spiders文件即为我们主要编写逻辑代码的区域，也就是爬虫文件；</li>
+<li>最初start_urls网址请求（request）被发送给引擎（Scrapy Engine）；</li>
+<li>引擎通过判断这是一段网址请求而又将网址请求发送给调度器（Scheduler）；</li>
+<li>调度器将网址请求进行入队操作（可能有很多网址）排好队再重新发回引擎；</li>
+<li>引擎将入队之后再出队的网址请求发送给下载器（Downloader）；</li>
+<li>下载器直接从Inernet中下载请求网址对应的网页源代码，即HTML代码，这段代码被称为响应（response），没错就是后续代码中使用的response，下载器将响应返回给引擎；</li>
+<li>引擎再将响应返回给爬虫文件（Spiders）；</li>
+<li>爬虫文件经过逻辑处理之后，再次发送请求给引擎，但这段请求可能是网址，如果是网址请求则再次重复上述过程，但也可能是数据，如果是数据，则引擎在接受到数据之后则将其转发给管道文件（Pipeline）；</li>
+<li>最终由管道文件来确定是否将数据输出并且输出成何种类型的文件，也就是我们后面讲到的pipelines.py中的逻辑操作；</li>
+</ul>
+</li>
+</ul>
+<h2 id="3-创建项目（直接上手实例）"><a href="#3-创建项目（直接上手实例）" class="headerlink" title="3.创建项目（直接上手实例）"></a>3.创建项目（直接上手实例）</h2><ul>
+<li>在cmd中进入文件所在位置，再执行指令用于创建项目：</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># scrapy startproject 项目名	项目名一般由爬取网站的网站域名去除后缀再加上Spider单词组成</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 下面是我的实际执行命令，爬取网站为 http://www.itcast.cn/</span></span><br><span class="line">scrapy startproject spiderStudy</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="4-创建爬虫"><a href="#4-创建爬虫" class="headerlink" title="4.创建爬虫"></a>4.创建爬虫</h2><ul>
+<li>进入新建的项目目录，执行命令用于创建爬虫文件：</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># scrapy genspider 爬虫文件 网站域名</span></span><br><span class="line"><span class="comment"># 爬虫文件不要和项目名相同，规范是直接使用项目名去除Spider之后的单词，而网站域名则是爬虫采集的域名，即只有在此域名之下的网址才能被采集到，可以在文件中修改</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 实际执行命令</span></span><br><span class="line">scrapy genspider itcast itcast.cn</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="5-项目结构"><a href="#5-项目结构" class="headerlink" title="5.项目结构"></a>5.项目结构</h2><ul>
+<li>如图所示：</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/091.png" alt="image-20200909092153091"></p>
+<ul>
+<li>目录结构：<ul>
+<li>spiders.data5u.py：爬虫文件，主要编写逻辑区域；</li>
+<li>_ init_.py：初始化文件，一般不需要修改；</li>
+<li>items.py：定义数据结构体；</li>
+<li>middlewares：中间件文件；</li>
+<li>pipelines.py：管道文件，从该文件中将数据传输保存为json、xls等文件；</li>
+<li>settings.py：配置文件；</li>
+</ul>
+</li>
+</ul>
+<h2 id="6-爬虫开始"><a href="#6-爬虫开始" class="headerlink" title="6.爬虫开始"></a>6.爬虫开始</h2><h3 id="6-1-解析爬虫类"><a href="#6-1-解析爬虫类" class="headerlink" title="6.1 解析爬虫类"></a>6.1 解析爬虫类</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 创建爬虫类 继承自scrapy.Spider 也就是原理中的Spider爬虫文件类，是一个基础类</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ItcastSpider</span>(<span class="params">scrapy.Spider</span>):</span></span><br><span class="line">    name = <span class="string">&#x27;itcast&#x27;</span>     <span class="comment">#爬虫名</span></span><br><span class="line">    allowed_domains = [<span class="string">&#x27;itcast.cn&#x27;</span>]     <span class="comment">#允许爬取的域名范围</span></span><br><span class="line">    start_urls = [<span class="string">&#x27;http://www.itcast.cn/channel/teacher.shtml&#x27;</span>]        <span class="comment">#最初请求url的地址</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">parse</span>(<span class="params">self, response</span>):</span></span><br><span class="line">        <span class="comment"># 用来处理start_urls地址对应的请求响应</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="6-2-Selectors选择器"><a href="#6-2-Selectors选择器" class="headerlink" title="6.2 Selectors选择器"></a>6.2 Selectors选择器</h3><ul>
+<li>是scrapy提取数据的一套机制，通过特定的XPath或者CSS表达式来选去HTML中的某个部分；</li>
+<li>Selector四个基本方法：<ul>
+<li>正则表达式：暂不涉及；</li>
+<li>xpath()：传入xpath()表达式，返回该表达式所对应的所有节点的selector list列表；</li>
+<li>css()：传入css表达式，返回该表达式所对应的所有节点的selector list列表；</li>
+<li>extract()：序列化该节点unicode字符串并返回list()，与get()使用效果相似；</li>
+</ul>
+</li>
+<li>一般使用正则表达式和xpath即可，xpath请自行百度菜鸟或w3；</li>
+</ul>
+<h3 id="6-3-response-xpath"><a href="#6-3-response-xpath" class="headerlink" title="6.3 response.xpath"></a>6.3 response.xpath</h3><ul>
+<li>response是返回的响应，使用xpath对返回的数据进行选择：</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">parse</span>(<span class="params">self, response</span>):</span></span><br><span class="line">    <span class="comment"># 用来处理start_urls地址对应的请求响应</span></span><br><span class="line">    retName = response.xpath(<span class="string">&#x27;//*[@class=&quot;main_bot&quot;]/h2/text()&#x27;</span>)</span><br><span class="line">    print(retName)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>xpath是如何选择的呢：</p>
+<ul>
+<li>进入到start_urls网页（这本就是parse函数最初得到的相应数据），具体请自行学习xpath：</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/095.png" alt="image-20200910201738870"></p>
+</li>
+</ul>
+<ul>
+<li>可以在cmd进入该项目目录中执行，也可直接在PyCharm Terminal执行：</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#scrapy crawl 爬虫名</span></span><br><span class="line">scrapy crawl itcast</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>得到结果：</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/092.png" alt="image-20200910195843555"></p>
+<h3 id="6-4-LOG-LEVEL日志信息"><a href="#6-4-LOG-LEVEL日志信息" class="headerlink" title="6.4 LOG_LEVEL日志信息"></a>6.4 LOG_LEVEL日志信息</h3><ul>
+<li>从上图中看见很多额外的信息，在<code>settings.py</code>文件中添加以下代码过滤日志信息：</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">LOG_LEVEL = <span class="string">&#x27;WARNING&#x27;</span></span><br><span class="line"><span class="comment"># 该语句含义为只显示警告及以上级别（ERROR）的日志信息</span></span><br><span class="line"><span class="comment"># 日志信息有四个等级，从低到高分别为 DEBUG-&gt;INFO-&gt;WARNING-&gt;ERROR</span></span><br><span class="line"><span class="comment"># 对应含义为 					调试信息-&gt;普通信息-&gt;警告-&gt;错误</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>重新执行上述代码可以看到已经只剩下输出信息：</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/093.png" alt="image-20200910200554769"></p>
+<h3 id="6-5-extract"><a href="#6-5-extract" class="headerlink" title="6.5 extract()"></a>6.5 extract()</h3><ul>
+<li>根据6.3中使用的语句<code>/text()</code>应该返回的结果是具体的文本内容，也就是上图中的<code>data</code>数据部分，但是却发现不经处理直接返回的数据是整个<code>&lt;Selector&gt;</code>列表，此时应该使用 <code>extract()</code>函数处理得到具体数据的列表值：</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">parse</span>(<span class="params">self, response</span>):</span></span><br><span class="line">    <span class="comment"># 用来处理start_urls地址对应的请求响应</span></span><br><span class="line">    retNames = response.xpath(<span class="string">&#x27;//*[@class=&quot;main_bot&quot;]/h2/text()&#x27;</span>).extract()</span><br><span class="line">    print(retName)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>再次执行就可以得到想要的信息啦：</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/094.png" alt="image-20200910201223556"></p>
+<h3 id="6-6-分组处理数据"><a href="#6-6-分组处理数据" class="headerlink" title="6.6 分组处理数据"></a>6.6 分组处理数据</h3><ul>
+<li>刚刚我们获得的数据是在具体节点下所有的<code>h2</code>文本数据列表，但如果我们要将所有对应的数据进行分组呢？</li>
+<li>只要使用一个变量用来存储所有的<code>&lt;Selector&gt;</code>列表（注意此处不能接extract()函数，否则得到的列表并不是响应数据<code>response</code>的类型则不能再下面调用），再使用for循环遍历列表中所有节点并依次获取数据即可：</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">parse</span>(<span class="params">self, response</span>):</span></span><br><span class="line">    li_list = response.xpath(<span class="string">&#x27;//*[@class=&quot;clears&quot;]/li&#x27;</span>)</span><br><span class="line">    <span class="comment">#不能使用extract()，否则类型不同于response响应类型，则不能被循环调用</span></span><br><span class="line">    <span class="keyword">for</span> li <span class="keyword">in</span> li_list:</span><br><span class="line">        item = &#123;&#125;	<span class="comment">#定义字典变量用来存储数据</span></span><br><span class="line">        item[<span class="string">&quot;name&quot;</span>] = li.xpath(<span class="string">&#x27;./div[2]/h2/text()&#x27;</span>).extract()	<span class="comment">#. 表示从当前节点开始取</span></span><br><span class="line">        item[<span class="string">&quot;level&quot;</span>] = li.xpath(<span class="string">&#x27;./div[2]/h2/span/text()&#x27;</span>).extract()</span><br><span class="line">        print(item)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>得到结果如图：</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/096.png" alt="image-20200910203824629"></p>
+<ul>
+<li><p>但是却发现输出数据的最前头和最后头都分别有四个空数据，这是为什么？</p>
+</li>
+<li><p>回顾刚刚代码中的<code>xpath(&#39;//*[@class=&quot;clears&quot;]/li&#39;)</code>，发现原网页中class属性不唯一！如图所示一共有四处节点使用了该class属性，而我们需要获取数据的节点只有一处，此处需要注意，class属性值并不唯一，可能被其它地方引用而导致我们获取无用数据：</p>
+</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/097.png" alt="image-20200910204220189"></p>
+<ul>
+<li>修改之后代码如下：</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">parse</span>(<span class="params">self, response</span>):</span></span><br><span class="line">	<span class="comment">#只需要修改父节点一处即可</span></span><br><span class="line">    li_list = response.xpath(<span class="string">&#x27;//*[@class=&quot;maincon&quot;]/ul/li&#x27;</span>)</span><br><span class="line">    <span class="keyword">for</span> li <span class="keyword">in</span> li_list:</span><br><span class="line">        item = &#123;&#125;	<span class="comment">#定义字典变量用来存储数据</span></span><br><span class="line">        item[<span class="string">&quot;name&quot;</span>] = li.xpath(<span class="string">&#x27;./div[2]/h2/text()&#x27;</span>).extract()</span><br><span class="line">        item[<span class="string">&quot;level&quot;</span>] = li.xpath(<span class="string">&#x27;./div[2]/h2/span/text()&#x27;</span>).extract()</span><br><span class="line">        print(item)</span><br></pre></td></tr></table></figure>
+<ul>
+<li>如图所示，成功解决问题：</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/098.png" alt="image-20200910204627728"></p>
+<h2 id="7-pipelines管道文件简要介绍"><a href="#7-pipelines管道文件简要介绍" class="headerlink" title="7 pipelines管道文件简要介绍"></a>7 pipelines管道文件简要介绍</h2><h3 id="7-1-单爬虫使用"><a href="#7-1-单爬虫使用" class="headerlink" title="7.1 单爬虫使用"></a>7.1 单爬虫使用</h3><ul>
+<li>刚刚我们获取的数据都是通过<code>print()</code>函数直接打印在终端上，那么接下来我们就要将这些文件通过pipelins管道文件传输出来，暂时也是使用<code>print()</code>，此处主要是简要讲述pipelines管道文件；</li>
+<li>管道文件其实早就初始化在我们的spider文件中，也就是其中的pipelines.py文件，但在正式使用之前，需要到settings.py文件中进行配置：</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 在settings.py文件中找到被注释掉的这段代码并去掉注释即可使用</span></span><br><span class="line">ITEM_PIPELINES = &#123;</span><br><span class="line">    <span class="comment">#其中该字典元素的键名即为pipelines.py文件中的类名路径，后面的值300表示距离管道文件的距离，距离越近值越小表示越先经过该文件，可以设置多个值，通过不同的键值确定其顺序</span></span><br><span class="line">   <span class="string">&#x27;spiderStudy.pipelines.SpiderstudyPipeline&#x27;</span>: <span class="number">300</span>,</span><br><span class="line">   <span class="string">&#x27;spiderStudy.pipelines.SpiderstudyPipeline1&#x27;</span>: <span class="number">301</span>,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>配置完成后先在爬虫文件中将获取的数据返回给<code>pipelines.py</code>文件，只要通过一条语句即可完成：</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span> li <span class="keyword">in</span> li_list:</span><br><span class="line">    item = &#123;&#125;   <span class="comment">#定义字典变量用来存储数据</span></span><br><span class="line">    item[<span class="string">&quot;name&quot;</span>] = li.xpath(<span class="string">&#x27;./div[2]/h2/text()&#x27;</span>).extract()</span><br><span class="line">    item[<span class="string">&quot;level&quot;</span>] = li.xpath(<span class="string">&#x27;./div[2]/h2/span/text()&#x27;</span>).extract()</span><br><span class="line">    <span class="keyword">yield</span> item</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>最后在<code>pipelines.py</code>文件中编写逻辑代码：</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">SpiderstudyPipeline</span>:</span></span><br><span class="line">    <span class="comment"># 该函数为默认接收并执行逻辑数据的函数，不可修改</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">process_item</span>(<span class="params">self, item, spider</span>):</span></span><br><span class="line">        <span class="comment"># 对所有返回的字典增加一个键值对</span></span><br><span class="line">        item[<span class="string">&quot;hello&quot;</span>] = <span class="string">&quot;world&quot;</span></span><br><span class="line">        <span class="comment"># 函数结束后必须返回其值，否则无法继续使用</span></span><br><span class="line">        <span class="keyword">return</span> item</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">SpiderstudyPipeline1</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">process_item</span>(<span class="params">self, item, spider</span>):</span></span><br><span class="line">        print(item)</span><br><span class="line">        <span class="keyword">return</span> item</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>执行代码得到结果便可知其妙用：</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/099.png" alt="image-20200910210416661"></p>
+<ul>
+<li>结束之后我们再重新回过头看一下爬虫文件中的<code>yield item</code>语句，这段语句放在for循环之内，表示每次得到一对数据就返回给管道文件一次，那么可不可以将含有所有元素的字典列表一次性返回给管道文件呢？我们来尝试一下：</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#新建一个list变量用于存储所有的item值</span></span><br><span class="line">content_list = []</span><br><span class="line">        <span class="keyword">for</span> li <span class="keyword">in</span> li_list:</span><br><span class="line">            item = &#123;&#125;   <span class="comment">#定义字典变量用来存储数据</span></span><br><span class="line">            item[<span class="string">&quot;name&quot;</span>] = li.xpath(<span class="string">&#x27;./div[2]/h2/text()&#x27;</span>).extract()</span><br><span class="line">            item[<span class="string">&quot;level&quot;</span>] = li.xpath(<span class="string">&#x27;./div[2]/h2/span/text()&#x27;</span>).extract()</span><br><span class="line">            content_list.append(item)</span><br><span class="line">        <span class="keyword">yield</span> content_list</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>输出结果为：</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/100.png" alt="image-20200910211436369"></p>
+<ul>
+<li>直接报错，由此可知不能一次性返回一个列表；</li>
+</ul>
+<blockquote>
+<p>其实最后可以总结一下yield传输值给pipelines.py文件时的过程，pipelines.py文件是对于每一次yield返回值都会进行一次逻辑运算的，而yield自身只能传输请求、字典或者None值，而不能传输list列表。</p>
+</blockquote>
+<blockquote>
+<p>最后再讲一下extract()函数，这个函数调用时是直接返回list列表取得的所有值，而我们在分组单次数据获取时只需要获取一个值便可，一般会使用extract()[0]（获取数组中第一个值）来替代上述写法，但是extract()[0]有一个弊端就是如果列表中没有值不会返回任何值（连空字符串都没有），但yield却不能返回这种类型的值而会导致报错，于是我们更常用extract_first()来替代上一种写法，这种写法在列表中没有值时会返回一个None字符串，可以直接被yield传输    </p>
+</blockquote>
+<h3 id="7-2-多爬虫使用"><a href="#7-2-多爬虫使用" class="headerlink" title="7.2 多爬虫使用"></a>7.2 多爬虫使用</h3><ul>
+<li><p>在同一个项目spiderStudy下，创建多个爬虫文件；</p>
+</li>
+<li><p>可以创建多个pipeline类用于接收来自不同爬虫文件的数据：</p>
+<ul>
+<li><p>通过以下两种方式处理不同的数据：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#通过一个类来说明</span></span><br><span class="line">  <span class="comment">#1.在每个爬虫文件传入的item值中定义一个字典元素“come_from”,并且赋值，通过此值判断</span></span><br><span class="line">  <span class="class"><span class="keyword">class</span> <span class="title">SpiderstudyPipeline</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">process_item</span>(<span class="params">self, item, spider</span>):</span></span><br><span class="line">      </span><br><span class="line">        <span class="keyword">if</span> item[<span class="string">&quot;come_from&quot;</span>] == <span class="string">&quot;itcase&quot;</span>:</span><br><span class="line">              </span><br><span class="line">        <span class="keyword">elif</span> ...:</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">else</span> ...:</span><br><span class="line">              </span><br><span class="line">  </span><br><span class="line">  <span class="comment">#2.通过传入的spider参数判断，spider参数本身就是被传入的爬虫文件</span></span><br><span class="line">  	  <span class="comment">#其中spider.name变量就是spider爬虫文件最初定义的爬虫名</span></span><br><span class="line">        <span class="keyword">if</span> spider.name == <span class="string">&quot;itcase&quot;</span>:</span><br><span class="line">          </span><br><span class="line">        <span class="keyword">elif</span> ...:</span><br><span class="line">          </span><br><span class="line">        <span class="keyword">else</span> ...:</span><br><span class="line">              </span><br><span class="line">              </span><br><span class="line">              </span><br><span class="line">              </span><br><span class="line">              </span><br><span class="line">        <span class="keyword">return</span> item</span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="8-logging"><a href="#8-logging" class="headerlink" title="8.logging"></a>8.logging</h2><h3 id="8-1-定义"><a href="#8-1-定义" class="headerlink" title="8.1 定义"></a>8.1 定义</h3><ul>
+<li>手动调试并存储日志信息，有助于项目结束之后调试bug；</li>
+</ul>
+<h3 id="8-2-scrapy导入及使用"><a href="#8-2-scrapy导入及使用" class="headerlink" title="8.2 scrapy导入及使用"></a>8.2 scrapy导入及使用</h3><ul>
+<li>第一种方式，直接使用原包：</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 导入logging包</span></span><br><span class="line"><span class="keyword">import</span> logging</span><br><span class="line"></span><br><span class="line"><span class="comment"># 将item信息以warning等级的信息存储为日志信息显示，设置存储为文件之后就不会在终端显示而只存储至文件中</span></span><br><span class="line"><span class="comment"># warning 还可为 debug、info、error，配合settings.py中的LOG_LEVEL使用</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">5</span>):</span><br><span class="line">    item = &#123;&#125;</span><br><span class="line">    item[<span class="string">&quot;come_from&quot;</span>] = <span class="string">&quot;itcast&quot;</span></span><br><span class="line">    logging.warning(item)</span><br><span class="line"></span><br><span class="line">&gt;<span class="comment">#输出如下</span></span><br><span class="line"><span class="number">2020</span><span class="number">-09</span><span class="number">-11</span> <span class="number">19</span>:<span class="number">44</span>:<span class="number">37</span> [root] WARNING: &#123;<span class="string">&#x27;come_from&#x27;</span>: <span class="string">&#x27;itcast&#x27;</span>&#125;</span><br><span class="line"><span class="number">2020</span><span class="number">-09</span><span class="number">-11</span> <span class="number">19</span>:<span class="number">44</span>:<span class="number">37</span> [root] WARNING: &#123;<span class="string">&#x27;come_from&#x27;</span>: <span class="string">&#x27;itcast&#x27;</span>&#125;</span><br><span class="line"><span class="number">2020</span><span class="number">-09</span><span class="number">-11</span> <span class="number">19</span>:<span class="number">44</span>:<span class="number">37</span> [root] WARNING: &#123;<span class="string">&#x27;come_from&#x27;</span>: <span class="string">&#x27;itcast&#x27;</span>&#125;</span><br><span class="line"><span class="number">2020</span><span class="number">-09</span><span class="number">-11</span> <span class="number">19</span>:<span class="number">44</span>:<span class="number">37</span> [root] WARNING: &#123;<span class="string">&#x27;come_from&#x27;</span>: <span class="string">&#x27;itcast&#x27;</span>&#125;</span><br><span class="line"><span class="number">2020</span><span class="number">-09</span><span class="number">-11</span> <span class="number">19</span>:<span class="number">44</span>:<span class="number">37</span> [root] WARNING: &#123;<span class="string">&#x27;come_from&#x27;</span>: <span class="string">&#x27;itcast&#x27;</span>&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>第二种方式，使用函数：</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> logging</span><br><span class="line"></span><br><span class="line">logger = logging.getLogger(__name__)</span><br><span class="line"><span class="comment">#全局定义一次，其它文件可以直接引用</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">5</span>):</span><br><span class="line">    item = &#123;&#125;</span><br><span class="line">    item[<span class="string">&quot;come_from&quot;</span>] = <span class="string">&quot;itcast&quot;</span></span><br><span class="line">    logger.warning(item)</span><br><span class="line">    </span><br><span class="line">&gt;<span class="comment">#输出如下</span></span><br><span class="line"><span class="number">2020</span><span class="number">-09</span><span class="number">-11</span> <span class="number">19</span>:<span class="number">48</span>:<span class="number">18</span> [spiderStudy.spiders.itcast] WARNING: &#123;<span class="string">&#x27;come_from&#x27;</span>: <span class="string">&#x27;itcast&#x27;</span>&#125;</span><br><span class="line"><span class="number">2020</span><span class="number">-09</span><span class="number">-11</span> <span class="number">19</span>:<span class="number">48</span>:<span class="number">18</span> [spiderStudy.spiders.itcast] WARNING: &#123;<span class="string">&#x27;come_from&#x27;</span>: <span class="string">&#x27;itcast&#x27;</span>&#125;</span><br><span class="line"><span class="number">2020</span><span class="number">-09</span><span class="number">-11</span> <span class="number">19</span>:<span class="number">48</span>:<span class="number">18</span> [spiderStudy.spiders.itcast] WARNING: &#123;<span class="string">&#x27;come_from&#x27;</span>: <span class="string">&#x27;itcast&#x27;</span>&#125;</span><br><span class="line"><span class="number">2020</span><span class="number">-09</span><span class="number">-11</span> <span class="number">19</span>:<span class="number">48</span>:<span class="number">18</span> [spiderStudy.spiders.itcast] WARNING: &#123;<span class="string">&#x27;come_from&#x27;</span>: <span class="string">&#x27;itcast&#x27;</span>&#125;</span><br><span class="line"><span class="number">2020</span><span class="number">-09</span><span class="number">-11</span> <span class="number">19</span>:<span class="number">48</span>:<span class="number">18</span> [spiderStudy.spiders.itcast] WARNING: &#123;<span class="string">&#x27;come_from&#x27;</span>: <span class="string">&#x27;itcast&#x27;</span>&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>对比之后可以发现第二种函数调用方法可以显示出所传入参数来自于哪个爬虫文件或者管道文件，更加有利于信息整理，其实日志信息一般放至pipelines.py文件中用来统一处理数据信息</p>
+</blockquote>
+<h3 id="8-3-将logging文件存储至日志文件"><a href="#8-3-将logging文件存储至日志文件" class="headerlink" title="8.3 将logging文件存储至日志文件"></a>8.3 将logging文件存储至日志文件</h3><ul>
+<li>在<code>settings.py</code>文件中添加<code>LOG_FILE = &quot;./log.log&quot;</code>即可存储至代码目录下为<code>log.log</code>文件；</li>
+</ul>
+<h3 id="8-4-普通python文件调用logging包"><a href="#8-4-普通python文件调用logging包" class="headerlink" title="8.4 普通python文件调用logging包"></a>8.4 普通python文件调用logging包</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> logging</span><br><span class="line">logging.basicConfig(</span><br><span class="line">					level=logging.INFO,</span><br><span class="line">    				format=<span class="string">&quot;&quot;</span>	<span class="comment">#百度查找具体格式即可</span></span><br><span class="line">    				filename=<span class="string">&quot;./log.log&quot;</span></span><br><span class="line">					)	<span class="comment">#设置日志输出的样式和格式，</span></span><br><span class="line">logger = logging.getLogger(__name__)	<span class="comment">#实例化logger，在任何py文件中直接调用logger即可</span></span><br><span class="line"><span class="comment"># 调用格式 from log.a(省略.py) import logger</span></span><br><span class="line"><span class="comment">#用以下语句来观看结果</span></span><br><span class="line">logger.info(<span class="string">&quot;info&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="9-实现翻页请求"><a href="#9-实现翻页请求" class="headerlink" title="9.实现翻页请求"></a>9.实现翻页请求</h2><ul>
+<li>注：由于原学习视频是18年的，而现在20年很多网站都设置反扒，不好使用原案例，直接贴代码：</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">parse</span>(<span class="params">self,response</span>):</span></span><br><span class="line">	tr_list = response.xpath(<span class="string">&quot;//table[eclass=&#x27;tablelist&#x27;]/tr&quot;</span>)[<span class="number">1</span>:<span class="number">-1</span>]</span><br><span class="line">	<span class="keyword">for</span> tr <span class="keyword">in</span> tr_list:</span><br><span class="line">		item = []</span><br><span class="line">		item[<span class="string">&quot;title&quot;</span>] = tr.xpath(<span class="string">&quot;./td[1]/a/text()&quot;</span>).extract_first(</span><br><span class="line">		item[<span class="string">&quot;position&quot;</span>] = tr.xpath(<span class="string">&quot;./td[2]/text()&quot;</span>).extract_first(</span><br><span class="line">		item[ <span class="string">&quot;publish_date&quot;</span>] = tr.xpath(<span class="string">&quot;./td[5]/text()&quot;</span>).extract_first()</span><br><span class="line">		<span class="keyword">yield</span> item</span><br><span class="line">	<span class="comment">#找到下一页的url地址</span></span><br><span class="line">	next_url = response.xpath(<span class="string">&quot;//a[@id=&#x27;next&#x27;]/@href&quot;</span>).extract_first()</span><br><span class="line">	<span class="keyword">if</span> next_url != <span class="string">&quot;javascript:; &quot;</span>:</span><br><span class="line">		next_url = <span class="string">&quot;http://hr.tencent.com/&quot;</span> +next_url</span><br><span class="line">		<span class="keyword">yield</span> scrapy.Request(</span><br><span class="line">			next_url,</span><br><span class="line">			callback=self.parse</span><br><span class="line">        )</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>并且从原网站中拿到请求头中的UserAgent数据贴到settings.py文件中：</p>
+</li>
+<li><p>在网站Network中打开原网页的Response页面，注意与直接检查HTML代码中tbody标签是否有无，实质上我们请求得到的响应式前者网页源代码，而Response中可能没有tbody标签而导致无法使用；</p>
+</li>
+</ul>
+<h2 id="10-scrapy-Request"><a href="#10-scrapy-Request" class="headerlink" title="10.scrapy.Request()"></a>10.scrapy.Request()</h2><p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/101.png" alt="image-20200911202745519"></p>
+]]></content>
+      <categories>
+        <category>学习</category>
+      </categories>
+      <tags>
+        <tag>Scrapy</tag>
+        <tag>Python</tag>
       </tags>
   </entry>
   <entry>
@@ -856,654 +1110,6 @@
       <tags>
         <tag>java</tag>
         <tag>SpringBoot</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>爬虫之Scrapy（1.简要入门）</title>
-    <url>/2020/09/10/Python/scrapy%E7%AE%80%E8%A6%81%E4%BD%BF%E7%94%A8%E5%85%A5%E9%97%A8/</url>
-    <content><![CDATA[<h2 id="1-安装scrapy"><a href="#1-安装scrapy" class="headerlink" title="1.安装scrapy"></a>1.安装scrapy</h2><ul>
-<li>在cmd下一条语句即可完成安装；</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pip install scrapy</span><br></pre></td></tr></table></figure>
-
-
-
-<blockquote>
-<p>据说在安装过程中可能遇到各种问题，由于我自己并没有遇到，所以略过，出现问题请自行百度</p>
-</blockquote>
-<ul>
-<li>直接在命令行输入<code>scrapy</code>可以查看相关指令：</li>
-</ul>
-<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/089.png" alt="image-20200909084009265"></p>
-<ul>
-<li>输入<code>scrapy bench</code>用来验证安装是否成功，出现error则未成功，请自行百度解决方法；</li>
-</ul>
-<a id="more"></a>
-
-<hr>
-<h2 id="2-scrapy原理"><a href="#2-scrapy原理" class="headerlink" title="2.scrapy原理"></a>2.scrapy原理</h2><ul>
-<li>直接上图：</li>
-</ul>
-<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/090.png" alt="image-20200910212314248"></p>
-<ul>
-<li>讲解一下整个项目运行的过程，看完整篇博客再回来这里更有收获哟~<ul>
-<li>Spiders文件即为我们主要编写逻辑代码的区域，也就是爬虫文件；</li>
-<li>最初start_urls网址请求（request）被发送给引擎（Scrapy Engine）；</li>
-<li>引擎通过判断这是一段网址请求而又将网址请求发送给调度器（Scheduler）；</li>
-<li>调度器将网址请求进行入队操作（可能有很多网址）排好队再重新发回引擎；</li>
-<li>引擎将入队之后再出队的网址请求发送给下载器（Downloader）；</li>
-<li>下载器直接从Inernet中下载请求网址对应的网页源代码，即HTML代码，这段代码被称为响应（response），没错就是后续代码中使用的response，下载器将响应返回给引擎；</li>
-<li>引擎再将响应返回给爬虫文件（Spiders）；</li>
-<li>爬虫文件经过逻辑处理之后，再次发送请求给引擎，但这段请求可能是网址，如果是网址请求则再次重复上述过程，但也可能是数据，如果是数据，则引擎在接受到数据之后则将其转发给管道文件（Pipeline）；</li>
-<li>最终由管道文件来确定是否将数据输出并且输出成何种类型的文件，也就是我们后面讲到的pipelines.py中的逻辑操作；</li>
-</ul>
-</li>
-</ul>
-<h2 id="3-创建项目（直接上手实例）"><a href="#3-创建项目（直接上手实例）" class="headerlink" title="3.创建项目（直接上手实例）"></a>3.创建项目（直接上手实例）</h2><ul>
-<li>在cmd中进入文件所在位置，再执行指令用于创建项目：</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># scrapy startproject 项目名	项目名一般由爬取网站的网站域名去除后缀再加上Spider单词组成</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 下面是我的实际执行命令，爬取网站为 http://www.itcast.cn/</span></span><br><span class="line">scrapy startproject spiderStudy</span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="4-创建爬虫"><a href="#4-创建爬虫" class="headerlink" title="4.创建爬虫"></a>4.创建爬虫</h2><ul>
-<li>进入新建的项目目录，执行命令用于创建爬虫文件：</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># scrapy genspider 爬虫文件 网站域名</span></span><br><span class="line"><span class="comment"># 爬虫文件不要和项目名相同，规范是直接使用项目名去除Spider之后的单词，而网站域名则是爬虫采集的域名，即只有在此域名之下的网址才能被采集到，可以在文件中修改</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 实际执行命令</span></span><br><span class="line">scrapy genspider itcast itcast.cn</span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="5-项目结构"><a href="#5-项目结构" class="headerlink" title="5.项目结构"></a>5.项目结构</h2><ul>
-<li>如图所示：</li>
-</ul>
-<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/091.png" alt="image-20200909092153091"></p>
-<ul>
-<li>目录结构：<ul>
-<li>spiders.data5u.py：爬虫文件，主要编写逻辑区域；</li>
-<li>_ init_.py：初始化文件，一般不需要修改；</li>
-<li>items.py：定义数据结构体；</li>
-<li>middlewares：中间件文件；</li>
-<li>pipelines.py：管道文件，从该文件中将数据传输保存为json、xls等文件；</li>
-<li>settings.py：配置文件；</li>
-</ul>
-</li>
-</ul>
-<h2 id="6-爬虫开始"><a href="#6-爬虫开始" class="headerlink" title="6.爬虫开始"></a>6.爬虫开始</h2><h3 id="6-1-解析爬虫类"><a href="#6-1-解析爬虫类" class="headerlink" title="6.1 解析爬虫类"></a>6.1 解析爬虫类</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 创建爬虫类 继承自scrapy.Spider 也就是原理中的Spider爬虫文件类，是一个基础类</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ItcastSpider</span>(<span class="params">scrapy.Spider</span>):</span></span><br><span class="line">    name = <span class="string">&#x27;itcast&#x27;</span>     <span class="comment">#爬虫名</span></span><br><span class="line">    allowed_domains = [<span class="string">&#x27;itcast.cn&#x27;</span>]     <span class="comment">#允许爬取的域名范围</span></span><br><span class="line">    start_urls = [<span class="string">&#x27;http://www.itcast.cn/channel/teacher.shtml&#x27;</span>]        <span class="comment">#最初请求url的地址</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">parse</span>(<span class="params">self, response</span>):</span></span><br><span class="line">        <span class="comment"># 用来处理start_urls地址对应的请求响应</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="6-2-Selectors选择器"><a href="#6-2-Selectors选择器" class="headerlink" title="6.2 Selectors选择器"></a>6.2 Selectors选择器</h3><ul>
-<li>是scrapy提取数据的一套机制，通过特定的XPath或者CSS表达式来选去HTML中的某个部分；</li>
-<li>Selector四个基本方法：<ul>
-<li>正则表达式：暂不涉及；</li>
-<li>xpath()：传入xpath()表达式，返回该表达式所对应的所有节点的selector list列表；</li>
-<li>css()：传入css表达式，返回该表达式所对应的所有节点的selector list列表；</li>
-<li>extract()：序列化该节点unicode字符串并返回list()，与get()使用效果相似；</li>
-</ul>
-</li>
-<li>一般使用正则表达式和xpath即可，xpath请自行百度菜鸟或w3；</li>
-</ul>
-<h3 id="6-3-response-xpath"><a href="#6-3-response-xpath" class="headerlink" title="6.3 response.xpath"></a>6.3 response.xpath</h3><ul>
-<li>response是返回的响应，使用xpath对返回的数据进行选择：</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">parse</span>(<span class="params">self, response</span>):</span></span><br><span class="line">    <span class="comment"># 用来处理start_urls地址对应的请求响应</span></span><br><span class="line">    retName = response.xpath(<span class="string">&#x27;//*[@class=&quot;main_bot&quot;]/h2/text()&#x27;</span>)</span><br><span class="line">    print(retName)</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><p>xpath是如何选择的呢：</p>
-<ul>
-<li>进入到start_urls网页（这本就是parse函数最初得到的相应数据），具体请自行学习xpath：</li>
-</ul>
-<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/095.png" alt="image-20200910201738870"></p>
-</li>
-</ul>
-<ul>
-<li>可以在cmd进入该项目目录中执行，也可直接在PyCharm Terminal执行：</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#scrapy crawl 爬虫名</span></span><br><span class="line">scrapy crawl itcast</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>得到结果：</li>
-</ul>
-<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/092.png" alt="image-20200910195843555"></p>
-<h3 id="6-4-LOG-LEVEL日志信息"><a href="#6-4-LOG-LEVEL日志信息" class="headerlink" title="6.4 LOG_LEVEL日志信息"></a>6.4 LOG_LEVEL日志信息</h3><ul>
-<li>从上图中看见很多额外的信息，在<code>settings.py</code>文件中添加以下代码过滤日志信息：</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">LOG_LEVEL = <span class="string">&#x27;WARNING&#x27;</span></span><br><span class="line"><span class="comment"># 该语句含义为只显示警告及以上级别（ERROR）的日志信息</span></span><br><span class="line"><span class="comment"># 日志信息有四个等级，从低到高分别为 DEBUG-&gt;INFO-&gt;WARNING-&gt;ERROR</span></span><br><span class="line"><span class="comment"># 对应含义为 					调试信息-&gt;普通信息-&gt;警告-&gt;错误</span></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>重新执行上述代码可以看到已经只剩下输出信息：</li>
-</ul>
-<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/093.png" alt="image-20200910200554769"></p>
-<h3 id="6-5-extract"><a href="#6-5-extract" class="headerlink" title="6.5 extract()"></a>6.5 extract()</h3><ul>
-<li>根据6.3中使用的语句<code>/text()</code>应该返回的结果是具体的文本内容，也就是上图中的<code>data</code>数据部分，但是却发现不经处理直接返回的数据是整个<code>&lt;Selector&gt;</code>列表，此时应该使用 <code>extract()</code>函数处理得到具体数据的列表值：</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">parse</span>(<span class="params">self, response</span>):</span></span><br><span class="line">    <span class="comment"># 用来处理start_urls地址对应的请求响应</span></span><br><span class="line">    retNames = response.xpath(<span class="string">&#x27;//*[@class=&quot;main_bot&quot;]/h2/text()&#x27;</span>).extract()</span><br><span class="line">    print(retName)</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>再次执行就可以得到想要的信息啦：</li>
-</ul>
-<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/094.png" alt="image-20200910201223556"></p>
-<h3 id="6-6-分组处理数据"><a href="#6-6-分组处理数据" class="headerlink" title="6.6 分组处理数据"></a>6.6 分组处理数据</h3><ul>
-<li>刚刚我们获得的数据是在具体节点下所有的<code>h2</code>文本数据列表，但如果我们要将所有对应的数据进行分组呢？</li>
-<li>只要使用一个变量用来存储所有的<code>&lt;Selector&gt;</code>列表（注意此处不能接extract()函数，否则得到的列表并不是响应数据<code>response</code>的类型则不能再下面调用），再使用for循环遍历列表中所有节点并依次获取数据即可：</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">parse</span>(<span class="params">self, response</span>):</span></span><br><span class="line">    li_list = response.xpath(<span class="string">&#x27;//*[@class=&quot;clears&quot;]/li&#x27;</span>)</span><br><span class="line">    <span class="comment">#不能使用extract()，否则类型不同于response响应类型，则不能被循环调用</span></span><br><span class="line">    <span class="keyword">for</span> li <span class="keyword">in</span> li_list:</span><br><span class="line">        item = &#123;&#125;	<span class="comment">#定义字典变量用来存储数据</span></span><br><span class="line">        item[<span class="string">&quot;name&quot;</span>] = li.xpath(<span class="string">&#x27;./div[2]/h2/text()&#x27;</span>).extract()	<span class="comment">#. 表示从当前节点开始取</span></span><br><span class="line">        item[<span class="string">&quot;level&quot;</span>] = li.xpath(<span class="string">&#x27;./div[2]/h2/span/text()&#x27;</span>).extract()</span><br><span class="line">        print(item)</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>得到结果如图：</li>
-</ul>
-<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/096.png" alt="image-20200910203824629"></p>
-<ul>
-<li><p>但是却发现输出数据的最前头和最后头都分别有四个空数据，这是为什么？</p>
-</li>
-<li><p>回顾刚刚代码中的<code>xpath(&#39;//*[@class=&quot;clears&quot;]/li&#39;)</code>，发现原网页中class属性不唯一！如图所示一共有四处节点使用了该class属性，而我们需要获取数据的节点只有一处，此处需要注意，class属性值并不唯一，可能被其它地方引用而导致我们获取无用数据：</p>
-</li>
-</ul>
-<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/097.png" alt="image-20200910204220189"></p>
-<ul>
-<li>修改之后代码如下：</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">parse</span>(<span class="params">self, response</span>):</span></span><br><span class="line">	<span class="comment">#只需要修改父节点一处即可</span></span><br><span class="line">    li_list = response.xpath(<span class="string">&#x27;//*[@class=&quot;maincon&quot;]/ul/li&#x27;</span>)</span><br><span class="line">    <span class="keyword">for</span> li <span class="keyword">in</span> li_list:</span><br><span class="line">        item = &#123;&#125;	<span class="comment">#定义字典变量用来存储数据</span></span><br><span class="line">        item[<span class="string">&quot;name&quot;</span>] = li.xpath(<span class="string">&#x27;./div[2]/h2/text()&#x27;</span>).extract()</span><br><span class="line">        item[<span class="string">&quot;level&quot;</span>] = li.xpath(<span class="string">&#x27;./div[2]/h2/span/text()&#x27;</span>).extract()</span><br><span class="line">        print(item)</span><br></pre></td></tr></table></figure>
-<ul>
-<li>如图所示，成功解决问题：</li>
-</ul>
-<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/098.png" alt="image-20200910204627728"></p>
-<h2 id="7-pipelines管道文件简要介绍"><a href="#7-pipelines管道文件简要介绍" class="headerlink" title="7 pipelines管道文件简要介绍"></a>7 pipelines管道文件简要介绍</h2><h3 id="7-1-单爬虫使用"><a href="#7-1-单爬虫使用" class="headerlink" title="7.1 单爬虫使用"></a>7.1 单爬虫使用</h3><ul>
-<li>刚刚我们获取的数据都是通过<code>print()</code>函数直接打印在终端上，那么接下来我们就要将这些文件通过pipelins管道文件传输出来，暂时也是使用<code>print()</code>，此处主要是简要讲述pipelines管道文件；</li>
-<li>管道文件其实早就初始化在我们的spider文件中，也就是其中的pipelines.py文件，但在正式使用之前，需要到settings.py文件中进行配置：</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 在settings.py文件中找到被注释掉的这段代码并去掉注释即可使用</span></span><br><span class="line">ITEM_PIPELINES = &#123;</span><br><span class="line">    <span class="comment">#其中该字典元素的键名即为pipelines.py文件中的类名路径，后面的值300表示距离管道文件的距离，距离越近值越小表示越先经过该文件，可以设置多个值，通过不同的键值确定其顺序</span></span><br><span class="line">   <span class="string">&#x27;spiderStudy.pipelines.SpiderstudyPipeline&#x27;</span>: <span class="number">300</span>,</span><br><span class="line">   <span class="string">&#x27;spiderStudy.pipelines.SpiderstudyPipeline1&#x27;</span>: <span class="number">301</span>,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>配置完成后先在爬虫文件中将获取的数据返回给<code>pipelines.py</code>文件，只要通过一条语句即可完成：</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span> li <span class="keyword">in</span> li_list:</span><br><span class="line">    item = &#123;&#125;   <span class="comment">#定义字典变量用来存储数据</span></span><br><span class="line">    item[<span class="string">&quot;name&quot;</span>] = li.xpath(<span class="string">&#x27;./div[2]/h2/text()&#x27;</span>).extract()</span><br><span class="line">    item[<span class="string">&quot;level&quot;</span>] = li.xpath(<span class="string">&#x27;./div[2]/h2/span/text()&#x27;</span>).extract()</span><br><span class="line">    <span class="keyword">yield</span> item</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>最后在<code>pipelines.py</code>文件中编写逻辑代码：</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">SpiderstudyPipeline</span>:</span></span><br><span class="line">    <span class="comment"># 该函数为默认接收并执行逻辑数据的函数，不可修改</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">process_item</span>(<span class="params">self, item, spider</span>):</span></span><br><span class="line">        <span class="comment"># 对所有返回的字典增加一个键值对</span></span><br><span class="line">        item[<span class="string">&quot;hello&quot;</span>] = <span class="string">&quot;world&quot;</span></span><br><span class="line">        <span class="comment"># 函数结束后必须返回其值，否则无法继续使用</span></span><br><span class="line">        <span class="keyword">return</span> item</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">SpiderstudyPipeline1</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">process_item</span>(<span class="params">self, item, spider</span>):</span></span><br><span class="line">        print(item)</span><br><span class="line">        <span class="keyword">return</span> item</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>执行代码得到结果便可知其妙用：</li>
-</ul>
-<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/099.png" alt="image-20200910210416661"></p>
-<ul>
-<li>结束之后我们再重新回过头看一下爬虫文件中的<code>yield item</code>语句，这段语句放在for循环之内，表示每次得到一对数据就返回给管道文件一次，那么可不可以将含有所有元素的字典列表一次性返回给管道文件呢？我们来尝试一下：</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#新建一个list变量用于存储所有的item值</span></span><br><span class="line">content_list = []</span><br><span class="line">        <span class="keyword">for</span> li <span class="keyword">in</span> li_list:</span><br><span class="line">            item = &#123;&#125;   <span class="comment">#定义字典变量用来存储数据</span></span><br><span class="line">            item[<span class="string">&quot;name&quot;</span>] = li.xpath(<span class="string">&#x27;./div[2]/h2/text()&#x27;</span>).extract()</span><br><span class="line">            item[<span class="string">&quot;level&quot;</span>] = li.xpath(<span class="string">&#x27;./div[2]/h2/span/text()&#x27;</span>).extract()</span><br><span class="line">            content_list.append(item)</span><br><span class="line">        <span class="keyword">yield</span> content_list</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>输出结果为：</li>
-</ul>
-<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/100.png" alt="image-20200910211436369"></p>
-<ul>
-<li>直接报错，由此可知不能一次性返回一个列表；</li>
-</ul>
-<blockquote>
-<p>其实最后可以总结一下yield传输值给pipelines.py文件时的过程，pipelines.py文件是对于每一次yield返回值都会进行一次逻辑运算的，而yield自身只能传输请求、字典或者None值，而不能传输list列表。</p>
-</blockquote>
-<blockquote>
-<p>最后再讲一下extract()函数，这个函数调用时是直接返回list列表取得的所有值，而我们在分组单次数据获取时只需要获取一个值便可，一般会使用extract()[0]（获取数组中第一个值）来替代上述写法，但是extract()[0]有一个弊端就是如果列表中没有值不会返回任何值（连空字符串都没有），但yield却不能返回这种类型的值而会导致报错，于是我们更常用extract_first()来替代上一种写法，这种写法在列表中没有值时会返回一个None字符串，可以直接被yield传输    </p>
-</blockquote>
-<h3 id="7-2-多爬虫使用"><a href="#7-2-多爬虫使用" class="headerlink" title="7.2 多爬虫使用"></a>7.2 多爬虫使用</h3><ul>
-<li><p>在同一个项目spiderStudy下，创建多个爬虫文件；</p>
-</li>
-<li><p>可以创建多个pipeline类用于接收来自不同爬虫文件的数据：</p>
-<ul>
-<li><p>通过以下两种方式处理不同的数据：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#通过一个类来说明</span></span><br><span class="line">  <span class="comment">#1.在每个爬虫文件传入的item值中定义一个字典元素“come_from”,并且赋值，通过此值判断</span></span><br><span class="line">  <span class="class"><span class="keyword">class</span> <span class="title">SpiderstudyPipeline</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">process_item</span>(<span class="params">self, item, spider</span>):</span></span><br><span class="line">      </span><br><span class="line">        <span class="keyword">if</span> item[<span class="string">&quot;come_from&quot;</span>] == <span class="string">&quot;itcase&quot;</span>:</span><br><span class="line">              </span><br><span class="line">        <span class="keyword">elif</span> ...:</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">else</span> ...:</span><br><span class="line">              </span><br><span class="line">  </span><br><span class="line">  <span class="comment">#2.通过传入的spider参数判断，spider参数本身就是被传入的爬虫文件</span></span><br><span class="line">  	  <span class="comment">#其中spider.name变量就是spider爬虫文件最初定义的爬虫名</span></span><br><span class="line">        <span class="keyword">if</span> spider.name == <span class="string">&quot;itcase&quot;</span>:</span><br><span class="line">          </span><br><span class="line">        <span class="keyword">elif</span> ...:</span><br><span class="line">          </span><br><span class="line">        <span class="keyword">else</span> ...:</span><br><span class="line">              </span><br><span class="line">              </span><br><span class="line">              </span><br><span class="line">              </span><br><span class="line">              </span><br><span class="line">        <span class="keyword">return</span> item</span><br></pre></td></tr></table></figure>
-
-
-
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="8-logging"><a href="#8-logging" class="headerlink" title="8.logging"></a>8.logging</h2><h3 id="8-1-定义"><a href="#8-1-定义" class="headerlink" title="8.1 定义"></a>8.1 定义</h3><ul>
-<li>手动调试并存储日志信息，有助于项目结束之后调试bug；</li>
-</ul>
-<h3 id="8-2-scrapy导入及使用"><a href="#8-2-scrapy导入及使用" class="headerlink" title="8.2 scrapy导入及使用"></a>8.2 scrapy导入及使用</h3><ul>
-<li>第一种方式，直接使用原包：</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 导入logging包</span></span><br><span class="line"><span class="keyword">import</span> logging</span><br><span class="line"></span><br><span class="line"><span class="comment"># 将item信息以warning等级的信息存储为日志信息显示，设置存储为文件之后就不会在终端显示而只存储至文件中</span></span><br><span class="line"><span class="comment"># warning 还可为 debug、info、error，配合settings.py中的LOG_LEVEL使用</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">5</span>):</span><br><span class="line">    item = &#123;&#125;</span><br><span class="line">    item[<span class="string">&quot;come_from&quot;</span>] = <span class="string">&quot;itcast&quot;</span></span><br><span class="line">    logging.warning(item)</span><br><span class="line"></span><br><span class="line">&gt;<span class="comment">#输出如下</span></span><br><span class="line"><span class="number">2020</span><span class="number">-09</span><span class="number">-11</span> <span class="number">19</span>:<span class="number">44</span>:<span class="number">37</span> [root] WARNING: &#123;<span class="string">&#x27;come_from&#x27;</span>: <span class="string">&#x27;itcast&#x27;</span>&#125;</span><br><span class="line"><span class="number">2020</span><span class="number">-09</span><span class="number">-11</span> <span class="number">19</span>:<span class="number">44</span>:<span class="number">37</span> [root] WARNING: &#123;<span class="string">&#x27;come_from&#x27;</span>: <span class="string">&#x27;itcast&#x27;</span>&#125;</span><br><span class="line"><span class="number">2020</span><span class="number">-09</span><span class="number">-11</span> <span class="number">19</span>:<span class="number">44</span>:<span class="number">37</span> [root] WARNING: &#123;<span class="string">&#x27;come_from&#x27;</span>: <span class="string">&#x27;itcast&#x27;</span>&#125;</span><br><span class="line"><span class="number">2020</span><span class="number">-09</span><span class="number">-11</span> <span class="number">19</span>:<span class="number">44</span>:<span class="number">37</span> [root] WARNING: &#123;<span class="string">&#x27;come_from&#x27;</span>: <span class="string">&#x27;itcast&#x27;</span>&#125;</span><br><span class="line"><span class="number">2020</span><span class="number">-09</span><span class="number">-11</span> <span class="number">19</span>:<span class="number">44</span>:<span class="number">37</span> [root] WARNING: &#123;<span class="string">&#x27;come_from&#x27;</span>: <span class="string">&#x27;itcast&#x27;</span>&#125;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>第二种方式，使用函数：</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> logging</span><br><span class="line"></span><br><span class="line">logger = logging.getLogger(__name__)</span><br><span class="line"><span class="comment">#全局定义一次，其它文件可以直接引用</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">5</span>):</span><br><span class="line">    item = &#123;&#125;</span><br><span class="line">    item[<span class="string">&quot;come_from&quot;</span>] = <span class="string">&quot;itcast&quot;</span></span><br><span class="line">    logger.warning(item)</span><br><span class="line">    </span><br><span class="line">&gt;<span class="comment">#输出如下</span></span><br><span class="line"><span class="number">2020</span><span class="number">-09</span><span class="number">-11</span> <span class="number">19</span>:<span class="number">48</span>:<span class="number">18</span> [spiderStudy.spiders.itcast] WARNING: &#123;<span class="string">&#x27;come_from&#x27;</span>: <span class="string">&#x27;itcast&#x27;</span>&#125;</span><br><span class="line"><span class="number">2020</span><span class="number">-09</span><span class="number">-11</span> <span class="number">19</span>:<span class="number">48</span>:<span class="number">18</span> [spiderStudy.spiders.itcast] WARNING: &#123;<span class="string">&#x27;come_from&#x27;</span>: <span class="string">&#x27;itcast&#x27;</span>&#125;</span><br><span class="line"><span class="number">2020</span><span class="number">-09</span><span class="number">-11</span> <span class="number">19</span>:<span class="number">48</span>:<span class="number">18</span> [spiderStudy.spiders.itcast] WARNING: &#123;<span class="string">&#x27;come_from&#x27;</span>: <span class="string">&#x27;itcast&#x27;</span>&#125;</span><br><span class="line"><span class="number">2020</span><span class="number">-09</span><span class="number">-11</span> <span class="number">19</span>:<span class="number">48</span>:<span class="number">18</span> [spiderStudy.spiders.itcast] WARNING: &#123;<span class="string">&#x27;come_from&#x27;</span>: <span class="string">&#x27;itcast&#x27;</span>&#125;</span><br><span class="line"><span class="number">2020</span><span class="number">-09</span><span class="number">-11</span> <span class="number">19</span>:<span class="number">48</span>:<span class="number">18</span> [spiderStudy.spiders.itcast] WARNING: &#123;<span class="string">&#x27;come_from&#x27;</span>: <span class="string">&#x27;itcast&#x27;</span>&#125;</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>对比之后可以发现第二种函数调用方法可以显示出所传入参数来自于哪个爬虫文件或者管道文件，更加有利于信息整理，其实日志信息一般放至pipelines.py文件中用来统一处理数据信息</p>
-</blockquote>
-<h3 id="8-3-将logging文件存储至日志文件"><a href="#8-3-将logging文件存储至日志文件" class="headerlink" title="8.3 将logging文件存储至日志文件"></a>8.3 将logging文件存储至日志文件</h3><ul>
-<li>在<code>settings.py</code>文件中添加<code>LOG_FILE = &quot;./log.log&quot;</code>即可存储至代码目录下为<code>log.log</code>文件；</li>
-</ul>
-<h3 id="8-4-普通python文件调用logging包"><a href="#8-4-普通python文件调用logging包" class="headerlink" title="8.4 普通python文件调用logging包"></a>8.4 普通python文件调用logging包</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> logging</span><br><span class="line">logging.basicConfig(</span><br><span class="line">					level=logging.INFO,</span><br><span class="line">    				format=<span class="string">&quot;&quot;</span>	<span class="comment">#百度查找具体格式即可</span></span><br><span class="line">    				filename=<span class="string">&quot;./log.log&quot;</span></span><br><span class="line">					)	<span class="comment">#设置日志输出的样式和格式，</span></span><br><span class="line">logger = logging.getLogger(__name__)	<span class="comment">#实例化logger，在任何py文件中直接调用logger即可</span></span><br><span class="line"><span class="comment"># 调用格式 from log.a(省略.py) import logger</span></span><br><span class="line"><span class="comment">#用以下语句来观看结果</span></span><br><span class="line">logger.info(<span class="string">&quot;info&quot;</span>)</span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="9-实现翻页请求"><a href="#9-实现翻页请求" class="headerlink" title="9.实现翻页请求"></a>9.实现翻页请求</h2><ul>
-<li>注：由于原学习视频是18年的，而现在20年很多网站都设置反扒，不好使用原案例，直接贴代码：</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">parse</span>(<span class="params">self,response</span>):</span></span><br><span class="line">	tr_list = response.xpath(<span class="string">&quot;//table[eclass=&#x27;tablelist&#x27;]/tr&quot;</span>)[<span class="number">1</span>:<span class="number">-1</span>]</span><br><span class="line">	<span class="keyword">for</span> tr <span class="keyword">in</span> tr_list:</span><br><span class="line">		item = []</span><br><span class="line">		item[<span class="string">&quot;title&quot;</span>] = tr.xpath(<span class="string">&quot;./td[1]/a/text()&quot;</span>).extract_first(</span><br><span class="line">		item[<span class="string">&quot;position&quot;</span>] = tr.xpath(<span class="string">&quot;./td[2]/text()&quot;</span>).extract_first(</span><br><span class="line">		item[ <span class="string">&quot;publish_date&quot;</span>] = tr.xpath(<span class="string">&quot;./td[5]/text()&quot;</span>).extract_first()</span><br><span class="line">		<span class="keyword">yield</span> item</span><br><span class="line">	<span class="comment">#找到下一页的url地址</span></span><br><span class="line">	next_url = response.xpath(<span class="string">&quot;//a[@id=&#x27;next&#x27;]/@href&quot;</span>).extract_first()</span><br><span class="line">	<span class="keyword">if</span> next_url != <span class="string">&quot;javascript:; &quot;</span>:</span><br><span class="line">		next_url = <span class="string">&quot;http://hr.tencent.com/&quot;</span> +next_url</span><br><span class="line">		<span class="keyword">yield</span> scrapy.Request(</span><br><span class="line">			next_url,</span><br><span class="line">			callback=self.parse</span><br><span class="line">        )</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><p>并且从原网站中拿到请求头中的UserAgent数据贴到settings.py文件中：</p>
-</li>
-<li><p>在网站Network中打开原网页的Response页面，注意与直接检查HTML代码中tbody标签是否有无，实质上我们请求得到的响应式前者网页源代码，而Response中可能没有tbody标签而导致无法使用；</p>
-</li>
-</ul>
-<h2 id="10-scrapy-Request"><a href="#10-scrapy-Request" class="headerlink" title="10.scrapy.Request()"></a>10.scrapy.Request()</h2><p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/101.png" alt="image-20200911202745519"></p>
-]]></content>
-      <categories>
-        <category>学习</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
-        <tag>Scrapy</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>计算机网络自顶向下方法学习笔记（一）因特网</title>
-    <url>/2020/09/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E8%87%AA%E9%A1%B6%E5%90%91%E4%B8%8B%E6%96%B9%E6%B3%95/%E7%AC%AC%E4%B8%80%E7%AB%A0.%E5%9B%A0%E7%89%B9%E7%BD%91/</url>
-    <content><![CDATA[<h2 id="1-什么是因特网"><a href="#1-什么是因特网" class="headerlink" title="1.什么是因特网"></a>1.什么是因特网</h2><blockquote>
-<p>因特网是一种特定的计算机网络（只是其中一种类型）；</p>
-</blockquote>
-<h3 id="1-1-具体构成描述"><a href="#1-1-具体构成描述" class="headerlink" title="1.1 具体构成描述"></a>1.1 具体构成描述</h3><ul>
-<li><p>主机（端系统）：</p>
-<ul>
-<li>接入到因特网的设备被称作主机；</li>
-<li>由通信链路和分组交换机连接；</li>
-<li>端系统通过ISP接入因特网；</li>
-<li>因特网端系统包括：<ul>
-<li>桌面计算机（桌面PC、Mac和Linux设备）；</li>
-<li>服务器（Web和电子邮件服务器）；</li>
-<li>移动计算机（智能手机和平板电脑）；</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>分组：</p>
-<ul>
-<li>由发送端系统将数据进行分段，并为每段加上首部字节组成的信息包；</li>
-<li>一个分组所经历的一系列通信链路和分组交换机称为通过该网络的路径(path/route)；</li>
-</ul>
-</li>
-<li><p>通信链路：</p>
-<ul>
-<li>由不同类型的物理媒体组成，物理媒体包括同轴电缆、光纤等；</li>
-<li>不同的链路以不同的速率传输数据；</li>
-<li>传输速度以比特/秒（bit/s或bps）为单位；</li>
-</ul>
-</li>
-<li><p>分组交换机：</p>
-<ul>
-<li><p>自身连接两段小型通信链路，用于连接外部真正的通信链路：</p>
-<ul>
-<li>入通信链路用来接收到达的分组；</li>
-<li>出通信链路用来转发接收到的分组；</li>
-<li>一般所说的路由器链路传输速率就是指出链路传输到通信链路的速率；</li>
-</ul>
-</li>
-<li><p>两种类型：</p>
-<ul>
-<li>路由器(router)；</li>
-<li>链路层交换机；</li>
-</ul>
-</li>
-<li><p>作用是将特定的分组转发到特定的链路；</p>
-</li>
-<li><p>通过时延图观察其构成：</p>
-</li>
-</ul>
-<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/ComputerNetWorking/001.png" alt="image-20200929232833820"></p>
-</li>
-<li><p>因特网服务提供商(ISP)：</p>
-<ul>
-<li>每个ISP自身就是一个由多台分组交换机和多段通信链路组成的网络；</li>
-</ul>
-</li>
-<li><p>网络协议：</p>
-<ul>
-<li>用来控制因特网中信息的接收和发送的规则和标准；</li>
-<li>因特网的主要协议统称为TCP/IP；</li>
-</ul>
-</li>
-</ul>
-<a id="more"></a>
-
-<h3 id="1-2-服务描述"><a href="#1-2-服务描述" class="headerlink" title="1.2 服务描述"></a>1.2 服务描述</h3><ul>
-<li>因特网是一种为应用程序提供服务的基础设施；</li>
-<li>因特网应用程序运行在端系统上，由于其涉及到多个交换数据的端系统，这些应用程序又被称为分布式应用程序；</li>
-<li>套接字接口：<ul>
-<li>是一套发送程序必须遵守的规则集合；</li>
-<li>规定了运行在一个端系统上的程序请求因特网向运行在另一个端系统上的特定目的程序交付数据的方式；</li>
-</ul>
-</li>
-</ul>
-<h2 id="2-网络边缘"><a href="#2-网络边缘" class="headerlink" title="2.网络边缘"></a>2.网络边缘</h2><blockquote>
-<p>即处于因特网边缘的端系统；</p>
-</blockquote>
-<h3 id="2-1-接入网"><a href="#2-1-接入网" class="headerlink" title="2.1 接入网"></a>2.1 接入网</h3><blockquote>
-<p>将端系统物理连接到其边缘路由器的网络；</p>
-</blockquote>
-<ul>
-<li>类型：<ul>
-<li>家庭接入：<ul>
-<li>数字用户线（DSL）；</li>
-<li>电缆；</li>
-<li>光纤到户（FTTH）；</li>
-<li>拨号和卫星；</li>
-</ul>
-</li>
-<li>企业接入：<ul>
-<li>以太网；</li>
-<li>WiFi；</li>
-</ul>
-</li>
-<li>广域无线接入：<ul>
-<li>3G；</li>
-<li>长期演进（LTE）；</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h3 id="2-2-物理媒体"><a href="#2-2-物理媒体" class="headerlink" title="2.2 物理媒体"></a>2.2 物理媒体</h3><blockquote>
-<p>对于每个“发射器–接收器”对通过跨越一种物体媒体传播电磁波或光脉冲来发送该比特；</p>
-</blockquote>
-<ul>
-<li>两种类型：<ul>
-<li>导引性媒体：<ul>
-<li>电波沿着固体媒体前行；</li>
-<li>光缆；</li>
-<li>双绞铜线；</li>
-<li>同轴电缆；</li>
-<li>安装实际成本低，但劳动力成本很高，常一次性直接安装多种媒体；</li>
-</ul>
-</li>
-<li>非导引性媒体：<ul>
-<li>电波在空气或外层空间中传播；</li>
-<li>在无线局域网中传播；</li>
-<li>在数字卫星频道中传播；</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="3-网络核心"><a href="#3-网络核心" class="headerlink" title="3.网络核心"></a>3.网络核心</h2><blockquote>
-<p>由互联因特网端系统的分组交换机和链路构成的网状结构；</p>
-</blockquote>
-<ul>
-<li>通过网络链路和分组交换机传输数据有两种方式：分组交换和电路交换，前者正在慢慢取缔后者；</li>
-</ul>
-<h3 id="3-1-分组交换"><a href="#3-1-分组交换" class="headerlink" title="3.1 分组交换"></a>3.1 分组交换</h3><ul>
-<li>分组：从源端系统向目的端系统发送一个报文，源将长报文划分为较小的数据块，称之为分组；</li>
-<li>分组交换：在源和目的端系统之间，每个分组都通过通信链路和分组交换机，由分组交换机实现分组交换功能，转发分组至指定的通信链路；</li>
-<li>例：如果某源端系统或分组交换机经过一条链路发送一个L比特的分组，链路的传输速率为R比特/秒，则传输该分组的时间为L/R秒；</li>
-</ul>
-<h4 id="3-11-存储转发传输"><a href="#3-11-存储转发传输" class="headerlink" title="3.11 存储转发传输"></a>3.11 存储转发传输</h4><blockquote>
-<p>存储转发传输是指在交换机能够开始向输出链路传输该分组的第一个比特之前，必须接受到整个分组；</p>
-</blockquote>
-<ul>
-<li>例：两个端系统经一条路由器构成的简单网络：<ul>
-<li>源在时刻0开始传输，在时刻L/R秒，该路由器刚好接收到整个分组，并且朝着目的地向出链路开始传输分组（这里暂时先只考虑传输时延）；</li>
-<li>在时刻2L/R，路由器已经传输了整个分组，并且整个分组已经被目的地接收；</li>
-<li>考虑一种情形：如果一旦比特到达，交换机就转发比特，而不等到其全部到达再转发，那么传输时延将会是多少呢？<ul>
-<li>虽然有两条通信链路，但由于此处我们只考虑传输时延而不考虑传播时延和处理时延，也就意味着这段时间和距离以及通信链路的段数没有关系，那么依然可以直接得到答案：L/R秒；</li>
-</ul>
-</li>
-<li>考虑一般情形：通过由N条速率均为R的链路组成的路径，此时在源于目的地之间有N-1台路由器，此时从源发送一个分组，端到端的时延为：d=N*L/R;</li>
-</ul>
-</li>
-</ul>
-<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/ComputerNetWorking/002.png" alt="image-20200930000516666"></p>
-<h4 id="3-12-排队时延和分组丢失"><a href="#3-12-排队时延和分组丢失" class="headerlink" title="3.12 排队时延和分组丢失"></a>3.12 排队时延和分组丢失</h4><ul>
-<li><p>输出缓存（输出队列）：每台分组交换机有多条链路与之相连，对于每条相连的链路，该分组交换机具有一个输出缓存，用于存储路由器准备发往那条链路的分组；</p>
-<ul>
-<li><p>如果到达输出缓存的分组需要传输到某条链路，但却发现那条链路正忙于传输其它链路（传输容量已满），该到达分组必须在输出缓存中排队等待，这段等待时间被称为<strong>排队时延</strong>；</p>
-</li>
-<li><p>又由于输出缓存的大小也是有限的，当一个分组到达其输出缓存时，如果该输出缓存已经被其它需要传输的分组完全充满了，那么此时就会出现<strong>丢包</strong>现象，到达的分组或者排队的分组之一会被丢弃；</p>
-</li>
-</ul>
-</li>
-</ul>
-<h4 id="3-13-转发表和路由选择协议"><a href="#3-13-转发表和路由选择协议" class="headerlink" title="3.13 转发表和路由选择协议"></a>3.13 转发表和路由选择协议</h4><ul>
-<li>IP地址：在因特网中，每台端系统具有一个IP地址，用于唯一标识自己的身份，目的IP地址存在于源发送的分组首部，且该地址具有等级结构，想象一下按照邮政地址发送的方式，二者极其相似；</li>
-<li>转发表：每台路由器都拥有一个转发表，用于将目的地址（或其一部分）映射成为输出链路；</li>
-<li>这样一来，整个过程就一目了然了，当某分组到达一台路由器时，路由器检查该地址，并用这个目的地址搜索器转发表，并且将其转发给适当的通信链路；</li>
-<li>路由选择协议：因特网中用于自动设置这些转发表的协议标准；</li>
-</ul>
-<h3 id="3-2-电路交换"><a href="#3-2-电路交换" class="headerlink" title="3.2 电路交换"></a>3.2 电路交换</h3><blockquote>
-<p>在电路交换网络中，在端系统通信期间，预留了端系统间沿路径通信所需要的资源（缓存或链路传输速率），而在分组交换网络中，传输速率是先来先使用的，如果已经被全部占用就只能排队。二者的区别类似于餐馆预定座位和直接去餐馆就餐。</p>
-</blockquote>
-<ul>
-<li>例：传统的电话网络就是其中一种，当一个人通过电话网向另一个人发送信息时，在发送信息之前，必须先在二者之间建立一条电路连接，当网络创建出该电路连接时，它也在连接期间在该网络链路上预留了恒定的传输速率；</li>
-<li>如图显示了一个四条链路互联四台电路交换机，且每条链路具有四条电路的电路交换网络：<ul>
-<li>在这个网络中，每条链路都包括四条电路，这意味着每条链路最多可以同时并行四条连接；</li>
-<li>例：如果邻近的两台分组交换机之间每条链路具有1Mbps的传输速率，那么其中每条电路都具有250kbps的传输速率，即每个端到端电路交换连接获得250kbps的专用传输速率；</li>
-</ul>
-</li>
-</ul>
-<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/ComputerNetWorking/003.png" alt="image-20200930101439297"></p>
-<h4 id="3-21-电路交换网络中的复用"><a href="#3-21-电路交换网络中的复用" class="headerlink" title="3.21 电路交换网络中的复用"></a>3.21 电路交换网络中的复用</h4><ul>
-<li>频分复用（FDM）：对于FDM，链路的频谱由跨越链路创建的所有连接共享，在连接期间，为每条连接专用一个频段，该频段的宽度即称为<strong>带宽</strong>，在电话网络中，带宽通常为4kHz（即每秒4000周期）</li>
-</ul>
-<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/ComputerNetWorking/004.png" alt="image-20200930103014139"></p>
-<ul>
-<li>时分复用（TDM）：在TDM中，时间被划分为固定期间的帧，并且每个帧由被划分为固定数量的时隙。当网络跨越一条链路创建一条连接时，网络在每个帧中为该连接指定一个时隙专门由该连接单独使用，该时隙用于传输该连接的数据；</li>
-</ul>
-<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/ComputerNetWorking/005.png" alt="image-20200930103113485"></p>
-<h3 id="3-3-分组交换和电路交换的对比"><a href="#3-3-分组交换和电路交换的对比" class="headerlink" title="3.3 分组交换和电路交换的对比"></a>3.3 分组交换和电路交换的对比</h3><ul>
-<li><p>对比：</p>
-<ul>
-<li>分组交换提供了比电路交换更好的带宽共享（即先来先使用原则更优于预留原则，预留原则存在巨大的占用期）；</li>
-<li>分组交换比电路交换更简单更有效，实现成本更低；</li>
-<li>由于排队时延，分组交换的端到端时延是可变的和不可预测的，不太适合实时服务（电话和视频会议等）；</li>
-</ul>
-</li>
-<li><p>例1：假定多个用户共享一条1Mbps链路，每个用户活跃周期是变化的，且用户只有10%的时间以100kbps恒定速率产生数据，其余时间均静默：</p>
-<ul>
-<li>对于电路交换，在所有时间内必须为每个用户预留100kbps，该电路交换仅能支持10个并发用户。<ul>
-<li>即在时分复用中将1s的帧划分为10个时隙，每个时隙100ms，则每帧将为每个用户分配一个时隙。</li>
-</ul>
-</li>
-<li>对于分组交换，由于一个特定用户活跃的概率为0.1，如果有35个用户同时进行通信连接，有11个以上用户活跃的概率只有0.0004，当有10个以下并发用户时（概率为0.9996），到达的数据速率小于或等于该链路的输出速率1Mbps。因此，当同时活跃的用户小于或等于10个时，基本没有时延，等同于电路交换，而超过10个用户的概率只有0.0004，在用户过多的情形下，分组交换就会有排队时延。<ul>
-<li>但是！注意分组交换可以同时支持3倍于电路交换支持的用户数量而保证性能基本相同！</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<blockquote>
-<p>横向占用，电路交换的并行通信数量是固定的，无法并行更多用户</p>
-</blockquote>
-<ul>
-<li>例2：假定有10个用户，某个用户突然产生1000个1000比特的分组，而其它用户保持静默：<ul>
-<li>在电路交换中，如每帧具有10个时隙并且每个时隙能包含1000比特，活跃用户仅能使用每帧中一个时隙来传输速率，而其余9个时隙保持空闲，该活跃用户传完所有10^6比特数据需要10s时间；</li>
-<li>而在分组交换中，活跃用户能够持续以1Mbps的全部链路速率发送其分组，此时只需要1s就能发送完所有数据；</li>
-</ul>
-</li>
-</ul>
-<blockquote>
-<p>纵向占用，电路交换分配的时隙连接也是固定的，无法更快传输数据</p>
-</blockquote>
-<h3 id="3-4-网络结构的发展过程"><a href="#3-4-网络结构的发展过程" class="headerlink" title="3.4 网络结构的发展过程"></a>3.4 网络结构的发展过程</h3><ul>
-<li>接入ISP：端系统经过一个接入ISP与因特网相连，接入ISP不必是电信局或电缆公司，也能够是大学或公司这样的单位。端系统和内容提供商连接到接入ISP，接入ISP就是与端系统直接相连的第一个ISP。</li>
-</ul>
-<h4 id="3-41-网络结构1"><a href="#3-41-网络结构1" class="headerlink" title="3.41 网络结构1"></a>3.41 网络结构1</h4><ul>
-<li>使用单一的全球传输ISP互联所有接入ISP；</li>
-<li>且对于全球传输ISP而言，其建造将耗资巨大，因此向所有每个连接的接入ISP收费，故接入ISP被认为是<strong>客户</strong>，而全球传输ISP被认为是<strong>提供商</strong>；</li>
-</ul>
-<h4 id="3-42-网络结构2"><a href="#3-42-网络结构2" class="headerlink" title="3.42 网络结构2"></a>3.42 网络结构2</h4><ul>
-<li>在网络结构1的基础上考虑竞争盈利的问题，于是导致多个全球传输ISP的产生；</li>
-<li>由多个全球传输ISP和数十万个接入ISP组成，且这些全球传输ISP互联；</li>
-</ul>
-<h4 id="3-43-网络结构3"><a href="#3-43-网络结构3" class="headerlink" title="3.43 网络结构3"></a>3.43 网络结构3</h4><ul>
-<li>多层等级结构，将全球传输ISP非正式命名为第一层ISP，建立区域ISP，且区域ISP之间又相互竞争，但最终都要连接到第一层ISP，且第一层ISP又互联；</li>
-<li>例：中国每个城市都有接入ISP，这些接入ISP又与省级ISP相连，省级ISP又和国家ISP相连，最终国家ISP连入第一层ISP（或许可以将联通、移动、电信看成是相互竞争的各层次ISP）；</li>
-</ul>
-<h4 id="3-44-网络结构4"><a href="#3-44-网络结构4" class="headerlink" title="3.44 网络结构4"></a>3.44 网络结构4</h4><ul>
-<li>在网络结构3的基础上增加存在点（PoP）、多宿、对等和因特网交换点；</li>
-<li>PoP：<ul>
-<li>存在于等级结构的所有层次，最底层接入ISP除外；</li>
-<li>一个PoP提供商只是提供商网络中的一台或多台在相同位置的路由器群组；</li>
-<li>对于与之相连的下一层客户ISP，它能从第三方提供商租用高速链路（注意，第三方提供商仅提供高速链路支持）快速互联其群组中任何两台路由器设备；</li>
-<li>总结来说，就是一个提供商自身内部具有多个路由器，整个群组成为一个PoP，而下一层客户ISP只能接入其中一个路由器，但PoP概念能实现提供商内部路由器快速互联；</li>
-</ul>
-</li>
-<li>多宿：任何ISP（第一层ISP除外）可以选择与两个或更多ISP提供商连接，这样当其中一个提供商出现故障时，客户ISP依然能够继续发送和接收分组数据；</li>
-<li>对等：位于相同等级结构层次的邻近一对ISP直接将其网络连接到一起，使它们之间的所有流量经直接连接而不是通过上游的中间ISP传输，这样一来可以节省与上层ISP之间的通信流量费用，其对等ISP之间无需提供费用；第一层ISP互相之间就是对等的关系，无需向对方结算费用</li>
-<li>因特网交换点（IXP）：由第三方公司创建的汇合点，多个ISP能够在这里一起对等；</li>
-</ul>
-<h4 id="3-45-网络结构5——现在的网络结构"><a href="#3-45-网络结构5——现在的网络结构" class="headerlink" title="3.45 网络结构5——现在的网络结构"></a>3.45 网络结构5——现在的网络结构</h4><ul>
-<li>在网络结构4的基础上增加内容提供商网络；</li>
-<li>例：谷歌具有上百个数据中心，每个数据中心由无数服务器组成，其所有数据中心通过专用的TCP/IP网络互联，该网络跨越全球且独立于因特网，该谷歌专用网络仅承载出入谷歌浏览器的流量，由于有些接入ISP仅能通过第一层网络传输到达，所以谷歌也与第一层ISP相连，并就与这些ISP交换的流量向它们付费，这样一来可以减少大量流量传输费用开支，而且对其服务如何交付给端用户有了更多控制；</li>
-</ul>
-<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/ComputerNetWorking/006.png" alt="image-20200930124505953"></p>
-<h2 id="4-分组交换网中的时延、丢包和吞吐量"><a href="#4-分组交换网中的时延、丢包和吞吐量" class="headerlink" title="4.分组交换网中的时延、丢包和吞吐量"></a>4.分组交换网中的时延、丢包和吞吐量</h2><h3 id="4-1-时延概述"><a href="#4-1-时延概述" class="headerlink" title="4.1 时延概述"></a>4.1 时延概述</h3><ul>
-<li>分组从源主机出发，经过一系列路由器传输，最终到达目的地主机，该分组在沿途的每个节点经受了几种不同类型的时延；</li>
-</ul>
-<h4 id="4-11-时延类型"><a href="#4-11-时延类型" class="headerlink" title="4.11 时延类型"></a>4.11 时延类型</h4><ul>
-<li>处理时延（d<sub>proc</sub>）：包括检查分组首部和决定将该分组导向何处所需要的时间、检查比特级别的差错所需要的时间等；</li>
-<li>排队时延（d<sub>queue</sub>）：在输出缓存中时，当分组在等待传输时所花的时间；这个时间是不可预估而可变的，通常使用统计量来度量，而不使用具体的值；</li>
-<li>传输时延（d<sub>trans</sub>）：是指当该分组前面的排队分组已经传输完毕之后，将该分组从路由器推上通信链路的时间，用比特L表示分组长度，R bps表示从路由器A到路由器B的链路传输速率，传输时延是L/R；</li>
-<li>传播时延（d<sub>prop</sub>）：一旦一个比特被推上链路，该比特就需要向B路由器传播，从该链路的起点到路由器B传播所需要的时间是传播时延。传播时等于两台路由器之间的距离除以传播速率，传播速率取决于该链路的物理媒体。其大小为d/s；</li>
-<li>节点总时延（d<sub>nodal</sub>）：d<sub>nodal</sub> = d<sub>proc</sub> + d<sub>queue</sub> + d<sub>trans</sub> + d<sub>prop</sub> </li>
-</ul>
-<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/ComputerNetWorking/001.png" alt="image-20200929232833820"></p>
-<h3 id="4-2-排队时延和丢包"><a href="#4-2-排队时延和丢包" class="headerlink" title="4.2 排队时延和丢包"></a>4.2 排队时延和丢包</h3><ul>
-<li>节点时延中最为复杂和有趣的是排队时延；</li>
-<li><strong>流量强度</strong>：<ul>
-<li>假设输出队列的长度是无限的；</li>
-<li>令 <code>a</code> 表示分组到达输出队列的平均速率，即 <code>a</code> 的单位为分组/秒；</li>
-<li>分组长度为L；</li>
-<li>则比特到达队列的平均速率为 <code>L*a</code>；</li>
-<li>传输速率为R；</li>
-<li>比率 <code>L*a/R</code> 被称作流量强度；</li>
-<li>如果 <code>L*a/R&gt;1</code> 则比特到达队列的平均速率超过该队列传输出去的速率，排队速率将无限增加！所以设计系统时流量强度不能大于1；</li>
-</ul>
-</li>
-</ul>
-<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/ComputerNetWorking/007.png" alt="image-20200930145540463"></p>
-<ul>
-<li>丢包：由于现实中输出队列容量有限，随着流量强度接近1，排队时延并不可能趋向无穷大（排队时延理论上有最大值，因为输出队列有容量上限），当到达的分组发现队列已满，此时就会发生丢包现象；<ul>
-<li>分组丢失的比例随着流量强度的增强而增加；</li>
-<li>一个节点的性能不仅根据时延来度量，而且根据丢包率来度量；</li>
-<li>丢失的分组可能基于端到端的原则重传；</li>
-</ul>
-</li>
-</ul>
-<h3 id="4-3-端到端时延"><a href="#4-3-端到端时延" class="headerlink" title="4.3 端到端时延"></a>4.3 端到端时延</h3><blockquote>
-<p>即从源到目的地的总时延；</p>
-</blockquote>
-<ul>
-<li><p>假定在源于目的地端系统之间有N-1太路由器，网络无拥塞，且每台路由器的时延相同：</p>
-<ul>
-<li>d<sub>end-end</sub> = N*(d<sub>proc</sub> + d<sub>trans</sub> + d<sub>prop</sub>)</li>
-</ul>
-</li>
-<li><p>在windows cmd中使用<code>tracert</code>指令能够进行跃点跟踪：</p>
-</li>
-</ul>
-<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/ComputerNetWorking/008.png" alt="image-20200930151355107"></p>
-<h3 id="4-4-吞吐量"><a href="#4-4-吞吐量" class="headerlink" title="4.4 吞吐量"></a>4.4 吞吐量</h3><ul>
-<li><p>端到端吞吐量也是检测计算机网络性能的重要度量之一；</p>
-</li>
-<li><p>考虑从主机A到主机B跨越计算机网络传送一个大文件：</p>
-<ul>
-<li>瞬时吞吐量：主机B接收到该文件的速率（bps单位）；</li>
-<li>平均吞吐量：如果该文件由F比特组成，主机B接收到所有F比特费时T，则文件传送的平均吞吐量为F/T bps；</li>
-<li>在不考虑其它时延的情形下，吞吐量的大小就是所有通信链路中最小的传输速率；</li>
-</ul>
-</li>
-</ul>
-<h2 id="5-协议层次及其服务模型"><a href="#5-协议层次及其服务模型" class="headerlink" title="5.协议层次及其服务模型"></a>5.协议层次及其服务模型</h2><h3 id="5-1-协议分层"><a href="#5-1-协议分层" class="headerlink" title="5.1 协议分层"></a>5.1 协议分层</h3><blockquote>
-<p>网络设计者以<strong>分层</strong>的方式组织协议以及实现这些协议的网络硬件和软件，每层通过在该层中执行某些动作或使用直接下层的服务来提供服务，各层的所有协议统称为协议栈</p>
-</blockquote>
-<ul>
-<li>服务模型：某层向它的上一层提供的服务即称为该层的服务模型；</li>
-</ul>
-<h4 id="5-11-因特网协议栈组成层次（整本书后续重点都在于此）"><a href="#5-11-因特网协议栈组成层次（整本书后续重点都在于此）" class="headerlink" title="5.11 因特网协议栈组成层次（整本书后续重点都在于此）"></a>5.11 因特网协议栈组成层次（整本书后续重点都在于此）</h4><blockquote>
-<p>协议组成层次相当于确定每两层之间交接时的标准和规则</p>
-</blockquote>
-<ul>
-<li>应用层：<ul>
-<li>应用层包含网络应用程序和应用层协议；</li>
-<li>应用层协议：<ul>
-<li>HTTP协议：提供Web文档的请求和传送服务；</li>
-<li>SMTP协议：提供电子邮件报文的传输服务；</li>
-<li>FTP协议：提供两个端系统之间的传送服务；</li>
-<li>DNS协议：提供域名地址转换服务；</li>
-</ul>
-</li>
-<li>报文：<ul>
-<li>应用层协议分布在多个端系统上，一个端系统上的应用程序使用协议与另一个端系统中的应用程序交换信息分组；</li>
-<li>应用层分组被称作<strong>报文</strong>；</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>运输层：<ul>
-<li>在应用程序端点之间传送应用层报文；</li>
-<li>运输层协议：<ul>
-<li>TCP协议：<ul>
-<li>向应用程序提供面向连接的服务；</li>
-<li>包括应用层报文向目的地的确保传递和流量控制；</li>
-<li>将长报文划分为短报文，并提供拥塞控制机制，当网络拥塞时，源抑制其传输速率；</li>
-</ul>
-</li>
-<li>UDP协议：向应用程序提供无连接服务；</li>
-</ul>
-</li>
-<li>报文段：运输层分组被称为<strong>报文段</strong>；</li>
-</ul>
-</li>
-<li>网络层：<ul>
-<li>数据报：网络层分组被称为<strong>数据报</strong>；</li>
-<li>负责将数据报从一台主机移动到另一台主机；</li>
-<li>网络层协议：<ul>
-<li>IP协议：<ul>
-<li>定义了数据报中各个字段以及端系统和路由器如何使用这些字段；</li>
-<li>IP只有一个，所有具有网络层的因特网组件必须运行IP；</li>
-</ul>
-</li>
-<li>路由选择协议：根据每个路由将数据报从源传输到目的地；</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>链路层：<ul>
-<li>在每个节点（主机或路由器），网络层将数据报下传给链路层，链路层沿着路径将数据报传递给下一个节点，在下一个节点中，链路层再将数据报上传给网络层；</li>
-<li>帧：链路层分组被称为<strong>帧</strong>；</li>
-<li>链路层的任务是将整个帧从一个网络元素移动到相邻的网络元素；</li>
-</ul>
-</li>
-<li>物理层：<ul>
-<li>物理层的任务是将整个帧中的所有比特从一个节点移动到下一个节点；</li>
-</ul>
-</li>
-</ul>
-<h4 id="5-12-OSI模型"><a href="#5-12-OSI模型" class="headerlink" title="5.12 OSI模型"></a>5.12 OSI模型</h4><ul>
-<li>国际化标准组织（ISO）提出计算机网络围绕七层来组织，成为开放系统互联模型（OSI），是一种不同于因特网协议栈的另一种协议栈；</li>
-</ul>
-<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/ComputerNetWorking/009.png" alt="image-20200930201300290"></p>
-<h3 id="5-2-封装"><a href="#5-2-封装" class="headerlink" title="5.2 封装"></a>5.2 封装</h3><ul>
-<li>每次向下即在分组端头部添加该层独有首部信息，即进行封装，向上时解封；</li>
-</ul>
-<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/ComputerNetWorking/010.png" alt="image-20200930201809900"></p>
-<blockquote>
-<p>附本书题目答案链接：<a href="https://feater.top/ebooks/11/">计算机网络：自顶向下方法（原书第7版）课后习题参考答案中文版</a></p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>计算机网络自顶向下方法</category>
-      </categories>
-      <tags>
-        <tag>计算机网络自顶向下方法</tag>
-        <tag>理论学习</tag>
-        <tag>教材</tag>
       </tags>
   </entry>
   <entry>
@@ -2076,6 +1682,408 @@
       <tags>
         <tag>vue</tag>
         <tag>webpack</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>计算机网络自顶向下方法学习笔记（一）因特网</title>
+    <url>/2020/09/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E8%87%AA%E9%A1%B6%E5%90%91%E4%B8%8B%E6%96%B9%E6%B3%95/%E7%AC%AC%E4%B8%80%E7%AB%A0.%E5%9B%A0%E7%89%B9%E7%BD%91/</url>
+    <content><![CDATA[<h2 id="1-什么是因特网"><a href="#1-什么是因特网" class="headerlink" title="1.什么是因特网"></a>1.什么是因特网</h2><blockquote>
+<p>因特网是一种特定的计算机网络（只是其中一种类型）；</p>
+</blockquote>
+<h3 id="1-1-具体构成描述"><a href="#1-1-具体构成描述" class="headerlink" title="1.1 具体构成描述"></a>1.1 具体构成描述</h3><ul>
+<li><p>主机（端系统）：</p>
+<ul>
+<li>接入到因特网的设备被称作主机；</li>
+<li>由通信链路和分组交换机连接；</li>
+<li>端系统通过ISP接入因特网；</li>
+<li>因特网端系统包括：<ul>
+<li>桌面计算机（桌面PC、Mac和Linux设备）；</li>
+<li>服务器（Web和电子邮件服务器）；</li>
+<li>移动计算机（智能手机和平板电脑）；</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>分组：</p>
+<ul>
+<li>由发送端系统将数据进行分段，并为每段加上首部字节组成的信息包；</li>
+<li>一个分组所经历的一系列通信链路和分组交换机称为通过该网络的路径(path/route)；</li>
+</ul>
+</li>
+<li><p>通信链路：</p>
+<ul>
+<li>由不同类型的物理媒体组成，物理媒体包括同轴电缆、光纤等；</li>
+<li>不同的链路以不同的速率传输数据；</li>
+<li>传输速度以比特/秒（bit/s或bps）为单位；</li>
+</ul>
+</li>
+<li><p>分组交换机：</p>
+<ul>
+<li><p>自身连接两段小型通信链路，用于连接外部真正的通信链路：</p>
+<ul>
+<li>入通信链路用来接收到达的分组；</li>
+<li>出通信链路用来转发接收到的分组；</li>
+<li>一般所说的路由器链路传输速率就是指出链路传输到通信链路的速率；</li>
+</ul>
+</li>
+<li><p>两种类型：</p>
+<ul>
+<li>路由器(router)；</li>
+<li>链路层交换机；</li>
+</ul>
+</li>
+<li><p>作用是将特定的分组转发到特定的链路；</p>
+</li>
+<li><p>通过时延图观察其构成：</p>
+</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/ComputerNetWorking/001.png" alt="image-20200929232833820"></p>
+</li>
+<li><p>因特网服务提供商(ISP)：</p>
+<ul>
+<li>每个ISP自身就是一个由多台分组交换机和多段通信链路组成的网络；</li>
+</ul>
+</li>
+<li><p>网络协议：</p>
+<ul>
+<li>用来控制因特网中信息的接收和发送的规则和标准；</li>
+<li>因特网的主要协议统称为TCP/IP；</li>
+</ul>
+</li>
+</ul>
+<a id="more"></a>
+
+<h3 id="1-2-服务描述"><a href="#1-2-服务描述" class="headerlink" title="1.2 服务描述"></a>1.2 服务描述</h3><ul>
+<li>因特网是一种为应用程序提供服务的基础设施；</li>
+<li>因特网应用程序运行在端系统上，由于其涉及到多个交换数据的端系统，这些应用程序又被称为分布式应用程序；</li>
+<li>套接字接口：<ul>
+<li>是一套发送程序必须遵守的规则集合；</li>
+<li>规定了运行在一个端系统上的程序请求因特网向运行在另一个端系统上的特定目的程序交付数据的方式；</li>
+</ul>
+</li>
+</ul>
+<h2 id="2-网络边缘"><a href="#2-网络边缘" class="headerlink" title="2.网络边缘"></a>2.网络边缘</h2><blockquote>
+<p>即处于因特网边缘的端系统；</p>
+</blockquote>
+<h3 id="2-1-接入网"><a href="#2-1-接入网" class="headerlink" title="2.1 接入网"></a>2.1 接入网</h3><blockquote>
+<p>将端系统物理连接到其边缘路由器的网络；</p>
+</blockquote>
+<ul>
+<li>类型：<ul>
+<li>家庭接入：<ul>
+<li>数字用户线（DSL）；</li>
+<li>电缆；</li>
+<li>光纤到户（FTTH）；</li>
+<li>拨号和卫星；</li>
+</ul>
+</li>
+<li>企业接入：<ul>
+<li>以太网；</li>
+<li>WiFi；</li>
+</ul>
+</li>
+<li>广域无线接入：<ul>
+<li>3G；</li>
+<li>长期演进（LTE）；</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-2-物理媒体"><a href="#2-2-物理媒体" class="headerlink" title="2.2 物理媒体"></a>2.2 物理媒体</h3><blockquote>
+<p>对于每个“发射器–接收器”对通过跨越一种物体媒体传播电磁波或光脉冲来发送该比特；</p>
+</blockquote>
+<ul>
+<li>两种类型：<ul>
+<li>导引性媒体：<ul>
+<li>电波沿着固体媒体前行；</li>
+<li>光缆；</li>
+<li>双绞铜线；</li>
+<li>同轴电缆；</li>
+<li>安装实际成本低，但劳动力成本很高，常一次性直接安装多种媒体；</li>
+</ul>
+</li>
+<li>非导引性媒体：<ul>
+<li>电波在空气或外层空间中传播；</li>
+<li>在无线局域网中传播；</li>
+<li>在数字卫星频道中传播；</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="3-网络核心"><a href="#3-网络核心" class="headerlink" title="3.网络核心"></a>3.网络核心</h2><blockquote>
+<p>由互联因特网端系统的分组交换机和链路构成的网状结构；</p>
+</blockquote>
+<ul>
+<li>通过网络链路和分组交换机传输数据有两种方式：分组交换和电路交换，前者正在慢慢取缔后者；</li>
+</ul>
+<h3 id="3-1-分组交换"><a href="#3-1-分组交换" class="headerlink" title="3.1 分组交换"></a>3.1 分组交换</h3><ul>
+<li>分组：从源端系统向目的端系统发送一个报文，源将长报文划分为较小的数据块，称之为分组；</li>
+<li>分组交换：在源和目的端系统之间，每个分组都通过通信链路和分组交换机，由分组交换机实现分组交换功能，转发分组至指定的通信链路；</li>
+<li>例：如果某源端系统或分组交换机经过一条链路发送一个L比特的分组，链路的传输速率为R比特/秒，则传输该分组的时间为L/R秒；</li>
+</ul>
+<h4 id="3-11-存储转发传输"><a href="#3-11-存储转发传输" class="headerlink" title="3.11 存储转发传输"></a>3.11 存储转发传输</h4><blockquote>
+<p>存储转发传输是指在交换机能够开始向输出链路传输该分组的第一个比特之前，必须接受到整个分组；</p>
+</blockquote>
+<ul>
+<li>例：两个端系统经一条路由器构成的简单网络：<ul>
+<li>源在时刻0开始传输，在时刻L/R秒，该路由器刚好接收到整个分组，并且朝着目的地向出链路开始传输分组（这里暂时先只考虑传输时延）；</li>
+<li>在时刻2L/R，路由器已经传输了整个分组，并且整个分组已经被目的地接收；</li>
+<li>考虑一种情形：如果一旦比特到达，交换机就转发比特，而不等到其全部到达再转发，那么传输时延将会是多少呢？<ul>
+<li>虽然有两条通信链路，但由于此处我们只考虑传输时延而不考虑传播时延和处理时延，也就意味着这段时间和距离以及通信链路的段数没有关系，那么依然可以直接得到答案：L/R秒；</li>
+</ul>
+</li>
+<li>考虑一般情形：通过由N条速率均为R的链路组成的路径，此时在源于目的地之间有N-1台路由器，此时从源发送一个分组，端到端的时延为：d=N*L/R;</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/ComputerNetWorking/002.png" alt="image-20200930000516666"></p>
+<h4 id="3-12-排队时延和分组丢失"><a href="#3-12-排队时延和分组丢失" class="headerlink" title="3.12 排队时延和分组丢失"></a>3.12 排队时延和分组丢失</h4><ul>
+<li><p>输出缓存（输出队列）：每台分组交换机有多条链路与之相连，对于每条相连的链路，该分组交换机具有一个输出缓存，用于存储路由器准备发往那条链路的分组；</p>
+<ul>
+<li><p>如果到达输出缓存的分组需要传输到某条链路，但却发现那条链路正忙于传输其它链路（传输容量已满），该到达分组必须在输出缓存中排队等待，这段等待时间被称为<strong>排队时延</strong>；</p>
+</li>
+<li><p>又由于输出缓存的大小也是有限的，当一个分组到达其输出缓存时，如果该输出缓存已经被其它需要传输的分组完全充满了，那么此时就会出现<strong>丢包</strong>现象，到达的分组或者排队的分组之一会被丢弃；</p>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="3-13-转发表和路由选择协议"><a href="#3-13-转发表和路由选择协议" class="headerlink" title="3.13 转发表和路由选择协议"></a>3.13 转发表和路由选择协议</h4><ul>
+<li>IP地址：在因特网中，每台端系统具有一个IP地址，用于唯一标识自己的身份，目的IP地址存在于源发送的分组首部，且该地址具有等级结构，想象一下按照邮政地址发送的方式，二者极其相似；</li>
+<li>转发表：每台路由器都拥有一个转发表，用于将目的地址（或其一部分）映射成为输出链路；</li>
+<li>这样一来，整个过程就一目了然了，当某分组到达一台路由器时，路由器检查该地址，并用这个目的地址搜索器转发表，并且将其转发给适当的通信链路；</li>
+<li>路由选择协议：因特网中用于自动设置这些转发表的协议标准；</li>
+</ul>
+<h3 id="3-2-电路交换"><a href="#3-2-电路交换" class="headerlink" title="3.2 电路交换"></a>3.2 电路交换</h3><blockquote>
+<p>在电路交换网络中，在端系统通信期间，预留了端系统间沿路径通信所需要的资源（缓存或链路传输速率），而在分组交换网络中，传输速率是先来先使用的，如果已经被全部占用就只能排队。二者的区别类似于餐馆预定座位和直接去餐馆就餐。</p>
+</blockquote>
+<ul>
+<li>例：传统的电话网络就是其中一种，当一个人通过电话网向另一个人发送信息时，在发送信息之前，必须先在二者之间建立一条电路连接，当网络创建出该电路连接时，它也在连接期间在该网络链路上预留了恒定的传输速率；</li>
+<li>如图显示了一个四条链路互联四台电路交换机，且每条链路具有四条电路的电路交换网络：<ul>
+<li>在这个网络中，每条链路都包括四条电路，这意味着每条链路最多可以同时并行四条连接；</li>
+<li>例：如果邻近的两台分组交换机之间每条链路具有1Mbps的传输速率，那么其中每条电路都具有250kbps的传输速率，即每个端到端电路交换连接获得250kbps的专用传输速率；</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/ComputerNetWorking/003.png" alt="image-20200930101439297"></p>
+<h4 id="3-21-电路交换网络中的复用"><a href="#3-21-电路交换网络中的复用" class="headerlink" title="3.21 电路交换网络中的复用"></a>3.21 电路交换网络中的复用</h4><ul>
+<li>频分复用（FDM）：对于FDM，链路的频谱由跨越链路创建的所有连接共享，在连接期间，为每条连接专用一个频段，该频段的宽度即称为<strong>带宽</strong>，在电话网络中，带宽通常为4kHz（即每秒4000周期）</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/ComputerNetWorking/004.png" alt="image-20200930103014139"></p>
+<ul>
+<li>时分复用（TDM）：在TDM中，时间被划分为固定期间的帧，并且每个帧由被划分为固定数量的时隙。当网络跨越一条链路创建一条连接时，网络在每个帧中为该连接指定一个时隙专门由该连接单独使用，该时隙用于传输该连接的数据；</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/ComputerNetWorking/005.png" alt="image-20200930103113485"></p>
+<h3 id="3-3-分组交换和电路交换的对比"><a href="#3-3-分组交换和电路交换的对比" class="headerlink" title="3.3 分组交换和电路交换的对比"></a>3.3 分组交换和电路交换的对比</h3><ul>
+<li><p>对比：</p>
+<ul>
+<li>分组交换提供了比电路交换更好的带宽共享（即先来先使用原则更优于预留原则，预留原则存在巨大的占用期）；</li>
+<li>分组交换比电路交换更简单更有效，实现成本更低；</li>
+<li>由于排队时延，分组交换的端到端时延是可变的和不可预测的，不太适合实时服务（电话和视频会议等）；</li>
+</ul>
+</li>
+<li><p>例1：假定多个用户共享一条1Mbps链路，每个用户活跃周期是变化的，且用户只有10%的时间以100kbps恒定速率产生数据，其余时间均静默：</p>
+<ul>
+<li>对于电路交换，在所有时间内必须为每个用户预留100kbps，该电路交换仅能支持10个并发用户。<ul>
+<li>即在时分复用中将1s的帧划分为10个时隙，每个时隙100ms，则每帧将为每个用户分配一个时隙。</li>
+</ul>
+</li>
+<li>对于分组交换，由于一个特定用户活跃的概率为0.1，如果有35个用户同时进行通信连接，有11个以上用户活跃的概率只有0.0004，当有10个以下并发用户时（概率为0.9996），到达的数据速率小于或等于该链路的输出速率1Mbps。因此，当同时活跃的用户小于或等于10个时，基本没有时延，等同于电路交换，而超过10个用户的概率只有0.0004，在用户过多的情形下，分组交换就会有排队时延。<ul>
+<li>但是！注意分组交换可以同时支持3倍于电路交换支持的用户数量而保证性能基本相同！</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>横向占用，电路交换的并行通信数量是固定的，无法并行更多用户</p>
+</blockquote>
+<ul>
+<li>例2：假定有10个用户，某个用户突然产生1000个1000比特的分组，而其它用户保持静默：<ul>
+<li>在电路交换中，如每帧具有10个时隙并且每个时隙能包含1000比特，活跃用户仅能使用每帧中一个时隙来传输速率，而其余9个时隙保持空闲，该活跃用户传完所有10^6比特数据需要10s时间；</li>
+<li>而在分组交换中，活跃用户能够持续以1Mbps的全部链路速率发送其分组，此时只需要1s就能发送完所有数据；</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>纵向占用，电路交换分配的时隙连接也是固定的，无法更快传输数据</p>
+</blockquote>
+<h3 id="3-4-网络结构的发展过程"><a href="#3-4-网络结构的发展过程" class="headerlink" title="3.4 网络结构的发展过程"></a>3.4 网络结构的发展过程</h3><ul>
+<li>接入ISP：端系统经过一个接入ISP与因特网相连，接入ISP不必是电信局或电缆公司，也能够是大学或公司这样的单位。端系统和内容提供商连接到接入ISP，接入ISP就是与端系统直接相连的第一个ISP。</li>
+</ul>
+<h4 id="3-41-网络结构1"><a href="#3-41-网络结构1" class="headerlink" title="3.41 网络结构1"></a>3.41 网络结构1</h4><ul>
+<li>使用单一的全球传输ISP互联所有接入ISP；</li>
+<li>且对于全球传输ISP而言，其建造将耗资巨大，因此向所有每个连接的接入ISP收费，故接入ISP被认为是<strong>客户</strong>，而全球传输ISP被认为是<strong>提供商</strong>；</li>
+</ul>
+<h4 id="3-42-网络结构2"><a href="#3-42-网络结构2" class="headerlink" title="3.42 网络结构2"></a>3.42 网络结构2</h4><ul>
+<li>在网络结构1的基础上考虑竞争盈利的问题，于是导致多个全球传输ISP的产生；</li>
+<li>由多个全球传输ISP和数十万个接入ISP组成，且这些全球传输ISP互联；</li>
+</ul>
+<h4 id="3-43-网络结构3"><a href="#3-43-网络结构3" class="headerlink" title="3.43 网络结构3"></a>3.43 网络结构3</h4><ul>
+<li>多层等级结构，将全球传输ISP非正式命名为第一层ISP，建立区域ISP，且区域ISP之间又相互竞争，但最终都要连接到第一层ISP，且第一层ISP又互联；</li>
+<li>例：中国每个城市都有接入ISP，这些接入ISP又与省级ISP相连，省级ISP又和国家ISP相连，最终国家ISP连入第一层ISP（或许可以将联通、移动、电信看成是相互竞争的各层次ISP）；</li>
+</ul>
+<h4 id="3-44-网络结构4"><a href="#3-44-网络结构4" class="headerlink" title="3.44 网络结构4"></a>3.44 网络结构4</h4><ul>
+<li>在网络结构3的基础上增加存在点（PoP）、多宿、对等和因特网交换点；</li>
+<li>PoP：<ul>
+<li>存在于等级结构的所有层次，最底层接入ISP除外；</li>
+<li>一个PoP提供商只是提供商网络中的一台或多台在相同位置的路由器群组；</li>
+<li>对于与之相连的下一层客户ISP，它能从第三方提供商租用高速链路（注意，第三方提供商仅提供高速链路支持）快速互联其群组中任何两台路由器设备；</li>
+<li>总结来说，就是一个提供商自身内部具有多个路由器，整个群组成为一个PoP，而下一层客户ISP只能接入其中一个路由器，但PoP概念能实现提供商内部路由器快速互联；</li>
+</ul>
+</li>
+<li>多宿：任何ISP（第一层ISP除外）可以选择与两个或更多ISP提供商连接，这样当其中一个提供商出现故障时，客户ISP依然能够继续发送和接收分组数据；</li>
+<li>对等：位于相同等级结构层次的邻近一对ISP直接将其网络连接到一起，使它们之间的所有流量经直接连接而不是通过上游的中间ISP传输，这样一来可以节省与上层ISP之间的通信流量费用，其对等ISP之间无需提供费用；第一层ISP互相之间就是对等的关系，无需向对方结算费用</li>
+<li>因特网交换点（IXP）：由第三方公司创建的汇合点，多个ISP能够在这里一起对等；</li>
+</ul>
+<h4 id="3-45-网络结构5——现在的网络结构"><a href="#3-45-网络结构5——现在的网络结构" class="headerlink" title="3.45 网络结构5——现在的网络结构"></a>3.45 网络结构5——现在的网络结构</h4><ul>
+<li>在网络结构4的基础上增加内容提供商网络；</li>
+<li>例：谷歌具有上百个数据中心，每个数据中心由无数服务器组成，其所有数据中心通过专用的TCP/IP网络互联，该网络跨越全球且独立于因特网，该谷歌专用网络仅承载出入谷歌浏览器的流量，由于有些接入ISP仅能通过第一层网络传输到达，所以谷歌也与第一层ISP相连，并就与这些ISP交换的流量向它们付费，这样一来可以减少大量流量传输费用开支，而且对其服务如何交付给端用户有了更多控制；</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/ComputerNetWorking/006.png" alt="image-20200930124505953"></p>
+<h2 id="4-分组交换网中的时延、丢包和吞吐量"><a href="#4-分组交换网中的时延、丢包和吞吐量" class="headerlink" title="4.分组交换网中的时延、丢包和吞吐量"></a>4.分组交换网中的时延、丢包和吞吐量</h2><h3 id="4-1-时延概述"><a href="#4-1-时延概述" class="headerlink" title="4.1 时延概述"></a>4.1 时延概述</h3><ul>
+<li>分组从源主机出发，经过一系列路由器传输，最终到达目的地主机，该分组在沿途的每个节点经受了几种不同类型的时延；</li>
+</ul>
+<h4 id="4-11-时延类型"><a href="#4-11-时延类型" class="headerlink" title="4.11 时延类型"></a>4.11 时延类型</h4><ul>
+<li>处理时延（d<sub>proc</sub>）：包括检查分组首部和决定将该分组导向何处所需要的时间、检查比特级别的差错所需要的时间等；</li>
+<li>排队时延（d<sub>queue</sub>）：在输出缓存中时，当分组在等待传输时所花的时间；这个时间是不可预估而可变的，通常使用统计量来度量，而不使用具体的值；</li>
+<li>传输时延（d<sub>trans</sub>）：是指当该分组前面的排队分组已经传输完毕之后，将该分组从路由器推上通信链路的时间，用比特L表示分组长度，R bps表示从路由器A到路由器B的链路传输速率，传输时延是L/R；</li>
+<li>传播时延（d<sub>prop</sub>）：一旦一个比特被推上链路，该比特就需要向B路由器传播，从该链路的起点到路由器B传播所需要的时间是传播时延。传播时等于两台路由器之间的距离除以传播速率，传播速率取决于该链路的物理媒体。其大小为d/s；</li>
+<li>节点总时延（d<sub>nodal</sub>）：d<sub>nodal</sub> = d<sub>proc</sub> + d<sub>queue</sub> + d<sub>trans</sub> + d<sub>prop</sub> </li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/ComputerNetWorking/001.png" alt="image-20200929232833820"></p>
+<h3 id="4-2-排队时延和丢包"><a href="#4-2-排队时延和丢包" class="headerlink" title="4.2 排队时延和丢包"></a>4.2 排队时延和丢包</h3><ul>
+<li>节点时延中最为复杂和有趣的是排队时延；</li>
+<li><strong>流量强度</strong>：<ul>
+<li>假设输出队列的长度是无限的；</li>
+<li>令 <code>a</code> 表示分组到达输出队列的平均速率，即 <code>a</code> 的单位为分组/秒；</li>
+<li>分组长度为L；</li>
+<li>则比特到达队列的平均速率为 <code>L*a</code>；</li>
+<li>传输速率为R；</li>
+<li>比率 <code>L*a/R</code> 被称作流量强度；</li>
+<li>如果 <code>L*a/R&gt;1</code> 则比特到达队列的平均速率超过该队列传输出去的速率，排队速率将无限增加！所以设计系统时流量强度不能大于1；</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/ComputerNetWorking/007.png" alt="image-20200930145540463"></p>
+<ul>
+<li>丢包：由于现实中输出队列容量有限，随着流量强度接近1，排队时延并不可能趋向无穷大（排队时延理论上有最大值，因为输出队列有容量上限），当到达的分组发现队列已满，此时就会发生丢包现象；<ul>
+<li>分组丢失的比例随着流量强度的增强而增加；</li>
+<li>一个节点的性能不仅根据时延来度量，而且根据丢包率来度量；</li>
+<li>丢失的分组可能基于端到端的原则重传；</li>
+</ul>
+</li>
+</ul>
+<h3 id="4-3-端到端时延"><a href="#4-3-端到端时延" class="headerlink" title="4.3 端到端时延"></a>4.3 端到端时延</h3><blockquote>
+<p>即从源到目的地的总时延；</p>
+</blockquote>
+<ul>
+<li><p>假定在源于目的地端系统之间有N-1太路由器，网络无拥塞，且每台路由器的时延相同：</p>
+<ul>
+<li>d<sub>end-end</sub> = N*(d<sub>proc</sub> + d<sub>trans</sub> + d<sub>prop</sub>)</li>
+</ul>
+</li>
+<li><p>在windows cmd中使用<code>tracert</code>指令能够进行跃点跟踪：</p>
+</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/ComputerNetWorking/008.png" alt="image-20200930151355107"></p>
+<h3 id="4-4-吞吐量"><a href="#4-4-吞吐量" class="headerlink" title="4.4 吞吐量"></a>4.4 吞吐量</h3><ul>
+<li><p>端到端吞吐量也是检测计算机网络性能的重要度量之一；</p>
+</li>
+<li><p>考虑从主机A到主机B跨越计算机网络传送一个大文件：</p>
+<ul>
+<li>瞬时吞吐量：主机B接收到该文件的速率（bps单位）；</li>
+<li>平均吞吐量：如果该文件由F比特组成，主机B接收到所有F比特费时T，则文件传送的平均吞吐量为F/T bps；</li>
+<li>在不考虑其它时延的情形下，吞吐量的大小就是所有通信链路中最小的传输速率；</li>
+</ul>
+</li>
+</ul>
+<h2 id="5-协议层次及其服务模型"><a href="#5-协议层次及其服务模型" class="headerlink" title="5.协议层次及其服务模型"></a>5.协议层次及其服务模型</h2><h3 id="5-1-协议分层"><a href="#5-1-协议分层" class="headerlink" title="5.1 协议分层"></a>5.1 协议分层</h3><blockquote>
+<p>网络设计者以<strong>分层</strong>的方式组织协议以及实现这些协议的网络硬件和软件，每层通过在该层中执行某些动作或使用直接下层的服务来提供服务，各层的所有协议统称为协议栈</p>
+</blockquote>
+<ul>
+<li>服务模型：某层向它的上一层提供的服务即称为该层的服务模型；</li>
+</ul>
+<h4 id="5-11-因特网协议栈组成层次（整本书后续重点都在于此）"><a href="#5-11-因特网协议栈组成层次（整本书后续重点都在于此）" class="headerlink" title="5.11 因特网协议栈组成层次（整本书后续重点都在于此）"></a>5.11 因特网协议栈组成层次（整本书后续重点都在于此）</h4><blockquote>
+<p>协议组成层次相当于确定每两层之间交接时的标准和规则</p>
+</blockquote>
+<ul>
+<li>应用层：<ul>
+<li>应用层包含网络应用程序和应用层协议；</li>
+<li>应用层协议：<ul>
+<li>HTTP协议：提供Web文档的请求和传送服务；</li>
+<li>SMTP协议：提供电子邮件报文的传输服务；</li>
+<li>FTP协议：提供两个端系统之间的传送服务；</li>
+<li>DNS协议：提供域名地址转换服务；</li>
+</ul>
+</li>
+<li>报文：<ul>
+<li>应用层协议分布在多个端系统上，一个端系统上的应用程序使用协议与另一个端系统中的应用程序交换信息分组；</li>
+<li>应用层分组被称作<strong>报文</strong>；</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>运输层：<ul>
+<li>在应用程序端点之间传送应用层报文；</li>
+<li>运输层协议：<ul>
+<li>TCP协议：<ul>
+<li>向应用程序提供面向连接的服务；</li>
+<li>包括应用层报文向目的地的确保传递和流量控制；</li>
+<li>将长报文划分为短报文，并提供拥塞控制机制，当网络拥塞时，源抑制其传输速率；</li>
+</ul>
+</li>
+<li>UDP协议：向应用程序提供无连接服务；</li>
+</ul>
+</li>
+<li>报文段：运输层分组被称为<strong>报文段</strong>；</li>
+</ul>
+</li>
+<li>网络层：<ul>
+<li>数据报：网络层分组被称为<strong>数据报</strong>；</li>
+<li>负责将数据报从一台主机移动到另一台主机；</li>
+<li>网络层协议：<ul>
+<li>IP协议：<ul>
+<li>定义了数据报中各个字段以及端系统和路由器如何使用这些字段；</li>
+<li>IP只有一个，所有具有网络层的因特网组件必须运行IP；</li>
+</ul>
+</li>
+<li>路由选择协议：根据每个路由将数据报从源传输到目的地；</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>链路层：<ul>
+<li>在每个节点（主机或路由器），网络层将数据报下传给链路层，链路层沿着路径将数据报传递给下一个节点，在下一个节点中，链路层再将数据报上传给网络层；</li>
+<li>帧：链路层分组被称为<strong>帧</strong>；</li>
+<li>链路层的任务是将整个帧从一个网络元素移动到相邻的网络元素；</li>
+</ul>
+</li>
+<li>物理层：<ul>
+<li>物理层的任务是将整个帧中的所有比特从一个节点移动到下一个节点；</li>
+</ul>
+</li>
+</ul>
+<h4 id="5-12-OSI模型"><a href="#5-12-OSI模型" class="headerlink" title="5.12 OSI模型"></a>5.12 OSI模型</h4><ul>
+<li>国际化标准组织（ISO）提出计算机网络围绕七层来组织，成为开放系统互联模型（OSI），是一种不同于因特网协议栈的另一种协议栈；</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/ComputerNetWorking/009.png" alt="image-20200930201300290"></p>
+<h3 id="5-2-封装"><a href="#5-2-封装" class="headerlink" title="5.2 封装"></a>5.2 封装</h3><ul>
+<li>每次向下即在分组端头部添加该层独有首部信息，即进行封装，向上时解封；</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/ComputerNetWorking/010.png" alt="image-20200930201809900"></p>
+<blockquote>
+<p>附本书题目答案链接：<a href="https://feater.top/ebooks/11/">计算机网络：自顶向下方法（原书第7版）课后习题参考答案中文版</a></p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>计算机网络自顶向下方法</category>
+      </categories>
+      <tags>
+        <tag>计算机网络自顶向下方法</tag>
+        <tag>理论学习</tag>
+        <tag>教材</tag>
       </tags>
   </entry>
   <entry>
