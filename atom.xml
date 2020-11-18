@@ -6,7 +6,7 @@
   <link href="http://kunpw.cn/atom.xml" rel="self"/>
   
   <link href="http://kunpw.cn/"/>
-  <updated>2020-11-14T13:27:09.545Z</updated>
+  <updated>2020-11-18T13:33:36.637Z</updated>
   <id>http://kunpw.cn/</id>
   
   <author>
@@ -17,11 +17,48 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>计算机网络自顶向下方法学习笔记（四）网络层：数据平面</title>
+    <link href="http://kunpw.cn/2020/11/18/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E8%87%AA%E9%A1%B6%E5%90%91%E4%B8%8B%E6%96%B9%E6%B3%95/%E7%AC%AC%E5%9B%9B%E7%AB%A0.%E7%BD%91%E7%BB%9C%E5%B1%82%EF%BC%9A%E6%95%B0%E6%8D%AE%E5%B9%B3%E9%9D%A2/"/>
+    <id>http://kunpw.cn/2020/11/18/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E8%87%AA%E9%A1%B6%E5%90%91%E4%B8%8B%E6%96%B9%E6%B3%95/%E7%AC%AC%E5%9B%9B%E7%AB%A0.%E7%BD%91%E7%BB%9C%E5%B1%82%EF%BC%9A%E6%95%B0%E6%8D%AE%E5%B9%B3%E9%9D%A2/</id>
+    <published>2020-11-18T13:32:08.117Z</published>
+    <updated>2020-11-18T13:33:36.637Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;1-网络层概述&quot;&gt;&lt;a href=&quot;#1-网络层概述&quot; class=&quot;headerlink&quot; title=&quot;1.网络层概述&quot;&gt;&lt;/a&gt;1.网络层概述&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;网络层存在于网络中所有主机和路由器中（路由器具有截断的协议栈，没有网络层以上的部分），由&lt;strong&gt;数据平面&lt;/strong&gt;和&lt;strong&gt;控制平面&lt;/strong&gt;两部分组成。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;数据平面&lt;/strong&gt;：是网络层中属于每台路由器自身的功能，决定到达路由器输入链路的数据报（网络层分组）如何转发到该路由器某一个具体的输出链路。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;控制平面&lt;/strong&gt;：是网络范围内的逻辑，控制数据报沿着从源主机到目的主机的端到端路径中路由器的路由方式。&lt;/p&gt;
+&lt;p&gt;如图所示：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;过程实例：&lt;ul&gt;
+&lt;li&gt;H1中的网络层取得来自于H1运输层的报文段，并将其封装成数据报，向相邻路由器发送该数据报；&lt;/li&gt;
+&lt;li&gt;在接收方路由器H2，网络层接收来自相邻路由器R2的数据报，提取出相应报文段并上传给H2运输层；&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;每台路由器数据平面作用是从其输入链路向其输出链路转发数据报，控制平面作用是协调本地的每台路由器转发动作，使数据报沿着源到目的主机之间的路由器路径进行端到端传输；&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&quot;https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/ComputerNetWorking/079.png&quot; alt=&quot;image-20201110165452010&quot;&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="计算机网络自顶向下方法" scheme="http://kunpw.cn/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E8%87%AA%E9%A1%B6%E5%90%91%E4%B8%8B%E6%96%B9%E6%B3%95/"/>
+    
+    
+    <category term="计算机网络自顶向下方法" scheme="http://kunpw.cn/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E8%87%AA%E9%A1%B6%E5%90%91%E4%B8%8B%E6%96%B9%E6%B3%95/"/>
+    
+    <category term="理论学习" scheme="http://kunpw.cn/tags/%E7%90%86%E8%AE%BA%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="教材" scheme="http://kunpw.cn/tags/%E6%95%99%E6%9D%90/"/>
+    
+  </entry>
+  
+  <entry>
     <title>使用Python数据分析遇到的部分问题</title>
     <link href="http://kunpw.cn/2020/11/14/Python/Python%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E6%97%B6%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/"/>
     <id>http://kunpw.cn/2020/11/14/Python/Python%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E6%97%B6%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/</id>
     <published>2020-11-14T11:02:41.986Z</published>
-    <updated>2020-11-14T13:27:09.545Z</updated>
+    <updated>2020-11-18T13:36:58.592Z</updated>
     
     
     <summary type="html">&lt;h2 id=&quot;工作流程&quot;&gt;&lt;a href=&quot;#工作流程&quot; class=&quot;headerlink&quot; title=&quot;工作流程&quot;&gt;&lt;/a&gt;工作流程&lt;/h2&gt;&lt;blockquote&gt;

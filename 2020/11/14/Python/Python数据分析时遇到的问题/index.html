@@ -31,7 +31,7 @@
 <meta property="og:description" content="工作流程 本次数据分析目标是对大量的txt文本匹配查询一系列词汇出现的总频次，并从另一个大型二维数组（第一列元素存储了一系列文件名，需要将第二列和第三列元素相应添加到Excel表格中）中对每个文件名做相应的匹配查询  使用python进行数据分析工作，主要工作流程如下：  从a1、a2文本中读取内容（中文情感词汇，积极词汇表和消极词汇表）并以键值对形式存入两个大的字典中，键用取出来的词语表示，值则">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-11-14T11:02:41.986Z">
-<meta property="article:modified_time" content="2020-11-14T13:27:09.545Z">
+<meta property="article:modified_time" content="2020-11-18T13:36:58.592Z">
 <meta property="article:author" content="Zhaoxiaoan">
 <meta property="article:tag" content="Python">
 <meta property="article:tag" content="数据分析">
@@ -158,7 +158,7 @@
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">16</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">17</span></a>
 
   </li>
         <li class="menu-item menu-item-essays">
@@ -238,7 +238,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">16</span>
+          <span class="site-state-item-count">17</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -276,6 +276,10 @@
         
         
           <li>
+            <a href="/2020/11/18/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E8%87%AA%E9%A1%B6%E5%90%91%E4%B8%8B%E6%96%B9%E6%B3%95/%E7%AC%AC%E5%9B%9B%E7%AB%A0.%E7%BD%91%E7%BB%9C%E5%B1%82%EF%BC%9A%E6%95%B0%E6%8D%AE%E5%B9%B3%E9%9D%A2/" title="计算机网络自顶向下方法学习笔记（四）网络层：数据平面" target="_blank">计算机网络自顶向下方法学习笔记（四）网络层：数据平面</a>
+          </li>
+        
+          <li>
             <a href="/2020/11/14/Python/Python%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E6%97%B6%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/" title="使用Python数据分析遇到的部分问题" target="_blank">使用Python数据分析遇到的部分问题</a>
           </li>
         
@@ -289,10 +293,6 @@
         
           <li>
             <a href="/2020/10/23/java/%E6%B3%A8%E8%A7%A3%E5%92%8C%E5%8F%8D%E5%B0%84/" title="注解和反射" target="_blank">注解和反射</a>
-          </li>
-        
-          <li>
-            <a href="/2020/10/14/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E8%87%AA%E9%A1%B6%E5%90%91%E4%B8%8B%E6%96%B9%E6%B3%95/%E7%AC%AC%E4%BA%8C%E7%AB%A0.%E5%BA%94%E7%94%A8%E5%B1%82/" title="计算机网络自顶向下方法学习笔记（二）应用层" target="_blank">计算机网络自顶向下方法学习笔记（二）应用层</a>
           </li>
         
       </ul>
@@ -358,10 +358,16 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
-      
 
-      <time title="创建时间：2020-11-14 19:02:41 / 修改时间：21:27:09" itemprop="dateCreated datePublished" datetime="2020-11-14T19:02:41+08:00">2020-11-14</time>
+      <time title="创建时间：2020-11-14 19:02:41" itemprop="dateCreated datePublished" datetime="2020-11-14T19:02:41+08:00">2020-11-14</time>
     </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2020-11-18 21:36:58" itemprop="dateModified" datetime="2020-11-18T21:36:58+08:00">2020-11-18</time>
+      </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-folder"></i>
@@ -489,8 +495,10 @@
 
 
 
-
-
+<blockquote>
+<p>问题四：pritf字符串输出的问题</p>
+</blockquote>
+<p>printf函数传入参数应是字符串格式参数，即不可以为此种类型<code>printf(&quot;num=&quot;+x)</code>其中<code>x=1</code>，这时必须要把变量x转为字符串即<code>printf(&quot;num=&quot;+str(x))</code>格式才能正确输出。</p>
 <blockquote>
 <p>小彩蛋</p>
 </blockquote>
@@ -575,6 +583,9 @@
                 </a>
             </div>
             <div class="post-nav-item">
+                <a href="/2020/11/18/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E8%87%AA%E9%A1%B6%E5%90%91%E4%B8%8B%E6%96%B9%E6%B3%95/%E7%AC%AC%E5%9B%9B%E7%AB%A0.%E7%BD%91%E7%BB%9C%E5%B1%82%EF%BC%9A%E6%95%B0%E6%8D%AE%E5%B9%B3%E9%9D%A2/" rel="next" title="计算机网络自顶向下方法学习笔记（四）网络层：数据平面">
+                  计算机网络自顶向下方法学习笔记（四）网络层：数据平面 <i class="fa fa-chevron-right"></i>
+                </a>
             </div>
           </div>
     </footer>
@@ -667,14 +678,14 @@ setInterval("createtime()",250);
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">152k</span>
+    <span title="站点总字数">161k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">2:18</span>
+    <span title="站点阅读时长">2:26</span>
   </span>
 </div>
 <div class="busuanzi-count">

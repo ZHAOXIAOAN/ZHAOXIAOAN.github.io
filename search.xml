@@ -1,6 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Typora修改CSS</title>
+    <url>/2020/09/06/Typora%E4%BF%AE%E6%94%B9CSS/</url>
+    <content><![CDATA[<p><strong>这一期给大家讲讲怎样将Typora设置成自己喜欢的风格，这里以高亮颜色为例！</strong></p>
+<blockquote>
+<p>打开 视图–&gt;开发者工具（快捷键 Shift+F12）得到网页元素：</p>
+</blockquote>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/082.png" alt="image-20200828154027327"></p>
+<a id="more"></a>
+
+<blockquote>
+<p>点亮这个图标：</p>
+</blockquote>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/083.png" alt="image-20200828154137307"></p>
+<blockquote>
+<p>移动鼠标至想要修改样式的地方，点击一次</p>
+</blockquote>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/084.png" alt="image-20200828154549041"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/085.png" alt="image-20200828154851984"></p>
+<blockquote>
+<p>一般有两种类型的地址，第一种：</p>
+</blockquote>
+<ul>
+<li>这种地址就直接按照地址中的位置寻找css文件，打开之后如图查找样式名即可</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/086.png" alt="image-20200828154927107"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/087.png" alt="image-20200828155231370"></p>
+<blockquote>
+<p>第二种：</p>
+</blockquote>
+<ul>
+<li>这种地址存放在<code>C:\Users\Acer\AppData\Roaming\Typora\themes</code> 目录下，修改此处才有效</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/088.png" alt="image-20200828155004523"></p>
+<blockquote>
+<p>最后修改完成重启Typora即可。</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>学习</category>
+      </categories>
+      <tags>
+        <tag>Typora</tag>
+        <tag>个性化设置</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/2020/09/06/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+  </entry>
+  <entry>
     <title>FFmpeg简要使用</title>
     <url>/2020/09/23/ffmpeg/</url>
     <content><![CDATA[<h2 id="1-简介"><a href="#1-简介" class="headerlink" title="1.简介"></a>1.简介</h2><ul>
@@ -153,70 +217,6 @@
         <tag>FFmpeg</tag>
         <tag>不实用</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>Typora修改CSS</title>
-    <url>/2020/09/06/Typora%E4%BF%AE%E6%94%B9CSS/</url>
-    <content><![CDATA[<p><strong>这一期给大家讲讲怎样将Typora设置成自己喜欢的风格，这里以高亮颜色为例！</strong></p>
-<blockquote>
-<p>打开 视图–&gt;开发者工具（快捷键 Shift+F12）得到网页元素：</p>
-</blockquote>
-<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/082.png" alt="image-20200828154027327"></p>
-<a id="more"></a>
-
-<blockquote>
-<p>点亮这个图标：</p>
-</blockquote>
-<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/083.png" alt="image-20200828154137307"></p>
-<blockquote>
-<p>移动鼠标至想要修改样式的地方，点击一次</p>
-</blockquote>
-<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/084.png" alt="image-20200828154549041"></p>
-<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/085.png" alt="image-20200828154851984"></p>
-<blockquote>
-<p>一般有两种类型的地址，第一种：</p>
-</blockquote>
-<ul>
-<li>这种地址就直接按照地址中的位置寻找css文件，打开之后如图查找样式名即可</li>
-</ul>
-<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/086.png" alt="image-20200828154927107"></p>
-<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/087.png" alt="image-20200828155231370"></p>
-<blockquote>
-<p>第二种：</p>
-</blockquote>
-<ul>
-<li>这种地址存放在<code>C:\Users\Acer\AppData\Roaming\Typora\themes</code> 目录下，修改此处才有效</li>
-</ul>
-<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/088.png" alt="image-20200828155004523"></p>
-<blockquote>
-<p>最后修改完成重启Typora即可。</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>学习</category>
-      </categories>
-      <tags>
-        <tag>Typora</tag>
-        <tag>个性化设置</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>/2020/09/06/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
   </entry>
   <entry>
     <title>hero等静态网站通过外部cdn引用图片</title>
@@ -570,8 +570,10 @@
 
 
 
-
-
+<blockquote>
+<p>问题四：pritf字符串输出的问题</p>
+</blockquote>
+<p>printf函数传入参数应是字符串格式参数，即不可以为此种类型<code>printf(&quot;num=&quot;+x)</code>其中<code>x=1</code>，这时必须要把变量x转为字符串即<code>printf(&quot;num=&quot;+str(x))</code>格式才能正确输出。</p>
 <blockquote>
 <p>小彩蛋</p>
 </blockquote>
@@ -1113,267 +1115,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Vue（1.基础入门）</title>
-    <url>/2020/09/06/vue/1.Vue%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/</url>
-    <content><![CDATA[<h2 id="1-简介"><a href="#1-简介" class="headerlink" title="1.简介"></a>1.简介</h2><h3 id="1-1-概念介绍"><a href="#1-1-概念介绍" class="headerlink" title="1.1 概念介绍"></a>1.1 概念介绍</h3><ul>
-<li>Vue 是一款渐进式JavaScript框架，所谓渐进式就是逐步实现新特性的意思，如实现模块化开发、路由、状态管理等新特性。其特点是综合了Angular（模块化）和React(虚拟DOM）的优点，与其它大型框架不同的是，Vue被设计为可以自底向上逐层应用。Vue的核心库只关注视图层，不仅易于上手，还便于与第三方库(如: vue-router，vue-resource，vuex）或既有项目整合。</li>
-</ul>
-<a id="more"></a>
-
-<h3 id="1-2-MVVM"><a href="#1-2-MVVM" class="headerlink" title="1.2 MVVM"></a>1.2 MVVM</h3><ul>
-<li>Model:模型层，在这里表示JavaScript对象；</li>
-<li>View:视图层，在这里表示DOM(HTML 操作的元素)；</li>
-<li>ViewModel:连接视图和数据的中间件，Vue.js 就是MVVM中的ViewModel层的实现者</li>
-</ul>
-<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/030.png" alt="image-20200830141507977"></p>
-<ul>
-<li>View层展现的不是Model层的数据，而是ViewModel的数据，由ViewNodel负责与 Model层交互，这就完全解耦了View层和Model层，这个解耦是至关重要的，它是前后端分离方案实施的重要一环。</li>
-</ul>
-<h3 id="1-3-搭配环境"><a href="#1-3-搭配环境" class="headerlink" title="1.3 搭配环境"></a>1.3 搭配环境</h3><ul>
-<li><p>下载vue.js文件：</p>
-<ul>
-<li><a href="https://vuejs.org/js/vue.js">https://vuejs.org/js/vue.js</a></li>
-<li><a href="https://vuejs.org/js/vue.min.js">https://vuejs.org/js/vue.min.js</a></li>
-<li>上面一个是全包，下面一个是简化包，代码中引用一个就OK</li>
-</ul>
-</li>
-<li><p>如果不下载到本地，可以使用<code>cdn</code>外部引入：</p>
-<ul>
-<li><pre><code class="html">&lt;script src=&quot;https://cdn.jsdelivr.net/npm/vue@2.5.21/dist/vue.js&quot;&gt;&lt;/script&gt;
-&lt;script src=&quot;https://cdn.jsdelivr.net/npm/vue@2.5.21/dist/vue.min.js&quot;&gt;&lt;/script&gt;
-<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="bullet">-</span> 再在IDEA中 <span class="code">`settings-&gt;plugins`</span>中搜索安装vue.js：</span><br><span class="line">  ![<span class="string">image-20200830144613941</span>](<span class="link">https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/031.png</span>)</span><br><span class="line"></span><br><span class="line"><span class="bullet">-</span> 安装之后重启再设置下一步：</span><br><span class="line"></span><br><span class="line">![<span class="string">å¨è¿éæå¥å¾çæè¿°</span>](<span class="link">https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/032.png</span>)</span><br><span class="line"></span><br><span class="line">附模板：</span><br><span class="line"></span><br><span class="line"><span class="code">```vue</span></span><br><span class="line"><span class="code">&lt;template&gt;</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">&lt;/template&gt;</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">&lt;script&gt;</span></span><br><span class="line"><span class="code">    export default &#123;</span></span><br><span class="line"><span class="code">        name:&quot;$&#123;NAME&#125;&quot;</span></span><br><span class="line"><span class="code">    &#125;</span></span><br><span class="line"><span class="code">&lt;/script&gt;</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">&lt;style scoped&gt;</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">&lt;/style&gt;</span></span><br></pre></td></tr></table></figure>
-</code></pre>
-</li>
-</ul>
-</li>
-</ul>
-<blockquote>
-<p>注：上图与模板代码取自博客：<a href="https://blog.csdn.net/jdq8576/article/details/104055707/">https://blog.csdn.net/jdq8576/article/details/104055707/</a></p>
-</blockquote>
-<ul>
-<li>然后就可以在IDEA文件中new一个Vue Component文件啦！</li>
-</ul>
-<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/033.png" alt="image-20200830145017226"></p>
-<hr>
-<h2 id="2-基础语法"><a href="#2-基础语法" class="headerlink" title="2.基础语法"></a>2.基础语法</h2><h3 id="2-1-初步使用"><a href="#2-1-初步使用" class="headerlink" title="2.1 初步使用"></a>2.1 初步使用</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!--view层，模板--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;app&quot;</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--展示格式--&gt;</span></span><br><span class="line">    &#123;&#123;message&#125;&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!--导入vue.js包--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;../lib/vue.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">    <span class="keyword">let</span> vm = <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="javascript">        el: <span class="string">&quot;#app&quot;</span>,		<span class="comment">//el属性用于绑定id号，且双向绑定，vm绑定id的同时，id也绑定了vm，使id视图层能随时取到vm的值</span></span></span><br><span class="line"><span class="javascript">        data: &#123;			<span class="comment">//data属性为数据存储区</span></span></span><br><span class="line"><span class="javascript">            message:<span class="string">&quot;hello,vue!&quot;</span></span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line"></span><br><span class="line"><span class="javascript"><span class="comment">//页面内容能够随message数值改变而随时改变，不需要刷新页面</span></span></span><br><span class="line"><span class="javascript">vm.message = <span class="string">&#x27;hello zhaoxiaoan&#x27;</span></span></span><br><span class="line"><span class="javascript">&gt;<span class="string">&quot;hello zhaoxiaoan&quot;</span>  </span></span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>Vue常用的七个属性：<ul>
-<li><code>el</code> ：占位符，用来绑定标签、id和class，指示编译器解析；</li>
-<li><code>data</code> ：存放数据区域；</li>
-<li><code>methods</code> ：存放方法逻辑区域；</li>
-<li><code>render</code> ：创建Virtual Dom</li>
-<li><code>computed</code> ：用于计算</li>
-<li><code>watch</code> ：<ul>
-<li>watch:function(new,old){}；</li>
-<li>监听data中数据的变化；</li>
-</ul>
-</li>
-<li><code>template</code> ：用来设置模板，替换页面元素，包括占位符；</li>
-</ul>
-</li>
-</ul>
-<h3 id="2-2-v-bind指令"><a href="#2-2-v-bind指令" class="headerlink" title="2.2 v-bind指令"></a>2.2 v-bind指令</h3><ul>
-<li>该指令的含义是绑定信息，如 <code>v-bind:title=&quot;massage&quot;</code> 就是绑定了标题信息，将鼠标移动到<code>&lt;span&gt;</code>标签语句悬停可显示其绑定信息；</li>
-<li><code>v-bind:</code>可以简写为 <code>:</code> ;</li>
-</ul>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!--使用v-bind指令可以自动引入v-bind使用链接--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span> <span class="attr">xmlns:v-bind</span>=<span class="string">&quot;http://www.w3.org/1999/xhtml&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!--view层，模板--&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- v- 都是vue指令 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;app&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">span</span> <span class="attr">v-bind:title</span>=<span class="string">&quot;massage&quot;</span>&gt;</span></span><br><span class="line">        鼠标悬停几秒查看此处绑定的信息</span><br><span class="line">    <span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!--导入vue.js包--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;../lib/vue.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">    <span class="keyword">let</span> vm = <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="javascript">        el: <span class="string">&quot;#app&quot;</span>,</span></span><br><span class="line">        data: &#123;</span><br><span class="line"><span class="javascript">            massage:<span class="string">&quot;hello,vue&quot;</span></span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="2-3-if判断语句"><a href="#2-3-if判断语句" class="headerlink" title="2.3 if判断语句"></a>2.3 if判断语句</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!--view层，模板--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;app&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">h1</span> <span class="attr">v-if</span>=<span class="string">&quot;type===&#x27;A&#x27;&quot;</span>&gt;</span>A<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">h1</span> <span class="attr">v-else-if</span>=<span class="string">&quot;type===&#x27;B&#x27;&quot;</span>&gt;</span>B<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">h1</span> <span class="attr">v-else</span>&gt;</span>C<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!--导入vue.js包--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;../lib/vue.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">    <span class="keyword">let</span> vm = <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="javascript">        el: <span class="string">&quot;#app&quot;</span>,</span></span><br><span class="line">        data: &#123;</span><br><span class="line"><span class="javascript">            type:<span class="string">&quot;A&quot;</span></span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="2-4-循环列表（重要）"><a href="#2-4-循环列表（重要）" class="headerlink" title="2. 4 循环列表（重要）"></a>2. 4 <code>循环列表（重要）</code></h3><ul>
-<li>列表配合for循环就可以简单实现从数据库中导出数据并且循环输出成列表展示；</li>
-</ul>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!--view层，模板--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;app&quot;</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--v-for=&quot;(item,index) in items&quot; 格式类似于forEach,定义item取items数组中每个元素,index取索引下标，不用可不取--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span> <span class="attr">v-for</span>=<span class="string">&quot;item in items&quot;</span>&gt;</span>  </span><br><span class="line">        <span class="comment">&lt;!--item.message用于展示--&gt;</span></span><br><span class="line">        &#123;&#123;item.message&#125;&#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!--导入vue.js包--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;../lib/vue.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">    <span class="keyword">let</span> vm = <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="javascript">        el: <span class="string">&quot;#app&quot;</span>,</span></span><br><span class="line">        data: &#123;</span><br><span class="line"><span class="javascript">            <span class="comment">//数组元素用来给列表li循环遍历</span></span></span><br><span class="line">            items: [</span><br><span class="line"><span class="javascript">                &#123;<span class="attr">message</span>:<span class="string">&quot;hello,vue&quot;</span>&#125;,</span></span><br><span class="line"><span class="javascript">                &#123;<span class="attr">message</span>:<span class="string">&quot;hello zhaoxiaoan&quot;</span>&#125;</span></span><br><span class="line">            ]</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/034.png" alt="image-20200830153345031"></p>
-<h3 id="2-5-v-on-绑定事件"><a href="#2-5-v-on-绑定事件" class="headerlink" title="2.5 v-on 绑定事件"></a>2.5 v-on 绑定事件</h3><ul>
-<li><code>v-on:</code> 用来绑定事件，如事件<code>click</code> ，其余事件可以查找jQuery事件文档（可以自己创建新事件）；</li>
-<li><code>v-on:</code>可以简写为 <code>@</code> ；</li>
-</ul>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span> <span class="attr">xmlns:v-on</span>=<span class="string">&quot;http://www.w3.org/1999/xhtml&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!--view层，模板--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;app&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">button</span> <span class="attr">v-on:click</span> = <span class="string">&quot;sayHi&quot;</span>&gt;</span>Click Me<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!--导入vue.js包--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;../lib/vue.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">    <span class="keyword">let</span> vm = <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="javascript">        el: <span class="string">&quot;#app&quot;</span>,</span></span><br><span class="line">        data: &#123;</span><br><span class="line"><span class="javascript">            message: <span class="string">&quot;hello,vue!&quot;</span></span></span><br><span class="line">        &#125;,</span><br><span class="line"><span class="javascript">        <span class="comment">//方法只能存放在methods中</span></span></span><br><span class="line">        methods: &#123;</span><br><span class="line"><span class="javascript">            sayHi:<span class="function"><span class="keyword">function</span> (<span class="params">envent</span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">                alert(<span class="built_in">this</span>.message);</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/035.png" alt="image-20200830155311872"></p>
-<hr>
-<h2 id="3-双向绑定（重点）"><a href="#3-双向绑定（重点）" class="headerlink" title="3.双向绑定（重点）"></a>3.<code>双向绑定（重点）</code></h2><ul>
-<li>使用<code>v-model</code>指令；</li>
-<li><code>v-model</code>指令会忽略所有表单元素的checked、selected等值，因此在下拉框中初始默认选择为空，必须设置一个disabled不可选中项并且设置其值为空来作为默认选择域；</li>
-</ul>
-<h3 id="3-1-文本"><a href="#3-1-文本" class="headerlink" title="3.1 文本"></a>3.1 文本</h3><ul>
-<li>本质是<code>&#123;&#123;message&#125;&#125;</code>用来绑定<code>data&#123;message&#125;</code>显示内容，而<code>message</code>又通过<code>v-model=&quot;message&quot;</code>绑定了<code>&lt;input&gt;</code>文本域，所以当<code>&lt;input&gt;</code>输入框值域变化时修改了<code>data&#123;message&#125;</code>数据，接着<code>message</code>就跟着变化；</li>
-</ul>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!--view层，模板--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;app&quot;</span>&gt;</span></span><br><span class="line">    输入的文本：<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">v-model</span>=<span class="string">&quot;message&quot;</span>&gt;</span></span><br><span class="line">    &#123;&#123;message&#125;&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!--导入vue.js包--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;../lib/vue.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">    <span class="keyword">let</span> vm = <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="javascript">        el: <span class="string">&quot;#app&quot;</span>,</span></span><br><span class="line">        data: &#123;</span><br><span class="line"><span class="javascript">            message: <span class="string">&quot;hello,vue!&quot;</span></span></span><br><span class="line">        &#125;,</span><br><span class="line">    &#125;);</span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/036.png" alt="image-20200830164055648"></p>
-<h3 id="3-2-textarea文本域"><a href="#3-2-textarea文本域" class="headerlink" title="3.2 textarea文本域"></a>3.2 textarea文本域</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!--view层，模板--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;app&quot;</span>&gt;</span></span><br><span class="line">    输入的文本：</span><br><span class="line">    <span class="tag">&lt;<span class="name">textarea</span>  <span class="attr">v-model</span>=<span class="string">&quot;message&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">textarea</span>&gt;</span>&gt;</span><br><span class="line">    &#123;&#123;message&#125;&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!--导入vue.js包--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;../lib/vue.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">    <span class="keyword">let</span> vm = <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="javascript">        el: <span class="string">&quot;#app&quot;</span>,</span></span><br><span class="line">        data: &#123;</span><br><span class="line"><span class="javascript">            message: <span class="string">&quot;hello,vue!&quot;</span></span></span><br><span class="line">        &#125;,</span><br><span class="line">    &#125;);</span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/037.png" alt="image-20200830164801393"></p>
-<h3 id="3-3-radio单选框"><a href="#3-3-radio单选框" class="headerlink" title="3.3 radio单选框"></a>3.3 radio单选框</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!--view层，模板--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;app&quot;</span>&gt;</span></span><br><span class="line">    性别：</span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;radio&quot;</span> <span class="attr">name</span>=<span class="string">&quot;sex&quot;</span> <span class="attr">value</span>=<span class="string">&quot;男&quot;</span> <span class="attr">v-model</span>=<span class="string">&quot;message&quot;</span>&gt;</span>男</span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;radio&quot;</span> <span class="attr">name</span>=<span class="string">&quot;sex&quot;</span> <span class="attr">value</span>=<span class="string">&quot;女&quot;</span> <span class="attr">v-model</span>=<span class="string">&quot;message&quot;</span>&gt;</span>女</span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    &#123;&#123;message&#125;&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!--导入vue.js包--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;../lib/vue.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">    <span class="keyword">let</span> vm = <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="javascript">        el: <span class="string">&quot;#app&quot;</span>,</span></span><br><span class="line">        data: &#123;</span><br><span class="line"><span class="javascript">            message: <span class="string">&quot;&quot;</span></span></span><br><span class="line">        &#125;,</span><br><span class="line">    &#125;);</span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/038.png" alt="image-20200830165053896"></p>
-<h3 id="3-4-select下拉框"><a href="#3-4-select下拉框" class="headerlink" title="3.4 select下拉框"></a>3.4 select下拉框</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!--view层，模板--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;app&quot;</span>&gt;</span></span><br><span class="line">    下拉框：</span><br><span class="line">    <span class="tag">&lt;<span class="name">select</span> <span class="attr">v-model</span>=<span class="string">&quot;message&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">&quot;&quot;</span> <span class="attr">disabled</span> &gt;</span>--请选择--<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">option</span>&gt;</span>A<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">option</span>&gt;</span>B<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">option</span>&gt;</span>C<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>选择了：&#123;&#123;message&#125;&#125;<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!--导入vue.js包--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;../lib/vue.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">    <span class="keyword">let</span> vm = <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="javascript">        el: <span class="string">&quot;#app&quot;</span>,</span></span><br><span class="line">        data: &#123;</span><br><span class="line"><span class="javascript">            message: <span class="string">&quot;&quot;</span></span></span><br><span class="line">        &#125;,</span><br><span class="line">    &#125;);</span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/039.png" alt="image-20200830165542144"></p>
-<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/040.png" alt="image-20200830165627407"></p>
-<hr>
-<h2 id="4-组件"><a href="#4-组件" class="headerlink" title="4.组件"></a>4.组件</h2><ul>
-<li>组件最大的作用就是其良好的复用性，但是复用性的本质只能复用框架外围，内在的本质数据必须从另一方获取，接下来讲述的就是获取数据的过程；</li>
-</ul>
-<h3 id="4-1-新建component组件"><a href="#4-1-新建component组件" class="headerlink" title="4.1 新建component组件"></a>4.1 新建component组件</h3><ul>
-<li>给新组件命名为<code>zhaoxiaoan</code>；</li>
-<li><code>template</code>为替换的模板内容；</li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">Vue.component(<span class="string">&quot;zhaoxiaoan&quot;</span>,&#123;</span><br><span class="line">    template: <span class="string">&#x27;&lt;li&gt;Hello&lt;/li&gt;&#x27;</span></span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">//做好准备工作，绑定好id，存好数据</span></span><br><span class="line"><span class="keyword">let</span> vm = <span class="keyword">new</span> Vue(&#123;</span><br><span class="line">    el: <span class="string">&quot;#app&quot;</span>,</span><br><span class="line">    data: &#123;</span><br><span class="line">        items: [<span class="string">&quot;Java&quot;</span>,<span class="string">&quot;Linux&quot;</span>,<span class="string">&quot;前端&quot;</span>]</span><br><span class="line">    &#125;,</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="4-2-使用新组件"><a href="#4-2-使用新组件" class="headerlink" title="4.2 使用新组件"></a>4.2 使用新组件</h3><ul>
-<li>从绑好的Data中遍历取出数据；</li>
-<li>并且使用<code>v-bind:itemX</code>绑定新变量<code>itemX</code>，并且将v-for遍历得到的数据赋值给新变量</li>
-</ul>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;app&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">zhaoxiaoan</span> <span class="attr">v-for</span>=<span class="string">&quot;item in items&quot;</span> <span class="attr">v-bind:itemX</span>=<span class="string">&quot;item&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">zhaoxiaoan</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="4-3-将数据传入新组件"><a href="#4-3-将数据传入新组件" class="headerlink" title="4.3 将数据传入新组件"></a>4.3 将数据传入新组件</h3><ul>
-<li>使用属性<code>props</code>接收新参数<code>itemX</code>此参数就是<code>v-bind</code>新定义并且绑定的那个变量，最终这个新变量传递给<code>template</code>模板中的<code>itemX</code>；</li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">Vue.component(<span class="string">&quot;zhaoxiaoan&quot;</span>,&#123;</span><br><span class="line">    props:[<span class="string">&#x27;itemX&#x27;</span>],</span><br><span class="line">    template: <span class="string">&#x27;&lt;li&gt;&#123;&#123;itemX&#125;&#125;&lt;/li&gt;&#x27;</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-
-
-
-<blockquote>
-<p>最终代码与运行结果如下：</p>
-</blockquote>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!--view层，模板--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;app&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">zhaoxiaoan</span> <span class="attr">v-for</span>=<span class="string">&quot;item in items&quot;</span> <span class="attr">v-bind:item</span>=<span class="string">&quot;item&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">zhaoxiaoan</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!--导入vue.js包--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;../lib/vue.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">    Vue.component(<span class="string">&quot;zhaoxiaoan&quot;</span>,&#123;</span></span><br><span class="line"><span class="javascript">        props:[<span class="string">&#x27;item&#x27;</span>],</span></span><br><span class="line"><span class="handlebars"><span class="xml">        template: &#x27;<span class="tag">&lt;<span class="name">li</span>&gt;</span></span><span class="template-variable">&#123;&#123;<span class="name">item</span>&#125;&#125;</span><span class="xml"><span class="tag">&lt;/<span class="name">li</span>&gt;</span>&#x27;</span></span></span><br><span class="line">    &#125;)</span><br><span class="line"></span><br><span class="line"><span class="javascript">    <span class="keyword">let</span> vm = <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="javascript">        el: <span class="string">&quot;#app&quot;</span>,</span></span><br><span class="line">        data: &#123;</span><br><span class="line"><span class="javascript">            items: [<span class="string">&quot;Java&quot;</span>,<span class="string">&quot;Linux&quot;</span>,<span class="string">&quot;前端&quot;</span>]</span></span><br><span class="line">        &#125;,</span><br><span class="line">    &#125;);</span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/041.png" alt="image-20200830171934341"></p>
-<hr>
-<h2 id="5-Axios异步网络通信（重点）"><a href="#5-Axios异步网络通信（重点）" class="headerlink" title="5.Axios异步网络通信（重点）"></a>5.<code>Axios异步网络通信（重点）</code></h2><h3 id="5-1-Axios简介"><a href="#5-1-Axios简介" class="headerlink" title="5.1 Axios简介"></a>5.1 Axios简介</h3><ul>
-<li><p>Axios是一个开源的可以用在浏览器端和 Node3S 的异步通信框架，它的主要作用就是实现 AJAX异步通信，其功能特点如下:</p>
-<ul>
-<li>从浏览器中创建 <code>XMLHttpRequests</code></li>
-<li>从 node.js 创建http请求</li>
-<li>支持 Promise API [JS中链式编程]</li>
-<li>拦截请求和响应</li>
-<li>转换请求数据和响应数据</li>
-<li>取消请求</li>
-<li>自动转换 JSON 数据</li>
-<li>客户端支持防御 XSRF（跨站请求伪造)</li>
-</ul>
-</li>
-<li><p>由于Vue.js是一个视图层框架并且作者（尤雨溪）严格准守SoC(关注度分离原则），所以Vue.js并不包含AJAX的通信功能，为了解决通信问题，作者单独开发了一个名为vue-resource的插件，不过在进入2.0版本以后停止了对该插件的维护并推荐了Axios框架。少用jQuery，因为它操作Dom太频繁</p>
-</li>
-</ul>
-<h3 id="5-2-Vue实例生命周期图示介绍"><a href="#5-2-Vue实例生命周期图示介绍" class="headerlink" title="5.2 Vue实例生命周期图示介绍"></a>5.2 Vue实例生命周期图示介绍</h3><ul>
-<li>这是一个Vue实例生命周期，在生命周期过程中会执行相应的“钩子函数”，这些“钩子函数”是可以被外部调用进而影响到整个实例的；</li>
-</ul>
-<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/042_lifecycle.png" alt="lifecycle"></p>
-<h3 id="5-3-引入Axios"><a href="#5-3-引入Axios" class="headerlink" title="5.3 引入Axios"></a>5.3 引入Axios</h3><ul>
-<li>外部cdn引入：</li>
-</ul>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;https://unpkg.com/axios/dist/axios.min.js &quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>官方文档安装Axios：</li>
-</ul>
-<p><a href="http://www.axios-js.com/zh-cn/docs/vue-axios.html">http://www.axios-js.com/zh-cn/docs/vue-axios.html</a></p>
-<h3 id="5-4-模拟网络通信"><a href="#5-4-模拟网络通信" class="headerlink" title="5.4 模拟网络通信"></a>5.4 模拟网络通信</h3><ul>
-<li>开发的接口大部分使用JSON格式，先在项目里模拟一段<code>JSON</code>数据：<ul>
-<li>创建一个新文件命名为<code>data.json</code> ，数据如下：</li>
-</ul>
-</li>
-</ul>
-<figure class="highlight json"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">&quot;name&quot;</span>:<span class="string">&quot;狂神说Java&quot;</span> ,</span><br><span class="line">  <span class="attr">&quot;url&quot;</span>:<span class="string">&quot;https://blog.kuangstudy.com&quot;</span>,</span><br><span class="line">  <span class="attr">&quot;page&quot;</span>: <span class="number">1</span>,</span><br><span class="line">  <span class="attr">&quot;isNonProfit&quot;</span>: <span class="literal">true</span>,</span><br><span class="line">  <span class="attr">&quot;address&quot;</span>: &#123;</span><br><span class="line">    <span class="attr">&quot;street&quot;</span>:<span class="string">&quot;含光门&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;city&quot;</span>:<span class="string">&quot;陕西西安&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;country&quot;</span> :<span class="string">&quot;中国&quot;</span></span><br><span class="line">&#125;,</span><br><span class="line">  <span class="attr">&quot;links&quot;</span> :[</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="attr">&quot;name&quot;</span>: <span class="string">&quot;bilibili&quot;</span>,</span><br><span class="line">      <span class="attr">&quot;url&quot;</span>: <span class="string">&quot;https://space.bilibili.com/95256449&quot;</span></span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="attr">&quot;name&quot;</span>: <span class="string">&quot;狂伸说java&quot;</span>,</span><br><span class="line">      <span class="attr">&quot;url&quot;</span>: <span class="string">&quot;https://blog.kuangstudy.com&quot;</span></span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="attr">&quot;name&quot;</span>:<span class="string">&quot;百度&quot;</span>,</span><br><span class="line">      <span class="attr">&quot;url&quot;</span>: <span class="string">&quot;https://www.baidu.com/&quot;</span></span><br><span class="line">    &#125;</span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<ul>
-<li><p>html文件代码如下：</p>
-<ol>
-<li><p>先写mounted()函数，在这个钩子函数中调用<code>axios.get()</code>获取json文件数据；</p>
-</li>
-<li><pre><code class="javascript">response=&gt;(this.info=response.data)
-//这条语句是ES6新特性，=&gt;后面相当于函数内容，即请求响应后执行函数语句将请求响应的数据赋值给info
-<figure class="highlight haskell"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="number">3.</span> ```javascript</span><br><span class="line">   //<span class="class"><span class="keyword">data</span>()函数return是将其中定义的键值对属性值在mounted调用之后返回给<span class="keyword">data</span>，实现<span class="keyword">data</span>属性的动态传递</span></span><br></pre></td></tr></table></figure></code></pre>
-</li>
-<li><p>再通过双向绑定在html中引用data属性的数值；</p>
-</li>
-<li><p>对于链接标签中链接的动态生成，则使用<code>v-bind</code>指令将href属性的值绑定为info.url，不能直接将<code>info.url</code>传递给<code>href</code>，否则只能识别为一串字符串；</p>
-</li>
-</ol>
-</li>
-</ul>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span> <span class="attr">xmlns:v-bind</span>=<span class="string">&quot;http://www.w3.org/1999/xhtml&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Title<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;vue&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span>&gt;</span>&#123;&#123;info.name&#125;&#125;<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span>&gt;</span>&#123;&#123;info.address.street&#125;&#125;<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">a</span> <span class="attr">v-bind:href</span>=<span class="string">&quot;info.url&quot;</span>&gt;</span>click<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!--引入js文件--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;../lib/vue.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;https://unpkg.com/axios/dist/axios.min.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">    <span class="keyword">var</span> vm = <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="javascript">    el: <span class="string">&quot;#vue&quot;</span> ,</span></span><br><span class="line">    data()&#123;</span><br><span class="line"><span class="javascript">        <span class="keyword">return</span>&#123;</span></span><br><span class="line"><span class="javascript">            info: &#123;		<span class="comment">//json文件中的属性只有在此处同名定义之后，接收数据后才能被调用</span></span></span><br><span class="line"><span class="javascript">                name: <span class="literal">null</span>,</span></span><br><span class="line">                address: &#123;</span><br><span class="line"><span class="javascript">                    street: <span class="literal">null</span>,</span></span><br><span class="line"><span class="javascript">                    city: <span class="literal">null</span>,</span></span><br><span class="line"><span class="javascript">                    country: <span class="literal">null</span></span></span><br><span class="line">                &#125;,</span><br><span class="line"><span class="javascript">                url:<span class="literal">null</span></span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;,</span><br><span class="line"><span class="javascript">    mounted()&#123;        <span class="comment">//钩子函数，链式编程</span></span></span><br><span class="line"><span class="javascript">        axios.get(<span class="string">&quot;../data.json&quot;</span>).then(<span class="function"><span class="params">response</span>=&gt;</span>(<span class="built_in">this</span>.info=response.data));</span></span><br><span class="line">    &#125;</span><br><span class="line">    &#125;);</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-
-
-
-<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/043.png" alt="image-20200902223854253"></p>
-<ul>
-<li>json文件在编码时没有使用UTF-8编译，所以上述请求执行后会得到乱码内容，解决方法是将json文件用notepad++打开之后在视窗栏 编码-&gt;使用UTF-8编码和转为UTF-8编码；</li>
-</ul>
-<hr>
-<h2 id="6-计算属性"><a href="#6-计算属性" class="headerlink" title="6.计算属性"></a>6.计算属性</h2><ul>
-<li><p>存在于computed属性中；</p>
-</li>
-<li><p>methods与computed属性中的函数名不能重名，否则优先调用methods中的函数而不会调用computed中的属性（定义为函数，调用为属性）；</p>
-</li>
-<li><p>调用方法时，每次都需要进行计算，既然有计算过程则必定产生系统开销，那如果这个结果是不经常变化的呢？此时就可以考虑将这个结果缓存起来，采用计算属性可以很方便的做到这一点，计算属性的主要特性就是为了将不经常变化的计算结果进行缓存，以节约我们的系统开销；</p>
-</li>
-<li><p>computed属性中的缓存只在数据发生增删改之后才会重新刷新变化，而methods内的函数随时变化；</p>
-</li>
-</ul>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;app&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>currentTime1 &#123;&#123;currentTime1()&#125;&#125;<span class="tag">&lt;/<span class="name">p</span>&gt;</span><span class="comment">&lt;!--注意，调用methods内的函数使用函数调用--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>currentTime2 &#123;&#123;currentTime2&#125;&#125;<span class="tag">&lt;/<span class="name">p</span>&gt;</span><span class="comment">&lt;!--注意，调用computed内的函数使用属性调用--&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!--引入js文件--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;../lib/vue.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">    <span class="keyword">var</span> vm = <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="javascript">        el: <span class="string">&quot;#app&quot;</span> ,</span></span><br><span class="line">        data: &#123;</span><br><span class="line"><span class="javascript">            message: <span class="string">&quot;hello,world&quot;</span></span></span><br><span class="line">        &#125;,</span><br><span class="line">        methods:&#123;</span><br><span class="line"><span class="javascript">            currentTime1:<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">                <span class="keyword">return</span> <span class="built_in">Date</span>.now();<span class="comment">//返回一个时间戳</span></span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;,</span><br><span class="line">        computed:&#123;</span><br><span class="line"><span class="javascript">            currentTime2:<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">                <span class="built_in">this</span>.message;</span></span><br><span class="line"><span class="javascript">                <span class="keyword">return</span> <span class="built_in">Date</span>.now();<span class="comment">//返回一个时间戳</span></span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;);</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-
-
-<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/044.png" alt="image-20200903102347608"></p>
-<hr>
-<h2 id="7-插槽slot"><a href="#7-插槽slot" class="headerlink" title="7.插槽slot"></a>7.插槽slot</h2><ul>
-<li>插槽的本质就是嵌套组合复用；</li>
-</ul>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;app&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">todo</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!--v-bind: 简略形式为 :        --&gt;</span></span><br><span class="line"><span class="comment">&lt;!--v-on: 简略形式为 @        --&gt;</span></span><br><span class="line"></span><br><span class="line">        <span class="tag">&lt;<span class="name">todo-title</span> <span class="attr">slot</span>=<span class="string">&quot;todo-title&quot;</span> <span class="attr">:title</span>=<span class="string">&quot;title&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">todo-title</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">todo-items</span> <span class="attr">slot</span>=<span class="string">&quot;todo-item&quot;</span> <span class="attr">v-for</span>=<span class="string">&quot;item in todoItems&quot;</span> <span class="attr">:item</span>=<span class="string">&quot;item&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">todo-items</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">todo</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!--引入js文件--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;../lib/vue.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">    Vue.component(<span class="string">&quot;todo&quot;</span>,&#123;</span></span><br><span class="line"><span class="handlebars"><span class="xml">        /*template: &#x27;<span class="tag">&lt;<span class="name">div</span>&gt;</span>&#x27; +</span></span></span><br><span class="line"><span class="handlebars"><span class="xml">                    &#x27;<span class="tag">&lt;<span class="name">slot</span>&gt;</span><span class="tag">&lt;/<span class="name">slot</span>&gt;</span>&#x27; +</span></span></span><br><span class="line"><span class="javascript">                    <span class="string">&#x27;&lt;ul&gt;&#x27;</span> +</span></span><br><span class="line"><span class="handlebars"><span class="xml">                        &#x27;<span class="tag">&lt;<span class="name">slot</span>&gt;</span><span class="tag">&lt;/<span class="name">slot</span>&gt;</span>&#x27; +</span></span></span><br><span class="line"><span class="javascript">                    <span class="string">&#x27;&lt;/ul&gt;&#x27;</span> +</span></span><br><span class="line"><span class="javascript">                <span class="string">&#x27;&lt;/div&gt;&#x27;</span>*/</span></span><br><span class="line"><span class="javascript">        <span class="comment">//使用一个 \ 就可以直接换行</span></span></span><br><span class="line"><span class="handlebars"><span class="xml">        template: &#x27;<span class="tag">&lt;<span class="name">div</span>&gt;</span>\</span></span></span><br><span class="line"><span class="handlebars"><span class="xml">                    <span class="tag">&lt;<span class="name">slot</span> <span class="attr">name</span>=<span class="string">&quot;todo-title&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">slot</span>&gt;</span>\</span></span></span><br><span class="line"><span class="handlebars"><span class="xml">                    <span class="tag">&lt;<span class="name">ul</span>&gt;</span>\</span></span></span><br><span class="line"><span class="handlebars"><span class="xml">                        <span class="tag">&lt;<span class="name">slot</span> <span class="attr">name</span>=<span class="string">&quot;todo-item&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">slot</span>&gt;</span>\</span></span></span><br><span class="line"><span class="handlebars"><span class="xml">                    <span class="tag">&lt;/<span class="name">ul</span>&gt;</span>\</span></span></span><br><span class="line"><span class="handlebars"><span class="xml">                   <span class="tag">&lt;/<span class="name">div</span>&gt;</span>&#x27;</span></span></span><br><span class="line"><span class="javascript">        <span class="comment">//slot插槽通过name属性确定每一个slot插槽独一无二，在&lt;div&gt;中可通过此属性连接其它组件</span></span></span><br><span class="line">    &#125;);</span><br><span class="line"></span><br><span class="line"><span class="javascript">    Vue.component(<span class="string">&quot;todo-title&quot;</span>,&#123;</span></span><br><span class="line"><span class="javascript">        props:[<span class="string">&quot;title&quot;</span>],</span></span><br><span class="line"><span class="handlebars"><span class="xml">        template: &#x27;<span class="tag">&lt;<span class="name">div</span>&gt;</span></span><span class="template-variable">&#123;&#123;<span class="name">title</span>&#125;&#125;</span><span class="xml"><span class="tag">&lt;/<span class="name">div</span>&gt;</span>&#x27;</span></span></span><br><span class="line">    &#125;);</span><br><span class="line"><span class="javascript">    Vue.component(<span class="string">&quot;todo-items&quot;</span>,&#123;</span></span><br><span class="line"><span class="javascript">        props:[<span class="string">&quot;item&quot;</span>],</span></span><br><span class="line"><span class="handlebars"><span class="xml">        template: &#x27;<span class="tag">&lt;<span class="name">li</span>&gt;</span></span><span class="template-variable">&#123;&#123;<span class="name">item</span>&#125;&#125;</span><span class="xml"><span class="tag">&lt;/<span class="name">li</span>&gt;</span>&#x27;</span></span></span><br><span class="line">    &#125;);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="javascript">    <span class="keyword">var</span> vm = <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="javascript">        el: <span class="string">&quot;#app&quot;</span> ,</span></span><br><span class="line">        data:&#123;</span><br><span class="line"><span class="javascript">            title: <span class="string">&quot;学习篇&quot;</span>,</span></span><br><span class="line"><span class="javascript">            todoItems:[<span class="string">&quot;Java&quot;</span>,<span class="string">&quot;Linux&quot;</span>,<span class="string">&quot;前端&quot;</span>]</span></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;);</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-
-
-<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/045.png" alt="image-20200903110407351"></p>
-<hr>
-<h2 id="8-自定义事件分发"><a href="#8-自定义事件分发" class="headerlink" title="8.自定义事件分发"></a>8.自定义事件分发</h2><ul>
-<li>实现在slot基础上的自定义删除事件；</li>
-<li>具体问题及解决方式：<ul>
-<li>component组件中定义事件函数，但是并不能直接修改vue实例内容<ul>
-<li>间接，在vue实例中定义函数事件用于删除data数据内容；</li>
-<li>将该事件<code>removeItem</code> 通过 <code>v-on</code> 绑定到自定义事件 <code>remove</code> 上；</li>
-<li>再在component组件中通过<code>this.$emit(&#39;remove&#39;,index)</code>自定义事件分发传参并调用自定义事件<code>remove</code>；</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;app&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">todo</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!--v-bind: 简略形式为 :        --&gt;</span></span><br><span class="line">        <span class="comment">&lt;!--v-on: 简略形式为 @        --&gt;</span></span><br><span class="line"></span><br><span class="line">        <span class="tag">&lt;<span class="name">todo-title</span> <span class="attr">slot</span>=<span class="string">&quot;todo-title&quot;</span> <span class="attr">:title</span>=<span class="string">&quot;title&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">todo-title</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">todo-items</span> <span class="attr">slot</span>=<span class="string">&quot;todo-item&quot;</span> <span class="attr">v-for</span>=<span class="string">&quot;(item,index) in todoItems&quot;</span></span></span><br><span class="line"><span class="tag">                    <span class="attr">:item</span>=<span class="string">&quot;item&quot;</span> <span class="attr">:index</span>=<span class="string">&quot;index&quot;</span> @<span class="attr">remove</span>=<span class="string">&quot;removeItem(index)&quot;</span> &gt;</span><span class="tag">&lt;/<span class="name">todo-items</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">todo</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!--引入js文件--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;../lib/vue.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">    Vue.component(<span class="string">&quot;todo&quot;</span>,&#123;</span></span><br><span class="line"><span class="javascript">        <span class="comment">//使用一个 \ 就可以直接换行</span></span></span><br><span class="line"><span class="handlebars"><span class="xml">        template: &#x27;<span class="tag">&lt;<span class="name">div</span>&gt;</span>\</span></span></span><br><span class="line"><span class="handlebars"><span class="xml">                    <span class="tag">&lt;<span class="name">slot</span> <span class="attr">name</span>=<span class="string">&quot;todo-title&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">slot</span>&gt;</span>\</span></span></span><br><span class="line"><span class="handlebars"><span class="xml">                    <span class="tag">&lt;<span class="name">ul</span>&gt;</span>\</span></span></span><br><span class="line"><span class="handlebars"><span class="xml">                        <span class="tag">&lt;<span class="name">slot</span> <span class="attr">name</span>=<span class="string">&quot;todo-item&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">slot</span>&gt;</span>\</span></span></span><br><span class="line"><span class="handlebars"><span class="xml">                    <span class="tag">&lt;/<span class="name">ul</span>&gt;</span>\</span></span></span><br><span class="line"><span class="handlebars"><span class="xml">                   <span class="tag">&lt;/<span class="name">div</span>&gt;</span>&#x27;</span></span></span><br><span class="line"><span class="javascript">        <span class="comment">//slot插槽通过name属性确定每一个slot插槽独一无二，在&lt;div&gt;中可通过此属性连接其它组件</span></span></span><br><span class="line">    &#125;);</span><br><span class="line"></span><br><span class="line"><span class="javascript">    Vue.component(<span class="string">&quot;todo-title&quot;</span>,&#123;</span></span><br><span class="line"><span class="javascript">        props:[<span class="string">&quot;title&quot;</span>],</span></span><br><span class="line"><span class="handlebars"><span class="xml">        template: &#x27;<span class="tag">&lt;<span class="name">div</span>&gt;</span></span><span class="template-variable">&#123;&#123;<span class="name">title</span>&#125;&#125;</span><span class="xml"><span class="tag">&lt;/<span class="name">div</span>&gt;</span>&#x27;</span></span></span><br><span class="line">    &#125;);</span><br><span class="line"><span class="javascript">    Vue.component(<span class="string">&quot;todo-items&quot;</span>,&#123;</span></span><br><span class="line"><span class="javascript">        props:[<span class="string">&quot;item&quot;</span>,<span class="string">&quot;index&quot;</span>],<span class="comment">//传入两个参数</span></span></span><br><span class="line"><span class="handlebars"><span class="xml">        template: &#x27;<span class="tag">&lt;<span class="name">li</span>&gt;</span>--</span><span class="template-variable">&#123;&#123;<span class="name">index</span>&#125;&#125;</span><span class="xml">--</span><span class="template-variable">&#123;&#123;<span class="name">item</span>&#125;&#125;</span><span class="xml"> <span class="tag">&lt;<span class="name">button</span> @<span class="attr">click</span>=<span class="string">&quot;remove(index)&quot;</span>&gt;</span>删除<span class="tag">&lt;/<span class="name">button</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span>&#x27;,</span></span></span><br><span class="line">        methods:&#123;</span><br><span class="line"><span class="javascript">            remove: <span class="function"><span class="keyword">function</span> (<span class="params">index</span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">                <span class="built_in">this</span>.$emit(<span class="string">&#x27;remove&#x27;</span>,index);<span class="comment">//自定义事件固定调用格式</span></span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line"></span><br><span class="line"><span class="javascript">    <span class="keyword">var</span> vm = <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="javascript">        el: <span class="string">&quot;#app&quot;</span> ,</span></span><br><span class="line">        data:&#123;</span><br><span class="line"><span class="javascript">            title: <span class="string">&quot;学习篇&quot;</span>,</span></span><br><span class="line"><span class="javascript">            todoItems:[<span class="string">&quot;Java&quot;</span>,<span class="string">&quot;Linux&quot;</span>,<span class="string">&quot;前端&quot;</span>]</span></span><br><span class="line">        &#125;,</span><br><span class="line">        methods:&#123;</span><br><span class="line"><span class="javascript">            removeItem:<span class="function"><span class="keyword">function</span> (<span class="params">index</span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">                <span class="built_in">this</span>.todoItems.splice(index,<span class="number">1</span>);<span class="comment">//从index索引删除一个数组元素</span></span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;);</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>点击删除按钮能够动态删除data数据并且刷新页面显示：</li>
-</ul>
-<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/046.png" alt="image-20200903121218463"></p>
-<blockquote>
-<p>关系示意图：最终都是通过前端的view视图来连接</p>
-</blockquote>
-<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/047.png" alt="QQ图片20200903120909"></p>
-]]></content>
-      <categories>
-        <category>学习</category>
-      </categories>
-      <tags>
-        <tag>vue</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>vue（3.开发实例演示(含webpack)）</title>
     <url>/2020/09/06/vue/3.vue%E5%BC%80%E5%8F%91%E5%AE%9E%E4%BE%8B%E6%BC%94%E7%A4%BA/</url>
     <content><![CDATA[<h2 id="1-解剖初始化模板"><a href="#1-解剖初始化模板" class="headerlink" title="1.解剖初始化模板"></a>1.解剖初始化模板</h2><h3 id="1-1-vue文件"><a href="#1-1-vue文件" class="headerlink" title="1.1 vue文件"></a>1.1 vue文件</h3><ul>
@@ -1682,6 +1423,267 @@
       <tags>
         <tag>vue</tag>
         <tag>webpack</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Vue（1.基础入门）</title>
+    <url>/2020/09/06/vue/1.Vue%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/</url>
+    <content><![CDATA[<h2 id="1-简介"><a href="#1-简介" class="headerlink" title="1.简介"></a>1.简介</h2><h3 id="1-1-概念介绍"><a href="#1-1-概念介绍" class="headerlink" title="1.1 概念介绍"></a>1.1 概念介绍</h3><ul>
+<li>Vue 是一款渐进式JavaScript框架，所谓渐进式就是逐步实现新特性的意思，如实现模块化开发、路由、状态管理等新特性。其特点是综合了Angular（模块化）和React(虚拟DOM）的优点，与其它大型框架不同的是，Vue被设计为可以自底向上逐层应用。Vue的核心库只关注视图层，不仅易于上手，还便于与第三方库(如: vue-router，vue-resource，vuex）或既有项目整合。</li>
+</ul>
+<a id="more"></a>
+
+<h3 id="1-2-MVVM"><a href="#1-2-MVVM" class="headerlink" title="1.2 MVVM"></a>1.2 MVVM</h3><ul>
+<li>Model:模型层，在这里表示JavaScript对象；</li>
+<li>View:视图层，在这里表示DOM(HTML 操作的元素)；</li>
+<li>ViewModel:连接视图和数据的中间件，Vue.js 就是MVVM中的ViewModel层的实现者</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/030.png" alt="image-20200830141507977"></p>
+<ul>
+<li>View层展现的不是Model层的数据，而是ViewModel的数据，由ViewNodel负责与 Model层交互，这就完全解耦了View层和Model层，这个解耦是至关重要的，它是前后端分离方案实施的重要一环。</li>
+</ul>
+<h3 id="1-3-搭配环境"><a href="#1-3-搭配环境" class="headerlink" title="1.3 搭配环境"></a>1.3 搭配环境</h3><ul>
+<li><p>下载vue.js文件：</p>
+<ul>
+<li><a href="https://vuejs.org/js/vue.js">https://vuejs.org/js/vue.js</a></li>
+<li><a href="https://vuejs.org/js/vue.min.js">https://vuejs.org/js/vue.min.js</a></li>
+<li>上面一个是全包，下面一个是简化包，代码中引用一个就OK</li>
+</ul>
+</li>
+<li><p>如果不下载到本地，可以使用<code>cdn</code>外部引入：</p>
+<ul>
+<li><pre><code class="html">&lt;script src=&quot;https://cdn.jsdelivr.net/npm/vue@2.5.21/dist/vue.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;https://cdn.jsdelivr.net/npm/vue@2.5.21/dist/vue.min.js&quot;&gt;&lt;/script&gt;
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="bullet">-</span> 再在IDEA中 <span class="code">`settings-&gt;plugins`</span>中搜索安装vue.js：</span><br><span class="line">  ![<span class="string">image-20200830144613941</span>](<span class="link">https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/031.png</span>)</span><br><span class="line"></span><br><span class="line"><span class="bullet">-</span> 安装之后重启再设置下一步：</span><br><span class="line"></span><br><span class="line">![<span class="string">å¨è¿éæå¥å¾çæè¿°</span>](<span class="link">https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/032.png</span>)</span><br><span class="line"></span><br><span class="line">附模板：</span><br><span class="line"></span><br><span class="line"><span class="code">```vue</span></span><br><span class="line"><span class="code">&lt;template&gt;</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">&lt;/template&gt;</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">&lt;script&gt;</span></span><br><span class="line"><span class="code">    export default &#123;</span></span><br><span class="line"><span class="code">        name:&quot;$&#123;NAME&#125;&quot;</span></span><br><span class="line"><span class="code">    &#125;</span></span><br><span class="line"><span class="code">&lt;/script&gt;</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">&lt;style scoped&gt;</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">&lt;/style&gt;</span></span><br></pre></td></tr></table></figure>
+</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>注：上图与模板代码取自博客：<a href="https://blog.csdn.net/jdq8576/article/details/104055707/">https://blog.csdn.net/jdq8576/article/details/104055707/</a></p>
+</blockquote>
+<ul>
+<li>然后就可以在IDEA文件中new一个Vue Component文件啦！</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/033.png" alt="image-20200830145017226"></p>
+<hr>
+<h2 id="2-基础语法"><a href="#2-基础语法" class="headerlink" title="2.基础语法"></a>2.基础语法</h2><h3 id="2-1-初步使用"><a href="#2-1-初步使用" class="headerlink" title="2.1 初步使用"></a>2.1 初步使用</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!--view层，模板--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;app&quot;</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--展示格式--&gt;</span></span><br><span class="line">    &#123;&#123;message&#125;&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!--导入vue.js包--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;../lib/vue.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">    <span class="keyword">let</span> vm = <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="javascript">        el: <span class="string">&quot;#app&quot;</span>,		<span class="comment">//el属性用于绑定id号，且双向绑定，vm绑定id的同时，id也绑定了vm，使id视图层能随时取到vm的值</span></span></span><br><span class="line"><span class="javascript">        data: &#123;			<span class="comment">//data属性为数据存储区</span></span></span><br><span class="line"><span class="javascript">            message:<span class="string">&quot;hello,vue!&quot;</span></span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line"></span><br><span class="line"><span class="javascript"><span class="comment">//页面内容能够随message数值改变而随时改变，不需要刷新页面</span></span></span><br><span class="line"><span class="javascript">vm.message = <span class="string">&#x27;hello zhaoxiaoan&#x27;</span></span></span><br><span class="line"><span class="javascript">&gt;<span class="string">&quot;hello zhaoxiaoan&quot;</span>  </span></span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>Vue常用的七个属性：<ul>
+<li><code>el</code> ：占位符，用来绑定标签、id和class，指示编译器解析；</li>
+<li><code>data</code> ：存放数据区域；</li>
+<li><code>methods</code> ：存放方法逻辑区域；</li>
+<li><code>render</code> ：创建Virtual Dom</li>
+<li><code>computed</code> ：用于计算</li>
+<li><code>watch</code> ：<ul>
+<li>watch:function(new,old){}；</li>
+<li>监听data中数据的变化；</li>
+</ul>
+</li>
+<li><code>template</code> ：用来设置模板，替换页面元素，包括占位符；</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-2-v-bind指令"><a href="#2-2-v-bind指令" class="headerlink" title="2.2 v-bind指令"></a>2.2 v-bind指令</h3><ul>
+<li>该指令的含义是绑定信息，如 <code>v-bind:title=&quot;massage&quot;</code> 就是绑定了标题信息，将鼠标移动到<code>&lt;span&gt;</code>标签语句悬停可显示其绑定信息；</li>
+<li><code>v-bind:</code>可以简写为 <code>:</code> ;</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!--使用v-bind指令可以自动引入v-bind使用链接--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span> <span class="attr">xmlns:v-bind</span>=<span class="string">&quot;http://www.w3.org/1999/xhtml&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!--view层，模板--&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- v- 都是vue指令 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;app&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">span</span> <span class="attr">v-bind:title</span>=<span class="string">&quot;massage&quot;</span>&gt;</span></span><br><span class="line">        鼠标悬停几秒查看此处绑定的信息</span><br><span class="line">    <span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!--导入vue.js包--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;../lib/vue.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">    <span class="keyword">let</span> vm = <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="javascript">        el: <span class="string">&quot;#app&quot;</span>,</span></span><br><span class="line">        data: &#123;</span><br><span class="line"><span class="javascript">            massage:<span class="string">&quot;hello,vue&quot;</span></span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="2-3-if判断语句"><a href="#2-3-if判断语句" class="headerlink" title="2.3 if判断语句"></a>2.3 if判断语句</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!--view层，模板--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;app&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">h1</span> <span class="attr">v-if</span>=<span class="string">&quot;type===&#x27;A&#x27;&quot;</span>&gt;</span>A<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">h1</span> <span class="attr">v-else-if</span>=<span class="string">&quot;type===&#x27;B&#x27;&quot;</span>&gt;</span>B<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">h1</span> <span class="attr">v-else</span>&gt;</span>C<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!--导入vue.js包--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;../lib/vue.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">    <span class="keyword">let</span> vm = <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="javascript">        el: <span class="string">&quot;#app&quot;</span>,</span></span><br><span class="line">        data: &#123;</span><br><span class="line"><span class="javascript">            type:<span class="string">&quot;A&quot;</span></span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="2-4-循环列表（重要）"><a href="#2-4-循环列表（重要）" class="headerlink" title="2. 4 循环列表（重要）"></a>2. 4 <code>循环列表（重要）</code></h3><ul>
+<li>列表配合for循环就可以简单实现从数据库中导出数据并且循环输出成列表展示；</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!--view层，模板--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;app&quot;</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--v-for=&quot;(item,index) in items&quot; 格式类似于forEach,定义item取items数组中每个元素,index取索引下标，不用可不取--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span> <span class="attr">v-for</span>=<span class="string">&quot;item in items&quot;</span>&gt;</span>  </span><br><span class="line">        <span class="comment">&lt;!--item.message用于展示--&gt;</span></span><br><span class="line">        &#123;&#123;item.message&#125;&#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!--导入vue.js包--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;../lib/vue.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">    <span class="keyword">let</span> vm = <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="javascript">        el: <span class="string">&quot;#app&quot;</span>,</span></span><br><span class="line">        data: &#123;</span><br><span class="line"><span class="javascript">            <span class="comment">//数组元素用来给列表li循环遍历</span></span></span><br><span class="line">            items: [</span><br><span class="line"><span class="javascript">                &#123;<span class="attr">message</span>:<span class="string">&quot;hello,vue&quot;</span>&#125;,</span></span><br><span class="line"><span class="javascript">                &#123;<span class="attr">message</span>:<span class="string">&quot;hello zhaoxiaoan&quot;</span>&#125;</span></span><br><span class="line">            ]</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/034.png" alt="image-20200830153345031"></p>
+<h3 id="2-5-v-on-绑定事件"><a href="#2-5-v-on-绑定事件" class="headerlink" title="2.5 v-on 绑定事件"></a>2.5 v-on 绑定事件</h3><ul>
+<li><code>v-on:</code> 用来绑定事件，如事件<code>click</code> ，其余事件可以查找jQuery事件文档（可以自己创建新事件）；</li>
+<li><code>v-on:</code>可以简写为 <code>@</code> ；</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span> <span class="attr">xmlns:v-on</span>=<span class="string">&quot;http://www.w3.org/1999/xhtml&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!--view层，模板--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;app&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">button</span> <span class="attr">v-on:click</span> = <span class="string">&quot;sayHi&quot;</span>&gt;</span>Click Me<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!--导入vue.js包--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;../lib/vue.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">    <span class="keyword">let</span> vm = <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="javascript">        el: <span class="string">&quot;#app&quot;</span>,</span></span><br><span class="line">        data: &#123;</span><br><span class="line"><span class="javascript">            message: <span class="string">&quot;hello,vue!&quot;</span></span></span><br><span class="line">        &#125;,</span><br><span class="line"><span class="javascript">        <span class="comment">//方法只能存放在methods中</span></span></span><br><span class="line">        methods: &#123;</span><br><span class="line"><span class="javascript">            sayHi:<span class="function"><span class="keyword">function</span> (<span class="params">envent</span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">                alert(<span class="built_in">this</span>.message);</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/035.png" alt="image-20200830155311872"></p>
+<hr>
+<h2 id="3-双向绑定（重点）"><a href="#3-双向绑定（重点）" class="headerlink" title="3.双向绑定（重点）"></a>3.<code>双向绑定（重点）</code></h2><ul>
+<li>使用<code>v-model</code>指令；</li>
+<li><code>v-model</code>指令会忽略所有表单元素的checked、selected等值，因此在下拉框中初始默认选择为空，必须设置一个disabled不可选中项并且设置其值为空来作为默认选择域；</li>
+</ul>
+<h3 id="3-1-文本"><a href="#3-1-文本" class="headerlink" title="3.1 文本"></a>3.1 文本</h3><ul>
+<li>本质是<code>&#123;&#123;message&#125;&#125;</code>用来绑定<code>data&#123;message&#125;</code>显示内容，而<code>message</code>又通过<code>v-model=&quot;message&quot;</code>绑定了<code>&lt;input&gt;</code>文本域，所以当<code>&lt;input&gt;</code>输入框值域变化时修改了<code>data&#123;message&#125;</code>数据，接着<code>message</code>就跟着变化；</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!--view层，模板--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;app&quot;</span>&gt;</span></span><br><span class="line">    输入的文本：<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">v-model</span>=<span class="string">&quot;message&quot;</span>&gt;</span></span><br><span class="line">    &#123;&#123;message&#125;&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!--导入vue.js包--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;../lib/vue.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">    <span class="keyword">let</span> vm = <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="javascript">        el: <span class="string">&quot;#app&quot;</span>,</span></span><br><span class="line">        data: &#123;</span><br><span class="line"><span class="javascript">            message: <span class="string">&quot;hello,vue!&quot;</span></span></span><br><span class="line">        &#125;,</span><br><span class="line">    &#125;);</span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/036.png" alt="image-20200830164055648"></p>
+<h3 id="3-2-textarea文本域"><a href="#3-2-textarea文本域" class="headerlink" title="3.2 textarea文本域"></a>3.2 textarea文本域</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!--view层，模板--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;app&quot;</span>&gt;</span></span><br><span class="line">    输入的文本：</span><br><span class="line">    <span class="tag">&lt;<span class="name">textarea</span>  <span class="attr">v-model</span>=<span class="string">&quot;message&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">textarea</span>&gt;</span>&gt;</span><br><span class="line">    &#123;&#123;message&#125;&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!--导入vue.js包--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;../lib/vue.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">    <span class="keyword">let</span> vm = <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="javascript">        el: <span class="string">&quot;#app&quot;</span>,</span></span><br><span class="line">        data: &#123;</span><br><span class="line"><span class="javascript">            message: <span class="string">&quot;hello,vue!&quot;</span></span></span><br><span class="line">        &#125;,</span><br><span class="line">    &#125;);</span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/037.png" alt="image-20200830164801393"></p>
+<h3 id="3-3-radio单选框"><a href="#3-3-radio单选框" class="headerlink" title="3.3 radio单选框"></a>3.3 radio单选框</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!--view层，模板--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;app&quot;</span>&gt;</span></span><br><span class="line">    性别：</span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;radio&quot;</span> <span class="attr">name</span>=<span class="string">&quot;sex&quot;</span> <span class="attr">value</span>=<span class="string">&quot;男&quot;</span> <span class="attr">v-model</span>=<span class="string">&quot;message&quot;</span>&gt;</span>男</span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;radio&quot;</span> <span class="attr">name</span>=<span class="string">&quot;sex&quot;</span> <span class="attr">value</span>=<span class="string">&quot;女&quot;</span> <span class="attr">v-model</span>=<span class="string">&quot;message&quot;</span>&gt;</span>女</span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    &#123;&#123;message&#125;&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!--导入vue.js包--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;../lib/vue.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">    <span class="keyword">let</span> vm = <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="javascript">        el: <span class="string">&quot;#app&quot;</span>,</span></span><br><span class="line">        data: &#123;</span><br><span class="line"><span class="javascript">            message: <span class="string">&quot;&quot;</span></span></span><br><span class="line">        &#125;,</span><br><span class="line">    &#125;);</span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/038.png" alt="image-20200830165053896"></p>
+<h3 id="3-4-select下拉框"><a href="#3-4-select下拉框" class="headerlink" title="3.4 select下拉框"></a>3.4 select下拉框</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!--view层，模板--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;app&quot;</span>&gt;</span></span><br><span class="line">    下拉框：</span><br><span class="line">    <span class="tag">&lt;<span class="name">select</span> <span class="attr">v-model</span>=<span class="string">&quot;message&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">&quot;&quot;</span> <span class="attr">disabled</span> &gt;</span>--请选择--<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">option</span>&gt;</span>A<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">option</span>&gt;</span>B<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">option</span>&gt;</span>C<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>选择了：&#123;&#123;message&#125;&#125;<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!--导入vue.js包--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;../lib/vue.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">    <span class="keyword">let</span> vm = <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="javascript">        el: <span class="string">&quot;#app&quot;</span>,</span></span><br><span class="line">        data: &#123;</span><br><span class="line"><span class="javascript">            message: <span class="string">&quot;&quot;</span></span></span><br><span class="line">        &#125;,</span><br><span class="line">    &#125;);</span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/039.png" alt="image-20200830165542144"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/040.png" alt="image-20200830165627407"></p>
+<hr>
+<h2 id="4-组件"><a href="#4-组件" class="headerlink" title="4.组件"></a>4.组件</h2><ul>
+<li>组件最大的作用就是其良好的复用性，但是复用性的本质只能复用框架外围，内在的本质数据必须从另一方获取，接下来讲述的就是获取数据的过程；</li>
+</ul>
+<h3 id="4-1-新建component组件"><a href="#4-1-新建component组件" class="headerlink" title="4.1 新建component组件"></a>4.1 新建component组件</h3><ul>
+<li>给新组件命名为<code>zhaoxiaoan</code>；</li>
+<li><code>template</code>为替换的模板内容；</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">Vue.component(<span class="string">&quot;zhaoxiaoan&quot;</span>,&#123;</span><br><span class="line">    template: <span class="string">&#x27;&lt;li&gt;Hello&lt;/li&gt;&#x27;</span></span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">//做好准备工作，绑定好id，存好数据</span></span><br><span class="line"><span class="keyword">let</span> vm = <span class="keyword">new</span> Vue(&#123;</span><br><span class="line">    el: <span class="string">&quot;#app&quot;</span>,</span><br><span class="line">    data: &#123;</span><br><span class="line">        items: [<span class="string">&quot;Java&quot;</span>,<span class="string">&quot;Linux&quot;</span>,<span class="string">&quot;前端&quot;</span>]</span><br><span class="line">    &#125;,</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="4-2-使用新组件"><a href="#4-2-使用新组件" class="headerlink" title="4.2 使用新组件"></a>4.2 使用新组件</h3><ul>
+<li>从绑好的Data中遍历取出数据；</li>
+<li>并且使用<code>v-bind:itemX</code>绑定新变量<code>itemX</code>，并且将v-for遍历得到的数据赋值给新变量</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;app&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">zhaoxiaoan</span> <span class="attr">v-for</span>=<span class="string">&quot;item in items&quot;</span> <span class="attr">v-bind:itemX</span>=<span class="string">&quot;item&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">zhaoxiaoan</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="4-3-将数据传入新组件"><a href="#4-3-将数据传入新组件" class="headerlink" title="4.3 将数据传入新组件"></a>4.3 将数据传入新组件</h3><ul>
+<li>使用属性<code>props</code>接收新参数<code>itemX</code>此参数就是<code>v-bind</code>新定义并且绑定的那个变量，最终这个新变量传递给<code>template</code>模板中的<code>itemX</code>；</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">Vue.component(<span class="string">&quot;zhaoxiaoan&quot;</span>,&#123;</span><br><span class="line">    props:[<span class="string">&#x27;itemX&#x27;</span>],</span><br><span class="line">    template: <span class="string">&#x27;&lt;li&gt;&#123;&#123;itemX&#125;&#125;&lt;/li&gt;&#x27;</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+
+
+<blockquote>
+<p>最终代码与运行结果如下：</p>
+</blockquote>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!--view层，模板--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;app&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">zhaoxiaoan</span> <span class="attr">v-for</span>=<span class="string">&quot;item in items&quot;</span> <span class="attr">v-bind:item</span>=<span class="string">&quot;item&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">zhaoxiaoan</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!--导入vue.js包--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;../lib/vue.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">    Vue.component(<span class="string">&quot;zhaoxiaoan&quot;</span>,&#123;</span></span><br><span class="line"><span class="javascript">        props:[<span class="string">&#x27;item&#x27;</span>],</span></span><br><span class="line"><span class="handlebars"><span class="xml">        template: &#x27;<span class="tag">&lt;<span class="name">li</span>&gt;</span></span><span class="template-variable">&#123;&#123;<span class="name">item</span>&#125;&#125;</span><span class="xml"><span class="tag">&lt;/<span class="name">li</span>&gt;</span>&#x27;</span></span></span><br><span class="line">    &#125;)</span><br><span class="line"></span><br><span class="line"><span class="javascript">    <span class="keyword">let</span> vm = <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="javascript">        el: <span class="string">&quot;#app&quot;</span>,</span></span><br><span class="line">        data: &#123;</span><br><span class="line"><span class="javascript">            items: [<span class="string">&quot;Java&quot;</span>,<span class="string">&quot;Linux&quot;</span>,<span class="string">&quot;前端&quot;</span>]</span></span><br><span class="line">        &#125;,</span><br><span class="line">    &#125;);</span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/041.png" alt="image-20200830171934341"></p>
+<hr>
+<h2 id="5-Axios异步网络通信（重点）"><a href="#5-Axios异步网络通信（重点）" class="headerlink" title="5.Axios异步网络通信（重点）"></a>5.<code>Axios异步网络通信（重点）</code></h2><h3 id="5-1-Axios简介"><a href="#5-1-Axios简介" class="headerlink" title="5.1 Axios简介"></a>5.1 Axios简介</h3><ul>
+<li><p>Axios是一个开源的可以用在浏览器端和 Node3S 的异步通信框架，它的主要作用就是实现 AJAX异步通信，其功能特点如下:</p>
+<ul>
+<li>从浏览器中创建 <code>XMLHttpRequests</code></li>
+<li>从 node.js 创建http请求</li>
+<li>支持 Promise API [JS中链式编程]</li>
+<li>拦截请求和响应</li>
+<li>转换请求数据和响应数据</li>
+<li>取消请求</li>
+<li>自动转换 JSON 数据</li>
+<li>客户端支持防御 XSRF（跨站请求伪造)</li>
+</ul>
+</li>
+<li><p>由于Vue.js是一个视图层框架并且作者（尤雨溪）严格准守SoC(关注度分离原则），所以Vue.js并不包含AJAX的通信功能，为了解决通信问题，作者单独开发了一个名为vue-resource的插件，不过在进入2.0版本以后停止了对该插件的维护并推荐了Axios框架。少用jQuery，因为它操作Dom太频繁</p>
+</li>
+</ul>
+<h3 id="5-2-Vue实例生命周期图示介绍"><a href="#5-2-Vue实例生命周期图示介绍" class="headerlink" title="5.2 Vue实例生命周期图示介绍"></a>5.2 Vue实例生命周期图示介绍</h3><ul>
+<li>这是一个Vue实例生命周期，在生命周期过程中会执行相应的“钩子函数”，这些“钩子函数”是可以被外部调用进而影响到整个实例的；</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/042_lifecycle.png" alt="lifecycle"></p>
+<h3 id="5-3-引入Axios"><a href="#5-3-引入Axios" class="headerlink" title="5.3 引入Axios"></a>5.3 引入Axios</h3><ul>
+<li>外部cdn引入：</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;https://unpkg.com/axios/dist/axios.min.js &quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>官方文档安装Axios：</li>
+</ul>
+<p><a href="http://www.axios-js.com/zh-cn/docs/vue-axios.html">http://www.axios-js.com/zh-cn/docs/vue-axios.html</a></p>
+<h3 id="5-4-模拟网络通信"><a href="#5-4-模拟网络通信" class="headerlink" title="5.4 模拟网络通信"></a>5.4 模拟网络通信</h3><ul>
+<li>开发的接口大部分使用JSON格式，先在项目里模拟一段<code>JSON</code>数据：<ul>
+<li>创建一个新文件命名为<code>data.json</code> ，数据如下：</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight json"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">&quot;name&quot;</span>:<span class="string">&quot;狂神说Java&quot;</span> ,</span><br><span class="line">  <span class="attr">&quot;url&quot;</span>:<span class="string">&quot;https://blog.kuangstudy.com&quot;</span>,</span><br><span class="line">  <span class="attr">&quot;page&quot;</span>: <span class="number">1</span>,</span><br><span class="line">  <span class="attr">&quot;isNonProfit&quot;</span>: <span class="literal">true</span>,</span><br><span class="line">  <span class="attr">&quot;address&quot;</span>: &#123;</span><br><span class="line">    <span class="attr">&quot;street&quot;</span>:<span class="string">&quot;含光门&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;city&quot;</span>:<span class="string">&quot;陕西西安&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;country&quot;</span> :<span class="string">&quot;中国&quot;</span></span><br><span class="line">&#125;,</span><br><span class="line">  <span class="attr">&quot;links&quot;</span> :[</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="attr">&quot;name&quot;</span>: <span class="string">&quot;bilibili&quot;</span>,</span><br><span class="line">      <span class="attr">&quot;url&quot;</span>: <span class="string">&quot;https://space.bilibili.com/95256449&quot;</span></span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="attr">&quot;name&quot;</span>: <span class="string">&quot;狂伸说java&quot;</span>,</span><br><span class="line">      <span class="attr">&quot;url&quot;</span>: <span class="string">&quot;https://blog.kuangstudy.com&quot;</span></span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="attr">&quot;name&quot;</span>:<span class="string">&quot;百度&quot;</span>,</span><br><span class="line">      <span class="attr">&quot;url&quot;</span>: <span class="string">&quot;https://www.baidu.com/&quot;</span></span><br><span class="line">    &#125;</span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<ul>
+<li><p>html文件代码如下：</p>
+<ol>
+<li><p>先写mounted()函数，在这个钩子函数中调用<code>axios.get()</code>获取json文件数据；</p>
+</li>
+<li><pre><code class="javascript">response=&gt;(this.info=response.data)
+//这条语句是ES6新特性，=&gt;后面相当于函数内容，即请求响应后执行函数语句将请求响应的数据赋值给info
+<figure class="highlight haskell"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="number">3.</span> ```javascript</span><br><span class="line">   //<span class="class"><span class="keyword">data</span>()函数return是将其中定义的键值对属性值在mounted调用之后返回给<span class="keyword">data</span>，实现<span class="keyword">data</span>属性的动态传递</span></span><br></pre></td></tr></table></figure></code></pre>
+</li>
+<li><p>再通过双向绑定在html中引用data属性的数值；</p>
+</li>
+<li><p>对于链接标签中链接的动态生成，则使用<code>v-bind</code>指令将href属性的值绑定为info.url，不能直接将<code>info.url</code>传递给<code>href</code>，否则只能识别为一串字符串；</p>
+</li>
+</ol>
+</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span> <span class="attr">xmlns:v-bind</span>=<span class="string">&quot;http://www.w3.org/1999/xhtml&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Title<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;vue&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span>&gt;</span>&#123;&#123;info.name&#125;&#125;<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span>&gt;</span>&#123;&#123;info.address.street&#125;&#125;<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">a</span> <span class="attr">v-bind:href</span>=<span class="string">&quot;info.url&quot;</span>&gt;</span>click<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!--引入js文件--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;../lib/vue.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;https://unpkg.com/axios/dist/axios.min.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">    <span class="keyword">var</span> vm = <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="javascript">    el: <span class="string">&quot;#vue&quot;</span> ,</span></span><br><span class="line">    data()&#123;</span><br><span class="line"><span class="javascript">        <span class="keyword">return</span>&#123;</span></span><br><span class="line"><span class="javascript">            info: &#123;		<span class="comment">//json文件中的属性只有在此处同名定义之后，接收数据后才能被调用</span></span></span><br><span class="line"><span class="javascript">                name: <span class="literal">null</span>,</span></span><br><span class="line">                address: &#123;</span><br><span class="line"><span class="javascript">                    street: <span class="literal">null</span>,</span></span><br><span class="line"><span class="javascript">                    city: <span class="literal">null</span>,</span></span><br><span class="line"><span class="javascript">                    country: <span class="literal">null</span></span></span><br><span class="line">                &#125;,</span><br><span class="line"><span class="javascript">                url:<span class="literal">null</span></span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;,</span><br><span class="line"><span class="javascript">    mounted()&#123;        <span class="comment">//钩子函数，链式编程</span></span></span><br><span class="line"><span class="javascript">        axios.get(<span class="string">&quot;../data.json&quot;</span>).then(<span class="function"><span class="params">response</span>=&gt;</span>(<span class="built_in">this</span>.info=response.data));</span></span><br><span class="line">    &#125;</span><br><span class="line">    &#125;);</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/043.png" alt="image-20200902223854253"></p>
+<ul>
+<li>json文件在编码时没有使用UTF-8编译，所以上述请求执行后会得到乱码内容，解决方法是将json文件用notepad++打开之后在视窗栏 编码-&gt;使用UTF-8编码和转为UTF-8编码；</li>
+</ul>
+<hr>
+<h2 id="6-计算属性"><a href="#6-计算属性" class="headerlink" title="6.计算属性"></a>6.计算属性</h2><ul>
+<li><p>存在于computed属性中；</p>
+</li>
+<li><p>methods与computed属性中的函数名不能重名，否则优先调用methods中的函数而不会调用computed中的属性（定义为函数，调用为属性）；</p>
+</li>
+<li><p>调用方法时，每次都需要进行计算，既然有计算过程则必定产生系统开销，那如果这个结果是不经常变化的呢？此时就可以考虑将这个结果缓存起来，采用计算属性可以很方便的做到这一点，计算属性的主要特性就是为了将不经常变化的计算结果进行缓存，以节约我们的系统开销；</p>
+</li>
+<li><p>computed属性中的缓存只在数据发生增删改之后才会重新刷新变化，而methods内的函数随时变化；</p>
+</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;app&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>currentTime1 &#123;&#123;currentTime1()&#125;&#125;<span class="tag">&lt;/<span class="name">p</span>&gt;</span><span class="comment">&lt;!--注意，调用methods内的函数使用函数调用--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>currentTime2 &#123;&#123;currentTime2&#125;&#125;<span class="tag">&lt;/<span class="name">p</span>&gt;</span><span class="comment">&lt;!--注意，调用computed内的函数使用属性调用--&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!--引入js文件--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;../lib/vue.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">    <span class="keyword">var</span> vm = <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="javascript">        el: <span class="string">&quot;#app&quot;</span> ,</span></span><br><span class="line">        data: &#123;</span><br><span class="line"><span class="javascript">            message: <span class="string">&quot;hello,world&quot;</span></span></span><br><span class="line">        &#125;,</span><br><span class="line">        methods:&#123;</span><br><span class="line"><span class="javascript">            currentTime1:<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">                <span class="keyword">return</span> <span class="built_in">Date</span>.now();<span class="comment">//返回一个时间戳</span></span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;,</span><br><span class="line">        computed:&#123;</span><br><span class="line"><span class="javascript">            currentTime2:<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">                <span class="built_in">this</span>.message;</span></span><br><span class="line"><span class="javascript">                <span class="keyword">return</span> <span class="built_in">Date</span>.now();<span class="comment">//返回一个时间戳</span></span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;);</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/044.png" alt="image-20200903102347608"></p>
+<hr>
+<h2 id="7-插槽slot"><a href="#7-插槽slot" class="headerlink" title="7.插槽slot"></a>7.插槽slot</h2><ul>
+<li>插槽的本质就是嵌套组合复用；</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;app&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">todo</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!--v-bind: 简略形式为 :        --&gt;</span></span><br><span class="line"><span class="comment">&lt;!--v-on: 简略形式为 @        --&gt;</span></span><br><span class="line"></span><br><span class="line">        <span class="tag">&lt;<span class="name">todo-title</span> <span class="attr">slot</span>=<span class="string">&quot;todo-title&quot;</span> <span class="attr">:title</span>=<span class="string">&quot;title&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">todo-title</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">todo-items</span> <span class="attr">slot</span>=<span class="string">&quot;todo-item&quot;</span> <span class="attr">v-for</span>=<span class="string">&quot;item in todoItems&quot;</span> <span class="attr">:item</span>=<span class="string">&quot;item&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">todo-items</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">todo</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!--引入js文件--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;../lib/vue.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">    Vue.component(<span class="string">&quot;todo&quot;</span>,&#123;</span></span><br><span class="line"><span class="handlebars"><span class="xml">        /*template: &#x27;<span class="tag">&lt;<span class="name">div</span>&gt;</span>&#x27; +</span></span></span><br><span class="line"><span class="handlebars"><span class="xml">                    &#x27;<span class="tag">&lt;<span class="name">slot</span>&gt;</span><span class="tag">&lt;/<span class="name">slot</span>&gt;</span>&#x27; +</span></span></span><br><span class="line"><span class="javascript">                    <span class="string">&#x27;&lt;ul&gt;&#x27;</span> +</span></span><br><span class="line"><span class="handlebars"><span class="xml">                        &#x27;<span class="tag">&lt;<span class="name">slot</span>&gt;</span><span class="tag">&lt;/<span class="name">slot</span>&gt;</span>&#x27; +</span></span></span><br><span class="line"><span class="javascript">                    <span class="string">&#x27;&lt;/ul&gt;&#x27;</span> +</span></span><br><span class="line"><span class="javascript">                <span class="string">&#x27;&lt;/div&gt;&#x27;</span>*/</span></span><br><span class="line"><span class="javascript">        <span class="comment">//使用一个 \ 就可以直接换行</span></span></span><br><span class="line"><span class="handlebars"><span class="xml">        template: &#x27;<span class="tag">&lt;<span class="name">div</span>&gt;</span>\</span></span></span><br><span class="line"><span class="handlebars"><span class="xml">                    <span class="tag">&lt;<span class="name">slot</span> <span class="attr">name</span>=<span class="string">&quot;todo-title&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">slot</span>&gt;</span>\</span></span></span><br><span class="line"><span class="handlebars"><span class="xml">                    <span class="tag">&lt;<span class="name">ul</span>&gt;</span>\</span></span></span><br><span class="line"><span class="handlebars"><span class="xml">                        <span class="tag">&lt;<span class="name">slot</span> <span class="attr">name</span>=<span class="string">&quot;todo-item&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">slot</span>&gt;</span>\</span></span></span><br><span class="line"><span class="handlebars"><span class="xml">                    <span class="tag">&lt;/<span class="name">ul</span>&gt;</span>\</span></span></span><br><span class="line"><span class="handlebars"><span class="xml">                   <span class="tag">&lt;/<span class="name">div</span>&gt;</span>&#x27;</span></span></span><br><span class="line"><span class="javascript">        <span class="comment">//slot插槽通过name属性确定每一个slot插槽独一无二，在&lt;div&gt;中可通过此属性连接其它组件</span></span></span><br><span class="line">    &#125;);</span><br><span class="line"></span><br><span class="line"><span class="javascript">    Vue.component(<span class="string">&quot;todo-title&quot;</span>,&#123;</span></span><br><span class="line"><span class="javascript">        props:[<span class="string">&quot;title&quot;</span>],</span></span><br><span class="line"><span class="handlebars"><span class="xml">        template: &#x27;<span class="tag">&lt;<span class="name">div</span>&gt;</span></span><span class="template-variable">&#123;&#123;<span class="name">title</span>&#125;&#125;</span><span class="xml"><span class="tag">&lt;/<span class="name">div</span>&gt;</span>&#x27;</span></span></span><br><span class="line">    &#125;);</span><br><span class="line"><span class="javascript">    Vue.component(<span class="string">&quot;todo-items&quot;</span>,&#123;</span></span><br><span class="line"><span class="javascript">        props:[<span class="string">&quot;item&quot;</span>],</span></span><br><span class="line"><span class="handlebars"><span class="xml">        template: &#x27;<span class="tag">&lt;<span class="name">li</span>&gt;</span></span><span class="template-variable">&#123;&#123;<span class="name">item</span>&#125;&#125;</span><span class="xml"><span class="tag">&lt;/<span class="name">li</span>&gt;</span>&#x27;</span></span></span><br><span class="line">    &#125;);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="javascript">    <span class="keyword">var</span> vm = <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="javascript">        el: <span class="string">&quot;#app&quot;</span> ,</span></span><br><span class="line">        data:&#123;</span><br><span class="line"><span class="javascript">            title: <span class="string">&quot;学习篇&quot;</span>,</span></span><br><span class="line"><span class="javascript">            todoItems:[<span class="string">&quot;Java&quot;</span>,<span class="string">&quot;Linux&quot;</span>,<span class="string">&quot;前端&quot;</span>]</span></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;);</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/045.png" alt="image-20200903110407351"></p>
+<hr>
+<h2 id="8-自定义事件分发"><a href="#8-自定义事件分发" class="headerlink" title="8.自定义事件分发"></a>8.自定义事件分发</h2><ul>
+<li>实现在slot基础上的自定义删除事件；</li>
+<li>具体问题及解决方式：<ul>
+<li>component组件中定义事件函数，但是并不能直接修改vue实例内容<ul>
+<li>间接，在vue实例中定义函数事件用于删除data数据内容；</li>
+<li>将该事件<code>removeItem</code> 通过 <code>v-on</code> 绑定到自定义事件 <code>remove</code> 上；</li>
+<li>再在component组件中通过<code>this.$emit(&#39;remove&#39;,index)</code>自定义事件分发传参并调用自定义事件<code>remove</code>；</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;app&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">todo</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!--v-bind: 简略形式为 :        --&gt;</span></span><br><span class="line">        <span class="comment">&lt;!--v-on: 简略形式为 @        --&gt;</span></span><br><span class="line"></span><br><span class="line">        <span class="tag">&lt;<span class="name">todo-title</span> <span class="attr">slot</span>=<span class="string">&quot;todo-title&quot;</span> <span class="attr">:title</span>=<span class="string">&quot;title&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">todo-title</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">todo-items</span> <span class="attr">slot</span>=<span class="string">&quot;todo-item&quot;</span> <span class="attr">v-for</span>=<span class="string">&quot;(item,index) in todoItems&quot;</span></span></span><br><span class="line"><span class="tag">                    <span class="attr">:item</span>=<span class="string">&quot;item&quot;</span> <span class="attr">:index</span>=<span class="string">&quot;index&quot;</span> @<span class="attr">remove</span>=<span class="string">&quot;removeItem(index)&quot;</span> &gt;</span><span class="tag">&lt;/<span class="name">todo-items</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">todo</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!--引入js文件--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;../lib/vue.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">    Vue.component(<span class="string">&quot;todo&quot;</span>,&#123;</span></span><br><span class="line"><span class="javascript">        <span class="comment">//使用一个 \ 就可以直接换行</span></span></span><br><span class="line"><span class="handlebars"><span class="xml">        template: &#x27;<span class="tag">&lt;<span class="name">div</span>&gt;</span>\</span></span></span><br><span class="line"><span class="handlebars"><span class="xml">                    <span class="tag">&lt;<span class="name">slot</span> <span class="attr">name</span>=<span class="string">&quot;todo-title&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">slot</span>&gt;</span>\</span></span></span><br><span class="line"><span class="handlebars"><span class="xml">                    <span class="tag">&lt;<span class="name">ul</span>&gt;</span>\</span></span></span><br><span class="line"><span class="handlebars"><span class="xml">                        <span class="tag">&lt;<span class="name">slot</span> <span class="attr">name</span>=<span class="string">&quot;todo-item&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">slot</span>&gt;</span>\</span></span></span><br><span class="line"><span class="handlebars"><span class="xml">                    <span class="tag">&lt;/<span class="name">ul</span>&gt;</span>\</span></span></span><br><span class="line"><span class="handlebars"><span class="xml">                   <span class="tag">&lt;/<span class="name">div</span>&gt;</span>&#x27;</span></span></span><br><span class="line"><span class="javascript">        <span class="comment">//slot插槽通过name属性确定每一个slot插槽独一无二，在&lt;div&gt;中可通过此属性连接其它组件</span></span></span><br><span class="line">    &#125;);</span><br><span class="line"></span><br><span class="line"><span class="javascript">    Vue.component(<span class="string">&quot;todo-title&quot;</span>,&#123;</span></span><br><span class="line"><span class="javascript">        props:[<span class="string">&quot;title&quot;</span>],</span></span><br><span class="line"><span class="handlebars"><span class="xml">        template: &#x27;<span class="tag">&lt;<span class="name">div</span>&gt;</span></span><span class="template-variable">&#123;&#123;<span class="name">title</span>&#125;&#125;</span><span class="xml"><span class="tag">&lt;/<span class="name">div</span>&gt;</span>&#x27;</span></span></span><br><span class="line">    &#125;);</span><br><span class="line"><span class="javascript">    Vue.component(<span class="string">&quot;todo-items&quot;</span>,&#123;</span></span><br><span class="line"><span class="javascript">        props:[<span class="string">&quot;item&quot;</span>,<span class="string">&quot;index&quot;</span>],<span class="comment">//传入两个参数</span></span></span><br><span class="line"><span class="handlebars"><span class="xml">        template: &#x27;<span class="tag">&lt;<span class="name">li</span>&gt;</span>--</span><span class="template-variable">&#123;&#123;<span class="name">index</span>&#125;&#125;</span><span class="xml">--</span><span class="template-variable">&#123;&#123;<span class="name">item</span>&#125;&#125;</span><span class="xml"> <span class="tag">&lt;<span class="name">button</span> @<span class="attr">click</span>=<span class="string">&quot;remove(index)&quot;</span>&gt;</span>删除<span class="tag">&lt;/<span class="name">button</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span>&#x27;,</span></span></span><br><span class="line">        methods:&#123;</span><br><span class="line"><span class="javascript">            remove: <span class="function"><span class="keyword">function</span> (<span class="params">index</span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">                <span class="built_in">this</span>.$emit(<span class="string">&#x27;remove&#x27;</span>,index);<span class="comment">//自定义事件固定调用格式</span></span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line"></span><br><span class="line"><span class="javascript">    <span class="keyword">var</span> vm = <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="javascript">        el: <span class="string">&quot;#app&quot;</span> ,</span></span><br><span class="line">        data:&#123;</span><br><span class="line"><span class="javascript">            title: <span class="string">&quot;学习篇&quot;</span>,</span></span><br><span class="line"><span class="javascript">            todoItems:[<span class="string">&quot;Java&quot;</span>,<span class="string">&quot;Linux&quot;</span>,<span class="string">&quot;前端&quot;</span>]</span></span><br><span class="line">        &#125;,</span><br><span class="line">        methods:&#123;</span><br><span class="line"><span class="javascript">            removeItem:<span class="function"><span class="keyword">function</span> (<span class="params">index</span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">                <span class="built_in">this</span>.todoItems.splice(index,<span class="number">1</span>);<span class="comment">//从index索引删除一个数组元素</span></span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;);</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>点击删除按钮能够动态删除data数据并且刷新页面显示：</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/046.png" alt="image-20200903121218463"></p>
+<blockquote>
+<p>关系示意图：最终都是通过前端的view视图来连接</p>
+</blockquote>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/047.png" alt="QQ图片20200903120909"></p>
+]]></content>
+      <categories>
+        <category>学习</category>
+      </categories>
+      <tags>
+        <tag>vue</tag>
       </tags>
   </entry>
   <entry>
@@ -2076,6 +2078,480 @@
 <blockquote>
 <p>附本书题目答案链接：<a href="https://feater.top/ebooks/11/">计算机网络：自顶向下方法（原书第7版）课后习题参考答案中文版</a></p>
 </blockquote>
+]]></content>
+      <categories>
+        <category>计算机网络自顶向下方法</category>
+      </categories>
+      <tags>
+        <tag>计算机网络自顶向下方法</tag>
+        <tag>理论学习</tag>
+        <tag>教材</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>计算机网络自顶向下方法学习笔记（四）网络层：数据平面</title>
+    <url>/2020/11/18/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E8%87%AA%E9%A1%B6%E5%90%91%E4%B8%8B%E6%96%B9%E6%B3%95/%E7%AC%AC%E5%9B%9B%E7%AB%A0.%E7%BD%91%E7%BB%9C%E5%B1%82%EF%BC%9A%E6%95%B0%E6%8D%AE%E5%B9%B3%E9%9D%A2/</url>
+    <content><![CDATA[<h2 id="1-网络层概述"><a href="#1-网络层概述" class="headerlink" title="1.网络层概述"></a>1.网络层概述</h2><blockquote>
+<p>网络层存在于网络中所有主机和路由器中（路由器具有截断的协议栈，没有网络层以上的部分），由<strong>数据平面</strong>和<strong>控制平面</strong>两部分组成。</p>
+</blockquote>
+<p><strong>数据平面</strong>：是网络层中属于每台路由器自身的功能，决定到达路由器输入链路的数据报（网络层分组）如何转发到该路由器某一个具体的输出链路。</p>
+<p><strong>控制平面</strong>：是网络范围内的逻辑，控制数据报沿着从源主机到目的主机的端到端路径中路由器的路由方式。</p>
+<p>如图所示：</p>
+<ul>
+<li>过程实例：<ul>
+<li>H1中的网络层取得来自于H1运输层的报文段，并将其封装成数据报，向相邻路由器发送该数据报；</li>
+<li>在接收方路由器H2，网络层接收来自相邻路由器R2的数据报，提取出相应报文段并上传给H2运输层；</li>
+</ul>
+</li>
+<li>每台路由器数据平面作用是从其输入链路向其输出链路转发数据报，控制平面作用是协调本地的每台路由器转发动作，使数据报沿着源到目的主机之间的路由器路径进行端到端传输；</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/ComputerNetWorking/079.png" alt="image-20201110165452010"></p>
+<a id="more"></a>
+
+<h3 id="1-1-转发和路由选择：数据平面和控制平面"><a href="#1-1-转发和路由选择：数据平面和控制平面" class="headerlink" title="1.1 转发和路由选择：数据平面和控制平面"></a>1.1 转发和路由选择：数据平面和控制平面</h3><p><strong>转发</strong>：当一个分组到达路由器的一条输入链路时，该路由器必须将该分组移动到合适的输出链路，这是一个路由器本地动作，发生时间很短，通常用硬件实现。转发是数据平面实现的唯一功能。分组有可能被现有的路由器阻拦（例如该分组来源于一个已知的恶意主机或者该分组发向一个被禁止的目的主机），或者可能是冗余的并经过多条出链路发送出去。</p>
+<p><strong>路由选择</strong>：当分组从发送方流向接收方时，网络层必须决定这些分组所采用的路由或路径，计算这些路径的算法被称作<strong>路由选择算法</strong>，这是一个端到端路径的网络范围处理过程，但路由选择发生时间相对很长，通常用软件实现。</p>
+<p>每台网络路由器本地存有有一个关键元素<strong>转发表</strong>，路由器检查到达的分组首部中一个或多个字段，进而使用这些首部值在其转发表中索引，转发分组至相应的输出链路。转发表配置方式有两种：</p>
+<ul>
+<li>传统方式：在一台路由器中的路由选择算法与在其它路由器中的路由选择算法通信，以计算它的转发表的值；</li>
+</ul>
+<img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/ComputerNetWorking/080.png" alt="image-20201110170746223" style="zoom:80%;">
+
+<ul>
+<li>SDN方式：远程控制器计算和分发转发表供每台路由器使用，其中控制平面路由选择功能与物理路由器相分离，路由选择仅执行转发，远程控制器结算并分发转发表。路由器和远程控制器通过交换包含转发表和其它路由选择信息的报文而通信；</li>
+</ul>
+<img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/ComputerNetWorking/081.png" alt="image-20201110171252006" style="zoom:80%;">
+
+
+
+<h3 id="1-2-网络服务模型"><a href="#1-2-网络服务模型" class="headerlink" title="1.2 网络服务模型"></a>1.2 网络服务模型</h3><ul>
+<li>确保交付；</li>
+<li>具有时延上界的确保交付；</li>
+<li>有序分组交付；</li>
+<li>确保最小带宽；</li>
+<li>安全性；</li>
+<li>……</li>
+</ul>
+<p>但因特网的网络层只提供了<strong>尽力而为服务</strong>，即不保证任何服务，ATM网络体系结构提供了确保按序时延、有界时延和确保最小带宽。</p>
+<p>分组交换机：指一台通用分组交换设备，根据分组首部字段中的值，从输入链路接口到输出链路接口转移分组</p>
+<ul>
+<li>链路层交换机：基于链路层帧中的字段值做出转发决定，也被称为链路层设备；</li>
+<li>路由器（router）：基于网络层数据报中的首部字段值做出转发决定，是网络层设备；</li>
+</ul>
+<h2 id="2-路由器工作原理"><a href="#2-路由器工作原理" class="headerlink" title="2.路由器工作原理"></a>2.路由器工作原理</h2><p>路由器体系结构：</p>
+<ul>
+<li>输入端口：<ul>
+<li>输入端口最左侧方框（及输出最右侧），执行终结入物理链路的物理层功能；</li>
+<li>输入端口中间方框（及输出中间框），与位于入链路远端的数据链路层交互来执行数据链路层功能；</li>
+<li>输入端口最右侧，执行查找功能，通过查询转发表决定路由器的输出端口，到达的分组通过路由器的交换结构转发到输出端口；</li>
+</ul>
+</li>
+<li>交换结构：将路由器的输入端口连接到输出端口；</li>
+<li>输出端口：存储从交换结构接收的分组，并通过执行必要的链路层和物理层功能在输出链路上传输这些分组。当一条链路是双向时，输出端口通常与该链路的输入端口成对出现在同一条线路卡上；</li>
+<li>路由选择处理器：执行控制平面功能<ul>
+<li>在传统路由器中，执行路由选择协议，维护路由选择表与关联链路状态信息，并计算转发表；</li>
+<li>在SDN路由器中，负责与远程控制器通信，目的是接收由远程控制器计算的转发表项，并在该路由器的输入端口安装这些表项；</li>
+<li>还执行网络管理功能；</li>
+</ul>
+</li>
+</ul>
+<img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/ComputerNetWorking/082.png" alt="image-20201111122551951" style="zoom:80%;">
+
+<p>路由器的输入端口、输出端口、交换结构几乎总使用硬件实现。</p>
+<p>两种转发：</p>
+<ul>
+<li>基于目的地转发；</li>
+<li>通用转发；</li>
+</ul>
+<h3 id="2-1-输入端口处理和基于目的地转发"><a href="#2-1-输入端口处理和基于目的地转发" class="headerlink" title="2.1 输入端口处理和基于目的地转发"></a>2.1 输入端口处理和基于目的地转发</h3><p>详细输入处理视图：</p>
+<ul>
+<li>转发表从路由选择处理器经过独立总线复制到线路卡，总线在图4-4中以虚线表示，因而转发决策能够在每个输入端口本地做出，无需基于每个分组调用集中式路由选择处理器，避免了集中式处理的瓶颈；</li>
+</ul>
+<img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/ComputerNetWorking/083.png" alt="image-20201111134112128" style="zoom:80%;">
+
+<p>假设一个入分组基于目的地址交换到输出端口，又假设路由器具有四条链路0-3如图：</p>
+<img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/ComputerNetWorking/084.png" alt="image-20201111134527504" style="zoom:80%;">
+
+<p>对于该链路，转发表如图：</p>
+<ul>
+<li>路由器使用分组目的地址的<strong>前缀</strong>与该表中表项进行匹配；</li>
+<li>当有多个匹配时，该路由器使用<strong>最长前缀匹配规则</strong>；</li>
+</ul>
+<img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/ComputerNetWorking/085.png" alt="image-20201111134611536" style="zoom:80%;">
+
+
+
+<p>查找方法：</p>
+<ul>
+<li>快速查找算法；</li>
+<li>三态内容可寻址存储器（TCAM）；</li>
+</ul>
+<p>通过查找确定某分组的输出端口后，该分组就进入交换结构，如果来自其它输入端口的分组当前正在使用该交换结构，则该分组可能会在输入端口处阻塞排队，并等待稍后被及时调度以通过交换结构。</p>
+<p>输入端口除执行查找动作外，还必须执行以下三项动作：</p>
+<ul>
+<li>必须出现物理层和链路层处理；</li>
+<li>必须检查分组的版本号、检验和以及寿命字段，并重写后两个字段；</li>
+<li>必须更新用于网络管理的计数器；</li>
+</ul>
+<h3 id="2-2-交换"><a href="#2-2-交换" class="headerlink" title="2.2 交换"></a>2.2 交换</h3><p>交换结构位于一台路由器的核心位置，常用三种方式如图：</p>
+<ul>
+<li>经内存交换：一个分组到达一个输入端口时，该端口会通过中断方式向路由器处理器发出信号。该分组从输入端口处被复制到处理器内存中，处理器转发操作也是将该分组复制到输出端口的缓存中。而且每次只能转发一个分组；</li>
+<li>经总线交换：直接通过一根共享主线将分组从输入端口传输到输出端口，不经过处理器的干预；</li>
+<li>经互联网络交换：又称纵横式交换，由2N条总线组成，连接N个输入端口和N个输出端口。纵横式交换机是非阻塞的，只要没有其它分组被转发到该输出端口，转发到该输出端口的分组就不会阻塞。但相对应的，如果同时有来自两个不同输入端口的两个分组目的地相同，则有一个分组会在输入端排队等待；</li>
+<li>除此之外，更复杂的互联网络使用多级交换元素，使得来自不同输入端口的分组通过交换结构同时朝着相同的输出端口前行如三级非阻塞交换策略：<ul>
+<li>输入端口和输出端口被连接到并行的N个交换结构；</li>
+<li>一个输入端口将一个分组分成K个较小的块，并通过N个交换结构中的K个发送这些块到所选择的输出端口；</li>
+<li>输出端口再将K个块装配还原成初始的分组；</li>
+</ul>
+</li>
+</ul>
+<img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/ComputerNetWorking/086.png" alt="image-20201111135534529" style="zoom:80%;">
+
+
+
+<h3 id="2-3-输出端口处理"><a href="#2-3-输出端口处理" class="headerlink" title="2.3 输出端口处理"></a>2.3 输出端口处理</h3><p>输出端口处理取出已存放在输出端口内存中的分组并将其发送到输出链路上：</p>
+<img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/ComputerNetWorking/087.png" alt="image-20201111140111303" style="zoom:80%;">
+
+
+
+<h3 id="2-4-何处出现排队"><a href="#2-4-何处出现排队" class="headerlink" title="2.4 何处出现排队"></a>2.4 何处出现排队</h3><p>假定输入线路速度和输出线路速度（传输速率）是相同的，均为<strong>R<sub>line</sub>**每秒分组数，并且有N个输入端口和N个输出端口。还假设所有分组具有相同的固定长度，分组以同步的方式到达输入端口。定义交换结构传输速率</strong>R<sub>switch</sub>**为从输入端口移动到输出端口移动分组的速率。</p>
+<p>如果**R<sub>switch</sub>=N×R<sub>line</sub>**，这时输入端口的排队时延微不足道。</p>
+<h4 id="2-41-输入排队"><a href="#2-41-输入排队" class="headerlink" title="2.41 输入排队"></a>2.41 输入排队</h4><p>考虑纵横式交换结构：</p>
+<ul>
+<li><p>假定①所有链路速率相同；②<strong>R<sub>switch</sub>=R<sub>line</sub>**；③ 分组以</strong>FCFS**先到先服务的方式从输入队列移动到输出队列；</p>
+</li>
+<li><p><strong>线路前部阻塞（HOL）</strong>：如果一个输入队列中前一个分组被阻塞，则后面的分组要去往的输出端口即使空闲也会被阻塞。</p>
+</li>
+</ul>
+<img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/ComputerNetWorking/088.png" alt="image-20201115110812624" style="zoom:80%;">
+
+
+
+<h4 id="2-42-输出排队"><a href="#2-42-输出排队" class="headerlink" title="2.42 输出排队"></a>2.42 输出排队</h4><p>依然考虑纵横式结构，且**R<sub>switch</sub>=N×R<sub>line</sub>**，到达N个输入端口的每个分组的目的地是相同的输出端口，但由于输出端口每次只能传输一个分组，所以这N个分组必须排队等待，而每次传输一个分组的时间中每个输入队列又会新增一个分组到达，这时排队的数量足够大，就会耗尽输入队列的可用内存。</p>
+<p>当没有足够的内存来存储一个分组时（有时候在缓存填满之前就会丢弃一个分组或者在其首部加上标记，这会向发送方提供拥塞信号），有两种方式解决：</p>
+<ul>
+<li>弃尾：丢弃到达的分组；</li>
+<li>删除一个或多个正在排队的分组；</li>
+</ul>
+<p>所有处理分组丢弃和标记的策略被称作<strong>主动队列管理（AQM）算法</strong>，其中<strong>随机早期检测（RED）算法</strong>是最广泛研究和实现的AQM算法之一。</p>
+<p>对于整个路由器而言，用来缓存所有的排队分组的大小该是多少呢？</p>
+<ul>
+<li>相对少量的TCP流经过链路排队，缓存数量（B）应当等于平均往返时延（RTT）乘以链路的容量（C）；</li>
+<li>当有大量的TCP流（N条）流过一条链路时，缓存所需要的数量B=RTT×C/$\sqrt{N}$；</li>
+</ul>
+<h3 id="2-5-分组调度"><a href="#2-5-分组调度" class="headerlink" title="2.5 分组调度"></a>2.5 分组调度</h3><blockquote>
+<p>仅考虑分组到达输出链路的排队问题，不考虑分组丢弃问题。</p>
+</blockquote>
+<h4 id="2-51-先进先出（FIFO、FCFS）"><a href="#2-51-先进先出（FIFO、FCFS）" class="headerlink" title="2.51 先进先出（FIFO、FCFS）"></a>2.51 先进先出（FIFO、FCFS）</h4><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/ComputerNetWorking/090.png" alt="image-20201116165410909" style="zoom:80%;">
+
+
+
+<img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/ComputerNetWorking/089.png" alt="image-20201116165223119" style="zoom:80%;">
+
+
+
+<h4 id="2-52-优先权排队"><a href="#2-52-优先权排队" class="headerlink" title="2.52 优先权排队"></a>2.52 优先权排队</h4><p>在<strong>非抢占式优先权排队</strong>规则下进行，一旦分组进行传输，不能被打断。</p>
+<p>每个优先权类通常拥有自己的队列，当选择一个分组传输时，优先权排队规则将从队列非空的最高优先权类中按照FIFO规则传输分组。实践中，携带网络管理信息的分组能获得超过用户流量的优先权，基于IP的实时语音分组也可能获得超过非实时流量的优先权。</p>
+<img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/ComputerNetWorking/091.png" alt="image-20201116165759364" style="zoom:80%;">
+
+
+
+<p>例如，分组1,3,4属于高优先权类，2,5属于低优先权类：</p>
+<img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/ComputerNetWorking/092.png" alt="image-20201116170223606" style="zoom:80%;">
+
+
+
+<h4 id="2-53-循环和加权公平排队"><a href="#2-53-循环和加权公平排队" class="headerlink" title="2.53 循环和加权公平排队"></a>2.53 循环和加权公平排队</h4><p>在<strong>循环排队规则</strong>下，分组像使用优先权排队那样被分类，但是类与类之间不存在严格的服务优先权，循环调度器在这些类之间轮流提供服务。一个<strong>保持工作排队</strong>规则不允许链路保持空闲。</p>
+<p>例如，分组1,2,4属于第一类，3,5属于第二类：</p>
+<img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/ComputerNetWorking/093.png" alt="image-20201116170529171" style="zoom:80%;">
+
+
+
+<p><strong>加权公平排队规则（WFQ）</strong>：</p>
+<ul>
+<li>到达的分组被加权分类在每个类的等待区域排队，WFQ会循环调度每一个类，而不必等待高优先权类为空再去调度下一级优先权类；</li>
+<li>对于每个类<code>i</code>被分配权 $w_i$ ，在类<code>i</code>有分组要发送的任何时间间隔内，第 i 类将确保接收到的服务部分等于 $w_i/(\sum w_j)$ ，其中分母中的和是计算所有有分组排队等待传输的类别得到的；</li>
+<li>在最坏的情况下，即使所有的类都有分组排队，第 i 类仍然保证分配到带宽的 $w_i/(\sum w_j)$ 部分；</li>
+<li>对于一条传输速率为<code>R</code>的链路，第 i 类总能获得至少为  $R*w_i/(\sum w_j)$ 的吞吐量；</li>
+</ul>
+<img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/ComputerNetWorking/094.png" alt="image-20201116170459971" style="zoom:80%;">
+
+
+
+<h2 id="3-IPV4、寻址、IPV6及其它"><a href="#3-IPV4、寻址、IPV6及其它" class="headerlink" title="3.IPV4、寻址、IPV6及其它"></a>3.IPV4、寻址、IPV6及其它</h2><h3 id="3-1-IPV4数据报格式"><a href="#3-1-IPV4数据报格式" class="headerlink" title="3.1 IPV4数据报格式"></a>3.1 IPV4数据报格式</h3><p>关键字段：</p>
+<ul>
+<li>版本：4比特，说明IPV4/IPV6版本；</li>
+<li>首部长度：4比特，选项字段为0时首部长度为20字节；</li>
+<li>服务类型（TOS）：区分不同类型的数据报，如将实时流量数据报和非实时流量数据报区分；</li>
+<li>数据报长度：16比特，所以IP数据报的理论最大长度为65535字节，一般以太网帧载荷字段为1500字节；</li>
+<li>标识、标志、片偏移：与IP分片相关；</li>
+<li>寿命（TTL）：每一台路由器处理数据报时，该字段值减1，若TTL值为0，则该数据报被丢弃；</li>
+<li>协议：仅当IP数据报到达目的地时使用，指示IP数据报的数据部分交付给哪个特定的运输层协议，值为6交给TCP，值为17交给UDP；</li>
+<li>首部检验和：将首部中每2个字节当做一个数，用反码算术求和；</li>
+<li>源和目的IP地址；</li>
+<li>选项：可扩展项，很少使用；</li>
+<li>数据（有效载荷）；</li>
+</ul>
+<p>一个IP数据报首部总长为20字节（无选项时），如果承载一个TCP报文段，则每个数据报总共承载40字节首部以及应用层报文；</p>
+<img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/ComputerNetWorking/095.png" alt="image-20201117165648343" style="zoom:80%;">
+
+
+
+<h3 id="3-2-IPV4数据报分片"><a href="#3-2-IPV4数据报分片" class="headerlink" title="3.2 IPV4数据报分片"></a>3.2 IPV4数据报分片</h3><blockquote>
+<p>不是所有链路层协议都能承载相同长度的网络层分组，因此有时需要对数据报进行分片处理</p>
+</blockquote>
+<p><strong>最大传送单元（MTU）</strong>：一个链路层帧能承载的最大数据量。</p>
+<p>当某条链路接收到一个IP数据报，通过检查转发表确定出链路，并且该出链路的MTU比该IP数据报的长度要小，这时如何将这个过大的IP数据报挤进链路层帧的有效载荷字段呢？</p>
+<p>解决方法是将IP数据报中的数据分片成两个或更多个较小的IP数据报，再通过出链路发送这些数据报，每个这种较小的数据报都被称作<strong>片（fragment）</strong>。片在其到达目的地运输层以前需要进行重组。</p>
+<p>分片格式：</p>
+<ul>
+<li>每个片都具有其源数据报的源地址、目的地址与标识号；</li>
+<li>最后一个片的标志比特被设置为0，其余片标志设置为1；</li>
+<li>偏移字段指定该片应放在初始IP数据报的哪个位置，注意，由于分片，多个数据报会多出多个首部20字节，且偏移量只计算数据内容，一般使用数据长度（字节）/8表示；</li>
+</ul>
+<h3 id="3-3-IPV4编址"><a href="#3-3-IPV4编址" class="headerlink" title="3.3 IPV4编址"></a>3.3 IPV4编址</h3><blockquote>
+<p>主机和路由器通过链路连接到网络中，而这个主机与物理链路之间的边界又叫做<strong>接口</strong>，一台主机通常只有一个接口，但是一台路由器往往有多个接口。从技术上讲，一个IP地址与一个接口相关联，而不是与包括该接口的主机或路由器关联！</p>
+</blockquote>
+<p>IPV4中每个IP地址长度为32字节，采用<strong>点分十进制记法</strong>每8个比特的十进制等价数使用句点<code>.</code>符号分割，如<code>193.32.216.9</code>的二进制记法就是<code>11000001 00100000 11011000 00001001</code>。</p>
+<p><strong>子网</strong>：如图所示一台路由器具有三个接口，互联七台主机</p>
+<ul>
+<li><strong>子网掩码</strong>：以该中心路由器为核心的三条链路接口共同组成一个大<strong>子网</strong>网络（包含三个小<strong>子网</strong>网络），对于最左侧链路IP地址<code>223.1.1.0/24</code>而言，其中的<code>/24</code>记法就被称作子网掩码，指示了比特中最左侧24定义了子网地址；对于路由器而言，它只需要匹配IP地址前24位即可分发分组至相应链路，而后<code>32-24</code>位地址则由链路分发给它所连接的其它主机；</li>
+</ul>
+<img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/ComputerNetWorking/097.png" alt="image-20201118135734964" style="zoom:80%;">
+
+<img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/ComputerNetWorking/096.png" alt="image-20201118135551134" style="zoom:80%;">
+
+
+
+<p>除此之外，再来看一个路由器互联的案例：</p>
+<ul>
+<li>该图中就包含六个子网；</li>
+</ul>
+<img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/ComputerNetWorking/098.png" alt="image-20201118140308954" style="zoom:80%;">
+
+
+
+<p><strong>无类别域间路由选择（CIDR）</strong>：32比特的IP地址按照<code>a.b.c.d/x</code>格式被划分成两部分，其中x位最高比特构成了IP地址的网络部分，该部分又被称为<strong>（网络）前缀（prefix）</strong>，当该组织外部的一台路由器转发一个数据报，且该数据报的目的地址位于该组织的内部时，仅需要考虑该地址前x位比特，这能够大大减少这些路由器中转发表的长度。</p>
+<p>对于使用CIDR协议的ISP组织而言，外界的其它部分不需要关注该ISP内部是否再次进行划分地址或者划分了多少主机，这种使用单个网络前缀通告多个网络的能力又被称为<strong>地址聚合</strong>、<strong>路由聚合</strong>或<strong>路由摘要</strong>。</p>
+<h4 id="3-31-获取一块地址"><a href="#3-31-获取一块地址" class="headerlink" title="3.31 获取一块地址"></a>3.31 获取一块地址</h4><p><strong>因特网名字和编号分配机构（ICANN）</strong>：非盈利，功能主要包括：</p>
+<ul>
+<li>分配IP地址；</li>
+<li>管理DNS根服务器；</li>
+<li>分配域名；</li>
+<li>解决域名纷争；</li>
+<li>……</li>
+</ul>
+<p>ISP通过与ICANN联系并获得一块IP地址（通过x确定），ISP再将自己的大块地址分配给向它发起请求的组织，如图所示：</p>
+<img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/ComputerNetWorking/099.png" alt="image-20201118141630351" style="zoom:80%;">
+
+
+
+<h4 id="3-32-获取主机地址：动态主机配置协议"><a href="#3-32-获取主机地址：动态主机配置协议" class="headerlink" title="3.32 获取主机地址：动态主机配置协议"></a>3.32 获取主机地址：动态主机配置协议</h4><blockquote>
+<p>当某组织获得一块地址之后，它如何为本组织内的主机与路由器分配IP地址呢？系统管理员一般手动配置路由器中的IP地址，并使用DHCP自动为主机配置地址</p>
+</blockquote>
+<p><strong>动态主机配置协议（DHCP）</strong>：DHCP允许主机自动获取一个IP地址，而DHCP又可以被网络管理员手动配置，使得每次分配给一台主机相同IP或者分配临时IP。DHCP也可以获得主机信息，如：</p>
+<ul>
+<li>子网掩码；</li>
+<li>第一条路由器地址（默认网关）；</li>
+<li>本地DNS服务器地址；</li>
+</ul>
+<p>DHCP又被称为<strong>即插即用协议</strong>或<strong>零配置协议</strong>。</p>
+<p>DHCP又是一个客户-服务器协议，客户通常是新到达的主机，它要获得包括自身使用的IP地址在内的网络配置信息。在最简单场景中，而每个子网都要拥有一台DHCP服务器，如果某子网中没有服务器，则需要一个DHCP中继代理（通常是一台路由器），这个代理知道用于该网络的DHCP服务器的地址。</p>
+<p>DHCP分配新地址步骤：</p>
+<ul>
+<li>DHCP服务器发现：新主机通过使用<strong>DHCP发现报文</strong><ul>
+<li>在UDP分组中向端口67发送该报文，DHCP发现报文中使用广播地址<code>255.255.255.255</code>和本机源地址<code>0.0.0.0</code></li>
+<li>DHCP客户将该IP数据报发送给链路层；</li>
+<li>链路层将该帧广播到所有与该子网连接的节点；</li>
+</ul>
+</li>
+<li>DHCP服务器提供：DHCP服务器收到一个DHCP发现报文，用<strong>DHCP提供报文</strong>向客户做出响应<ul>
+<li>该报文向该子网的所有节点广播，仍然使用广播地址<code>255.255.255.255</code>（使用广播的原因是可能有多个服务器共客户选择最优）；</li>
+<li>报文包含：<ul>
+<li>收到的发现报文的事务ID；</li>
+<li>向客户推荐的IP地址；</li>
+<li>网络掩码；</li>
+<li><strong>IP地址租用期</strong>，即IP地址有效的时间量；</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>DHCP请求：客户主机选择一个服务器，并使用<strong>DHCP请求报文</strong>进行响应，回显配置参数；</li>
+<li>DHCP ACK：服务器使用<strong>DHCP ACK报文</strong>对请求报文进行响应，证实参数；</li>
+</ul>
+<p>一旦客户接收到 DHCP ACK 后，交互分配即成功，该客户能在租用期内使用该DHCP分配的IP地址。由于可能过期，DHCP还提供了一种机制允许客户更新它对一个IP地址的租用。</p>
+<p>DHCP缺陷：每当节点连接到一个新子网，要从DHCP重新获取IP，当移动节点在子网与子网之间移动时，就不能维持IP与远程应用之间的TCP连接。</p>
+<h3 id="3-4-网络地址转换"><a href="#3-4-网络地址转换" class="headerlink" title="3.4 网络地址转换"></a>3.4 网络地址转换</h3><blockquote>
+<p>考虑家庭路由器以及小型办公室路由器的情形，在这些情形中，ISP显然是不会为每个路由器分配一块区域，太过浪费。这时就有一种广泛使用的<strong>网络地址转换（NAT）</strong>路由器出现了</p>
+</blockquote>
+<p>地址空间<code>10.0.0.0/8</code>是保留的<strong>专用网络/具有专用地址的地域</strong>，专门配置给家庭网络：</p>
+<ul>
+<li>对内而言，网络内部的各主机进行分组通信时自然是可以通过诸如<code>10.0.0.1</code>这种IP地址进行的；</li>
+<li>但对外而言，如果一台路由器中的主机要访问外部网络，那么不可能所有的家庭主机还使用<code>10.0.0.1</code>这个公共内部地址，这时就需要NAT使能路由器发挥作用了；</li>
+</ul>
+<p>NAT使能路由器（如图所示）：</p>
+<ul>
+<li><p>具有一个接口，被DHCP分配IP地址为<code>138.76.29.7</code>，这个IP地址仅在对外访问连接时使用，并且连接在这一台路由器上的所有主机设备都使用这一台链路传输数据；</p>
+</li>
+<li><p>NAT转换表：将接收到的来自内部主机的源IP统一替换为路由器IP地址，并为该数据报生成一个新的尚未使用的端口号，旧端口号为具体主机使用的源端口号，这样一来，当接收到外部传入的数据包时，再次进行匹配转换最后再传给具体主机；</p>
+</li>
+<li><p>NAT缺点：</p>
+<ul>
+<li>端口号是用来进程寻址的，而不是用来主机寻址的；<ul>
+<li>解决方法：<strong>NAT穿越</strong>和<strong>通用即插即用（UPnP）</strong>；</li>
+</ul>
+</li>
+<li>路由器时网络层设备，不应该处理IP地址和源端口号这种上层分组；</li>
+</ul>
+</li>
+<li><p>又被称作<strong>中间盒</strong>，功能如下：</p>
+<ul>
+<li>NAT；</li>
+<li>流量流的负载均衡；</li>
+<li>流量防火墙；</li>
+</ul>
+</li>
+</ul>
+<img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/ComputerNetWorking/100.png" alt="image-20201118145401770" style="zoom:80%;">
+
+
+
+<blockquote>
+<p>拓展：检查数据报：防火墙和入侵检测系统（IDS）</p>
+</blockquote>
+<p>对抗恶意分组攻击的两种方式：</p>
+<ul>
+<li>防火墙：即一般路由器都具有防火墙功能，能够检查数据报和数据报首部字段，拒绝可疑的数据报进入网络内部；</li>
+<li>入侵检测系统（IDS）：通常位于网络的边界，执行深度分组检查，不仅检查数据报（包括应用层数据）中的首部字段，而且检查其有效载荷；</li>
+</ul>
+<h3 id="3-5-IPV6"><a href="#3-5-IPV6" class="headerlink" title="3.5 IPV6"></a>3.5 IPV6</h3><h4 id="3-51-IPV6数据报格式"><a href="#3-51-IPV6数据报格式" class="headerlink" title="3.51 IPV6数据报格式"></a>3.51 IPV6数据报格式</h4><p>与IPV4相较的变化：</p>
+<ul>
+<li>地址容量扩大：地址长度从32比特扩大到128比特；</li>
+<li>简化高效的40字节首部；</li>
+<li>流标签：<ul>
+<li><strong>流（flow）</strong>：用于给属于特殊流的分组加上标签，这种特殊流是发送方要求进行特殊处理的流，如一种非默认服务质量或需要实时服务的流；</li>
+<li>高优先权用户承载的流量也可能被当做一个流；</li>
+</ul>
+</li>
+</ul>
+<p>IPV6字段：</p>
+<ul>
+<li>版本：4比特，IPV6将该字段值设置为6（但并不能简单的设置为4以创建IPV4数据报）；</li>
+<li>流量类型：8比特，与IPV4 TOS字段含义类似，用来区分不同类型的数据报；</li>
+<li>流标签：20比特，用于标识一条数据报的流，给出更高优先权；</li>
+<li>有效载荷长度：16比特，无符号整数，给出了数据部分字节数量；</li>
+<li>下一个首部：等同于IPV4协议字段，标识需要交付给哪一个运输层协议；</li>
+<li>跳限制：转发数据报的每台路由器对该值减1，计数达到0则该数据报被舍弃；</li>
+<li>源地址和目的地址；</li>
+<li>数据；</li>
+</ul>
+<p>不再存在于IPV6上的几个字段：</p>
+<ul>
+<li>分片/重新组装：由于该操作耗时，因此只能在源和目的地执行，不允许中间路由器执行该操作，如果路由器收到的IPV6数据报太大，则向发送方发回一个“分组太大”的ICMP差错报文，发送方重新发送较小长度的IP数据报；</li>
+<li>首部检验和：因为因特网运输层和数据链路层协议执行了检验操作，且耗时，故舍弃；</li>
+<li>选项：不再是标准首部的一部分，而是可能出现在IPV6首部中“下一个首部”字段位置；</li>
+</ul>
+<img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/ComputerNetWorking/101.png" alt="image-20201118155410687" style="zoom:80%;">
+
+
+
+<h4 id="3-52-从IPV4到IPV6的迁移"><a href="#3-52-从IPV4到IPV6的迁移" class="headerlink" title="3.52 从IPV4到IPV6的迁移"></a>3.52 从IPV4到IPV6的迁移</h4><blockquote>
+<p>IPV6使能系统能向后兼容，即能发送、路由和接收IPV4数据报，但已经部署的具有IPV4数据报能力的系统却不能处理IPV6数据报</p>
+</blockquote>
+<p>实践可行的解决方案是<strong>建隧道</strong>，其基本思想是：假定两个IPV6节点要使用中间IPV4节点进行互联，则将该中间IPV4路由器称为一个<strong>隧道</strong>。在隧道发送端，IPV6节点将整个IPV6数据报放到一个IPV4数据报的数据字段中，在隧道接收端，IPV6节点最终接收到该IPV4数据报，并通过确认其首部协议号字段值为41，从中取出IPV6数据报并为该数据报提供路由。</p>
+<h2 id="4-通用转发和SDN"><a href="#4-通用转发和SDN" class="headerlink" title="4.通用转发和SDN"></a>4.通用转发和SDN</h2><blockquote>
+<p>通用转发用来提供多种网络层功能以及某些链路层功能，进而解决多种第三层中间盒独立发展配置的问题</p>
+</blockquote>
+<p>先将第三层基于目的地转发的特征总结为两个步骤：</p>
+<ul>
+<li>查找IP地址（匹配）；</li>
+<li>将分组发送到有特定输出端口的交换结构（动作）；</li>
+</ul>
+<p>通用转发就整合这两个步骤，形成新的“匹配加动作”范式，该设备又被称为<strong>分组交换机</strong>：</p>
+<ul>
+<li>能够对多个首部字段进行“匹配”；</li>
+<li>“动作”包括：<ul>
+<li>将分组转发到一个或多个输出端口（就像基于目的地转发一样）；</li>
+<li>跨越多个通向服务的离开接口进行负载均衡分组（就像负载均衡一样）；</li>
+<li>重写首部值（就像NAT一样）；</li>
+<li>有意识地阻挡/丢弃某个分组（就像防火墙一样）；</li>
+<li>为进一步处理和动作而像某个特定的服务器发送一个分组（就像DPI一样）；</li>
+</ul>
+</li>
+</ul>
+<p>如图显示了位于每台分组交换机中的一张匹配加动作表，该表由远程控制器计算、安装和更新：</p>
+<img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/ComputerNetWorking/102.png" alt="image-20201118204009875" style="zoom:80%;">
+
+
+
+<p><strong>OpenFlow</strong>是一个得到高度认可和成功的通用转发的标准，已经成为匹配加动作转发抽象、控制器以及更为一般的SDN革命等概念的先驱，后续对通用转发的讨论也将基于OpenFlow。</p>
+<p>匹配加动作转发表在OpenFlow中被称作<strong>流表</strong>，它的每个<strong>表项</strong>包括：</p>
+<ul>
+<li>首部字段值的集合：入分组与之匹配；</li>
+<li>计数器集合：当分组与流表匹配时更新计数器，这些计数器可以包括已经与该流表项匹配的分组数量，以及自从该表项上次更新以来的时间等；</li>
+<li>当分组匹配流表项时所采取的的动作集合；</li>
+</ul>
+<h3 id="4-1-匹配"><a href="#4-1-匹配" class="headerlink" title="4.1 匹配"></a>4.1 匹配</h3><p>OpenFlow的匹配抽象允许对来自三个层次的协议首部所选择的字段进行匹配，但基于功能复杂性，并非一个IP首部所有的字段都能被匹配，如OpenFlow并不允许基于TTL字段或数据长度字段的匹配。</p>
+<p>入端口是指分组交换机上接收分组的输入端口，运输层源和目的端口号字段也能匹配。</p>
+<p>流表项也可有通配符，如<code>128.119.*.*</code>格式，每个流表项也具有相应的优先权。如果一个分组匹配多个流表项，选定的匹配和对应的动作将是其中优先权最高的那个。</p>
+<img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/ComputerNetWorking/103.png" alt="image-20201118205852856" style="zoom:80%;">
+
+
+
+<h3 id="4-2-动作"><a href="#4-2-动作" class="headerlink" title="4.2 动作"></a>4.2 动作</h3><p>每个流表项都拥有零个或多个动作，如果有多个动作，它们以在表中规定的次序执行，其中最重要的动作是：</p>
+<ul>
+<li>转发：<ul>
+<li>一个入分组可以转发到一个特定的物理输出端口，或者广播到除入端口外的所有端口，或者通过所选的端口集合进行多播；</li>
+<li>该分组可能被封装并发送到用于该设备的远程控制器，该控制器可能对该分组采取某些动作并安装或更新新的流表项重新转发；</li>
+</ul>
+</li>
+<li>丢弃：没有动作的流表项表明某个匹配的分组应该被丢弃；</li>
+<li>修改字段：在分组被转发到相应的输出端口前，分组首部的10个字段（图4-29中显示的除IP协议字段外的所有第二、三、四层的字段）中的值可以重写；</li>
+</ul>
+<h3 id="4-3-匹配加动作操作中的OpenFlow例子"><a href="#4-3-匹配加动作操作中的OpenFlow例子" class="headerlink" title="4.3 匹配加动作操作中的OpenFlow例子"></a>4.3 匹配加动作操作中的OpenFlow例子</h3><p>例：该网络具有六台主机（h系列）以及三台分组交换机（s系列），每台交换机具有四个本地接口（1-4）</p>
+<img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/ComputerNetWorking/104.png" alt="image-20201118211728849" style="zoom:80%;">
+
+<blockquote>
+<p>第一个例子：简单转发</p>
+</blockquote>
+<p>假定希望的转发行为是：来自h5/h6的发往h3/h4的分组从s3转发到s1，再从s1转发到s2</p>
+<ul>
+<li>s1中的流表项：</li>
+</ul>
+<img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/ComputerNetWorking/105.png" alt="image-20201118212140005" style="zoom:80%;">
+
+<ul>
+<li>s3中的流表项：从h5/h6经过接口s3转发到s1</li>
+</ul>
+<img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/ComputerNetWorking/106.png" alt="image-20201118212215390" style="zoom:80%;">
+
+<ul>
+<li>s2中的流表项：s1转发到目的主机h3/h4</li>
+</ul>
+<img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/ComputerNetWorking/107.png" alt="image-20201118212245271" style="zoom:80%;">
+
+
+
+<blockquote>
+<p>第二个例子：负载均衡</p>
+</blockquote>
+<p>来自h3发往<code>10.1.*.*</code>的数据报经过s1和s2之间的直接链路转发，同时来自于h4发往<code>10.1.*.*</code>的数据报经过s2和s3之间的链路转发</p>
+<ul>
+<li>s2中的流表项：</li>
+</ul>
+<img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/ComputerNetWorking/108.png" alt="image-20201118212619944" style="zoom:80%;">
+
+
+
+<blockquote>
+<p>第三个例子：充当防火墙</p>
+</blockquote>
+<p>s2仅希望接收到来自与s3相连的主机所发送的流量</p>
+<ul>
+<li>s2中的流表项：</li>
+</ul>
+<img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/ComputerNetWorking/109.png" alt="image-20201118212747781" style="zoom:80%;">
+
+
 ]]></content>
       <categories>
         <category>计算机网络自顶向下方法</category>
