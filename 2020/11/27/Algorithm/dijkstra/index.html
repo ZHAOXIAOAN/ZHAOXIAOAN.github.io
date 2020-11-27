@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.1.1">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/MuyunHui.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/MuyunHui.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/MuyunHui.png">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
+  <link rel="stylesheet" href="//cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-flash.min.css">
+  <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+
+<script class="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"kunpw.cn","root":"/","scheme":"Gemini","version":"8.0.0","exturl":false,"sidebar":{"display":"always","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"valine","storage":true,"lazyload":false,"nav":null,"activeClass":"valine"},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
+  </script>
+
+  <meta name="description" content="Dijkstra算法简要介绍 Dijkstra算法是一种广度优先搜索算法； 主要解决赋权值有向图或无向图的单源点最短路径问题； 时间复杂度是${n^2}$； 权值必须为正；  主要思想 设置两个顶点集S和T，集合S中存放已经找到最短路径的顶点，集合T中存放尚未找到最短路径的顶点； 初始状态下，集合S中只包含源点V，集合T中包含除源点之外的所有顶点，此时源点到各顶点的最短路径为两个顶点所连边上的权值">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Dijkstra">
+<meta property="og:url" content="http://kunpw.cn/2020/11/27/Algorithm/dijkstra/index.html">
+<meta property="og:site_name" content="朝小闇的博客">
+<meta property="og:description" content="Dijkstra算法简要介绍 Dijkstra算法是一种广度优先搜索算法； 主要解决赋权值有向图或无向图的单源点最短路径问题； 时间复杂度是${n^2}$； 权值必须为正；  主要思想 设置两个顶点集S和T，集合S中存放已经找到最短路径的顶点，集合T中存放尚未找到最短路径的顶点； 初始状态下，集合S中只包含源点V，集合T中包含除源点之外的所有顶点，此时源点到各顶点的最短路径为两个顶点所连边上的权值">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/Algorithm/001.png">
+<meta property="article:published_time" content="2020-11-27T08:23:38.881Z">
+<meta property="article:modified_time" content="2020-11-27T08:32:06.377Z">
+<meta property="article:author" content="Zhaoxiaoan">
+<meta property="article:tag" content="算法">
+<meta property="article:tag" content="Dijkstra">
+<meta property="article:tag" content="广度优先搜索">
+<meta property="article:tag" content="最短路径">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/Algorithm/001.png">
+
+
+<link rel="canonical" href="http://kunpw.cn/2020/11/27/Algorithm/dijkstra/">
+
+
+<script data-pjax class="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>Dijkstra | 朝小闇的博客</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  body { margin-top: 2rem; }
+
+  .use-motion .menu-item,
+  .use-motion .sidebar,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header {
+    visibility: visible;
+  }
+
+  .use-motion .header,
+  .use-motion .site-brand-container .toggle,
+  .use-motion .footer { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle,
+  .use-motion .custom-logo-image {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line {
+    transform: scaleX(1);
+  }
+
+  .search-pop-overlay, .sidebar-nav { display: none; }
+  .sidebar-panel { display: block; }
+  </style>
+</noscript>
+
+  
+	<script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+  
+
+<link rel="alternate" href="/atom.xml" title="朝小闇的博客" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">朝小闇的博客</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">海上月是天上月，眼前人是心上人</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">25</span></a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">4</span></a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">18</span></a>
+
+  </li>
+        <li class="menu-item menu-item-essays">
+
+    <a href="/essays" rel="section"><i class="fa fa-heart fa-fw"></i>随笔</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <section class="post-toc-wrap sidebar-panel">
+          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Dijkstra%E7%AE%97%E6%B3%95"><span class="nav-text">Dijkstra算法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AE%80%E8%A6%81%E4%BB%8B%E7%BB%8D"><span class="nav-text">简要介绍</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%BB%E8%A6%81%E6%80%9D%E6%83%B3"><span class="nav-text">主要思想</span></a></li></ol></li></ol></div>
+      </section>
+      <!--/noindex-->
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Zhaoxiaoan"
+      src="/images/PubuLan.png">
+  <p class="site-author-name" itemprop="name">Zhaoxiaoan</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">18</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">25</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+
+
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/ZHAOXIAOAN" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;ZHAOXIAOAN" rel="noopener external nofollow noreferrer" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+  </div>
+
+
+
+    <div class="links-of-blogroll motion-element links-of-blogroll-block">
+      <div class="links-of-blogroll-title">
+        <!-- modify icon to fire by szw -->
+        <i class="fa fa-history fa-" aria-hidden="true"></i>
+        近期文章
+      </div>
+      <ul class="links-of-blogroll-list">
+        
+        
+          <li>
+            <a href="/2020/11/27/Algorithm/dijkstra/" title="Dijkstra" target="_blank">Dijkstra</a>
+          </li>
+        
+          <li>
+            <a href="/2020/11/18/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E8%87%AA%E9%A1%B6%E5%90%91%E4%B8%8B%E6%96%B9%E6%B3%95/%E7%AC%AC%E5%9B%9B%E7%AB%A0.%E7%BD%91%E7%BB%9C%E5%B1%82%EF%BC%9A%E6%95%B0%E6%8D%AE%E5%B9%B3%E9%9D%A2/" title="计算机网络自顶向下方法学习笔记（四）网络层：数据平面" target="_blank">计算机网络自顶向下方法学习笔记（四）网络层：数据平面</a>
+          </li>
+        
+          <li>
+            <a href="/2020/11/14/Python/Python%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E6%97%B6%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/" title="使用Python数据分析遇到的部分问题" target="_blank">使用Python数据分析遇到的部分问题</a>
+          </li>
+        
+          <li>
+            <a href="/2020/11/05/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E8%87%AA%E9%A1%B6%E5%90%91%E4%B8%8B%E6%96%B9%E6%B3%95/%E7%AC%AC%E4%B8%89%E7%AB%A0.%E8%BF%90%E8%BE%93%E5%B1%82/" title="计算机网络自顶向下方法学习笔记（三）运输层" target="_blank">计算机网络自顶向下方法学习笔记（三）运输层</a>
+          </li>
+        
+          <li>
+            <a href="/2020/10/23/SpringBoot/SpringBoot%EF%BC%88%E4%B8%80%EF%BC%89/" title="SpringBoot(一)" target="_blank">SpringBoot(一)</a>
+          </li>
+        
+      </ul>
+    </div>
+
+
+      </section><div>
+  <canvas id="canvasDiyBlock" style="width:60%;">当前浏览器不支持canvas，请更换浏览器后再试</canvas><script src="/js/custom/clock.js"></script>
+</div>
+
+
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+      
+
+      
+
+    
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://kunpw.cn/2020/11/27/Algorithm/dijkstra/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/PubuLan.png">
+      <meta itemprop="name" content="Zhaoxiaoan">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="朝小闇的博客">
+    </span>
+
+    
+    
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Dijkstra
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2020-11-27 16:23:38 / 修改时间：16:32:06" itemprop="dateCreated datePublished" datetime="2020-11-27T16:23:38+08:00">2020-11-27</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E7%AE%97%E6%B3%95/" itemprop="url" rel="index"><span itemprop="name">算法</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2020/11/27/Algorithm/dijkstra/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2020/11/27/Algorithm/dijkstra/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>7.7k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>7 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h2 id="Dijkstra算法"><a href="#Dijkstra算法" class="headerlink" title="Dijkstra算法"></a>Dijkstra算法</h2><h3 id="简要介绍"><a href="#简要介绍" class="headerlink" title="简要介绍"></a>简要介绍</h3><ul>
+<li>Dijkstra算法是一种<strong>广度优先搜索算法</strong>；</li>
+<li>主要解决赋权值有向图或无向图的<strong>单源点最短路径问题</strong>；</li>
+<li>时间复杂度是${n^2}$；</li>
+<li>权值必须为正；</li>
+</ul>
+<h3 id="主要思想"><a href="#主要思想" class="headerlink" title="主要思想"></a>主要思想</h3><ol>
+<li>设置两个顶点集S和T，集合S中存放已经找到最短路径的顶点，集合T中存放尚未找到最短路径的顶点；</li>
+<li>初始状态下，集合S中只包含源点V，集合T中包含除源点之外的所有顶点，此时源点到各顶点的最短路径为两个顶点所连边上的权值，如果没有边，则最小路径为无穷大（代码中设置为最大正整数）；</li>
+<li>依次从集合T中选取到源点V路径最短的顶点${v_i}$放入集合S中；</li>
+<li>修改从源点V到T中顶点的最短路径长度；</li>
+</ol>
+<a id="more"></a>
+
+<blockquote>
+<p>实例演示：</p>
+</blockquote>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/Algorithm/001.png" alt="img"></p>
+<blockquote>
+<p>基于邻接矩阵实现算法</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 基于邻接矩阵实现无向图最短路径算法</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Adjacent_Matrix</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 顶点总个数</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">int</span> numOfVexs = <span class="number">6</span>;</span><br><span class="line">    <span class="comment">// 存放各顶点之间的距离</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">int</span>[][] edges = &#123;&#123;<span class="number">0</span>,<span class="number">0</span>,<span class="number">10</span>,<span class="number">0</span>,<span class="number">30</span>,<span class="number">100</span>&#125;,</span><br><span class="line">            &#123;<span class="number">0</span>,<span class="number">0</span>,<span class="number">5</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>&#125;,</span><br><span class="line">            &#123;<span class="number">10</span>,<span class="number">5</span>,<span class="number">0</span>,<span class="number">50</span>,<span class="number">0</span>,<span class="number">0</span>&#125;,</span><br><span class="line">            &#123;<span class="number">0</span>,<span class="number">0</span>,<span class="number">50</span>,<span class="number">0</span>,<span class="number">20</span>,<span class="number">10</span>&#125;,</span><br><span class="line">            &#123;<span class="number">30</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">20</span>,<span class="number">0</span>,<span class="number">60</span>&#125;,</span><br><span class="line">            &#123;<span class="number">100</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">10</span>,<span class="number">60</span>,<span class="number">0</span>&#125;&#125;;</span><br><span class="line">    <span class="comment">// 最短路径源点及终点，取数组下标索引</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">int</span> vertexS = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">int</span> vertexE = <span class="number">5</span>;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="comment">// 传入源点</span></span><br><span class="line">        <span class="keyword">int</span>[] distance = dijkstra(vertexS);</span><br><span class="line">        System.out.println(<span class="string">&quot;源点到各顶点之间的最短路径：&quot;</span>);</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; distance.length; i++) &#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;1-&quot;</span>+(i+<span class="number">1</span>)+<span class="string">&quot;:&quot;</span>);</span><br><span class="line">            System.out.println(distance[i]);</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(<span class="string">&quot;源点&quot;</span>+(vertexS+<span class="number">1</span>)+<span class="string">&quot;到终点&quot;</span>+(vertexE+<span class="number">1</span>)+<span class="string">&quot;之间的最短路径为：&quot;</span>+distance[vertexE]);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span>[] dijkstra(<span class="keyword">int</span> v) &#123;   <span class="comment">//传入源点</span></span><br><span class="line">        <span class="keyword">if</span> (v &lt; <span class="number">0</span> || v &gt;= numOfVexs) &#123;</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> ArrayIndexOutOfBoundsException();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 默认初始为false，表示在T集合（未找到最短路径）中，true时表示在S集合（已找到源点到目标定点最短路径）中</span></span><br><span class="line">        <span class="keyword">boolean</span>[] st = <span class="keyword">new</span> <span class="keyword">boolean</span>[numOfVexs];</span><br><span class="line">        <span class="comment">// 存放源点到其他点的矩离</span></span><br><span class="line">        <span class="keyword">int</span>[] distance = <span class="keyword">new</span> <span class="keyword">int</span>[numOfVexs];</span><br><span class="line">        <span class="comment">// 更新edges二维数组，除自身外将所有距离为0转化为无穷大（即最大正整数）</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; numOfVexs; i++) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = i + <span class="number">1</span>; j &lt; numOfVexs; j++) &#123;</span><br><span class="line">                <span class="keyword">if</span> (edges[i][j] == <span class="number">0</span>) &#123;</span><br><span class="line">                    edges[i][j] = Integer.MAX_VALUE;</span><br><span class="line">                    edges[j][i] = Integer.MAX_VALUE;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 对传入源点与其它顶点之间进行距离初始化</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; numOfVexs; i++) &#123;</span><br><span class="line">            distance[i] = edges[v][i];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 初始化S集合，将源点v加入S集合</span></span><br><span class="line">        st[v] = <span class="keyword">true</span>;</span><br><span class="line">        <span class="comment">// 处理从源点到其余顶点的最短路径</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; numOfVexs; ++i) &#123;</span><br><span class="line">            <span class="keyword">int</span> min = Integer.MAX_VALUE;</span><br><span class="line">            <span class="comment">// 索引号，如果找到最短路径则赋值为目的顶点号</span></span><br><span class="line">            <span class="keyword">int</span> index=-<span class="number">1</span>;</span><br><span class="line">            <span class="comment">// 比较从源点到其余顶点的路径长度</span></span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; numOfVexs; ++j) &#123;</span><br><span class="line">                <span class="comment">// 从源点到j顶点的最短路径还没有找到</span></span><br><span class="line">                <span class="keyword">if</span> (st[j]==<span class="keyword">false</span>) &#123;</span><br><span class="line">                    <span class="comment">// 从源点到j顶点的路径长度最小</span></span><br><span class="line">                    <span class="keyword">if</span> (distance[j] &lt; min) &#123;</span><br><span class="line">                        index = j;</span><br><span class="line">                        min = distance[j];</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">// 找到源点到索引为index顶点的最短路径长度，将该顶点加入到S集合中</span></span><br><span class="line">            <span class="keyword">if</span>(index!=-<span class="number">1</span>) &#123;</span><br><span class="line">                st[index] = <span class="keyword">true</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">// 更新当前最短路径及距离</span></span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> w = <span class="number">0</span>; w &lt; numOfVexs; w++) &#123;</span><br><span class="line">                <span class="keyword">if</span> (st[w] == <span class="keyword">false</span>) &#123;</span><br><span class="line">                    <span class="keyword">if</span> (edges[index][w] != Integer.MAX_VALUE</span><br><span class="line">                            &amp;&amp; (min + edges[index][w] &lt; distance[w])) &#123;</span><br><span class="line">                        distance[w] = min + edges[index][w];</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> distance;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&gt;&gt;</span><br><span class="line">源点到各顶点之间的最短路径：</span><br><span class="line"><span class="number">1</span>-<span class="number">1</span>:</span><br><span class="line"><span class="number">0</span></span><br><span class="line"><span class="number">1</span>-<span class="number">2</span>:</span><br><span class="line"><span class="number">15</span></span><br><span class="line"><span class="number">1</span>-<span class="number">3</span>:</span><br><span class="line"><span class="number">10</span></span><br><span class="line"><span class="number">1</span>-<span class="number">4</span>:</span><br><span class="line"><span class="number">50</span></span><br><span class="line"><span class="number">1</span>-<span class="number">5</span>:</span><br><span class="line"><span class="number">30</span></span><br><span class="line"><span class="number">1</span>-<span class="number">6</span>:</span><br><span class="line"><span class="number">60</span></span><br><span class="line">源点<span class="number">1</span>到终点<span class="number">6</span>之间的最短路径为：<span class="number">60</span></span><br></pre></td></tr></table></figure>
+
+
+
+<blockquote>
+<p>基于邻接表实现算法</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//基于邻接表实现算法</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Adjacency_List</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 顶点总个数</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">int</span> numOfVexs = <span class="number">6</span>;</span><br><span class="line">    <span class="comment">// 对每个顶点创建一个邻接表</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> ENode[] vexs = <span class="keyword">new</span> ENode[numOfVexs];</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 存放各顶点之间的距离/权值</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">int</span>[][] edges = &#123;&#123;<span class="number">0</span>,<span class="number">0</span>,<span class="number">10</span>,<span class="number">0</span>,<span class="number">30</span>,<span class="number">100</span>&#125;,</span><br><span class="line">            &#123;<span class="number">0</span>,<span class="number">0</span>,<span class="number">5</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>&#125;,</span><br><span class="line">            &#123;<span class="number">10</span>,<span class="number">5</span>,<span class="number">0</span>,<span class="number">50</span>,<span class="number">0</span>,<span class="number">0</span>&#125;,</span><br><span class="line">            &#123;<span class="number">0</span>,<span class="number">0</span>,<span class="number">50</span>,<span class="number">0</span>,<span class="number">20</span>,<span class="number">10</span>&#125;,</span><br><span class="line">            &#123;<span class="number">30</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">20</span>,<span class="number">0</span>,<span class="number">60</span>&#125;,</span><br><span class="line">            &#123;<span class="number">100</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">10</span>,<span class="number">60</span>,<span class="number">0</span>&#125;&#125;;</span><br><span class="line">    <span class="comment">// 最短路径源点及终点，取数组下标索引</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">int</span> vertexS = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">int</span> vertexE = <span class="number">5</span>;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        init();</span><br><span class="line">        <span class="comment">// 传入源点</span></span><br><span class="line">        <span class="keyword">int</span>[] distance = dijkstra(vertexS);</span><br><span class="line">        System.out.println(<span class="string">&quot;源点到各顶点之间的最短路径：&quot;</span>);</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; distance.length; i++) &#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;1-&quot;</span>+(i+<span class="number">1</span>)+<span class="string">&quot;:&quot;</span>);</span><br><span class="line">            System.out.println(distance[i]);</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(<span class="string">&quot;源点&quot;</span>+(vertexS+<span class="number">1</span>)+<span class="string">&quot;到终点&quot;</span>+(vertexE+<span class="number">1</span>)+<span class="string">&quot;之间的最短路径为：&quot;</span>+distance[vertexE]);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">init</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="comment">// 用来临时存储邻接表中的元素</span></span><br><span class="line">        ENode vex;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; numOfVexs; i++) &#123;</span><br><span class="line">            <span class="comment">// 初始化每一个顶点</span></span><br><span class="line">            vexs[i] = <span class="keyword">new</span> ENode();</span><br><span class="line">            vexs[i].setAdjvex(i);</span><br><span class="line">            <span class="comment">// 设置其下一个链接和第一个链接为null</span></span><br><span class="line">            vexs[i].setNextadj(<span class="keyword">null</span>);</span><br><span class="line"></span><br><span class="line">            <span class="comment">// 权值不为0，则</span></span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; numOfVexs; j++) &#123;</span><br><span class="line">                <span class="keyword">if</span>(edges[i][j]!=<span class="number">0</span>)&#123;</span><br><span class="line">                    <span class="comment">// 每次重新初始化一个地址空间</span></span><br><span class="line">                    vex = <span class="keyword">new</span> ENode();</span><br><span class="line">                    <span class="comment">// 显示内存地址，判断每次地址是否不一样</span></span><br><span class="line">                    System.out.println(System.identityHashCode(vex));</span><br><span class="line">                    <span class="comment">// 设置权值和序号</span></span><br><span class="line">                    vex.setAdjvex(j);</span><br><span class="line">                    vex.setWeight(edges[i][j]);</span><br><span class="line"></span><br><span class="line">                    <span class="comment">// 将vex的下一个链接设置为vexs[i]的下一个链接，并将vexs[i]的下一个链接设置为vex自身</span></span><br><span class="line">                    vex.setNextadj(vexs[i].getNextadj());</span><br><span class="line">                    vexs[i].setNextadj(vex);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; numOfVexs; i++) &#123;</span><br><span class="line">            System.out.println(vexs[i]);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span>[] dijkstra(<span class="keyword">int</span> v) &#123;</span><br><span class="line">        <span class="keyword">if</span> (v &lt; <span class="number">0</span> || v &gt;= numOfVexs) &#123;</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> ArrayIndexOutOfBoundsException();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 默认初始为false，表示在T集合（未找到最短路径）中，true时表示在S集合（已找到源点到目标定点最短路径）中</span></span><br><span class="line">        <span class="keyword">boolean</span>[] st = <span class="keyword">new</span> <span class="keyword">boolean</span>[numOfVexs];</span><br><span class="line">        <span class="comment">// 存放源点到其他点的距离</span></span><br><span class="line">        <span class="keyword">int</span>[] distance = <span class="keyword">new</span> <span class="keyword">int</span>[numOfVexs];</span><br><span class="line">        <span class="comment">// 对传入源点与其它顶点之间进行距离初始化，初始化为无穷大（即最大正整数）</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; numOfVexs; i++) &#123;</span><br><span class="line">            distance[i] = Integer.MAX_VALUE;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 创建源点的ENode类</span></span><br><span class="line">        ENode current;</span><br><span class="line">        current = vexs[v].getNextadj();</span><br><span class="line">        <span class="keyword">while</span> (current != <span class="keyword">null</span>) &#123;</span><br><span class="line">            distance[current.getAdjvex()] = current.getWeight();</span><br><span class="line">            current = current.getNextadj();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 顶点自身到自身距离为0</span></span><br><span class="line">        distance[v] = <span class="number">0</span>;</span><br><span class="line">        <span class="comment">// 初始化S集合，将源点v加入S集合</span></span><br><span class="line">        st[v] = <span class="keyword">true</span>;</span><br><span class="line">        <span class="comment">// 处理从源点到其余顶点的最短路径</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; numOfVexs; i++) &#123;</span><br><span class="line">            <span class="keyword">int</span> min = Integer.MAX_VALUE;</span><br><span class="line">            <span class="keyword">int</span> index = -<span class="number">1</span>;</span><br><span class="line">            <span class="comment">// 比较从源点到其余顶点的路径长度</span></span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; numOfVexs; j++) &#123;</span><br><span class="line">                <span class="comment">// 从源点到j顶点的最短路径还没有找到</span></span><br><span class="line">                <span class="keyword">if</span> (st[j] == <span class="keyword">false</span>) &#123;</span><br><span class="line">                    <span class="comment">// 从源点到j顶点的路径长度最小</span></span><br><span class="line">                    <span class="keyword">if</span> (distance[j] &lt; min) &#123;</span><br><span class="line">                        index = j;</span><br><span class="line">                        min = distance[j];</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">// 找到源点到索引为index顶点的最短路径长度</span></span><br><span class="line">            <span class="keyword">if</span> (index != -<span class="number">1</span>) &#123;</span><br><span class="line">                st[index] = <span class="keyword">true</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">// 更新当前最短路径及距离</span></span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> w = <span class="number">0</span>; w &lt; numOfVexs; w++) &#123;</span><br><span class="line">                <span class="keyword">if</span> (st[w] == <span class="keyword">false</span>) &#123;</span><br><span class="line">                    current = vexs[w].getNextadj();</span><br><span class="line">                    <span class="keyword">while</span> (current != <span class="keyword">null</span>) &#123;</span><br><span class="line">                        <span class="keyword">if</span> (current.getAdjvex() == index) &#123;</span><br><span class="line">                            <span class="keyword">if</span> ((min + current.getWeight()) &lt; distance[w]) &#123;</span><br><span class="line">                                distance[w] = min + current.getWeight();</span><br><span class="line">                                <span class="keyword">break</span>;</span><br><span class="line">                            &#125;</span><br><span class="line">                        &#125;</span><br><span class="line">                        current = current.getNextadj();</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> distance;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ENode</span></span>&#123;</span><br><span class="line">    <span class="comment">// 源点到当前顶点权值（即距离）</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> weight;</span><br><span class="line">    <span class="comment">// 当前顶点序号</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> adjvex;</span><br><span class="line">    <span class="comment">// 下一个节点</span></span><br><span class="line">    <span class="keyword">private</span> ENode nextadj;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getWeight</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> weight;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setWeight</span><span class="params">(<span class="keyword">int</span> weight)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.weight = weight;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getAdjvex</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> adjvex;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setAdjvex</span><span class="params">(<span class="keyword">int</span> adjvex)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.adjvex = adjvex;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> ENode <span class="title">getNextadj</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> nextadj;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setNextadj</span><span class="params">(ENode nextadj)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.nextadj = nextadj;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">toString</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;ENode&#123;&quot;</span> +</span><br><span class="line">                <span class="string">&quot;weight=&quot;</span> + weight +</span><br><span class="line">                <span class="string">&quot;, adjvex=&quot;</span> + adjvex +</span><br><span class="line">                <span class="string">&quot;, nextadj=&quot;</span> + nextadj +</span><br><span class="line">                <span class="string">&#x27;&#125;&#x27;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&gt;&gt;</span><br><span class="line"><span class="number">356573597</span></span><br><span class="line"><span class="number">1735600054</span></span><br><span class="line"><span class="number">21685669</span></span><br><span class="line"><span class="number">2133927002</span></span><br><span class="line"><span class="number">1836019240</span></span><br><span class="line"><span class="number">325040804</span></span><br><span class="line"><span class="number">1173230247</span></span><br><span class="line"><span class="number">856419764</span></span><br><span class="line"><span class="number">621009875</span></span><br><span class="line"><span class="number">1265094477</span></span><br><span class="line"><span class="number">2125039532</span></span><br><span class="line"><span class="number">312714112</span></span><br><span class="line"><span class="number">692404036</span></span><br><span class="line"><span class="number">1554874502</span></span><br><span class="line"><span class="number">1846274136</span></span><br><span class="line"><span class="number">1639705018</span></span><br><span class="line">ENode&#123;weight=<span class="number">0</span>, adjvex=<span class="number">0</span>, nextadj=ENode&#123;weight=<span class="number">100</span>, adjvex=<span class="number">5</span>, nextadj=ENode&#123;weight=<span class="number">30</span>, adjvex=<span class="number">4</span>, nextadj=ENode&#123;weight=<span class="number">10</span>, adjvex=<span class="number">2</span>, nextadj=<span class="keyword">null</span>&#125;&#125;&#125;&#125;</span><br><span class="line">ENode&#123;weight=<span class="number">0</span>, adjvex=<span class="number">1</span>, nextadj=ENode&#123;weight=<span class="number">5</span>, adjvex=<span class="number">2</span>, nextadj=<span class="keyword">null</span>&#125;&#125;</span><br><span class="line">ENode&#123;weight=<span class="number">0</span>, adjvex=<span class="number">2</span>, nextadj=ENode&#123;weight=<span class="number">50</span>, adjvex=<span class="number">3</span>, nextadj=ENode&#123;weight=<span class="number">5</span>, adjvex=<span class="number">1</span>, nextadj=ENode&#123;weight=<span class="number">10</span>, adjvex=<span class="number">0</span>, nextadj=<span class="keyword">null</span>&#125;&#125;&#125;&#125;</span><br><span class="line">ENode&#123;weight=<span class="number">0</span>, adjvex=<span class="number">3</span>, nextadj=ENode&#123;weight=<span class="number">10</span>, adjvex=<span class="number">5</span>, nextadj=ENode&#123;weight=<span class="number">20</span>, adjvex=<span class="number">4</span>, nextadj=ENode&#123;weight=<span class="number">50</span>, adjvex=<span class="number">2</span>, nextadj=<span class="keyword">null</span>&#125;&#125;&#125;&#125;</span><br><span class="line">ENode&#123;weight=<span class="number">0</span>, adjvex=<span class="number">4</span>, nextadj=ENode&#123;weight=<span class="number">60</span>, adjvex=<span class="number">5</span>, nextadj=ENode&#123;weight=<span class="number">20</span>, adjvex=<span class="number">3</span>, nextadj=ENode&#123;weight=<span class="number">30</span>, adjvex=<span class="number">0</span>, nextadj=<span class="keyword">null</span>&#125;&#125;&#125;&#125;</span><br><span class="line">ENode&#123;weight=<span class="number">0</span>, adjvex=<span class="number">5</span>, nextadj=ENode&#123;weight=<span class="number">60</span>, adjvex=<span class="number">4</span>, nextadj=ENode&#123;weight=<span class="number">10</span>, adjvex=<span class="number">3</span>, nextadj=ENode&#123;weight=<span class="number">100</span>, adjvex=<span class="number">0</span>, nextadj=<span class="keyword">null</span>&#125;&#125;&#125;&#125;</span><br><span class="line">源点到各顶点之间的最短路径：</span><br><span class="line"><span class="number">1</span>-<span class="number">1</span>:</span><br><span class="line"><span class="number">0</span></span><br><span class="line"><span class="number">1</span>-<span class="number">2</span>:</span><br><span class="line"><span class="number">15</span></span><br><span class="line"><span class="number">1</span>-<span class="number">3</span>:</span><br><span class="line"><span class="number">10</span></span><br><span class="line"><span class="number">1</span>-<span class="number">4</span>:</span><br><span class="line"><span class="number">50</span></span><br><span class="line"><span class="number">1</span>-<span class="number">5</span>:</span><br><span class="line"><span class="number">30</span></span><br><span class="line"><span class="number">1</span>-<span class="number">6</span>:</span><br><span class="line"><span class="number">60</span></span><br><span class="line">源点<span class="number">1</span>到终点<span class="number">6</span>之间的最短路径为：<span class="number">60</span></span><br></pre></td></tr></table></figure>
+
+
+
+<blockquote>
+<p>问题</p>
+</blockquote>
+<ol>
+<li><code>System.out.println(System.identityHashCode(vex));</code>输出对象的内存地址；</li>
+<li>ENode类创建对象数组和初始化时，先创建对象数组，然后初始化对象数组，再对数组中每一个对象初始化分配内存；</li>
+</ol>
+<p>参考博客：<a target="_blank" rel="noopener external nofollow noreferrer" href="https://blog.csdn.net/qq_38410730/article/details/79587768">https://blog.csdn.net/qq_38410730/article/details/79587768</a></p>
+
+    </div>
+
+    
+    
+    
+
+  
+         <div>
+           <div>
+  
+    <div style="text-align:center;color:#bfbfbf;font-size:16px;">
+      <span>-------- 本文结束 </span>
+      <i class="fa fa-paw"></i>
+      <span> 感谢阅读 --------</span>
+    </div>
+  
+</div>
+
+         </div>
+       
+      
+
+
+
+
+
+    <footer class="post-footer">
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>Zhaoxiaoan
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="http://kunpw.cn/2020/11/27/Algorithm/dijkstra/" title="Dijkstra">http://kunpw.cn/2020/11/27/Algorithm/dijkstra/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener external nofollow noreferrer" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/%E7%AE%97%E6%B3%95/" rel="tag"><i class="fa fa-tag"></i> 算法</a>
+              <a href="/tags/Dijkstra/" rel="tag"><i class="fa fa-tag"></i> Dijkstra</a>
+              <a href="/tags/%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2/" rel="tag"><i class="fa fa-tag"></i> 广度优先搜索</a>
+              <a href="/tags/%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84/" rel="tag"><i class="fa fa-tag"></i> 最短路径</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2020/11/18/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E8%87%AA%E9%A1%B6%E5%90%91%E4%B8%8B%E6%96%B9%E6%B3%95/%E7%AC%AC%E5%9B%9B%E7%AB%A0.%E7%BD%91%E7%BB%9C%E5%B1%82%EF%BC%9A%E6%95%B0%E6%8D%AE%E5%B9%B3%E9%9D%A2/" rel="prev" title="计算机网络自顶向下方法学习笔记（四）网络层：数据平面">
+                  <i class="fa fa-chevron-left"></i> 计算机网络自顶向下方法学习笔记（四）网络层：数据平面
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+
+  
+  
+  
+
+
+
+      
+    <div class="comments" id="valine-comments"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      const activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      const commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      
+
+      
+
+<span id="timeDate" style="color: green;">载入天数...</span>
+<span id="times" style="color: green;">载入时分秒...</span>
+<script>
+    var now = new Date();
+    function createtime() {
+        var grt= new Date("09/06/2020 13:38:49");//在此处修改你的建站时间，格式：月/日/年 时:分:秒
+        now.setTime(now.getTime()+250);
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
+        document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 ";
+        document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
+    }
+setInterval("createtime()",250);
+</script>
+
+
+
+<div>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<span id="busuanzi_container_site_pv" style='display:none'>
+    本站总访问量 <span id="busuanzi_value_site_pv"></span> 次
+    <span class="post-meta-divider">|</span>
+</span>
+<span id="busuanzi_container_site_uv" style='display:none'>
+    有<span id="busuanzi_value_site_uv"></span>人看过我的博客啦
+</span>
+</div>
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Zhaoxiaoan</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+      <span>站点总字数：</span>
+    <span title="站点总字数">169k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span>站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">2:33</span>
+  </span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener external nofollow noreferrer" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" class="theme-link" rel="noopener external nofollow noreferrer" target="_blank">NexT.Gemini</a> 强力驱动
+  </div><script color="0,0,255" opacity="0.5" zIndex="-1" count="99" src="https://cdn.jsdelivr.net/npm/canvas-nest.js@1/dist/canvas-nest.js"></script>
+
+    </div>
+  </footer>
+
+  
+  <script src="//cdn.jsdelivr.net/npm/animejs@3.2.0/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/@next-theme/pjax@0.4.0/pjax.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+  <script>
+var pjax = new Pjax({
+  selectors: [
+    'head title',
+    '.page-configurations',
+    '.main-inner',
+    '.post-toc-wrap',
+    '.languages',
+    '.pjax'
+  ],
+  analytics: false,
+  cacheBust: false,
+  scrollRestoration: false,
+  scrollTo: !CONFIG.bookmark.enable
+});
+
+document.addEventListener('pjax:success', () => {
+  pjax.executeScripts(document.querySelectorAll('script[data-pjax], .pjax script'));
+  NexT.boot.refresh();
+  // Define Motion Sequence & Bootstrap Motion.
+  if (CONFIG.motion.enable) {
+    NexT.motion.integrator
+      .init()
+      .add(NexT.motion.middleWares.subMenu)
+      .add(NexT.motion.middleWares.postList)
+      .bootstrap();
+  }
+  const hasTOC = document.querySelector('.post-toc');
+  document.querySelector('.sidebar-inner').classList.toggle('sidebar-nav-active', hasTOC);
+  document.querySelector(hasTOC ? '.sidebar-nav-toc' : '.sidebar-nav-overview').click();
+  NexT.utils.updateSidebarPosition();
+});
+</script>
+
+
+  
+
+
+
+
+  <script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script data-pjax async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+
+
+
+    <div class="pjax">
+  
+
+  
+<script>
+NexT.utils.loadComments('#valine-comments', () => {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js', () => {
+    new Valine(Object.assign({
+      el  : '#valine-comments',
+      path: "/2020/11/27/Algorithm/dijkstra/",
+    }, {"enable":true,"appId":"9JxB7GVqlwRNk6oWQAWRFukK-MdYXbMMI","appKey":"0FRspDasEAKCPOgl62bwPGJ6","placeholder":"评论区走一波","avatar":"mm","meta":["nick","mail","link"],"pageSize":10,"lang":"zh-cn","visitor":false,"comment_count":true,"recordIP":false,"serverURLs":null,"enableQQ":false,"requiredFields":[],"emoticonUrl":["https://cdn.jsdelivr.net/npm/alus@latest","https://cdn.jsdelivr.net/gh/MiniValine/qq@latest","https://cdn.jsdelivr.net/gh/MiniValine/Bilibilis@latest","https://cdn.jsdelivr.net/gh/MiniValine/tieba@latest","https://cdn.jsdelivr.net/gh/MiniValine/twemoji@latest","https://cdn.jsdelivr.net/gh/MiniValine/weibo@latest"]}
+    ));
+  }, window.Valine);
+});
+</script>
+
+
+
+<script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+<script type="text/javascript">
+jinrishici.load(function(result) {
+	var jrsc_plac =  result.data.content + "\n「" + result.data.origin.title + "」" + result.data.origin.dynasty + " · " + result.data.origin.author
+	document.getElementById("veditor").setAttribute("placeholder",jrsc_plac);
+});
+</script>
+
+
+  <script async src="/js/cursor/fireworks.js"></script>
+
+
+
+
+  <script src="/js/write/activate-power-mode.min.js"></script>
+  <script>
+    POWERMODE.colorful = true;
+    POWERMODE.shake = false;
+    document.body.addEventListener('input', POWERMODE);
+  </script>
+
+
+    </div>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/hijiki.model.json"},"display":{"position":"left","width":150,"height":300},"mobile":{"show":true},"react":{"opacity":1},"log":false});</script></body>
+</html>

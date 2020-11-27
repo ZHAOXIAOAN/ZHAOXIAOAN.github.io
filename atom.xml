@@ -6,7 +6,7 @@
   <link href="http://kunpw.cn/atom.xml" rel="self"/>
   
   <link href="http://kunpw.cn/"/>
-  <updated>2020-11-18T13:33:36.637Z</updated>
+  <updated>2020-11-27T08:32:06.377Z</updated>
   <id>http://kunpw.cn/</id>
   
   <author>
@@ -15,6 +15,42 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Dijkstra</title>
+    <link href="http://kunpw.cn/2020/11/27/Algorithm/dijkstra/"/>
+    <id>http://kunpw.cn/2020/11/27/Algorithm/dijkstra/</id>
+    <published>2020-11-27T08:23:38.881Z</published>
+    <updated>2020-11-27T08:32:06.377Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;Dijkstra算法&quot;&gt;&lt;a href=&quot;#Dijkstra算法&quot; class=&quot;headerlink&quot; title=&quot;Dijkstra算法&quot;&gt;&lt;/a&gt;Dijkstra算法&lt;/h2&gt;&lt;h3 id=&quot;简要介绍&quot;&gt;&lt;a href=&quot;#简要介绍&quot; class=&quot;headerlink&quot; title=&quot;简要介绍&quot;&gt;&lt;/a&gt;简要介绍&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;Dijkstra算法是一种&lt;strong&gt;广度优先搜索算法&lt;/strong&gt;；&lt;/li&gt;
+&lt;li&gt;主要解决赋权值有向图或无向图的&lt;strong&gt;单源点最短路径问题&lt;/strong&gt;；&lt;/li&gt;
+&lt;li&gt;时间复杂度是${n^2}$；&lt;/li&gt;
+&lt;li&gt;权值必须为正；&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;主要思想&quot;&gt;&lt;a href=&quot;#主要思想&quot; class=&quot;headerlink&quot; title=&quot;主要思想&quot;&gt;&lt;/a&gt;主要思想&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;设置两个顶点集S和T，集合S中存放已经找到最短路径的顶点，集合T中存放尚未找到最短路径的顶点；&lt;/li&gt;
+&lt;li&gt;初始状态下，集合S中只包含源点V，集合T中包含除源点之外的所有顶点，此时源点到各顶点的最短路径为两个顶点所连边上的权值，如果没有边，则最小路径为无穷大（代码中设置为最大正整数）；&lt;/li&gt;
+&lt;li&gt;依次从集合T中选取到源点V路径最短的顶点${v_i}$放入集合S中；&lt;/li&gt;
+&lt;li&gt;修改从源点V到T中顶点的最短路径长度；&lt;/li&gt;
+&lt;/ol&gt;</summary>
+    
+    
+    
+    <category term="算法" scheme="http://kunpw.cn/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="算法" scheme="http://kunpw.cn/tags/%E7%AE%97%E6%B3%95/"/>
+    
+    <category term="Dijkstra" scheme="http://kunpw.cn/tags/Dijkstra/"/>
+    
+    <category term="广度优先搜索" scheme="http://kunpw.cn/tags/%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2/"/>
+    
+    <category term="最短路径" scheme="http://kunpw.cn/tags/%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84/"/>
+    
+  </entry>
   
   <entry>
     <title>计算机网络自顶向下方法学习笔记（四）网络层：数据平面</title>
