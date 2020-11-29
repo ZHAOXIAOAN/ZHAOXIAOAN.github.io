@@ -6,7 +6,7 @@
   <link href="http://kunpw.cn/atom.xml" rel="self"/>
   
   <link href="http://kunpw.cn/"/>
-  <updated>2020-11-27T08:32:06.377Z</updated>
+  <updated>2020-11-29T03:05:31.404Z</updated>
   <id>http://kunpw.cn/</id>
   
   <author>
@@ -17,11 +17,52 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Prime和Kruskal</title>
+    <link href="http://kunpw.cn/2020/11/29/Algorithm/prime_kruskal/"/>
+    <id>http://kunpw.cn/2020/11/29/Algorithm/prime_kruskal/</id>
+    <published>2020-11-29T03:03:09.386Z</published>
+    <updated>2020-11-29T03:05:31.404Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;Prime算法和Kruskal算法都是无向图中最短路径算法，给出例证场景如下：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/Algorithm/002.png&quot; alt=&quot;1&quot;&gt;&lt;/p&gt;
+&lt;p&gt;注：代码部分基本上复用博客&lt;a href=&quot;https://blog.csdn.net/weixin_43312097/article/details/108238521#comments_14014195&quot;&gt;https://blog.csdn.net/weixin_43312097/article/details/108238521#comments_14014195&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;Prime算法&quot;&gt;&lt;a href=&quot;#Prime算法&quot; class=&quot;headerlink&quot; title=&quot;Prime算法&quot;&gt;&lt;/a&gt;Prime算法&lt;/h2&gt;&lt;h3 id=&quot;简要介绍&quot;&gt;&lt;a href=&quot;#简要介绍&quot; class=&quot;headerlink&quot; title=&quot;简要介绍&quot;&gt;&lt;/a&gt;简要介绍&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;最小生成树算法，从顶点的角度出发，适合解决边稠密的连通网；&lt;/li&gt;
+&lt;li&gt;时间复杂度为n&lt;sup&gt;2&lt;/sup&gt;，以下代码为n&lt;sup&gt;3&lt;/sup&gt;；&lt;/li&gt;
+&lt;li&gt;从已访问顶点开始，每次查找已访问边集合到未访问边集合中的最短未完全访问路径，直到找到n-1条边结束；&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;主要思想&quot;&gt;&lt;a href=&quot;#主要思想&quot; class=&quot;headerlink&quot; title=&quot;主要思想&quot;&gt;&lt;/a&gt;主要思想&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;将所有顶点划分成已访问和未访问两个集合；&lt;/li&gt;
+&lt;li&gt;从已访问集合依次取出一个顶点作为出度；&lt;/li&gt;
+&lt;li&gt;从未访问集合依次取出一个顶点作为入度；&lt;/li&gt;
+&lt;li&gt;取以该出入度为顶点的边的最小值并记录，将该最小值的入度顶点移动到已访问集合；&lt;/li&gt;
+&lt;li&gt;假设共有n个顶点，循环n-1次即找到所有边；&lt;/li&gt;
+&lt;/ol&gt;</summary>
+    
+    
+    
+    <category term="算法" scheme="http://kunpw.cn/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="算法" scheme="http://kunpw.cn/tags/%E7%AE%97%E6%B3%95/"/>
+    
+    <category term="Prime" scheme="http://kunpw.cn/tags/Prime/"/>
+    
+    <category term="Kruskal" scheme="http://kunpw.cn/tags/Kruskal/"/>
+    
+    <category term="最小生成树" scheme="http://kunpw.cn/tags/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91/"/>
+    
+    <category term="最短路径" scheme="http://kunpw.cn/tags/%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Dijkstra</title>
     <link href="http://kunpw.cn/2020/11/27/Algorithm/dijkstra/"/>
     <id>http://kunpw.cn/2020/11/27/Algorithm/dijkstra/</id>
     <published>2020-11-27T08:23:38.881Z</published>
-    <updated>2020-11-27T08:32:06.377Z</updated>
+    <updated>2020-11-29T03:02:30.116Z</updated>
     
     
     <summary type="html">&lt;h2 id=&quot;Dijkstra算法&quot;&gt;&lt;a href=&quot;#Dijkstra算法&quot; class=&quot;headerlink&quot; title=&quot;Dijkstra算法&quot;&gt;&lt;/a&gt;Dijkstra算法&lt;/h2&gt;&lt;h3 id=&quot;简要介绍&quot;&gt;&lt;a href=&quot;#简要介绍&quot; class=&quot;headerlink&quot; title=&quot;简要介绍&quot;&gt;&lt;/a&gt;简要介绍&lt;/h3&gt;&lt;ul&gt;
@@ -35,6 +76,7 @@
 &lt;li&gt;初始状态下，集合S中只包含源点V，集合T中包含除源点之外的所有顶点，此时源点到各顶点的最短路径为两个顶点所连边上的权值，如果没有边，则最小路径为无穷大（代码中设置为最大正整数）；&lt;/li&gt;
 &lt;li&gt;依次从集合T中选取到源点V路径最短的顶点${v_i}$放入集合S中；&lt;/li&gt;
 &lt;li&gt;修改从源点V到T中顶点的最短路径长度；&lt;/li&gt;
+&lt;li&gt;循环上面两项直到顶点集T为空；&lt;/li&gt;
 &lt;/ol&gt;</summary>
     
     
@@ -44,11 +86,11 @@
     
     <category term="算法" scheme="http://kunpw.cn/tags/%E7%AE%97%E6%B3%95/"/>
     
+    <category term="最短路径" scheme="http://kunpw.cn/tags/%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84/"/>
+    
     <category term="Dijkstra" scheme="http://kunpw.cn/tags/Dijkstra/"/>
     
     <category term="广度优先搜索" scheme="http://kunpw.cn/tags/%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2/"/>
-    
-    <category term="最短路径" scheme="http://kunpw.cn/tags/%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84/"/>
     
   </entry>
   

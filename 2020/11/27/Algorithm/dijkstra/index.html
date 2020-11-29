@@ -32,12 +32,12 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/Algorithm/001.png">
 <meta property="article:published_time" content="2020-11-27T08:23:38.881Z">
-<meta property="article:modified_time" content="2020-11-27T08:32:06.377Z">
+<meta property="article:modified_time" content="2020-11-29T03:02:30.116Z">
 <meta property="article:author" content="Zhaoxiaoan">
 <meta property="article:tag" content="算法">
+<meta property="article:tag" content="最短路径">
 <meta property="article:tag" content="Dijkstra">
 <meta property="article:tag" content="广度优先搜索">
-<meta property="article:tag" content="最短路径">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/Algorithm/001.png">
 
@@ -152,7 +152,7 @@
   </li>
         <li class="menu-item menu-item-tags">
 
-    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">25</span></a>
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">28</span></a>
 
   </li>
         <li class="menu-item menu-item-categories">
@@ -162,7 +162,7 @@
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">18</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">19</span></a>
 
   </li>
         <li class="menu-item menu-item-essays">
@@ -242,7 +242,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">18</span>
+          <span class="site-state-item-count">19</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -255,7 +255,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">25</span>
+        <span class="site-state-item-count">28</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
 
@@ -280,6 +280,10 @@
         
         
           <li>
+            <a href="/2020/11/29/Algorithm/prime_kruskal/" title="Prime和Kruskal" target="_blank">Prime和Kruskal</a>
+          </li>
+        
+          <li>
             <a href="/2020/11/27/Algorithm/dijkstra/" title="Dijkstra" target="_blank">Dijkstra</a>
           </li>
         
@@ -293,10 +297,6 @@
         
           <li>
             <a href="/2020/11/05/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E8%87%AA%E9%A1%B6%E5%90%91%E4%B8%8B%E6%96%B9%E6%B3%95/%E7%AC%AC%E4%B8%89%E7%AB%A0.%E8%BF%90%E8%BE%93%E5%B1%82/" title="计算机网络自顶向下方法学习笔记（三）运输层" target="_blank">计算机网络自顶向下方法学习笔记（三）运输层</a>
-          </li>
-        
-          <li>
-            <a href="/2020/10/23/SpringBoot/SpringBoot%EF%BC%88%E4%B8%80%EF%BC%89/" title="SpringBoot(一)" target="_blank">SpringBoot(一)</a>
           </li>
         
       </ul>
@@ -362,10 +362,16 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
-      
 
-      <time title="创建时间：2020-11-27 16:23:38 / 修改时间：16:32:06" itemprop="dateCreated datePublished" datetime="2020-11-27T16:23:38+08:00">2020-11-27</time>
+      <time title="创建时间：2020-11-27 16:23:38" itemprop="dateCreated datePublished" datetime="2020-11-27T16:23:38+08:00">2020-11-27</time>
     </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2020-11-29 11:02:30" itemprop="dateModified" datetime="2020-11-29T11:02:30+08:00">2020-11-29</time>
+      </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-folder"></i>
@@ -434,6 +440,7 @@
 <li>初始状态下，集合S中只包含源点V，集合T中包含除源点之外的所有顶点，此时源点到各顶点的最短路径为两个顶点所连边上的权值，如果没有边，则最小路径为无穷大（代码中设置为最大正整数）；</li>
 <li>依次从集合T中选取到源点V路径最短的顶点${v_i}$放入集合S中；</li>
 <li>修改从源点V到T中顶点的最短路径长度；</li>
+<li>循环上面两项直到顶点集T为空；</li>
 </ol>
 <a id="more"></a>
 
@@ -456,7 +463,7 @@
 
 
 <blockquote>
-<p>问题</p>
+<p>思考</p>
 </blockquote>
 <ol>
 <li><code>System.out.println(System.identityHashCode(vex));</code>输出对象的内存地址；</li>
@@ -485,6 +492,12 @@
          </div>
        
       
+  <div class="popular-posts-header">相关文章推荐# Custom header, leave empty to use the default one</div>
+  <ul class="popular-posts">
+    <li class="popular-posts-item">
+      <div class="popular-posts-title"><a href="\2020\11\29\Algorithm\prime_kruskal\" rel="bookmark">Prime和Kruskal</a></div>
+    </li>
+  </ul>
 
 
 
@@ -510,9 +523,9 @@
 
           <div class="post-tags">
               <a href="/tags/%E7%AE%97%E6%B3%95/" rel="tag"><i class="fa fa-tag"></i> 算法</a>
+              <a href="/tags/%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84/" rel="tag"><i class="fa fa-tag"></i> 最短路径</a>
               <a href="/tags/Dijkstra/" rel="tag"><i class="fa fa-tag"></i> Dijkstra</a>
               <a href="/tags/%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2/" rel="tag"><i class="fa fa-tag"></i> 广度优先搜索</a>
-              <a href="/tags/%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84/" rel="tag"><i class="fa fa-tag"></i> 最短路径</a>
           </div>
 
         
@@ -524,6 +537,9 @@
                 </a>
             </div>
             <div class="post-nav-item">
+                <a href="/2020/11/29/Algorithm/prime_kruskal/" rel="next" title="Prime和Kruskal">
+                  Prime和Kruskal <i class="fa fa-chevron-right"></i>
+                </a>
             </div>
           </div>
     </footer>
@@ -616,14 +632,14 @@ setInterval("createtime()",250);
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">169k</span>
+    <span title="站点总字数">176k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">2:33</span>
+    <span title="站点阅读时长">2:40</span>
   </span>
 </div>
 <div class="busuanzi-count">
