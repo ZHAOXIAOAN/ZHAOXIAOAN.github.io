@@ -6,7 +6,7 @@
   <link href="http://kunpw.cn/atom.xml" rel="self"/>
   
   <link href="http://kunpw.cn/"/>
-  <updated>2020-11-29T03:05:31.404Z</updated>
+  <updated>2020-12-01T02:57:41.842Z</updated>
   <id>http://kunpw.cn/</id>
   
   <author>
@@ -15,6 +15,41 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>计算机网络自顶向下方法学习笔记（五）网络层：控制平面</title>
+    <link href="http://kunpw.cn/2020/12/01/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E8%87%AA%E9%A1%B6%E5%90%91%E4%B8%8B%E6%96%B9%E6%B3%95/%E7%AC%AC%E4%BA%94%E7%AB%A0.%E7%BD%91%E7%BB%9C%E5%B1%82%EF%BC%9A%E6%8E%A7%E5%88%B6%E5%B9%B3%E9%9D%A2/"/>
+    <id>http://kunpw.cn/2020/12/01/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E8%87%AA%E9%A1%B6%E5%90%91%E4%B8%8B%E6%96%B9%E6%B3%95/%E7%AC%AC%E4%BA%94%E7%AB%A0.%E7%BD%91%E7%BB%9C%E5%B1%82%EF%BC%9A%E6%8E%A7%E5%88%B6%E5%B9%B3%E9%9D%A2/</id>
+    <published>2020-12-01T02:55:39.743Z</published>
+    <updated>2020-12-01T02:57:41.842Z</updated>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;前言：由于课程课时原因，从本章往后部分老师已不细讲，对计算机网络做一个简单了解的话涉及到前三层也差不多了，因此本章会简略些，后续章节也可能不会再出单章博客，不便之处敬请谅解，谢谢！&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;1-概述&quot;&gt;&lt;a href=&quot;#1-概述&quot; class=&quot;headerlink&quot; title=&quot;1.概述&quot;&gt;&lt;/a&gt;1.概述&lt;/h2&gt;&lt;p&gt;控制平面主要有两种形式：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;每路由器控制：在每台路由器中运行一种路由选择算法，每台路由器中都包含转发和路由选择功能；&lt;/li&gt;
+&lt;/ul&gt;
+&lt;img src=&quot;https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/ComputerNetWorking/110.png&quot; alt=&quot;image-20201201100331662&quot; style=&quot;zoom:80%;&quot;&gt;
+
+&lt;ul&gt;
+&lt;li&gt;逻辑集中式控制：&lt;/li&gt;
+&lt;/ul&gt;
+&lt;img src=&quot;https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/ComputerNetWorking/111.png&quot; alt=&quot;image-20201201100411586&quot; style=&quot;zoom:80%;&quot;&gt;</summary>
+    
+    
+    
+    <category term="计算机网络自顶向下方法" scheme="http://kunpw.cn/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E8%87%AA%E9%A1%B6%E5%90%91%E4%B8%8B%E6%96%B9%E6%B3%95/"/>
+    
+    
+    <category term="计算机网络自顶向下方法" scheme="http://kunpw.cn/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E8%87%AA%E9%A1%B6%E5%90%91%E4%B8%8B%E6%96%B9%E6%B3%95/"/>
+    
+    <category term="理论学习" scheme="http://kunpw.cn/tags/%E7%90%86%E8%AE%BA%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="教材" scheme="http://kunpw.cn/tags/%E6%95%99%E6%9D%90/"/>
+    
+  </entry>
   
   <entry>
     <title>Prime和Kruskal</title>
@@ -47,13 +82,13 @@
     
     <category term="算法" scheme="http://kunpw.cn/tags/%E7%AE%97%E6%B3%95/"/>
     
+    <category term="最短路径" scheme="http://kunpw.cn/tags/%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84/"/>
+    
     <category term="Prime" scheme="http://kunpw.cn/tags/Prime/"/>
     
     <category term="Kruskal" scheme="http://kunpw.cn/tags/Kruskal/"/>
     
     <category term="最小生成树" scheme="http://kunpw.cn/tags/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91/"/>
-    
-    <category term="最短路径" scheme="http://kunpw.cn/tags/%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84/"/>
     
   </entry>
   
@@ -86,11 +121,11 @@
     
     <category term="算法" scheme="http://kunpw.cn/tags/%E7%AE%97%E6%B3%95/"/>
     
-    <category term="最短路径" scheme="http://kunpw.cn/tags/%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84/"/>
-    
     <category term="Dijkstra" scheme="http://kunpw.cn/tags/Dijkstra/"/>
     
     <category term="广度优先搜索" scheme="http://kunpw.cn/tags/%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2/"/>
+    
+    <category term="最短路径" scheme="http://kunpw.cn/tags/%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84/"/>
     
   </entry>
   
