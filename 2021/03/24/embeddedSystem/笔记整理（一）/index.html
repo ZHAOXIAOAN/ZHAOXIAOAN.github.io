@@ -1,0 +1,1205 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.1.1">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/MuyunHui.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/MuyunHui.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/MuyunHui.png">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
+  <link rel="stylesheet" href="//cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-flash.min.css">
+  <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+
+<script class="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"kunpw.cn","root":"/","scheme":"Gemini","version":"8.0.0","exturl":false,"sidebar":{"display":"always","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"valine","storage":true,"lazyload":false,"nav":null,"activeClass":"valine"},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
+  </script>
+
+  <meta name="description" content="ARM汇编语言官方手册：链接：https:&#x2F;&#x2F;pan.baidu.com&#x2F;s&#x2F;1k-drPZBD41hSIXzzk4JA2Q 提取码：vjyf 1.计算机组成 嵌入式系统：以应用为中心，以计算机技术为基础，软硬件可裁剪，适应应用系统对功能、可靠性、成本、体积、功耗等严格要求的专用计算机系统。  计算机系统：  冯.诺伊曼结构（普林斯顿结构）：计算机按照程序顺序执行程序(指令)，程序指令存储地址和数">
+<meta property="og:type" content="article">
+<meta property="og:title" content="嵌入式系统笔记整理（一）">
+<meta property="og:url" content="http://kunpw.cn/2021/03/24/embeddedSystem/%E7%AC%94%E8%AE%B0%E6%95%B4%E7%90%86%EF%BC%88%E4%B8%80%EF%BC%89/index.html">
+<meta property="og:site_name" content="朝小闇的博客">
+<meta property="og:description" content="ARM汇编语言官方手册：链接：https:&#x2F;&#x2F;pan.baidu.com&#x2F;s&#x2F;1k-drPZBD41hSIXzzk4JA2Q 提取码：vjyf 1.计算机组成 嵌入式系统：以应用为中心，以计算机技术为基础，软硬件可裁剪，适应应用系统对功能、可靠性、成本、体积、功耗等严格要求的专用计算机系统。  计算机系统：  冯.诺伊曼结构（普林斯顿结构）：计算机按照程序顺序执行程序(指令)，程序指令存储地址和数">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/embeddedSystem/014.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/embeddedSystem/002.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/embeddedSystem/003.png">
+<meta property="article:published_time" content="2021-03-24T06:49:01.049Z">
+<meta property="article:modified_time" content="2021-03-24T06:55:32.295Z">
+<meta property="article:author" content="Zhaoxiaoan">
+<meta property="article:tag" content="嵌入式">
+<meta property="article:tag" content="汇编指令">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/embeddedSystem/014.png">
+
+
+<link rel="canonical" href="http://kunpw.cn/2021/03/24/embeddedSystem/%E7%AC%94%E8%AE%B0%E6%95%B4%E7%90%86%EF%BC%88%E4%B8%80%EF%BC%89/">
+
+
+<script data-pjax class="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>嵌入式系统笔记整理（一） | 朝小闇的博客</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  body { margin-top: 2rem; }
+
+  .use-motion .menu-item,
+  .use-motion .sidebar,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header {
+    visibility: visible;
+  }
+
+  .use-motion .header,
+  .use-motion .site-brand-container .toggle,
+  .use-motion .footer { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle,
+  .use-motion .custom-logo-image {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line {
+    transform: scaleX(1);
+  }
+
+  .search-pop-overlay, .sidebar-nav { display: none; }
+  .sidebar-panel { display: block; }
+  </style>
+</noscript>
+
+  
+	<script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+  
+
+<link rel="alternate" href="/atom.xml" title="朝小闇的博客" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">朝小闇的博客</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">海上月是天上月，眼前人是心上人</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">34</span></a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">7</span></a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">29</span></a>
+
+  </li>
+        <li class="menu-item menu-item-essays">
+
+    <a href="/essays" rel="section"><i class="fa fa-heart fa-fw"></i>随笔</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <section class="post-toc-wrap sidebar-panel">
+          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90"><span class="nav-text">1.计算机组成</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-ARM-Cortex-M4%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84"><span class="nav-text">2.ARM Cortex M4体系结构</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-Cortex-M4%E6%80%BB%E7%BA%BF%E6%8E%A5%E5%8F%A3"><span class="nav-text">2.1 Cortex M4总线接口</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-Cortex-M4%E5%B7%A5%E4%BD%9C%E7%8A%B6%E6%80%81-%E5%A4%84%E7%90%86%E5%99%A8%E7%8A%B6%E6%80%81"><span class="nav-text">2.2 Cortex M4工作状态(处理器状态)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-Cortex-M4%E5%AF%84%E5%AD%98%E5%99%A8"><span class="nav-text">2.3 Cortex M4寄存器</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-ARM%E6%8C%87%E4%BB%A4%E7%B3%BB%E7%BB%9F-%E9%80%9A%E7%94%A8%E6%8C%87%E4%BB%A432%E4%BD%8D"><span class="nav-text">3.ARM指令系统(通用指令32位)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-%E6%B1%87%E7%BC%96%E6%8C%87%E4%BB%A4%E7%B1%BB%E5%88%AB"><span class="nav-text">3.1 汇编指令类别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-ARM%E6%8C%87%E4%BB%A4%E7%9A%84%E6%A0%BC%E5%BC%8F"><span class="nav-text">3.2 ARM指令的格式</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-ARM%E6%8C%87%E4%BB%A4"><span class="nav-text">4.ARM指令</span></a></li></ol></div>
+      </section>
+      <!--/noindex-->
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Zhaoxiaoan"
+      src="/images/PubuLan.png">
+  <p class="site-author-name" itemprop="name">Zhaoxiaoan</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">29</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">34</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+
+
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/ZHAOXIAOAN" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;ZHAOXIAOAN" rel="noopener external nofollow noreferrer" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+  </div>
+
+
+
+      </section><div>
+  <canvas id="canvasDiyBlock" style="width:60%;">当前浏览器不支持canvas，请更换浏览器后再试</canvas><script src="/js/custom/clock.js"></script>
+</div>
+
+
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+      
+
+      
+
+    
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://kunpw.cn/2021/03/24/embeddedSystem/%E7%AC%94%E8%AE%B0%E6%95%B4%E7%90%86%EF%BC%88%E4%B8%80%EF%BC%89/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/PubuLan.png">
+      <meta itemprop="name" content="Zhaoxiaoan">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="朝小闇的博客">
+    </span>
+
+    
+    
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          嵌入式系统笔记整理（一）
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2021-03-24 14:49:01 / 修改时间：14:55:32" itemprop="dateCreated datePublished" datetime="2021-03-24T14:49:01+08:00">2021-03-24</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F%E7%B3%BB%E7%BB%9F/" itemprop="url" rel="index"><span itemprop="name">嵌入式系统</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2021/03/24/embeddedSystem/%E7%AC%94%E8%AE%B0%E6%95%B4%E7%90%86%EF%BC%88%E4%B8%80%EF%BC%89/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2021/03/24/embeddedSystem/%E7%AC%94%E8%AE%B0%E6%95%B4%E7%90%86%EF%BC%88%E4%B8%80%EF%BC%89/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>8.6k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>8 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>ARM汇编语言官方手册：链接：<a target="_blank" rel="noopener external nofollow noreferrer" href="https://pan.baidu.com/s/1k-drPZBD41hSIXzzk4JA2Q">https://pan.baidu.com/s/1k-drPZBD41hSIXzzk4JA2Q</a> 提取码：vjyf</p>
+<h2 id="1-计算机组成"><a href="#1-计算机组成" class="headerlink" title="1.计算机组成"></a>1.计算机组成</h2><ol>
+<li><p>嵌入式系统：以应用为中心，以计算机技术为基础，软硬件可裁剪，适应应用系统对功能、可靠性、成本、体积、功耗等严格要求的专用计算机系统。</p>
+</li>
+<li><p>计算机系统：</p>
+<ol>
+<li><p>冯.诺伊曼结构（普林斯顿结构）：计算机按照程序顺序执行程序(指令)，程序指令存储地址和数据存储地址指向同一个存储器的不同物理位置；</p>
+<p>组成：</p>
+<ul>
+<li>CPU(中央处理单元) = 算术逻辑单元(运算器) + 控制电路</li>
+<li>存储器 Memory<ul>
+<li>ROM: Read Only Memory 只读存储器</li>
+<li>RAM: Random Access Memory 随机访问存储器 “R/W”</li>
+</ul>
+</li>
+<li>输入输出设备    </li>
+</ul>
+</li>
+<li><p>哈佛架构(Harvard Architecture)：是一种将程序存储和数据存储分开的存储器结构，数据存储器与程序存储器采用不同的总线。</p>
+</li>
+</ol>
+</li>
+<li><p>各组件通信方式：</p>
+<ol>
+<li>全双工：同一时刻一方即可以发送数据给对方，又可以从对方接收数据；</li>
+<li>半双工：同一时刻一方只能发送数据给对方，或者是从对方接收数据；</li>
+<li>单工：任意时刻 一方只能发送数据给对方，或者是从对方接收数据；</li>
+</ol>
+<ul>
+<li>总线bus：计算机系统内部各组件之间是通过“总线”的来通信的；</li>
+<li>总线特点：<ul>
+<li>广播式：多个部件可以同时从总线上接收相同的信息；</li>
+<li>系统瓶颈：任意时刻只能有一个设备向总线发送信息；</li>
+</ul>
+</li>
+<li>总线按功能分：<ul>
+<li>数据总线(DB): 双向，宽度差别8bits/16bits/32bits</li>
+<li>地址总线(AB): 单向，CPU发地址，宽度与寻址空间有关 24bit==&gt;16MB                    </li>
+<li>控制总线(CB): 命令和状态</li>
+</ul>
+</li>
+<li>总线按位置分：<ul>
+<li>片内总线 </li>
+<li>系统总线</li>
+<li>通信总线(I/O总线)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<a id="more"></a>
+
+<h2 id="2-ARM-Cortex-M4体系结构"><a href="#2-ARM-Cortex-M4体系结构" class="headerlink" title="2.ARM Cortex M4体系结构"></a>2.ARM Cortex M4体系结构</h2><h3 id="2-1-Cortex-M4总线接口"><a href="#2-1-Cortex-M4总线接口" class="headerlink" title="2.1 Cortex M4总线接口"></a>2.1 Cortex M4总线接口</h3><blockquote>
+<p>使用哈佛架构，共有三套总线。</p>
+</blockquote>
+<p>总线：</p>
+<ul>
+<li>Icode总线：用于访问代码空间的指令instruction, 32bits <ul>
+<li>访问的空间为: 0x0000 0000 ~ 0x1FFF FFFF (512M)；</li>
+<li>每次取4字节；</li>
+<li>指令只读；</li>
+</ul>
+</li>
+<li>Dcode总线：用于访问代码空间的数据data, 32bits<ul>
+<li>访问的空间为: 0x0000 0000 ~ 0x1FFF FFFF(512M)；</li>
+<li>非对齐的访问会被总线分割成几个对齐的访问；            </li>
+<li>“4字节对齐”：地址必须为4倍数；</li>
+</ul>
+</li>
+<li>System总线：用于访问其他系统空间。如： 各硬件控制器，GPIO……<ul>
+<li>访问空间为 0x2000 0000 ~ 0xDFFF FFFF  和 0XE010 0000 ~ 0xFFFF FFFF；</li>
+<li>非对齐的访问会被总线分割成几个对齐的访问；</li>
+<li>I/O总线，用于访问芯片上的各外设寄存器的地址空间的；</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-2-Cortex-M4工作状态-处理器状态"><a href="#2-2-Cortex-M4工作状态-处理器状态" class="headerlink" title="2.2 Cortex M4工作状态(处理器状态)"></a>2.2 Cortex M4工作状态(处理器状态)</h3><p>ARM公司设计的CPU,可以支持两种指令集：</p>
+<ul>
+<li>ARM指令集：32bits,功能比较强大，通用；</li>
+<li>Thumb指令集:<ul>
+<li>thumb 16bits, 功能也强大(Cortem M4只支持Thumb指令)；</li>
+<li>thumb-2 32bits,功能强大，增加了不少专用的DSP指令；</li>
+</ul>
+</li>
+</ul>
+<p>处理器状态：执行某种指令集即处于其状态，Cortem M4只支持Thumb指令即只存在Thumb处理器状态。在状态寄存器中专门有1bit表示处理器状态，1为Thumb，0为ARM。</p>
+<h3 id="2-3-Cortex-M4寄存器"><a href="#2-3-Cortex-M4寄存器" class="headerlink" title="2.3 Cortex M4寄存器"></a>2.3 Cortex M4寄存器</h3><p>通用寄存器：没有特殊用途</p>
+<ul>
+<li>R0~R7： 所有thumb  thumb-2都可以访问；</li>
+<li>R8~R12: 只有少量的thumb指令可以访问，thumb-2都可以访问；</li>
+</ul>
+<p>专用寄存器：有专门用途</p>
+<ul>
+<li><p>R13（SP）：栈顶指针寄存器</p>
+<ul>
+<li>堆栈区用于过程PROC保护现场和恢复现场；</li>
+<li>定义宏difine没有保护现场和恢复现场的额外开销；</li>
+<li>Cortex M4有两个堆栈：<ul>
+<li>MSP：主堆栈指针；</li>
+<li>PSP：进程堆栈指针；</li>
+<li>可以把操作系统堆栈和用户堆栈区分；</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>R14(LR)：链接寄存器</p>
+</li>
+<li><p>执行过程调用时用来存储返回地址，即该条指令的下一条指令的地址；</p>
+</li>
+<li><p>R15(PC)：程序计数器</p>
+<ul>
+<li>保存下一条要执行的指令地址，在取指后自动增加到下一条指令地址；</li>
+<li>一般常将LR入栈保存，再用PC取出；</li>
+</ul>
+</li>
+<li><p>xPSR：程序状态寄存器</p>
+<ul>
+<li><p>保存程序运行过程中的一些状态，主要分为三类：</p>
+<ul>
+<li>应用状态寄存器 APSR：计算结果的标志——N Z C V Q；</li>
+<li>中断状态寄存器 IPSR：中断的编号  Exception Number 8bits；</li>
+<li>执行状态寄存器 EPSR：执行状态，如: Thumb/ARM；</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/embeddedSystem/014.png" alt="image-20210302110046157"></p>
+</li>
+<li><p>不是所有指令都会影响标志位，如MOV、ADD不影响，MOVS、ADDS影响；</p>
+</li>
+<li><p>标志：</p>
+<ul>
+<li><p>N：负数标志，如果xPSR.N == 1，表示上一条指令的操作结果为负数；</p>
+</li>
+<li><p>Z：零标志，结果所有bit位都为0，则xPSR.Z == 1，否则xPSR.Z == 0；</p>
+</li>
+<li><p>C：借位或进位标志：（进位是指32bit进位到33bit）</p>
+<ul>
+<li>进位：在做加法运算时，产生进位则C == 1；</li>
+<li>借位：在做减法运算时，产生借位则C == 0，R0 = 2，R1=-2，（R0=0x00000002，R1=0xFFFFFFFD）所以SUBS R4,R0,R1有借位，xPSR.C == 0；</li>
+<li>减法实质是加上此数的负数；</li>
+</ul>
+</li>
+<li><p>V：溢位，和C不同</p>
+<ul>
+<li>看最高位和次高位C标志的异或结果，1则溢出；</li>
+</ul>
+</li>
+<li><p>Q：饱和标志</p>
+<ul>
+<li>若数据没有超出最大范围允许值太多，就只为最大值；</li>
+</ul>
+</li>
+<li><p>T：状态标志：</p>
+<ul>
+<li>ARM状态 xPSR.T == 0；</li>
+<li>Thumb状态 xPST.T == 1；</li>
+</ul>
+</li>
+<li><p>ICI/IT：</p>
+<ul>
+<li>IT：IF-THEN位，它们是if-then指令的执行状态位（最多4条）；</li>
+<li>ICI：Interruptible-Continuable Instrument 可中断－可继续指令位<ul>
+<li>如果执行LDM/STM操作(对内存进行批量拷贝)时，数据没有操作完时，产生一个中断，中断的优先级很高，必须要打断这条指令的执行，这种情况，就需要记录被打断的寄存器的编号，在中断响应之后，处理器返回由该位指向的寄存器，并恢复操作，继续执行拷贝。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="3-ARM指令系统-通用指令32位"><a href="#3-ARM指令系统-通用指令32位" class="headerlink" title="3.ARM指令系统(通用指令32位)"></a>3.ARM指令系统(通用指令32位)</h2><h3 id="3-1-汇编指令类别"><a href="#3-1-汇编指令类别" class="headerlink" title="3.1 汇编指令类别"></a>3.1 汇编指令类别</h3><ol>
+<li><p>ARM汇编指令(ARM公司定)：</p>
+<ul>
+<li>一条汇编指令唯一对应一条机器指令；</li>
+<li>由操作码+操作数组成，如<code>MOV R0,R1</code>，MOV为操作码，R0和R1分别为第一、二操作数；</li>
+</ul>
+</li>
+<li><p>伪指令(由编译器厂商定的，keil环境下有keil的伪指令，gnu环境有gnu的伪指令)</p>
+<p>keil环境下常用的伪指令：</p>
+<ul>
+<li><p>顶格写的是标号，标号表示一个地址；</p>
+</li>
+<li><p><code>int a = 5;</code>：</p>
+<ul>
+<li>a    DCD 5        //DCD X : 分配4bytes空间并且把X的值，填入此处；</li>
+</ul>
+</li>
+<li><p><code>int b[10];</code>：</p>
+<ul>
+<li>b    SPACE 40   //SPACE X : 在此处开辟 X 个字节的空间，内容不定；</li>
+</ul>
+</li>
+<li><p><code>int c[10] = &#123;2,3&#125;;</code>：</p>
+<ul>
+<li>```asm<br>c<pre><code>DCD 2
+DCD 3
+SPACE 8*4</code></pre>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">`start.s`：</span><br><span class="line"></span><br><span class="line">- EQU 指令，为符号赋值，相当于#define，此处是为stack_size赋值0x200，意为分配栈大小为2^<span class="attribute">9</span>=512bit</span><br><span class="line">-<span class="built_in"> AREA </span>指令，标记一节开始，对节/段进行命名并设置其属性，属性在名称后以<span class="string">&quot;,&quot;</span>分割，如下方即对该节命名为mystack并设置DATA、READWRITE属性</span><br><span class="line">- DATA意为包含数据而不包含指令，READWRITE是缺省值即默认选项</span><br><span class="line">- SPACE DCD区别，前者申请一片内存空间但不赋初值，DCD申请一个字32bit的内存空间并赋初值</span><br><span class="line">- PRESERVE8设置代码保持堆栈8字节对齐模式，不需要时带参数<span class="literal">FALSE</span></span><br><span class="line">- ALIGN表示对齐代码</span><br><span class="line">- 顶格写的标号也就是变量，标号一定要顶格写，表示一个地址</span><br><span class="line">```asm</span><br><span class="line">; define a final named stack_size with  512bit(0x200)</span><br><span class="line">stack_size EQU 0x200</span><br><span class="line">; define segment mystack with DATA/READWRITE attribute</span><br><span class="line"><span class="built_in">	AREA </span>mystack,DATA,READWRITE</span><br><span class="line">stack_start</span><br><span class="line">	SPACE stack_size</span><br><span class="line">stack_end</span><br><span class="line">; end a segment <span class="keyword">or</span> start of the segment</span><br><span class="line">; <span class="builtin-name">set</span> 8bit<span class="built_in"> align </span>mode <span class="keyword">for</span> code</span><br><span class="line">	PRESERVE8</span><br><span class="line"></span><br><span class="line">; define vectors</span><br><span class="line"><span class="built_in">	AREA </span>RESET,DATA,READONLY</span><br><span class="line">vectors</span><br><span class="line">; define a stack-top point with a 4bit space first</span><br><span class="line">	DCD stack_end</span><br><span class="line">; define a begin code point with a 4bit space</span><br><span class="line">	DCD test_start</span><br><span class="line">vectors_end</span><br><span class="line"></span><br><span class="line">; define a segment <span class="keyword">for</span> code with<span class="built_in"> align </span>2^3(8bit)/must</span><br><span class="line"><span class="built_in">	AREA </span>mycode, CODE,READONLY,<span class="attribute">ALIGN</span>=3</span><br><span class="line">test_start</span><br><span class="line">	MOV R1,#1</span><br><span class="line">; <span class="keyword">while</span>(1), B means jump, . means local</span><br><span class="line">	B .</span><br><span class="line">	END</span><br></pre></td></tr></table></figure>
+<img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/embeddedSystem/002.png" alt="image-20210309094837149"></li>
+</ul>
+</li>
+<li><p>0x08000000是代码区开始部分，然后由中断向量<code>vectors</code>起始，0x20000000是堆栈区开始部分，由于栈大小最初定义为0x200即512bit，所以<code>DCD stack_end</code>即栈顶指针指向0x20000200；</p>
+</li>
+<li><p>其次是代码开始段，<code>DCD test_start</code>指向地址为0x08000009，此处是因为最后一个字节的最后两位（DCD分配四个字节，即每增加一个DCD定义增加四个字节，而地址显示最后两位只能增加到3，所以用不到；如上，代码开始处左边地址必须是4的倍数增加，此处是8开始，无论是4或8或12……都和最后两位没关系）没有用到（前面被DCW使用），所以最后一位用于标识ARM或Thumb指令，即异或1，所以最后一个字节是9，实质值是0x08000008即代码段开始部分；</p>
+</li>
+<li><p>由图地址知：MOV等指令占4个字节，而B跳转指令占2个字节；</p>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="3-2-ARM指令的格式"><a href="#3-2-ARM指令的格式" class="headerlink" title="3.2 ARM指令的格式"></a>3.2 ARM指令的格式</h3><figure class="highlight dust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">opcode</span>&gt;</span></span><span class="template-variable">&#123;&lt;cond&gt;&#125;</span><span class="template-variable">&#123;S&#125;</span><span class="xml"> <span class="tag">&lt;<span class="name">Rd</span>&gt;</span>, <span class="tag">&lt;<span class="name">operand1</span>&gt;</span> </span><span class="template-variable">&#123;, &lt;operand2&gt;&#125;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>&lt;&gt;内的必须要的 {} 可选的；</p>
+</li>
+<li><p>opcode：operator code 操作码，指令助记符，表示哪条指令；</p>
+</li>
+<li><p>cond：condition 条件。该指令执行的条件。如果省略不写，则表示该条件指令无条件执行(必须执行)；</p>
+</li>
+<li><p>条件码：</p>
+<ul>
+<li><table>
+<thead>
+<tr>
+<th>条件码</th>
+<th>含义</th>
+<th>xPSR中的标志位</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>EQ</td>
+<td>Equal(相等)</td>
+<td>Z==1</td>
+</tr>
+<tr>
+<td>NE</td>
+<td>Not Equal(不相等)</td>
+<td>Z==0</td>
+</tr>
+<tr>
+<td>CS/HS</td>
+<td>Carry Set (C == 1)<br>unsigned Higher or Same<br>&gt;=<br>a &gt;= b<br>a - b无须借位。=&gt; a &gt;= b<br>“无须借位” 表示　做减法时 不需要借位<br>C == 1<br>C == 1表示在做减法时，没有借位。</td>
+<td>C == 1</td>
+</tr>
+<tr>
+<td>CC/LO</td>
+<td>Carry Clear(C == 0)        <br>unsigned Lower<br>        &lt;<br>a &lt; b<br>a - b就需要借位(C == 0)</td>
+<td>C == 0</td>
+</tr>
+<tr>
+<td>MI</td>
+<td>MInous(负数)        <br>a &lt; b<br>a - b &lt; 0(N == 1)</td>
+<td>N == 1</td>
+</tr>
+<tr>
+<td>PL</td>
+<td>Positive or Zero(非负数)<br>a &gt;= b</td>
+<td>N == 0</td>
+</tr>
+<tr>
+<td>VS</td>
+<td>V Set(溢出)</td>
+<td>V == 1</td>
+</tr>
+<tr>
+<td>VC</td>
+<td>V Clear(没溢出)</td>
+<td>V == 0</td>
+</tr>
+<tr>
+<td>HI</td>
+<td>unsigned HIgher<br>a &gt; b<br>a - b &gt; 0<br>a - b 没有借位(C == 1)并且结果不为0(Z == 0)</td>
+<td>(C == 1) &amp;&amp; (Z == 0)</td>
+</tr>
+<tr>
+<td>LS</td>
+<td>unsigned Lower or Same<br>a &lt;= b<br>a - b &lt;= 0</td>
+<td>(C == 0) || (Z == 1)</td>
+</tr>
+<tr>
+<td>GE</td>
+<td>signed Greater or Equql<br>&gt;=</td>
+<td>N == V</td>
+</tr>
+<tr>
+<td>LT</td>
+<td>Less Than<br>&lt;</td>
+<td>N != V</td>
+</tr>
+<tr>
+<td>GT</td>
+<td>Greater Than<br>&gt;</td>
+<td>(N == V) &amp;&amp; (Z == 0)</td>
+</tr>
+<tr>
+<td>LE</td>
+<td>Less than or Equal<br>&lt;=</td>
+<td>(Z==1) || (N != V)</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+</li>
+<li><p>S：Status 表示该指令执行结果是否影响xPSR(程序状态寄存器)的标志位</p>
+<ul>
+<li><code>MOV R0, #0</code>：不会影响任何状态标志</li>
+<li><code>MOVS R0, #0</code> ：会影响状态标志位</li>
+<li>CMP, CMN, TEQ 等不加S也影响状态标志位</li>
+</ul>
+</li>
+<li><p>Rd：Register Desatiation 目标寄存器，用来保存运算的结果</p>
+</li>
+<li><p>operand1：第一个操作数</p>
+</li>
+<li><p>operand2：第2个操作数(有些指令没有第二个操作数)</p>
+</li>
+<li><p>操作数：</p>
+<ul>
+<li><p>立即数(常量表达式)，立即数的生成有要求，一般使用<code>LDR R0, =0x20001000</code>语句获取地址；</p>
+</li>
+<li><p>Rm 寄存器，操作数可以是一个寄存器；</p>
+</li>
+<li><p>Rm,shift 寄存器移位方式，操作数可以是一个寄存器加移位方式：</p>
+<ul>
+<li><table>
+<thead>
+<tr>
+<th>LSL #n</th>
+<th>Logic逻辑移位，无论是左移还是右移，空出的位，都补0</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>LSR #n</td>
+<td>Logic Shift Right 逻辑右移n位，在移出的位为0的情况下， <br>LSL #n 就相当于在原寄存器值 乘以 2的n次方<br>LSR #n 就相当于在原寄存器值 除以 2的n次方</td>
+</tr>
+<tr>
+<td>ASR #n</td>
+<td>算术右移n位<br>算术移位，不应该改变它的符号。<br>最高n位补符号位的值</td>
+</tr>
+<tr>
+<td>ASL #n</td>
+<td>无此方式</td>
+</tr>
+<tr>
+<td>ROR #n</td>
+<td>ROtate Right 循环右移<br>把右边移的n位，补到最左边</td>
+</tr>
+<tr>
+<td>RRX</td>
+<td>带扩展的循环右移1位<br>带C(xPSR.C) 那个位</td>
+</tr>
+<tr>
+<td>type Rs</td>
+<td>type为上述移位方式的一种，如: LSL, LSR,ASR, ROR, RRX…<br>Rs偏移量寄存器，低8位有效，要移的bit位数保存在Rs中</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="4-ARM指令"><a href="#4-ARM指令" class="headerlink" title="4.ARM指令"></a>4.ARM指令</h2><ol>
+<li><p>LDR/STR：加载/存储</p>
+<ul>
+<li>把数据从存储器 -&gt; 寄存器  加载  Loader  LDR</li>
+<li>把数据从寄存器 -&gt; 存储器  存储  Store   STR</li>
+</ul>
+<figure class="highlight dust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml">LDR</span><span class="template-variable">&#123;cond&#125;</span><span class="xml"> </span><span class="template-variable">&#123;S&#125;</span><span class="xml">	</span><span class="template-variable">&#123;B/H&#125;</span><span class="xml">	Rd, <span class="tag">&lt;<span class="name">地址</span>&gt;</span></span></span><br><span class="line"><span class="xml">STR</span><span class="template-variable">&#123;cond&#125;</span><span class="xml">   	</span><span class="template-variable">&#123;B/H&#125;</span><span class="xml">	Rd, <span class="tag">&lt;<span class="name">地址</span>&gt;</span>SSS</span></span><br><span class="line"><span class="xml">cond 条件</span></span><br><span class="line"><span class="xml">S 有符号</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>地址确定方式： 基址寄存器 + 偏移量</p>
+<ul>
+<li><table>
+<thead>
+<tr>
+<th>[Rn]</th>
+<th>Rn</th>
+<th>加载或存储后</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>[Rn, 偏移量]</td>
+<td>Rn + 偏移量</td>
+<td>Rn值不变</td>
+</tr>
+<tr>
+<td>[Rn, 偏移量]!</td>
+<td>Rn + 偏移量</td>
+<td>Rn值+偏移量</td>
+</tr>
+<tr>
+<td>[Rn], 偏移量</td>
+<td>Rn</td>
+<td>Rn值=Rn + 偏移量</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+</li>
+</ul>
+<p>实测：</p>
+<ul>
+<li><p>寄存器访问地址：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">test_start</span><br><span class="line">    MOV R0,#3</span><br><span class="line">    LDR R1,&#x3D;0x20001000 ;是立即数赋值</span><br><span class="line">    STR R0,[R1]</span><br></pre></td></tr></table></figure>
+</li>
+<li><pre><code class="c">char ch =0x80; //编译时刻或运行时刻，为ch分配一个存储器空间 0x2000 1000
+int a;    //编译时刻或运行时刻，为a分配一个存储器空间  0x2000 1004
+a =    ch;
+<figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">```asm</span><br><span class="line"><span class="symbol">test_start</span></span><br><span class="line">    <span class="keyword">MOV</span> <span class="built_in">R0</span>,<span class="number">#0x80</span></span><br><span class="line">    <span class="keyword">LDR</span> <span class="built_in">R1</span>,<span class="number">=0x20001000</span></span><br><span class="line">    <span class="keyword">STRB</span> <span class="built_in">R0</span>,[<span class="built_in">R1</span>]</span><br><span class="line"></span><br><span class="line">    <span class="keyword">LDRSB</span> <span class="built_in">R2</span>,[<span class="built_in">R1</span>]</span><br><span class="line">    <span class="keyword">STR</span> <span class="built_in">R2</span>,[<span class="built_in">R1</span>,<span class="number">#4</span>]!</span><br><span class="line">    <span class="comment">;改变寄存器值</span></span><br></pre></td></tr></table></figure></code></pre>
+</li>
+<li><p>将R0-R3放到存储器单元0x20000200开始的递减连续单元存放，然后再恢复：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">test_start</span><br><span class="line">    MOV R0,#1</span><br><span class="line">    MOV R1,#2</span><br><span class="line">    MOV R2,#3</span><br><span class="line">    MOV R3,#4</span><br><span class="line">    LDR R4,&#x3D;0x20001000</span><br><span class="line">    STMIA R4!,&#123;R0-R3&#125;</span><br><span class="line"></span><br><span class="line">    MOV R0,#10</span><br><span class="line">    MOV R1,#20</span><br><span class="line">    MOV R2,#30</span><br><span class="line">    MOV R3,#40</span><br><span class="line">    LDMDB R4!,&#123;R0-R3&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>PUSH/POP：压栈/出栈</p>
+<ul>
+<li><p>压栈：<code>PUSH &lt;reglist&gt;</code></p>
+</li>
+<li><p>出栈：<code>POP &lt;reglist&gt;</code></p>
+</li>
+<li><p>堆栈有四种类型：</p>
+<ul>
+<li>EA: 空递增；</li>
+<li>FA: 满递增；</li>
+<li>ED: 空递减；</li>
+<li>FD: 满递减：ARM采用的堆栈形式是FD满递减堆栈；</li>
+<li>A：Add递增，D：Dec递减；</li>
+<li>SP栈顶指针，指向F：Full满堆栈，E：Empty空堆栈；</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>数据传送指令</p>
+<ul>
+<li><code>MOV&#123;cond&#125;&#123;S&#125; Rd, operand2 ;Rd &lt;-- operand2</code></li>
+<li><code>MVN&#123;cond&#125;&#123;S&#125; Rd, operand2 ;Rd &lt;--- ~operand2(取反)</code> </li>
+</ul>
+</li>
+<li><p>算术运算： 加减</p>
+<ul>
+<li><code>ADD&#123;cond&#125;&#123;S&#125; Rd, Rn, operand2    ;Rd &lt;--- Rn + operand2</code></li>
+<li><code>ADC&#123;cond&#125;&#123;S&#125; Rd, Rn, operand2  ;Rd &lt;--- Rn + operand2 + xPSR.C</code></li>
+<li><code>SUB&#123;cond&#125;&#123;S&#125; Rd, Rn, operand2  ;Rd &lt;--- Rn - operand2</code></li>
+<li><code>SBC&#123;cond&#125;&#123;S&#125; Rd, Rn, operand2  ;Rd &lt;--- Rn - operand2 - !xPSR.C 带借位的减法</code></li>
+<li>RSB 逆向减法指令：<ul>
+<li><code>RSB&#123;cond&#125;&#123;S&#125; Rd, Rn, operand2  ;operand2 - Rn  -&gt; Rd</code></li>
+<li><code>RSC&#123;cond&#125;&#123;S&#125; Rd, Rn, operand2  ;operand2 - Rn - !xPSR.C -&gt; Rd 带借位的逆向减法</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>逻辑运算指令 (按位)</p>
+<ul>
+<li><p><code>AND&#123;cond&#125;&#123;S&#125; Rd, Rn, operand2  ;AND 与， Rn &amp; operand2 -&gt; Rd 按位与</code></p>
+</li>
+<li><p><code>ORR&#123;cond&#125;&#123;S&#125; Rd, Rn, operand2  ;OR 或，  Rn | operand2 -&gt; Rd 按位或</code></p>
+</li>
+<li><p><code>EOR&#123;cond&#125;&#123;S&#125; Rd, Rn, operand2  ;EOR 异或 Rn ^ operand2 -&gt; Rd 按位异或</code></p>
+</li>
+<li><p>BIt Clear 位清零，把一个指定寄存器的中，指定的bit位给清掉：</p>
+<ul>
+<li><code>BIC&#123;cond&#125;&#123;S&#125; Rd, Rn, operand2  ;Rn &amp; (~operand2) -&gt; Rd</code>把Rn中 operand2中的为1的哪些位置上的bit位清零</li>
+<li>R0 低4位清零：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">test_start</span><br><span class="line">    MOV R0,#-3</span><br><span class="line">    ;AND R0,R0,#0xfffffff0</span><br><span class="line">    BIC R0,R0,#0xf</span><br><span class="line"></span><br><span class="line">    ;357bit清零</span><br><span class="line">    MOV R0,#-3</span><br><span class="line">    BIC R0,R0,#0xf</span><br><span class="line">    ;BIC R0,R0,#0x54</span><br><span class="line">    BIC R0,R0,#(1&lt;&lt;3) | (1&lt;&lt;5) | (1&lt;&lt;7)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>取寄存器R0中的b7-b10，赋值给R1</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">test_start</span><br><span class="line">    MOV R0,#-3</span><br><span class="line">    BIC R0,R0,#0xf</span><br><span class="line">    BIC R0,R0,#(1&lt;&lt;3) | (1&lt;&lt;5) | (1&lt;&lt;7)</span><br><span class="line"></span><br><span class="line">    MOV R1,R0,LSR #7</span><br><span class="line">    AND R1,R1,#0xf</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>比较指令，并不执行动作，而是将大小放到<code>xPSR.Z</code>状态中</p>
+<ul>
+<li><code>CMP Rn, operand2  ;比较Rn与operand2的大小  Rn - operand2</code></li>
+<li><code>CMN Rn, operand2  ;比较Rn与operand2的大小， Rn + operand2(负数比较)</code></li>
+<li><code>TST Rn, operand2  ;Rn &amp; operand2</code>测试Rn中特定的bit位是否为1</li>
+<li><code>TEQ    Rn, operand2  ;Rn ^ operand2  测试是否相等</code></li>
+</ul>
+</li>
+</ol>
+<p>for循环实现：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">test_start</span><br><span class="line">	MOV R0,#1	;i</span><br><span class="line">	MOV R1,#0	;sum</span><br><span class="line">loop_sum</span><br><span class="line">	CMP R0,#10</span><br><span class="line">	BGT loop_sum_end</span><br><span class="line">	ADD R1,R1,R0</span><br><span class="line">	ADD R0,R0,#1</span><br><span class="line">	B loop_sum</span><br><span class="line">loop_sum_end</span><br></pre></td></tr></table></figure>
+
+
+
+<hr>
+<p>C与汇编交互使用：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">extern</span> <span class="keyword">int</span> <span class="title">sum_two</span><span class="params">(<span class="keyword">int</span>,<span class="keyword">int</span>)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">sum_three</span><span class="params">(<span class="keyword">int</span> a,<span class="keyword">int</span> b,<span class="keyword">int</span> c)</span></span>&#123;</span><br><span class="line">	<span class="keyword">return</span> c+sum_two(a,b);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">stack_size EQU 0x200</span><br><span class="line">	AREA mystack,DATA,READWRITE</span><br><span class="line">stack_start</span><br><span class="line">	SPACE stack_size</span><br><span class="line">stack_end</span><br><span class="line"></span><br><span class="line">	IMPORT sum_three</span><br><span class="line">	EXPORT sum_two</span><br><span class="line">	</span><br><span class="line">	PRESERVE8</span><br><span class="line">	AREA RESET,DATA,READONLY</span><br><span class="line">vectors</span><br><span class="line">	DCD stack_end</span><br><span class="line">	DCD test_start</span><br><span class="line">vectors_end</span><br><span class="line">	AREA mycode, CODE,READONLY,ALIGN&#x3D;3</span><br><span class="line">test_start PROC</span><br><span class="line"></span><br><span class="line">	MOV R0,#6	;a</span><br><span class="line">	MOV R1,#7	;b</span><br><span class="line">	MOV R2,#2</span><br><span class="line">	BL sum_three</span><br><span class="line">	B .</span><br><span class="line">	ENDP</span><br><span class="line"></span><br><span class="line">sum_two PROC</span><br><span class="line">	PUSH &#123;R2-R12,LR&#125;</span><br><span class="line">	ADD R0,R0,R1</span><br><span class="line">	POP &#123;R2-R12,PC&#125;</span><br><span class="line">	ENDP</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>C引用汇编过程：<ul>
+<li>外部引用函数申明：<code>extern int sum_two(int,int);</code></li>
+<li>调用函数：<code>return c+sum_two(a,b);</code></li>
+<li>汇编中申明导出，将该函数调用结果导出：<code>EXPORT sum_two</code></li>
+</ul>
+</li>
+<li>汇编调用C过程：<ul>
+<li>汇编申明函数导入：<code>IMPORT sum_three</code></li>
+<li>汇编申明函数调用，注意此处是C中main函数入口的原因：<code>BL sum_three</code></li>
+</ul>
+</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/embeddedSystem/003.png" alt="image-20210323090302541"></p>
+<ul>
+<li>只存R4-R6是因为只是用了这几个寄存器；</li>
+<li>不使用R3是因为R0-R3是系统自定的四个传参寄存器，这四个寄存器要用来下一次传参，所以在函数中间不能再使用；</li>
+<li>通过这种模式也可以从C得到汇编语句；</li>
+</ul>
+
+    </div>
+
+    
+    
+    
+
+  
+         <div>
+           <div>
+  
+    <div style="text-align:center;color:#bfbfbf;font-size:16px;">
+      <span>-------- 本文结束 </span>
+      <i class="fa fa-paw"></i>
+      <span> 感谢阅读 --------</span>
+    </div>
+  
+</div>
+
+         </div>
+       
+      
+
+
+
+
+
+    <footer class="post-footer">
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>Zhaoxiaoan
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="http://kunpw.cn/2021/03/24/embeddedSystem/%E7%AC%94%E8%AE%B0%E6%95%B4%E7%90%86%EF%BC%88%E4%B8%80%EF%BC%89/" title="嵌入式系统笔记整理（一）">http://kunpw.cn/2021/03/24/embeddedSystem/笔记整理（一）/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener external nofollow noreferrer" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F/" rel="tag"><i class="fa fa-tag"></i> 嵌入式</a>
+              <a href="/tags/%E6%B1%87%E7%BC%96%E6%8C%87%E4%BB%A4/" rel="tag"><i class="fa fa-tag"></i> 汇编指令</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2021/03/12/SpringBoot/SpringBoot%EF%BC%88%E4%BA%94%EF%BC%89%E2%80%94%E2%80%94SpringSecurity%E5%92%8CShiro/" rel="prev" title="SpringBoot(五)——SpringSecurity和Shiro">
+                  <i class="fa fa-chevron-left"></i> SpringBoot(五)——SpringSecurity和Shiro
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2021/03/25/%E5%88%86%E5%B8%83%E5%BC%8F%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/%E7%AC%AC%E4%B8%89%E7%AB%A0.%E5%88%86%E5%B8%83%E5%BC%8F%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80/" rel="next" title="分布式系统设计学习笔记（二）分布式程序设计语言">
+                  分布式系统设计学习笔记（二）分布式程序设计语言 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+
+  
+  
+  
+
+
+
+      
+    <div class="comments" id="valine-comments"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      const activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      const commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      
+
+      
+
+<span id="timeDate" style="color: green;">载入天数...</span>
+<span id="times" style="color: green;">载入时分秒...</span>
+<script>
+    var now = new Date();
+    function createtime() {
+        var grt= new Date("09/06/2020 13:38:49");//在此处修改你的建站时间，格式：月/日/年 时:分:秒
+        now.setTime(now.getTime()+250);
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
+        document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 ";
+        document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
+    }
+setInterval("createtime()",250);
+</script>
+
+
+
+<div>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<span id="busuanzi_container_site_pv" style='display:none'>
+    本站总访问量 <span id="busuanzi_value_site_pv"></span> 次
+    <span class="post-meta-divider">|</span>
+</span>
+<span id="busuanzi_container_site_uv" style='display:none'>
+    有<span id="busuanzi_value_site_uv"></span>人看过我的博客啦
+</span>
+</div>
+
+<div class="copyright">
+  
+  &copy; 2020 – 
+  <span itemprop="copyrightYear">2021</span>
+  <a src="https://beian.miit.gov.cn">湘ICP备2021000832号</a>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Zhaoxiaoan</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+      <span>站点总字数：</span>
+    <span title="站点总字数">301k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span>站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">4:33</span>
+  </span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener external nofollow noreferrer" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" class="theme-link" rel="noopener external nofollow noreferrer" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="//cdn.jsdelivr.net/npm/animejs@3.2.0/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/@next-theme/pjax@0.4.0/pjax.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+  <script>
+var pjax = new Pjax({
+  selectors: [
+    'head title',
+    '.page-configurations',
+    '.main-inner',
+    '.post-toc-wrap',
+    '.languages',
+    '.pjax'
+  ],
+  analytics: false,
+  cacheBust: false,
+  scrollRestoration: false,
+  scrollTo: !CONFIG.bookmark.enable
+});
+
+document.addEventListener('pjax:success', () => {
+  pjax.executeScripts(document.querySelectorAll('script[data-pjax], .pjax script'));
+  NexT.boot.refresh();
+  // Define Motion Sequence & Bootstrap Motion.
+  if (CONFIG.motion.enable) {
+    NexT.motion.integrator
+      .init()
+      .add(NexT.motion.middleWares.subMenu)
+      .add(NexT.motion.middleWares.postList)
+      .bootstrap();
+  }
+  const hasTOC = document.querySelector('.post-toc');
+  document.querySelector('.sidebar-inner').classList.toggle('sidebar-nav-active', hasTOC);
+  document.querySelector(hasTOC ? '.sidebar-nav-toc' : '.sidebar-nav-overview').click();
+  NexT.utils.updateSidebarPosition();
+});
+</script>
+
+
+  
+
+
+
+
+  <script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script data-pjax async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+
+
+
+    <div class="pjax">
+  
+
+  
+<script>
+NexT.utils.loadComments('#valine-comments', () => {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js', () => {
+    new Valine(Object.assign({
+      el  : '#valine-comments',
+      path: "/2021/03/24/embeddedSystem/%E7%AC%94%E8%AE%B0%E6%95%B4%E7%90%86%EF%BC%88%E4%B8%80%EF%BC%89/",
+    }, {"enable":true,"appId":"9JxB7GVqlwRNk6oWQAWRFukK-MdYXbMMI","appKey":"0FRspDasEAKCPOgl62bwPGJ6","placeholder":"评论区走一波","avatar":"mm","meta":["nick","mail","link"],"pageSize":10,"lang":"zh-cn","visitor":false,"comment_count":true,"recordIP":false,"serverURLs":null,"enableQQ":false,"requiredFields":[],"emoticonUrl":["https://cdn.jsdelivr.net/npm/alus@latest","https://cdn.jsdelivr.net/gh/MiniValine/qq@latest","https://cdn.jsdelivr.net/gh/MiniValine/Bilibilis@latest","https://cdn.jsdelivr.net/gh/MiniValine/tieba@latest","https://cdn.jsdelivr.net/gh/MiniValine/twemoji@latest","https://cdn.jsdelivr.net/gh/MiniValine/weibo@latest"]}
+    ));
+  }, window.Valine);
+});
+</script>
+
+
+
+<script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+<script type="text/javascript">
+jinrishici.load(function(result) {
+	var jrsc_plac =  result.data.content + "\n「" + result.data.origin.title + "」" + result.data.origin.dynasty + " · " + result.data.origin.author
+	document.getElementById("veditor").setAttribute("placeholder",jrsc_plac);
+});
+</script>
+
+
+  <script async src="/js/cursor/fireworks.js"></script>
+
+
+
+
+  <script src="/js/write/activate-power-mode.min.js"></script>
+  <script>
+    POWERMODE.colorful = true;
+    POWERMODE.shake = false;
+    document.body.addEventListener('input', POWERMODE);
+  </script>
+
+
+    </div>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/hijiki.model.json"},"display":{"position":"left","width":150,"height":300},"mobile":{"show":true},"react":{"opacity":1},"log":false});</script></body>
+</html>

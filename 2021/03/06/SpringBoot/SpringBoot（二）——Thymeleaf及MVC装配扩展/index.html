@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.1.1">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/MuyunHui.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/MuyunHui.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/MuyunHui.png">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
+  <link rel="stylesheet" href="//cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-flash.min.css">
+  <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+
+<script class="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"kunpw.cn","root":"/","scheme":"Gemini","version":"8.0.0","exturl":false,"sidebar":{"display":"always","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"valine","storage":true,"lazyload":false,"nav":null,"activeClass":"valine"},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
+  </script>
+
+  <meta name="description" content="SpringBoot配置了什么？能不能对其进行修改？能修改什么？能不能扩展？通过自动装配原理的学习，接下来主要根据自动装配源码分析并得到以下结论。  1.导入静态资源 这里的静态资源由果索因，即在网页中localhost:8080&#x2F;后输入webjars路径相当于访问源文件路径，以此找到源文件中存放静态资源位置，注：静态资源包含html等文件；  找到WebMvcAutoConfiguration">
+<meta property="og:type" content="article">
+<meta property="og:title" content="SpringBoot(二)——Thymeleaf及MVC装配扩展">
+<meta property="og:url" content="http://kunpw.cn/2021/03/06/SpringBoot/SpringBoot%EF%BC%88%E4%BA%8C%EF%BC%89%E2%80%94%E2%80%94Thymeleaf%E5%8F%8AMVC%E8%A3%85%E9%85%8D%E6%89%A9%E5%B1%95/index.html">
+<meta property="og:site_name" content="朝小闇的博客">
+<meta property="og:description" content="SpringBoot配置了什么？能不能对其进行修改？能修改什么？能不能扩展？通过自动装配原理的学习，接下来主要根据自动装配源码分析并得到以下结论。  1.导入静态资源 这里的静态资源由果索因，即在网页中localhost:8080&#x2F;后输入webjars路径相当于访问源文件路径，以此找到源文件中存放静态资源位置，注：静态资源包含html等文件；  找到WebMvcAutoConfiguration">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/SpringBoot/2+3/001.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/SpringBoot/2+3/002.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/SpringBoot/2+3/003.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/SpringBoot/2+3/004.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/SpringBoot/2+3/005.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/SpringBoot/2+3/006.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/SpringBoot/2+3/007.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/SpringBoot/2+3/008.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/SpringBoot/2+3/009.png">
+<meta property="article:published_time" content="2021-03-06T12:46:04.400Z">
+<meta property="article:modified_time" content="2021-03-10T09:13:31.301Z">
+<meta property="article:author" content="Zhaoxiaoan">
+<meta property="article:tag" content="java">
+<meta property="article:tag" content="SpringBoot">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/SpringBoot/2+3/001.png">
+
+
+<link rel="canonical" href="http://kunpw.cn/2021/03/06/SpringBoot/SpringBoot%EF%BC%88%E4%BA%8C%EF%BC%89%E2%80%94%E2%80%94Thymeleaf%E5%8F%8AMVC%E8%A3%85%E9%85%8D%E6%89%A9%E5%B1%95/">
+
+
+<script data-pjax class="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>SpringBoot(二)——Thymeleaf及MVC装配扩展 | 朝小闇的博客</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  body { margin-top: 2rem; }
+
+  .use-motion .menu-item,
+  .use-motion .sidebar,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header {
+    visibility: visible;
+  }
+
+  .use-motion .header,
+  .use-motion .site-brand-container .toggle,
+  .use-motion .footer { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle,
+  .use-motion .custom-logo-image {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line {
+    transform: scaleX(1);
+  }
+
+  .search-pop-overlay, .sidebar-nav { display: none; }
+  .sidebar-panel { display: block; }
+  </style>
+</noscript>
+
+  
+	<script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+  
+
+<link rel="alternate" href="/atom.xml" title="朝小闇的博客" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">朝小闇的博客</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">海上月是天上月，眼前人是心上人</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">34</span></a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">7</span></a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">29</span></a>
+
+  </li>
+        <li class="menu-item menu-item-essays">
+
+    <a href="/essays" rel="section"><i class="fa fa-heart fa-fw"></i>随笔</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <section class="post-toc-wrap sidebar-panel">
+          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E5%AF%BC%E5%85%A5%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90"><span class="nav-text">1.导入静态资源</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-%E5%AE%9A%E5%88%B6%E9%A6%96%E9%A1%B5"><span class="nav-text">2.定制首页</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8EThymeleaf"><span class="nav-text">3.模板引擎Thymeleaf</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-%E8%A3%85%E9%85%8D%E6%89%A9%E5%B1%95SpringMVC"><span class="nav-text">4.装配扩展SpringMVC</span></a></li></ol></div>
+      </section>
+      <!--/noindex-->
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Zhaoxiaoan"
+      src="/images/PubuLan.png">
+  <p class="site-author-name" itemprop="name">Zhaoxiaoan</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">29</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">34</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+
+
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/ZHAOXIAOAN" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;ZHAOXIAOAN" rel="noopener external nofollow noreferrer" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+  </div>
+
+
+
+      </section><div>
+  <canvas id="canvasDiyBlock" style="width:60%;">当前浏览器不支持canvas，请更换浏览器后再试</canvas><script src="/js/custom/clock.js"></script>
+</div>
+
+
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+      
+
+      
+
+    
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://kunpw.cn/2021/03/06/SpringBoot/SpringBoot%EF%BC%88%E4%BA%8C%EF%BC%89%E2%80%94%E2%80%94Thymeleaf%E5%8F%8AMVC%E8%A3%85%E9%85%8D%E6%89%A9%E5%B1%95/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/PubuLan.png">
+      <meta itemprop="name" content="Zhaoxiaoan">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="朝小闇的博客">
+    </span>
+
+    
+    
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          SpringBoot(二)——Thymeleaf及MVC装配扩展
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-03-06 20:46:04" itemprop="dateCreated datePublished" datetime="2021-03-06T20:46:04+08:00">2021-03-06</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-03-10 17:13:31" itemprop="dateModified" datetime="2021-03-10T17:13:31+08:00">2021-03-10</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index"><span itemprop="name">学习</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2021/03/06/SpringBoot/SpringBoot%EF%BC%88%E4%BA%8C%EF%BC%89%E2%80%94%E2%80%94Thymeleaf%E5%8F%8AMVC%E8%A3%85%E9%85%8D%E6%89%A9%E5%B1%95/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2021/03/06/SpringBoot/SpringBoot%EF%BC%88%E4%BA%8C%EF%BC%89%E2%80%94%E2%80%94Thymeleaf%E5%8F%8AMVC%E8%A3%85%E9%85%8D%E6%89%A9%E5%B1%95/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>7.7k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>7 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <blockquote>
+<p>SpringBoot配置了什么？能不能对其进行修改？能修改什么？能不能扩展？通过自动装配原理的学习，接下来主要根据自动装配源码分析并得到以下结论。</p>
+</blockquote>
+<h2 id="1-导入静态资源"><a href="#1-导入静态资源" class="headerlink" title="1.导入静态资源"></a>1.导入静态资源</h2><ul>
+<li><p>这里的静态资源由果索因，即在网页中<code>localhost:8080/</code>后输入<code>webjars</code>路径相当于访问源文件路径，以此找到源文件中存放静态资源位置，注：静态资源包含<code>html</code>等文件；</p>
+</li>
+<li><p>找到<code>WebMvcAutoConfiguration</code>文件以下部分：</p>
+</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">addResourceHandlers</span><span class="params">(ResourceHandlerRegistry registry)</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 这一段是判断是否在配置文件中自主配置资源路径，如果配置则默认配置失效，直接在此返回</span></span><br><span class="line">    <span class="keyword">if</span> (!<span class="keyword">this</span>.resourceProperties.isAddMappings()) &#123;</span><br><span class="line">        logger.debug(<span class="string">&quot;Default resource handling disabled&quot;</span>);</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    Duration cachePeriod = <span class="keyword">this</span>.resourceProperties.getCache().getPeriod();</span><br><span class="line">    CacheControl cacheControl = <span class="keyword">this</span>.resourceProperties.getCache().getCachecontrol().toHttpCacheControl();</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// webjars是以jar包形式封装引入前端资源，此处可以从官网取出引入静态资源依赖的代码</span></span><br><span class="line">    <span class="keyword">if</span> (!registry.hasMappingForPattern(<span class="string">&quot;/webjars/**&quot;</span>)) &#123;</span><br><span class="line">        customizeResourceHandlerRegistration(registry.addResourceHandler(<span class="string">&quot;/webjars/**&quot;</span>)</span><br><span class="line">               .addResourceLocations(<span class="string">&quot;classpath:/META-INF/resources/webjars/&quot;</span>)</span><br><span class="line">               .setCachePeriod(getSeconds(cachePeriod)).setCacheControl(cacheControl));</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    String staticPathPattern = <span class="keyword">this</span>.mvcProperties.getStaticPathPattern();</span><br><span class="line">    <span class="comment">/* 首先从mvcProperties对象的类WebMvcProperties文件中找到staticPathPattern变量</span></span><br><span class="line"><span class="comment">    	其次从resourceProperties对象的类ResourceProperties文件中找到staticLocations变量</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">    <span class="keyword">if</span> (!registry.hasMappingForPattern(staticPathPattern)) &#123;</span><br><span class="line">        customizeResourceHandlerRegistration(registry.addResourceHandler(staticPathPattern)                                    .addResourceLocations(getResourceLocations(<span class="keyword">this</span>.resourceProperties.getStaticLocations()))                      .setCachePeriod(getSeconds(cachePeriod)).setCacheControl(cacheControl));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p><code>webjars</code>引入 Maven <code>jquery</code>为例：</p>
+<img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/SpringBoot/2+3/001.png" alt="image-20210305125609037" style="zoom:80%;">
+
+<ul>
+<li><p>将该段依赖代码放到<code>pom.xml</code>文件依赖中并加载相关依赖项，如图：</p>
+<img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/SpringBoot/2+3/002.png" alt="image-20210305130316069" style="zoom:80%;">
+
+<p>这一段的含义是<code>localhost:8080/webjars/</code>路径相当于外部依赖库目录的<code>classpath:/META-INF/resources/webjars/</code>，因此在网页中输入<code>localhost:8080/webjars/jquery/3.6.0/jquery.js</code>即可获取到该静态资源，如图所示：</p>
+<img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/SpringBoot/2+3/003.png" alt="image-20210305130913244" style="zoom: 80%;">
+</li>
+</ul>
+</li>
+<li><p><code>ResourceProperties</code>文件静态资源默认路径：</p>
+<img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/SpringBoot/2+3/004.png" alt="image-20210305131847108" style="zoom:80%;">
+
+<ul>
+<li>此处四个路径全部是根目录下<code>resources</code>文件下目录，而系统默认生成<code>static</code>文件夹用以存放静态资源。经过实践发现后三者优先级：<code>/resources &gt; /static &gt; /public</code>，而第一个路径其实就是外部依赖包路径，参考<code>webjars</code>；</li>
+<li>且<code>WebMvcProperties</code>文件下<code>staticPathPattern</code>变量的默认地址就是根路径，即根路径下的资源也能直接访问到；</li>
+</ul>
+</li>
+<li><p>关于在<code>application.properties</code>文件中修改资源路径，一般不使用，修改的话直接修改<code>staticPathPattern</code>变量即可，这样一来默认存放静态资源的路径就会全部失效；</p>
+</li>
+</ul>
+<a id="more"></a>
+
+<h2 id="2-定制首页"><a href="#2-定制首页" class="headerlink" title="2.定制首页"></a>2.定制首页</h2><p><code>WebMvcAutoConfiguration</code>文件中：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 此方法用以获取location路径，并调用getIndexHtml方法在默认路径中寻找index.html文件</span></span><br><span class="line"><span class="comment">	ResourceProperties文件中staticLocations变量即为静态资源路径，因此首页index.html文件可放在静态资源路径下</span></span><br><span class="line"><span class="comment">	不过一般不使用此方法，下述模板引擎会讲到另一种方式</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="function"><span class="keyword">private</span> Optional&lt;Resource&gt; <span class="title">getWelcomePage</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    String[] locations = getResourceLocations(<span class="keyword">this</span>.resourceProperties.getStaticLocations());</span><br><span class="line">    <span class="keyword">return</span> Arrays.stream(locations).map(<span class="keyword">this</span>::getIndexHtml).filter(<span class="keyword">this</span>::isReadable).findFirst();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">private</span> Resource <span class="title">getIndexHtml</span><span class="params">(String location)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">this</span>.resourceLoader.getResource(location + <span class="string">&quot;index.html&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">boolean</span> <span class="title">isReadable</span><span class="params">(Resource resource)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> resource.exists() &amp;&amp; (resource.getURL() != <span class="keyword">null</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">catch</span> (Exception ex) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="3-模板引擎Thymeleaf"><a href="#3-模板引擎Thymeleaf" class="headerlink" title="3.模板引擎Thymeleaf"></a>3.模板引擎Thymeleaf</h2><blockquote>
+<p>使用模板自动渲染数据生成静态网页</p>
+</blockquote>
+<img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/SpringBoot/2+3/005.png" alt="image-20210305211634119" style="zoom: 67%;">
+
+<ul>
+<li><p>Thymeleaf导入依赖包：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- Thymeleaf --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.thymeleaf<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>thymeleaf-spring5<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.thymeleaf.extras<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>thymeleaf-extras-java8time<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>在父配置文件中进入依赖文件可查看Thymeleaf的默认导入版本。</p>
+</li>
+<li><p>首先查看源码，在<code>ThymeleafProperties</code>文件（每一个引入依赖都拥有自己的自动装配文件）中看到代码：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 两个变量分别定义了默认前缀和默认后缀，即前缀路径在根目录下resources/templates/目录下，即通过thymeleaf转换的html页面全部存放于该目录下</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> String DEFAULT_PREFIX = <span class="string">&quot;classpath:/templates/&quot;</span>;</span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> String DEFAULT_SUFFIX = <span class="string">&quot;.html&quot;</span>;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>在<code>templates</code>目录下新建<code>test.html</code>文件，并在<code>controller</code>目录下新建<code>IndexController.java</code>文件用于测试Thymeleaf：</p>
+<ul>
+<li><code>IndexController.java</code>文件：</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.kun.demoweb.controller;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> org.springframework.stereotype.Controller;</span><br><span class="line"><span class="keyword">import</span> org.springframework.ui.Model;</span><br><span class="line"><span class="keyword">import</span> org.springframework.web.bind.annotation.RequestMapping;</span><br><span class="line"></span><br><span class="line"><span class="comment">// thymeleaf转换的所有templates目录下页面全部需要通过Controller跳转</span></span><br><span class="line"><span class="meta">@Controller</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">IndexController</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 跳转路由</span></span><br><span class="line">    <span class="meta">@RequestMapping(&quot;/test&quot;)</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">test</span><span class="params">(Model model)</span></span>&#123;</span><br><span class="line">        <span class="comment">// 添加属性值传递到页面中</span></span><br><span class="line">        model.addAttribute(<span class="string">&quot;msg&quot;</span>,<span class="string">&quot;hello,springboot&quot;</span>);</span><br><span class="line">        <span class="comment">// 从此处索引页面文件名</span></span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;test&quot;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><code>test.html</code>文件：</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- html引入thymeleaf --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span> <span class="attr">xmlns:th</span>=<span class="string">&quot;http://www.thymeleaf.org&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Title<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- thymeleaf语法，引用传递过来的属性，类似于Vue语法 --&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 在html标签属性前添加th: 所有属性都可以被thymeleaf接管 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">th:text</span>=<span class="string">&quot;$&#123;msg&#125;&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Thymeleaf常见属性，此处不细讲，可去官网下载文档具体学习：</p>
+<img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/SpringBoot/2+3/006.png" alt="image-20210305220947183" style="zoom: 80%;">
+</li>
+<li><p>Thymeleaf常见语法：</p>
+<img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/SpringBoot/2+3/007.png" alt="image-20210305221142248" style="zoom:80%;">
+
+
+
+</li>
+</ul>
+<h2 id="4-装配扩展SpringMVC"><a href="#4-装配扩展SpringMVC" class="headerlink" title="4.装配扩展SpringMVC"></a>4.装配扩展SpringMVC</h2><ul>
+<li><p>查看<a target="_blank" rel="noopener external nofollow noreferrer" href="https://docs.spring.io/spring-boot/docs/2.3.4.RELEASE/reference/html/spring-boot-features.html#boot-features-developing-auto-configuration">官网</a>：<img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/SpringBoot/2+3/008.png" alt="image-20210305230035024"></p>
+</li>
+<li><p>创建config包，新建<code>MyMvcConfig.java</code>文件用于扩展SpringMVC，并根据官网说明添加注解及接口，且不能使用注解<code>@EnableWebMvc</code>防止全部接管，由此可以重写一些功能；</p>
+</li>
+<li><p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/SpringBoot/2+3/009.png" alt="image-20210305230640368"></p>
+</li>
+<li><p>如图，示例重写自己的视图解析器：</p>
+<ul>
+<li><p>先找到该文件：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*	1.resolveViewName方法获取所有的候选视图，并从中选择最好的视图返回，此时返回的视图解析器是Thymeleaf的</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="meta">@Override</span></span><br><span class="line"><span class="meta">@Nullable</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> View <span class="title">resolveViewName</span><span class="params">(String viewName, Locale locale)</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">    RequestAttributes attrs = RequestContextHolder.getRequestAttributes();</span><br><span class="line">    Assert.state(attrs <span class="keyword">instanceof</span> ServletRequestAttributes, <span class="string">&quot;No current ServletRequestAttributes&quot;</span>);</span><br><span class="line">    List&lt;MediaType&gt; requestedMediaTypes = getMediaTypes(((ServletRequestAttributes) attrs).getRequest());</span><br><span class="line">    <span class="keyword">if</span> (requestedMediaTypes != <span class="keyword">null</span>) &#123;</span><br><span class="line">        List&lt;View&gt; candidateViews = getCandidateViews(viewName, locale, requestedMediaTypes);</span><br><span class="line">        View bestView = getBestView(candidateViews, requestedMediaTypes, attrs);</span><br><span class="line">        <span class="keyword">if</span> (bestView != <span class="keyword">null</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> bestView;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    String mediaTypeInfo = logger.isDebugEnabled() &amp;&amp; requestedMediaTypes != <span class="keyword">null</span> ?</span><br><span class="line">        <span class="string">&quot; given &quot;</span> + requestedMediaTypes.toString() : <span class="string">&quot;&quot;</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (<span class="keyword">this</span>.useNotAcceptableStatusCode) &#123;</span><br><span class="line">        <span class="keyword">if</span> (logger.isDebugEnabled()) &#123;</span><br><span class="line">            logger.debug(<span class="string">&quot;Using 406 NOT_ACCEPTABLE&quot;</span> + mediaTypeInfo);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> NOT_ACCEPTABLE_VIEW;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span> &#123;</span><br><span class="line">        logger.debug(<span class="string">&quot;View remains unresolved&quot;</span> + mediaTypeInfo);</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*	2.getCandidateViews方法用以从Bean工具类中获取所有的候选视图</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="function"><span class="keyword">private</span> List&lt;View&gt; <span class="title">getCandidateViews</span><span class="params">(String viewName, Locale locale, List&lt;MediaType&gt; requestedMediaTypes)</span></span></span><br><span class="line"><span class="function">    <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line"></span><br><span class="line">    List&lt;View&gt; candidateViews = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">    <span class="keyword">if</span> (<span class="keyword">this</span>.viewResolvers != <span class="keyword">null</span>) &#123;</span><br><span class="line">        Assert.state(<span class="keyword">this</span>.contentNegotiationManager != <span class="keyword">null</span>, <span class="string">&quot;No ContentNegotiationManager set&quot;</span>);</span><br><span class="line">        <span class="keyword">for</span> (ViewResolver viewResolver : <span class="keyword">this</span>.viewResolvers) &#123;</span><br><span class="line">            View view = viewResolver.resolveViewName(viewName, locale);</span><br><span class="line">            <span class="keyword">if</span> (view != <span class="keyword">null</span>) &#123;</span><br><span class="line">                candidateViews.add(view);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">for</span> (MediaType requestedMediaType : requestedMediaTypes) &#123;</span><br><span class="line">                List&lt;String&gt; extensions = <span class="keyword">this</span>.contentNegotiationManager.resolveFileExtensions(requestedMediaType);</span><br><span class="line">                <span class="keyword">for</span> (String extension : extensions) &#123;</span><br><span class="line">                    String viewNameWithExtension = viewName + <span class="string">&#x27;.&#x27;</span> + extension;</span><br><span class="line">                    view = viewResolver.resolveViewName(viewNameWithExtension, locale);</span><br><span class="line">                    <span class="keyword">if</span> (view != <span class="keyword">null</span>) &#123;</span><br><span class="line">                        candidateViews.add(view);</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (!CollectionUtils.isEmpty(<span class="keyword">this</span>.defaultViews)) &#123;</span><br><span class="line">        candidateViews.addAll(<span class="keyword">this</span>.defaultViews);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> candidateViews;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>将自己重写的视图解析器放入Bean工具类中即可：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.kun.demoweb.config;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> org.springframework.context.annotation.Bean;</span><br><span class="line"><span class="keyword">import</span> org.springframework.context.annotation.Configuration;</span><br><span class="line"><span class="keyword">import</span> org.springframework.web.servlet.View;</span><br><span class="line"><span class="keyword">import</span> org.springframework.web.servlet.ViewResolver;</span><br><span class="line"><span class="keyword">import</span> org.springframework.web.servlet.config.annotation.WebMvcConfigurer;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.Locale;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Configuration</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyMvcConfig</span> <span class="keyword">implements</span> <span class="title">WebMvcConfigurer</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 将自定义的视图解析器添加进Bean中</span></span><br><span class="line">    <span class="meta">@Bean</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> ViewResolver <span class="title">myViewResolver</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> MyViewResolver();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 自定义自己的视图解析器，并重写resolveViewName方法</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">MyViewResolver</span> <span class="keyword">implements</span> <span class="title">ViewResolver</span> </span>&#123;</span><br><span class="line">        <span class="meta">@Override</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> View <span class="title">resolveViewName</span><span class="params">(String viewName, Locale locale)</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><code>Ctrl+shift+N</code>搜索文件快捷方式；</li>
+</ul>
+
+    </div>
+
+    
+    
+    
+
+  
+         <div>
+           <div>
+  
+    <div style="text-align:center;color:#bfbfbf;font-size:16px;">
+      <span>-------- 本文结束 </span>
+      <i class="fa fa-paw"></i>
+      <span> 感谢阅读 --------</span>
+    </div>
+  
+</div>
+
+         </div>
+       
+      
+  <div class="popular-posts-header">相关文章推荐# Custom header, leave empty to use the default one</div>
+  <ul class="popular-posts">
+    <li class="popular-posts-item">
+      <div class="popular-posts-title"><a href="\2021\03\10\SpringBoot\SpringBoot（四）——数据库连接（整合Mybatis）\" rel="bookmark">SpringBoot(四)——数据库连接（整合Mybatis）</a></div>
+    </li>
+    <li class="popular-posts-item">
+      <div class="popular-posts-title"><a href="\2020\10\23\SpringBoot\SpringBoot（一）——自动装配原理\" rel="bookmark">SpringBoot(一)——自动装配原理</a></div>
+    </li>
+    <li class="popular-posts-item">
+      <div class="popular-posts-title"><a href="\2021\03\12\SpringBoot\SpringBoot（五）——SpringSecurity和Shiro\" rel="bookmark">SpringBoot(五)——SpringSecurity和Shiro</a></div>
+    </li>
+    <li class="popular-posts-item">
+      <div class="popular-posts-title"><a href="\Spring\article01" rel="bookmark">Spring实战(一)——Spring基础（含Spring实战第五版源码和pdf）</a></div>
+    </li>
+    <li class="popular-posts-item">
+      <div class="popular-posts-title"><a href="\2021\03\06\SpringBoot\SpringBoot（三）——员工管理系统（无数据库）\" rel="bookmark">SpringBoot(三)——员工管理系统（已增数据库）</a></div>
+    </li>
+  </ul>
+
+
+
+
+
+    <footer class="post-footer">
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>Zhaoxiaoan
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="http://kunpw.cn/2021/03/06/SpringBoot/SpringBoot%EF%BC%88%E4%BA%8C%EF%BC%89%E2%80%94%E2%80%94Thymeleaf%E5%8F%8AMVC%E8%A3%85%E9%85%8D%E6%89%A9%E5%B1%95/" title="SpringBoot(二)——Thymeleaf及MVC装配扩展">http://kunpw.cn/2021/03/06/SpringBoot/SpringBoot（二）——Thymeleaf及MVC装配扩展/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener external nofollow noreferrer" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/java/" rel="tag"><i class="fa fa-tag"></i> java</a>
+              <a href="/tags/SpringBoot/" rel="tag"><i class="fa fa-tag"></i> SpringBoot</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2021/03/04/%E5%88%86%E5%B8%83%E5%BC%8F%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/%E7%AC%AC%E4%BA%8C%E7%AB%A0.%E8%BF%9B%E7%A8%8B%E9%80%9A%E4%BF%A1/" rel="prev" title="分布式系统设计学习笔记（一）进程通信">
+                  <i class="fa fa-chevron-left"></i> 分布式系统设计学习笔记（一）进程通信
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2021/03/06/SpringBoot/SpringBoot%EF%BC%88%E4%B8%89%EF%BC%89%E2%80%94%E2%80%94%E5%91%98%E5%B7%A5%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%EF%BC%88%E6%97%A0%E6%95%B0%E6%8D%AE%E5%BA%93%EF%BC%89/" rel="next" title="SpringBoot(三)——员工管理系统（已增数据库）">
+                  SpringBoot(三)——员工管理系统（已增数据库） <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+
+  
+  
+  
+
+
+
+      
+    <div class="comments" id="valine-comments"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      const activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      const commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      
+
+      
+
+<span id="timeDate" style="color: green;">载入天数...</span>
+<span id="times" style="color: green;">载入时分秒...</span>
+<script>
+    var now = new Date();
+    function createtime() {
+        var grt= new Date("09/06/2020 13:38:49");//在此处修改你的建站时间，格式：月/日/年 时:分:秒
+        now.setTime(now.getTime()+250);
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
+        document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 ";
+        document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
+    }
+setInterval("createtime()",250);
+</script>
+
+
+
+<div>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<span id="busuanzi_container_site_pv" style='display:none'>
+    本站总访问量 <span id="busuanzi_value_site_pv"></span> 次
+    <span class="post-meta-divider">|</span>
+</span>
+<span id="busuanzi_container_site_uv" style='display:none'>
+    有<span id="busuanzi_value_site_uv"></span>人看过我的博客啦
+</span>
+</div>
+
+<div class="copyright">
+  
+  &copy; 2020 – 
+  <span itemprop="copyrightYear">2021</span>
+  <a src="https://beian.miit.gov.cn">湘ICP备2021000832号</a>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Zhaoxiaoan</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+      <span>站点总字数：</span>
+    <span title="站点总字数">301k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span>站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">4:33</span>
+  </span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener external nofollow noreferrer" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" class="theme-link" rel="noopener external nofollow noreferrer" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="//cdn.jsdelivr.net/npm/animejs@3.2.0/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/@next-theme/pjax@0.4.0/pjax.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+  <script>
+var pjax = new Pjax({
+  selectors: [
+    'head title',
+    '.page-configurations',
+    '.main-inner',
+    '.post-toc-wrap',
+    '.languages',
+    '.pjax'
+  ],
+  analytics: false,
+  cacheBust: false,
+  scrollRestoration: false,
+  scrollTo: !CONFIG.bookmark.enable
+});
+
+document.addEventListener('pjax:success', () => {
+  pjax.executeScripts(document.querySelectorAll('script[data-pjax], .pjax script'));
+  NexT.boot.refresh();
+  // Define Motion Sequence & Bootstrap Motion.
+  if (CONFIG.motion.enable) {
+    NexT.motion.integrator
+      .init()
+      .add(NexT.motion.middleWares.subMenu)
+      .add(NexT.motion.middleWares.postList)
+      .bootstrap();
+  }
+  const hasTOC = document.querySelector('.post-toc');
+  document.querySelector('.sidebar-inner').classList.toggle('sidebar-nav-active', hasTOC);
+  document.querySelector(hasTOC ? '.sidebar-nav-toc' : '.sidebar-nav-overview').click();
+  NexT.utils.updateSidebarPosition();
+});
+</script>
+
+
+  
+
+
+
+
+  <script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script data-pjax async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+
+
+
+    <div class="pjax">
+  
+
+  
+<script>
+NexT.utils.loadComments('#valine-comments', () => {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js', () => {
+    new Valine(Object.assign({
+      el  : '#valine-comments',
+      path: "/2021/03/06/SpringBoot/SpringBoot%EF%BC%88%E4%BA%8C%EF%BC%89%E2%80%94%E2%80%94Thymeleaf%E5%8F%8AMVC%E8%A3%85%E9%85%8D%E6%89%A9%E5%B1%95/",
+    }, {"enable":true,"appId":"9JxB7GVqlwRNk6oWQAWRFukK-MdYXbMMI","appKey":"0FRspDasEAKCPOgl62bwPGJ6","placeholder":"评论区走一波","avatar":"mm","meta":["nick","mail","link"],"pageSize":10,"lang":"zh-cn","visitor":false,"comment_count":true,"recordIP":false,"serverURLs":null,"enableQQ":false,"requiredFields":[],"emoticonUrl":["https://cdn.jsdelivr.net/npm/alus@latest","https://cdn.jsdelivr.net/gh/MiniValine/qq@latest","https://cdn.jsdelivr.net/gh/MiniValine/Bilibilis@latest","https://cdn.jsdelivr.net/gh/MiniValine/tieba@latest","https://cdn.jsdelivr.net/gh/MiniValine/twemoji@latest","https://cdn.jsdelivr.net/gh/MiniValine/weibo@latest"]}
+    ));
+  }, window.Valine);
+});
+</script>
+
+
+
+<script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+<script type="text/javascript">
+jinrishici.load(function(result) {
+	var jrsc_plac =  result.data.content + "\n「" + result.data.origin.title + "」" + result.data.origin.dynasty + " · " + result.data.origin.author
+	document.getElementById("veditor").setAttribute("placeholder",jrsc_plac);
+});
+</script>
+
+
+  <script async src="/js/cursor/fireworks.js"></script>
+
+
+
+
+  <script src="/js/write/activate-power-mode.min.js"></script>
+  <script>
+    POWERMODE.colorful = true;
+    POWERMODE.shake = false;
+    document.body.addEventListener('input', POWERMODE);
+  </script>
+
+
+    </div>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/hijiki.model.json"},"display":{"position":"left","width":150,"height":300},"mobile":{"show":true},"react":{"opacity":1},"log":false});</script></body>
+</html>

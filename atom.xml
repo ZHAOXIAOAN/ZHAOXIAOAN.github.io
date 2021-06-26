@@ -6,7 +6,7 @@
   <link href="http://kunpw.cn/atom.xml" rel="self"/>
   
   <link href="http://kunpw.cn/"/>
-  <updated>2021-03-04T15:23:15.470Z</updated>
+  <updated>2021-05-31T12:24:14.657Z</updated>
   <id>http://kunpw.cn/</id>
   
   <author>
@@ -17,20 +17,456 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Spring实战(一)——Spring基础（含Spring实战第五版源码和pdf）</title>
+    <link href="http://kunpw.cn/Spring/article01"/>
+    <id>http://kunpw.cn/Spring/article01</id>
+    <published>2021-04-08T14:17:38.505Z</published>
+    <updated>2021-05-31T12:24:14.657Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;Spring实战第五版英文版及源码资源链接：&lt;a href=&quot;https://pan.baidu.com/s/18N8tt62cE5H8yXCRh95Jcw&quot;&gt;https://pan.baidu.com/s/18N8tt62cE5H8yXCRh95Jcw&lt;/a&gt;  提取码：ko2n &lt;/p&gt;
+&lt;h2 id=&quot;1-注解原理探索及使用&quot;&gt;&lt;a href=&quot;#1-注解原理探索及使用&quot; class=&quot;headerlink&quot; title=&quot;1.注解原理探索及使用&quot;&gt;&lt;/a&gt;1.注解原理探索及使用&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;@Repository、@Controller、@Service、@Component 四个包级注解，都实现了@Bean注解，即可以将标注类交托给springbean作为组件处理，除此之外：&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;@Repository：&lt;ul&gt;
+&lt;li&gt;数据访问层，一般是mapper或者dao层，将标注类中抛出的数据访问异常封装为Spring数据访问异常；&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;@Controller：&lt;ul&gt;
+&lt;li&gt;控制层，一般是controller层，标注控制器，实现action，能够填充可选的数据模型model并将请求传递给一个视图view；&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;@Service：&lt;ul&gt;
+&lt;li&gt;服务层（业务逻辑层），一般是service或者manager层，可以理解为对一个或多个DAO的再次封装；&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;@Component：&lt;ul&gt;
+&lt;li&gt;泛指各种组件，组件不属于以上三种时使用该注解；&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;（层次结构）：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;pojo：实体层，实体类；&lt;/li&gt;
+&lt;li&gt;repository/mapper/dao：数据访问层，接口类；&lt;/li&gt;
+&lt;li&gt;manager/service(serviceImpl)：服务层，接口类和实现类，一般可直接省略接口直接实现；&lt;/li&gt;
+&lt;li&gt;controller：控制层，实现路由跳转等基本控制；&lt;/li&gt;
+&lt;li&gt;config：配置层；&lt;/li&gt;
+&lt;/ul&gt;</summary>
+    
+    
+    
+    <category term="Spring实战" scheme="http://kunpw.cn/categories/Spring%E5%AE%9E%E6%88%98/"/>
+    
+    
+    <category term="java" scheme="http://kunpw.cn/tags/java/"/>
+    
+    <category term="SpringBoot" scheme="http://kunpw.cn/tags/SpringBoot/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>分布式系统设计学习笔记（二）分布式程序设计语言</title>
+    <link href="http://kunpw.cn/2021/03/25/%E5%88%86%E5%B8%83%E5%BC%8F%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/%E7%AC%AC%E4%B8%89%E7%AB%A0.%E5%88%86%E5%B8%83%E5%BC%8F%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80/"/>
+    <id>http://kunpw.cn/2021/03/25/%E5%88%86%E5%B8%83%E5%BC%8F%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/%E7%AC%AC%E4%B8%89%E7%AB%A0.%E5%88%86%E5%B8%83%E5%BC%8F%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80/</id>
+    <published>2021-03-25T06:32:29.527Z</published>
+    <updated>2021-03-25T06:34:49.871Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;第三章-分布式程序设计语言&quot;&gt;&lt;a href=&quot;#第三章-分布式程序设计语言&quot; class=&quot;headerlink&quot; title=&quot;第三章.分布式程序设计语言&quot;&gt;&lt;/a&gt;第三章.分布式程序设计语言&lt;/h2&gt;&lt;h3 id=&quot;1-分布式程序设计语言概述&quot;&gt;&lt;a href=&quot;#1-分布式程序设计语言概述&quot; class=&quot;headerlink&quot; title=&quot;1.分布式程序设计语言概述&quot;&gt;&lt;/a&gt;1.分布式程序设计语言概述&lt;/h3&gt;&lt;h4 id=&quot;1-1-分布式应用程序的分类&quot;&gt;&lt;a href=&quot;#1-1-分布式应用程序的分类&quot; class=&quot;headerlink&quot; title=&quot;1.1 分布式应用程序的分类&quot;&gt;&lt;/a&gt;1.1 分布式应用程序的分类&lt;/h4&gt;&lt;blockquote&gt;
+&lt;p&gt;在分布式计算系统中，对应用程序进行程序设计的层面有四：减少单个计算的周转时间、增加可靠性和可用性、使系统某些部分提供特殊功能、固有的分布式应用。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;分布式应用程序分类：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;并行、高性能应用程序：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;粒度是在通信之间的计算时间的长短，并行应用程序可按粒度划分：&lt;ul&gt;
+&lt;li&gt;大粒度并行应用程序用大部分时间进行计算，而不经常通信；&lt;/li&gt;
+&lt;li&gt;细粒度并行应用程序经常通信，适合紧密耦合分布计算系统；&lt;/li&gt;
+&lt;li&gt;松散耦合分布计算系统通信开销非常大，只适合大粒度并行计算，但大粒度并行计算也可适用紧密耦合分布计算系统；&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;容错应用程序：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;分布计算系统具有允许部分失效的特性，一个处理机的故障不影响其它处理机的正常工作，即可靠性高；&lt;/li&gt;
+&lt;li&gt;除此之外，程序和数据还可在若干处理机上复制，由此进一步增加可靠性；&lt;/li&gt;
+&lt;li&gt;抵御自然灾害，需要使用处理机在地域上松散耦合；&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;具有专用功能的应用程序：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;每个服务可以使用一个或多个专用处理机，用户通过网络请求这些服务；&lt;/li&gt;
+&lt;li&gt;易于增加新功能或改进现有功能，通过增加新的处理机即可实现；&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;固有的分布式应用程序：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;有些应用程序本身就是分布的，这种应用程序必须在分布式硬件上运行，如电子邮件；&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&quot;1-2-分布式程序设计和顺序程序设计的区别&quot;&gt;&lt;a href=&quot;#1-2-分布式程序设计和顺序程序设计的区别&quot; class=&quot;headerlink&quot; title=&quot;1.2 分布式程序设计和顺序程序设计的区别&quot;&gt;&lt;/a&gt;1.2 分布式程序设计和顺序程序设计的区别&lt;/h4&gt;&lt;blockquote&gt;
+&lt;p&gt;在分布计算系统上实现这些应用程序的活动叫做分布式程序设计。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;分布式程序设计和顺序程序设计的三个区别：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;使用多个处理机：&lt;ul&gt;
+&lt;li&gt;系统具有把一个程序的不同部分分配到不同处理机上执行的能力；&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;处理机合作：&lt;ul&gt;
+&lt;li&gt;各个进程必须能相互通信和同步；&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;处理部分失效：&lt;ul&gt;
+&lt;li&gt;能对系统的部分失效进行检测并恢复；&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&quot;1-3-分布式程序设计语言的分类&quot;&gt;&lt;a href=&quot;#1-3-分布式程序设计语言的分类&quot; class=&quot;headerlink&quot; title=&quot;1.3 分布式程序设计语言的分类&quot;&gt;&lt;/a&gt;1.3 分布式程序设计语言的分类&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;按并行模式来分：&lt;ul&gt;
+&lt;li&gt;顺序进程并行语言：&lt;ul&gt;
+&lt;li&gt;基本模型：一组顺序进程，并行运行，并能通过报文传递进行通信；&lt;/li&gt;
+&lt;li&gt;语言：C、C++、FORTRUN、SR、Ada、CSP……&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;具有内在并行性的语言：&lt;ul&gt;
+&lt;li&gt;函数式语言：无副作用，允许以任意次序（包括并行）计算表达式；&lt;/li&gt;
+&lt;li&gt;逻辑语言；&lt;/li&gt;
+&lt;li&gt;面向对象语言；&lt;/li&gt;
+&lt;li&gt;这些模型中并行的粒度比基本的通信顺序进程模型中小很多；&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;按通信模型来分；&lt;/li&gt;
+&lt;li&gt;容错模型和技术：&lt;ul&gt;
+&lt;li&gt;处理机故障：提供故障检测机制；&lt;/li&gt;
+&lt;li&gt;故障处理模型：&lt;ul&gt;
+&lt;li&gt;理想情况，系统对程序员隐匿全部处理机故障；&lt;/li&gt;
+&lt;li&gt;系统给程序员提供高层机制，使程序员能够描述哪些进程和数据是重要的，以及发生崩溃后怎样恢复；&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;实现可靠性：&lt;ul&gt;
+&lt;li&gt;程序设计容错：&lt;ul&gt;
+&lt;li&gt;向前恢复：试图确定错误所在，并在此基础上改正包含错误的系统状态，高级语言中的异常处理机制提供了此系统结构；&lt;/li&gt;
+&lt;li&gt;向后恢复：通过把系统恢复到错误发生前的状态来改正系统状态，恢复阻塞方案提供了这种系统结构；&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;通信容错：&lt;ul&gt;
+&lt;li&gt;通信容错依赖于使用的通信方式及故障类型；&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;</summary>
+    
+    
+    
+    <category term="分布式系统设计" scheme="http://kunpw.cn/categories/%E5%88%86%E5%B8%83%E5%BC%8F%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/"/>
+    
+    
+    <category term="理论学习" scheme="http://kunpw.cn/tags/%E7%90%86%E8%AE%BA%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="教材" scheme="http://kunpw.cn/tags/%E6%95%99%E6%9D%90/"/>
+    
+    <category term="分布式系统设计" scheme="http://kunpw.cn/tags/%E5%88%86%E5%B8%83%E5%BC%8F%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>嵌入式系统笔记整理（一）</title>
+    <link href="http://kunpw.cn/2021/03/24/embeddedSystem/%E7%AC%94%E8%AE%B0%E6%95%B4%E7%90%86%EF%BC%88%E4%B8%80%EF%BC%89/"/>
+    <id>http://kunpw.cn/2021/03/24/embeddedSystem/%E7%AC%94%E8%AE%B0%E6%95%B4%E7%90%86%EF%BC%88%E4%B8%80%EF%BC%89/</id>
+    <published>2021-03-24T06:49:01.049Z</published>
+    <updated>2021-03-24T06:55:32.295Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;ARM汇编语言官方手册：链接：&lt;a href=&quot;https://pan.baidu.com/s/1k-drPZBD41hSIXzzk4JA2Q&quot;&gt;https://pan.baidu.com/s/1k-drPZBD41hSIXzzk4JA2Q&lt;/a&gt; 提取码：vjyf&lt;/p&gt;
+&lt;h2 id=&quot;1-计算机组成&quot;&gt;&lt;a href=&quot;#1-计算机组成&quot; class=&quot;headerlink&quot; title=&quot;1.计算机组成&quot;&gt;&lt;/a&gt;1.计算机组成&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;嵌入式系统：以应用为中心，以计算机技术为基础，软硬件可裁剪，适应应用系统对功能、可靠性、成本、体积、功耗等严格要求的专用计算机系统。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;计算机系统：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;冯.诺伊曼结构（普林斯顿结构）：计算机按照程序顺序执行程序(指令)，程序指令存储地址和数据存储地址指向同一个存储器的不同物理位置；&lt;/p&gt;
+&lt;p&gt;组成：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;CPU(中央处理单元) = 算术逻辑单元(运算器) + 控制电路&lt;/li&gt;
+&lt;li&gt;存储器 Memory&lt;ul&gt;
+&lt;li&gt;ROM: Read Only Memory 只读存储器&lt;/li&gt;
+&lt;li&gt;RAM: Random Access Memory 随机访问存储器 “R/W”&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;输入输出设备    &lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;哈佛架构(Harvard Architecture)：是一种将程序存储和数据存储分开的存储器结构，数据存储器与程序存储器采用不同的总线。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;各组件通信方式：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;全双工：同一时刻一方即可以发送数据给对方，又可以从对方接收数据；&lt;/li&gt;
+&lt;li&gt;半双工：同一时刻一方只能发送数据给对方，或者是从对方接收数据；&lt;/li&gt;
+&lt;li&gt;单工：任意时刻 一方只能发送数据给对方，或者是从对方接收数据；&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;总线bus：计算机系统内部各组件之间是通过“总线”的来通信的；&lt;/li&gt;
+&lt;li&gt;总线特点：&lt;ul&gt;
+&lt;li&gt;广播式：多个部件可以同时从总线上接收相同的信息；&lt;/li&gt;
+&lt;li&gt;系统瓶颈：任意时刻只能有一个设备向总线发送信息；&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;总线按功能分：&lt;ul&gt;
+&lt;li&gt;数据总线(DB): 双向，宽度差别8bits/16bits/32bits&lt;/li&gt;
+&lt;li&gt;地址总线(AB): 单向，CPU发地址，宽度与寻址空间有关 24bit==&amp;gt;16MB                    &lt;/li&gt;
+&lt;li&gt;控制总线(CB): 命令和状态&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;总线按位置分：&lt;ul&gt;
+&lt;li&gt;片内总线 &lt;/li&gt;
+&lt;li&gt;系统总线&lt;/li&gt;
+&lt;li&gt;通信总线(I/O总线)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;</summary>
+    
+    
+    
+    <category term="嵌入式系统" scheme="http://kunpw.cn/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F%E7%B3%BB%E7%BB%9F/"/>
+    
+    
+    <category term="嵌入式" scheme="http://kunpw.cn/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F/"/>
+    
+    <category term="汇编指令" scheme="http://kunpw.cn/tags/%E6%B1%87%E7%BC%96%E6%8C%87%E4%BB%A4/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>SpringBoot(五)——SpringSecurity和Shiro</title>
+    <link href="http://kunpw.cn/2021/03/12/SpringBoot/SpringBoot%EF%BC%88%E4%BA%94%EF%BC%89%E2%80%94%E2%80%94SpringSecurity%E5%92%8CShiro/"/>
+    <id>http://kunpw.cn/2021/03/12/SpringBoot/SpringBoot%EF%BC%88%E4%BA%94%EF%BC%89%E2%80%94%E2%80%94SpringSecurity%E5%92%8CShiro/</id>
+    <published>2021-03-12T12:13:51.370Z</published>
+    <updated>2021-03-12T12:17:51.563Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;1-初始化导入资源&quot;&gt;&lt;a href=&quot;#1-初始化导入资源&quot; class=&quot;headerlink&quot; title=&quot;1.初始化导入资源&quot;&gt;&lt;/a&gt;1.初始化导入资源&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;新建项目并配置SpringWeb、Thymeleaf和SpringSecurity依赖（注：只要配置了SpringSecurity依赖后续资源在访问时就会自动被拦截并跳转到登录页，即使并没有配置登录账号）；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;导入素材，资源链接：&lt;a href=&quot;https://pan.baidu.com/s/1CsbZrhFKggnucYPHFVaHSw&quot;&gt;https://pan.baidu.com/s/1CsbZrhFKggnucYPHFVaHSw&lt;/a&gt;  提取码：v7g7 &lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;新建Controller目录，下建&lt;code&gt;RouterController.java&lt;/code&gt;路由控制器，实现简单路由即可：&lt;/p&gt;
+&lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;@Controller&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;class&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;RouterController&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;meta&quot;&gt;@RequestMapping(&amp;#123;&amp;quot;/&amp;quot;,&amp;quot;/index&amp;quot;&amp;#125;)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; String &lt;span class=&quot;title&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;()&lt;/span&gt;&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&amp;quot;index&amp;quot;&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;meta&quot;&gt;@RequestMapping(&amp;quot;/toLogin&amp;quot;)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; String &lt;span class=&quot;title&quot;&gt;toLogin&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;()&lt;/span&gt;&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&amp;quot;views/login&amp;quot;&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;meta&quot;&gt;@RequestMapping(&amp;quot;/level1/&amp;#123;id&amp;#125;&amp;quot;)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; String &lt;span class=&quot;title&quot;&gt;level1&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(&lt;span class=&quot;meta&quot;&gt;@PathVariable(&amp;quot;id&amp;quot;)&lt;/span&gt;Integer id)&lt;/span&gt;&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&amp;quot;views/level1/&amp;quot;&lt;/span&gt;+id;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;meta&quot;&gt;@RequestMapping(&amp;quot;/level2/&amp;#123;id&amp;#125;&amp;quot;)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; String &lt;span class=&quot;title&quot;&gt;level2&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(&lt;span class=&quot;meta&quot;&gt;@PathVariable(&amp;quot;id&amp;quot;)&lt;/span&gt;Integer id)&lt;/span&gt;&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&amp;quot;views/level2/&amp;quot;&lt;/span&gt;+id;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;meta&quot;&gt;@RequestMapping(&amp;quot;/level3/&amp;#123;id&amp;#125;&amp;quot;)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; String &lt;span class=&quot;title&quot;&gt;level3&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(&lt;span class=&quot;meta&quot;&gt;@PathVariable(&amp;quot;id&amp;quot;)&lt;/span&gt;Integer id)&lt;/span&gt;&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&amp;quot;views/level3/&amp;quot;&lt;/span&gt;+id;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;/li&gt;
+&lt;/ul&gt;</summary>
+    
+    
+    
+    <category term="学习" scheme="http://kunpw.cn/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="java" scheme="http://kunpw.cn/tags/java/"/>
+    
+    <category term="SpringBoot" scheme="http://kunpw.cn/tags/SpringBoot/"/>
+    
+    <category term="SpringSecurity" scheme="http://kunpw.cn/tags/SpringSecurity/"/>
+    
+    <category term="Shiro" scheme="http://kunpw.cn/tags/Shiro/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>SpringBoot(四)——数据库连接（整合Mybatis）</title>
+    <link href="http://kunpw.cn/2021/03/10/SpringBoot/SpringBoot%EF%BC%88%E5%9B%9B%EF%BC%89%E2%80%94%E2%80%94%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BF%9E%E6%8E%A5%EF%BC%88%E6%95%B4%E5%90%88Mybatis%EF%BC%89/"/>
+    <id>http://kunpw.cn/2021/03/10/SpringBoot/SpringBoot%EF%BC%88%E5%9B%9B%EF%BC%89%E2%80%94%E2%80%94%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BF%9E%E6%8E%A5%EF%BC%88%E6%95%B4%E5%90%88Mybatis%EF%BC%89/</id>
+    <published>2021-03-10T09:05:38.139Z</published>
+    <updated>2021-03-12T12:18:06.964Z</updated>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;本节讲解数据库连接以及mybatis使用&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;1-数据库连接及原生用法&quot;&gt;&lt;a href=&quot;#1-数据库连接及原生用法&quot; class=&quot;headerlink&quot; title=&quot;1.数据库连接及原生用法&quot;&gt;&lt;/a&gt;1.数据库连接及原生用法&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;新建项目，配置依赖：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Web-&amp;gt;Spring Web；&lt;/li&gt;
+&lt;li&gt;SQL-&amp;gt;JDBC API；&lt;/li&gt;
+&lt;li&gt;SQL-&amp;gt;Spring Data JDBC；&lt;/li&gt;
+&lt;li&gt;SQL-&amp;gt;MySQL Driver；&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;IDEA连接数据库（可选，可以使用其它软件直接打开mysql显示）：&lt;/p&gt;
+&lt;p&gt;如图，我已连接自己的mysql中springboot_mybatis数据库，其中已配置简单表user：&lt;/p&gt;
+&lt;img src=&quot;https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/SpringBoot/401.png&quot; alt=&quot;image-20210309160519767&quot; style=&quot;zoom:80%;&quot;&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;新建&lt;code&gt;application.yml&lt;/code&gt;文件（可以使用默认的&lt;code&gt;application.properties&lt;/code&gt;），并对该项目连接mysql数据库：&lt;/p&gt;
+&lt;figure class=&quot;highlight yml&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;attr&quot;&gt;spring:&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;attr&quot;&gt;datasource:&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;attr&quot;&gt;username:&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;root&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;attr&quot;&gt;password:&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;password&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;comment&quot;&gt;# serverTimezone=UTC是时区，&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;attr&quot;&gt;url:&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;jdbc:mysql://localhost:3306/springboot_mybatis?serverTimezone=UTC&amp;amp;useUnicode=true&amp;amp;characterEncoding=utf-8&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;attr&quot;&gt;driver-class-name:&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;com.mysql.cj.jdbc.Driver&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;新建controller包，并在其下新建&lt;code&gt;JDBCController.java&lt;/code&gt;文件，代码如下（运行后已可正常访问并简易增删查改数据库）：&lt;/p&gt;
+&lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;29&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;30&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;31&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;32&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;33&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;34&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;35&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;36&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;37&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;38&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;39&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;40&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;41&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;42&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;43&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;44&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;45&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;46&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;47&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;48&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;49&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;50&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;51&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;52&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;package&lt;/span&gt; com.kun.demodata.controller;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;import&lt;/span&gt; org.springframework.beans.factory.annotation.Autowired;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;import&lt;/span&gt; org.springframework.jdbc.core.JdbcTemplate;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;import&lt;/span&gt; org.springframework.web.bind.annotation.GetMapping;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;import&lt;/span&gt; org.springframework.web.bind.annotation.PathVariable;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;import&lt;/span&gt; org.springframework.web.bind.annotation.RestController;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;import&lt;/span&gt; java.util.List;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;import&lt;/span&gt; java.util.Map;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;@RestController&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;class&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;JDBCController&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;comment&quot;&gt;// Template是Spring默认配置好的模板bean，可以拿来即用&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;meta&quot;&gt;@Autowired&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    JdbcTemplate jdbcTemplate;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;comment&quot;&gt;// 查询数据库所有信息，没有实体类时使用Map获取数据库中的数据&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;meta&quot;&gt;@GetMapping(&amp;quot;/userList&amp;quot;)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; List&amp;lt;Map&amp;lt;String,Object&amp;gt;&amp;gt; userList()&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        String sql = &lt;span class=&quot;string&quot;&gt;&amp;quot;select * from user&amp;quot;&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        List&amp;lt;Map&amp;lt;String,Object&amp;gt;&amp;gt; mapList = jdbcTemplate.queryForList(sql);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; mapList;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;comment&quot;&gt;// 增加用户信息&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;meta&quot;&gt;@GetMapping(&amp;quot;/addUser&amp;quot;)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; String &lt;span class=&quot;title&quot;&gt;addUser&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;()&lt;/span&gt;&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        String sql = &lt;span class=&quot;string&quot;&gt;&amp;quot;insert into springboot_mybatis.user(id,name,pwd) values(4,&amp;#x27;小芳&amp;#x27;,&amp;#x27;ffffff&amp;#x27;)&amp;quot;&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        jdbcTemplate.update(sql);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&amp;quot;addUser-ok&amp;quot;&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;comment&quot;&gt;// 修改用户信息&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;meta&quot;&gt;@GetMapping(&amp;quot;/updateUser/&amp;#123;id&amp;#125;&amp;quot;)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; String &lt;span class=&quot;title&quot;&gt;updateUser&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(&lt;span class=&quot;meta&quot;&gt;@PathVariable(&amp;quot;id&amp;quot;)&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; id)&lt;/span&gt;&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;comment&quot;&gt;// 占位符语法格式&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        String sql = &lt;span class=&quot;string&quot;&gt;&amp;quot;update springboot_mybatis.user set name=?,pwd=? where id=&amp;quot;&lt;/span&gt;+id;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;comment&quot;&gt;// 封装&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        Object[] objects = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; Object[&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        objects[&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;] = &lt;span class=&quot;string&quot;&gt;&amp;quot;小黄&amp;quot;&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        objects[&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;] = &lt;span class=&quot;string&quot;&gt;&amp;quot;password&amp;quot;&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;comment&quot;&gt;// 直接传参&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        jdbcTemplate.update(sql,objects);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&amp;quot;updateUser-ok&amp;quot;&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;comment&quot;&gt;// 删除用户信息&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;meta&quot;&gt;@GetMapping(&amp;quot;/deleteUser/&amp;#123;id&amp;#125;&amp;quot;)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; String &lt;span class=&quot;title&quot;&gt;deleteUser&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(&lt;span class=&quot;meta&quot;&gt;@PathVariable(&amp;quot;id&amp;quot;)&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; id)&lt;/span&gt;&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        String sql = &lt;span class=&quot;string&quot;&gt;&amp;quot;delete from springboot_mybatis.user where id=?&amp;quot;&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;comment&quot;&gt;// 直接传参&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        jdbcTemplate.update(sql,id);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&amp;quot;deleteUser-ok&amp;quot;&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;/li&gt;
+&lt;/ol&gt;</summary>
+    
+    
+    
+    <category term="学习" scheme="http://kunpw.cn/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="java" scheme="http://kunpw.cn/tags/java/"/>
+    
+    <category term="SpringBoot" scheme="http://kunpw.cn/tags/SpringBoot/"/>
+    
+    <category term="Mybatis" scheme="http://kunpw.cn/tags/Mybatis/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>SpringBoot(三)——员工管理系统（已增数据库）</title>
+    <link href="http://kunpw.cn/2021/03/06/SpringBoot/SpringBoot%EF%BC%88%E4%B8%89%EF%BC%89%E2%80%94%E2%80%94%E5%91%98%E5%B7%A5%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%EF%BC%88%E6%97%A0%E6%95%B0%E6%8D%AE%E5%BA%93%EF%BC%89/"/>
+    <id>http://kunpw.cn/2021/03/06/SpringBoot/SpringBoot%EF%BC%88%E4%B8%89%EF%BC%89%E2%80%94%E2%80%94%E5%91%98%E5%B7%A5%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%EF%BC%88%E6%97%A0%E6%95%B0%E6%8D%AE%E5%BA%93%EF%BC%89/</id>
+    <published>2021-03-06T12:46:04.487Z</published>
+    <updated>2021-03-10T15:55:03.462Z</updated>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;本节以一个员工管理系统的实例在前两节的基础上继续讲解一些功能。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;1-初始化&quot;&gt;&lt;a href=&quot;#1-初始化&quot; class=&quot;headerlink&quot; title=&quot;1.初始化&quot;&gt;&lt;/a&gt;1.初始化&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;依然是上一个项目，但这次我们引入一个员工管理系统的模板，将页面和静态资源分别导入到项目中，并使用Thymeleaf模板解析器（模板资源链接：&lt;a href=&quot;https://pan.baidu.com/s/15L8ByzIqhKzaCMo2Re_F3g&quot;&gt;https://pan.baidu.com/s/15L8ByzIqhKzaCMo2Re_F3g&lt;/a&gt; 提取码：8lbu ）：&lt;/p&gt;
+&lt;img src=&quot;https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/SpringBoot/2+3/010.png&quot; alt=&quot;image-20210306102122875&quot; style=&quot;zoom:80%;&quot;&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;按照上一节在每一个页面引入Thymeleaf，并修改源html标签属性为Thymeleaf，以&lt;code&gt;index.html&lt;/code&gt;文件为例（修改完成之后页面中就可显示样式了）：&lt;/p&gt;
+&lt;figure class=&quot;highlight html&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;29&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;30&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;31&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;32&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;33&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;34&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;35&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;36&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;&amp;lt;!DOCTYPE &lt;span class=&quot;meta-keyword&quot;&gt;html&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;html&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;lang&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&amp;quot;en&amp;quot;&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;xmlns:th&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&amp;quot;http://www.thymeleaf.org&amp;quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;head&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;meta&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;http-equiv&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&amp;quot;Content-Type&amp;quot;&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;content&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&amp;quot;text/html; charset=UTF-8&amp;quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;meta&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;name&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&amp;quot;viewport&amp;quot;&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;content&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&amp;quot;width=device-width, initial-scale=1, shrink-to-fit=no&amp;quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;meta&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;name&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&amp;quot;description&amp;quot;&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;content&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&amp;quot;&amp;quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;meta&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;name&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&amp;quot;author&amp;quot;&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;content&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&amp;quot;&amp;quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;title&lt;/span&gt;&amp;gt;&lt;/span&gt;Signin Template for Bootstrap&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;title&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;comment&quot;&gt;&amp;lt;!-- Bootstrap core CSS --&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;comment&quot;&gt;&amp;lt;!-- /表示静态资源根目录 --&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;link&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;th:href&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&amp;quot;@&amp;#123;/css/bootstrap.min.css&amp;#125;&amp;quot;&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;rel&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&amp;quot;stylesheet&amp;quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;comment&quot;&gt;&amp;lt;!-- Custom styles for this template --&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;link&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;th:href&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&amp;quot;@&amp;#123;/css/signin.css&amp;#125;&amp;quot;&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;rel&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&amp;quot;stylesheet&amp;quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;head&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;body&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;class&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&amp;quot;text-center&amp;quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;form&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;class&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&amp;quot;form-signin&amp;quot;&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;action&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&amp;quot;dashboard.html&amp;quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;img&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;class&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&amp;quot;mb-4&amp;quot;&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;th:src&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&amp;quot;@&amp;#123;/img/bootstrap-solid.svg&amp;#125;&amp;quot;&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;alt&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&amp;quot;&amp;quot;&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;width&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&amp;quot;72&amp;quot;&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;height&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&amp;quot;72&amp;quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;h1&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;class&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&amp;quot;h3 mb-3 font-weight-normal&amp;quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;Please sign in&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;h1&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;label&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;class&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&amp;quot;sr-only&amp;quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;Username&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;label&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;input&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;type&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&amp;quot;text&amp;quot;&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;class&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&amp;quot;form-control&amp;quot;&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;placeholder&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&amp;quot;Username&amp;quot;&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;required&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&amp;quot;&amp;quot;&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;autofocus&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&amp;quot;&amp;quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;label&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;class&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&amp;quot;sr-only&amp;quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;Password&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;label&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;input&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;type&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&amp;quot;password&amp;quot;&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;class&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&amp;quot;form-control&amp;quot;&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;placeholder&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&amp;quot;Password&amp;quot;&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;required&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&amp;quot;&amp;quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;div&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;class&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&amp;quot;checkbox mb-3&amp;quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;				&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;label&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;          &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;input&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;type&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&amp;quot;checkbox&amp;quot;&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;value&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&amp;quot;remember-me&amp;quot;&lt;/span&gt;&amp;gt;&lt;/span&gt; Remember me&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;label&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;div&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;button&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;class&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&amp;quot;btn btn-lg btn-primary btn-block&amp;quot;&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;type&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&amp;quot;submit&amp;quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;Sign in&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;button&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;class&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&amp;quot;mt-5 mb-3 text-muted&amp;quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;© 2017-2018&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;p&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;class&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&amp;quot;btn btn-sm&amp;quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;中文&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;a&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;class&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&amp;quot;btn btn-sm&amp;quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;English&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;a&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;form&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;body&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;html&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;img src=&quot;https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/SpringBoot/2+3/011.png&quot; alt=&quot;image-20210306102901100&quot; style=&quot;zoom:80%;&quot;&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;在&lt;code&gt;MyMvcConfig&lt;/code&gt;文件中重写&lt;code&gt;addViewControllers&lt;/code&gt;方法，也就是实现路由跳转功能（注：此功能不实现国际化跳转就会失败）：&lt;/p&gt;
+&lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;@Override&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;addViewControllers&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(ViewControllerRegistry registry)&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    registry.addViewController(&lt;span class=&quot;string&quot;&gt;&amp;quot;/&amp;quot;&lt;/span&gt;).setViewName(&lt;span class=&quot;string&quot;&gt;&amp;quot;index&amp;quot;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    registry.addViewController(&lt;span class=&quot;string&quot;&gt;&amp;quot;/index.html&amp;quot;&lt;/span&gt;).setViewName(&lt;span class=&quot;string&quot;&gt;&amp;quot;index&amp;quot;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+
+
+&lt;/li&gt;
+&lt;/ul&gt;</summary>
+    
+    
+    
+    <category term="学习" scheme="http://kunpw.cn/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="java" scheme="http://kunpw.cn/tags/java/"/>
+    
+    <category term="SpringBoot" scheme="http://kunpw.cn/tags/SpringBoot/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>SpringBoot(二)——Thymeleaf及MVC装配扩展</title>
+    <link href="http://kunpw.cn/2021/03/06/SpringBoot/SpringBoot%EF%BC%88%E4%BA%8C%EF%BC%89%E2%80%94%E2%80%94Thymeleaf%E5%8F%8AMVC%E8%A3%85%E9%85%8D%E6%89%A9%E5%B1%95/"/>
+    <id>http://kunpw.cn/2021/03/06/SpringBoot/SpringBoot%EF%BC%88%E4%BA%8C%EF%BC%89%E2%80%94%E2%80%94Thymeleaf%E5%8F%8AMVC%E8%A3%85%E9%85%8D%E6%89%A9%E5%B1%95/</id>
+    <published>2021-03-06T12:46:04.400Z</published>
+    <updated>2021-03-10T09:13:31.301Z</updated>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;SpringBoot配置了什么？能不能对其进行修改？能修改什么？能不能扩展？通过自动装配原理的学习，接下来主要根据自动装配源码分析并得到以下结论。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;1-导入静态资源&quot;&gt;&lt;a href=&quot;#1-导入静态资源&quot; class=&quot;headerlink&quot; title=&quot;1.导入静态资源&quot;&gt;&lt;/a&gt;1.导入静态资源&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;这里的静态资源由果索因，即在网页中&lt;code&gt;localhost:8080/&lt;/code&gt;后输入&lt;code&gt;webjars&lt;/code&gt;路径相当于访问源文件路径，以此找到源文件中存放静态资源位置，注：静态资源包含&lt;code&gt;html&lt;/code&gt;等文件；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;找到&lt;code&gt;WebMvcAutoConfiguration&lt;/code&gt;文件以下部分：&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;25&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;addResourceHandlers&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(ResourceHandlerRegistry registry)&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;comment&quot;&gt;// 这一段是判断是否在配置文件中自主配置资源路径，如果配置则默认配置失效，直接在此返回&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; (!&lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;.resourceProperties.isAddMappings()) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        logger.debug(&lt;span class=&quot;string&quot;&gt;&amp;quot;Default resource handling disabled&amp;quot;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    Duration cachePeriod = &lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;.resourceProperties.getCache().getPeriod();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    CacheControl cacheControl = &lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;.resourceProperties.getCache().getCachecontrol().toHttpCacheControl();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;comment&quot;&gt;// webjars是以jar包形式封装引入前端资源，此处可以从官网取出引入静态资源依赖的代码&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; (!registry.hasMappingForPattern(&lt;span class=&quot;string&quot;&gt;&amp;quot;/webjars/**&amp;quot;&lt;/span&gt;)) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        customizeResourceHandlerRegistration(registry.addResourceHandler(&lt;span class=&quot;string&quot;&gt;&amp;quot;/webjars/**&amp;quot;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;               .addResourceLocations(&lt;span class=&quot;string&quot;&gt;&amp;quot;classpath:/META-INF/resources/webjars/&amp;quot;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;               .setCachePeriod(getSeconds(cachePeriod)).setCacheControl(cacheControl));&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    String staticPathPattern = &lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;.mvcProperties.getStaticPathPattern();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;comment&quot;&gt;/* 首先从mvcProperties对象的类WebMvcProperties文件中找到staticPathPattern变量&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;    	其次从resourceProperties对象的类ResourceProperties文件中找到staticLocations变量&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;    */&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; (!registry.hasMappingForPattern(staticPathPattern)) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        customizeResourceHandlerRegistration(registry.addResourceHandler(staticPathPattern)                                    .addResourceLocations(getResourceLocations(&lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;.resourceProperties.getStaticLocations()))                      .setCachePeriod(getSeconds(cachePeriod)).setCacheControl(cacheControl));&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;webjars&lt;/code&gt;引入 Maven &lt;code&gt;jquery&lt;/code&gt;为例：&lt;/p&gt;
+&lt;img src=&quot;https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/SpringBoot/2+3/001.png&quot; alt=&quot;image-20210305125609037&quot; style=&quot;zoom:80%;&quot;&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;将该段依赖代码放到&lt;code&gt;pom.xml&lt;/code&gt;文件依赖中并加载相关依赖项，如图：&lt;/p&gt;
+&lt;img src=&quot;https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/SpringBoot/2+3/002.png&quot; alt=&quot;image-20210305130316069&quot; style=&quot;zoom:80%;&quot;&gt;
+
+&lt;p&gt;这一段的含义是&lt;code&gt;localhost:8080/webjars/&lt;/code&gt;路径相当于外部依赖库目录的&lt;code&gt;classpath:/META-INF/resources/webjars/&lt;/code&gt;，因此在网页中输入&lt;code&gt;localhost:8080/webjars/jquery/3.6.0/jquery.js&lt;/code&gt;即可获取到该静态资源，如图所示：&lt;/p&gt;
+&lt;img src=&quot;https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/SpringBoot/2+3/003.png&quot; alt=&quot;image-20210305130913244&quot; style=&quot;zoom: 80%;&quot;&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;ResourceProperties&lt;/code&gt;文件静态资源默认路径：&lt;/p&gt;
+&lt;img src=&quot;https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/SpringBoot/2+3/004.png&quot; alt=&quot;image-20210305131847108&quot; style=&quot;zoom:80%;&quot;&gt;
+
+&lt;ul&gt;
+&lt;li&gt;此处四个路径全部是根目录下&lt;code&gt;resources&lt;/code&gt;文件下目录，而系统默认生成&lt;code&gt;static&lt;/code&gt;文件夹用以存放静态资源。经过实践发现后三者优先级：&lt;code&gt;/resources &amp;gt; /static &amp;gt; /public&lt;/code&gt;，而第一个路径其实就是外部依赖包路径，参考&lt;code&gt;webjars&lt;/code&gt;；&lt;/li&gt;
+&lt;li&gt;且&lt;code&gt;WebMvcProperties&lt;/code&gt;文件下&lt;code&gt;staticPathPattern&lt;/code&gt;变量的默认地址就是根路径，即根路径下的资源也能直接访问到；&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;关于在&lt;code&gt;application.properties&lt;/code&gt;文件中修改资源路径，一般不使用，修改的话直接修改&lt;code&gt;staticPathPattern&lt;/code&gt;变量即可，这样一来默认存放静态资源的路径就会全部失效；&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</summary>
+    
+    
+    
+    <category term="学习" scheme="http://kunpw.cn/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="java" scheme="http://kunpw.cn/tags/java/"/>
+    
+    <category term="SpringBoot" scheme="http://kunpw.cn/tags/SpringBoot/"/>
+    
+  </entry>
+  
+  <entry>
     <title>分布式系统设计学习笔记（一）进程通信</title>
     <link href="http://kunpw.cn/2021/03/04/%E5%88%86%E5%B8%83%E5%BC%8F%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/%E7%AC%AC%E4%BA%8C%E7%AB%A0.%E8%BF%9B%E7%A8%8B%E9%80%9A%E4%BF%A1/"/>
     <id>http://kunpw.cn/2021/03/04/%E5%88%86%E5%B8%83%E5%BC%8F%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/%E7%AC%AC%E4%BA%8C%E7%AB%A0.%E8%BF%9B%E7%A8%8B%E9%80%9A%E4%BF%A1/</id>
     <published>2021-03-04T15:18:01.925Z</published>
-    <updated>2021-03-04T15:23:15.470Z</updated>
+    <updated>2021-03-06T12:47:49.987Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;第二章-进程通信&quot;&gt;&lt;a href=&quot;#第二章-进程通信&quot; class=&quot;headerlink&quot;</summary>
-        
-      
+    <summary type="html">&lt;h2 id=&quot;第二章-进程通信&quot;&gt;&lt;a href=&quot;#第二章-进程通信&quot; class=&quot;headerlink&quot; title=&quot;第二章.进程通信&quot;&gt;&lt;/a&gt;第二章.进程通信&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;进程通信的两种方式：&lt;ul&gt;
+&lt;li&gt;同一物理节点上不同进程：管道、共享内存和消息队列等实现；&lt;/li&gt;
+&lt;li&gt;不同物理节点上不同进程：通信网络实现；&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;1-同一节点上进程间通信&quot;&gt;&lt;a href=&quot;#1-同一节点上进程间通信&quot; class=&quot;headerlink&quot; title=&quot;1 同一节点上进程间通信&quot;&gt;&lt;/a&gt;1 同一节点上进程间通信&lt;/h3&gt;&lt;h4 id=&quot;1-1-管道&quot;&gt;&lt;a href=&quot;#1-1-管道&quot; class=&quot;headerlink&quot; title=&quot;1.1 管道&quot;&gt;&lt;/a&gt;1.1 管道&lt;/h4&gt;&lt;blockquote&gt;
+&lt;p&gt;单向通信信道，使用&lt;code&gt;write&lt;/code&gt;系统调用发送数据，使用&lt;code&gt;read&lt;/code&gt;系统调用接收数据。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;无名管道：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;简称管道，只在父子进程或同父子进程间使用，并与创建该管道的进程同时存在；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;管道实质是允许双向通信的，但被强制用作单向通信信道。为了避免两个进程同时自由读写管道，因此习惯上每个进程只读或只写，并且关闭本进程不需要的文件描述符；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;通过&lt;code&gt;pipe&lt;/code&gt;系统调用创建管道，成功时返回两个文件描述符，一个向管道写入，一个向管道读出：&lt;/p&gt;
+&lt;figure class=&quot;highlight c&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;29&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;30&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;31&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;32&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;33&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;34&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;35&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;36&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;37&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;38&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;39&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;40&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;/*1.定义*/&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;#&lt;span class=&quot;meta-keyword&quot;&gt;include&lt;/span&gt; &lt;span class=&quot;meta-string&quot;&gt;&amp;lt;unistd.h&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// 如果调用成功，filedes[0]用来从管道读出数据，filedes[1]用来向管道写入数据&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;pipe&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; filedes[&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;])&lt;/span&gt;&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;/*2.实例*/&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;#&lt;span class=&quot;meta-keyword&quot;&gt;include&lt;/span&gt; &lt;span class=&quot;meta-string&quot;&gt;&amp;lt;unistd.h&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;#&lt;span class=&quot;meta-keyword&quot;&gt;include&lt;/span&gt; &lt;span class=&quot;meta-string&quot;&gt;&amp;lt;stdio.h&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;#&lt;span class=&quot;meta-keyword&quot;&gt;define&lt;/span&gt; MSGSIZE 16&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;char&lt;/span&gt; *msg1 = &lt;span class=&quot;string&quot;&gt;&amp;quot;hello, book # 1 &amp;quot;&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;char&lt;/span&gt; *msg2 = &lt;span class=&quot;string&quot;&gt;&amp;quot;hello, book # 2 &amp;quot;&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;char&lt;/span&gt; *msg3 = &lt;span class=&quot;string&quot;&gt;&amp;quot;hello, book # 3 &amp;quot;&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;main()&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;char&lt;/span&gt; inbuf[MSGSIZE];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; p[&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;],j;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;comment&quot;&gt;// 创建一个管道&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(pipe(p) == &lt;span class=&quot;number&quot;&gt;-1&lt;/span&gt;)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        perror(&lt;span class=&quot;string&quot;&gt;&amp;quot;pipe call failed&amp;quot;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;built_in&quot;&gt;exit&lt;/span&gt;(&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;comment&quot;&gt;// 通过fork调用生成的子进程会共享父进程的文件描述符p，父进程创建一个管道后，则可以实现父子进程通信&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;switch&lt;/span&gt;(pid == fork())&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;-1&lt;/span&gt;:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            perror(&lt;span class=&quot;string&quot;&gt;&amp;quot;fork call failed&amp;quot;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;built_in&quot;&gt;exit&lt;/span&gt;(&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;comment&quot;&gt;// 如果是child进程则写入管道&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            write(p[&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;],msg1,MSGSIZE);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            write(p[&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;],msg2,MSGSIZE);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            write(p[&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;],msg3,MSGSIZE);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;default&lt;/span&gt;:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;comment&quot;&gt;// 如果是parent进程则从管道读出&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt;(j=&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;;j&amp;lt;&lt;span class=&quot;number&quot;&gt;3&lt;/span&gt;;j++)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                read(p[&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;],inbuf,MSGSIZE);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                &lt;span class=&quot;built_in&quot;&gt;printf&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&amp;quot;%s\n&amp;quot;&lt;/span&gt;,inbuf);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            wait(&lt;span class=&quot;literal&quot;&gt;NULL&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;built_in&quot;&gt;exit&lt;/span&gt;(&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;FIFO或命名管道：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;FIFO在读写时具有和管道相同的属性，甚至在内核级FIFO和管道共享大量的公共代码，但是FIFO是一个持久的设备（文件），被赋予了一个UNIX文件名，有自己的所有者、大小以及访问权限；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;初始化部分与管道不同：&lt;/p&gt;
+&lt;figure class=&quot;highlight c&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;#&lt;span class=&quot;meta-keyword&quot;&gt;include&lt;/span&gt; &lt;span class=&quot;meta-string&quot;&gt;&amp;lt;sys/types.h&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;#&lt;span class=&quot;meta-keyword&quot;&gt;include&lt;/span&gt; &lt;span class=&quot;meta-string&quot;&gt;&amp;lt;sys/stat.h&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// mkfifo创建FIFO，文件，参数pathname指定名字，mode给定FIFO的权限，权限有四个如0666&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;mkfifo&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(&lt;span class=&quot;keyword&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;char&lt;/span&gt; *pathname, &lt;span class=&quot;keyword&quot;&gt;mode_t&lt;/span&gt; mode)&lt;/span&gt;&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// 创建完成后必须使用open打开该文件，类似于各种文本文件等的打开&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;#&lt;span class=&quot;meta-keyword&quot;&gt;include&lt;/span&gt; &lt;span class=&quot;meta-string&quot;&gt;&amp;lt;fcntl.h&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// 注意，此时open函数会被阻塞直至另一个进程打开这个FIFO来读取数据或者该FIFO已被打开则open立即返回调用&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;fd = open(pathname, O_WRONLY);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// 另一种非阻塞调用必须使用O_NONBLOCK，如果没有进程打开FIFO读取，则open返回-1，而不阻塞&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;((fd = open(pathname, O_WRONLY|O_NONBLOCK)) == &lt;span class=&quot;number&quot;&gt;-1&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    perror(&lt;span class=&quot;string&quot;&gt;&amp;quot;open fail&amp;quot;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// ？打开之后怎么写入和读取FIFO？&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</summary>
     
     
     
@@ -137,13 +573,13 @@
     
     <category term="算法" scheme="http://kunpw.cn/tags/%E7%AE%97%E6%B3%95/"/>
     
+    <category term="最短路径" scheme="http://kunpw.cn/tags/%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84/"/>
+    
     <category term="Prime" scheme="http://kunpw.cn/tags/Prime/"/>
     
     <category term="Kruskal" scheme="http://kunpw.cn/tags/Kruskal/"/>
     
     <category term="最小生成树" scheme="http://kunpw.cn/tags/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91/"/>
-    
-    <category term="最短路径" scheme="http://kunpw.cn/tags/%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84/"/>
     
   </entry>
   
@@ -176,11 +612,11 @@
     
     <category term="算法" scheme="http://kunpw.cn/tags/%E7%AE%97%E6%B3%95/"/>
     
-    <category term="最短路径" scheme="http://kunpw.cn/tags/%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84/"/>
-    
     <category term="Dijkstra" scheme="http://kunpw.cn/tags/Dijkstra/"/>
     
     <category term="广度优先搜索" scheme="http://kunpw.cn/tags/%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2/"/>
+    
+    <category term="最短路径" scheme="http://kunpw.cn/tags/%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84/"/>
     
   </entry>
   
@@ -290,11 +726,11 @@
   </entry>
   
   <entry>
-    <title>SpringBoot(一)</title>
-    <link href="http://kunpw.cn/2020/10/23/SpringBoot/SpringBoot%EF%BC%88%E4%B8%80%EF%BC%89/"/>
-    <id>http://kunpw.cn/2020/10/23/SpringBoot/SpringBoot%EF%BC%88%E4%B8%80%EF%BC%89/</id>
+    <title>SpringBoot(一)——自动装配原理</title>
+    <link href="http://kunpw.cn/2020/10/23/SpringBoot/SpringBoot%EF%BC%88%E4%B8%80%EF%BC%89%E2%80%94%E2%80%94%E8%87%AA%E5%8A%A8%E8%A3%85%E9%85%8D%E5%8E%9F%E7%90%86/"/>
+    <id>http://kunpw.cn/2020/10/23/SpringBoot/SpringBoot%EF%BC%88%E4%B8%80%EF%BC%89%E2%80%94%E2%80%94%E8%87%AA%E5%8A%A8%E8%A3%85%E9%85%8D%E5%8E%9F%E7%90%86/</id>
     <published>2020-10-23T09:06:44.507Z</published>
-    <updated>2020-11-01T05:00:15.598Z</updated>
+    <updated>2021-03-12T12:18:14.050Z</updated>
     
     
     <summary type="html">&lt;blockquote&gt;
@@ -512,225 +948,6 @@
     <category term="FFmpeg" scheme="http://kunpw.cn/tags/FFmpeg/"/>
     
     <category term="不实用" scheme="http://kunpw.cn/tags/%E4%B8%8D%E5%AE%9E%E7%94%A8/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>爬虫之Scrapy（2.实战）</title>
-    <link href="http://kunpw.cn/2020/09/13/Python/scrapy%E5%AE%9E%E6%88%98/"/>
-    <id>http://kunpw.cn/2020/09/13/Python/scrapy%E5%AE%9E%E6%88%98/</id>
-    <published>2020-09-13T13:35:46.004Z</published>
-    <updated>2020-10-17T09:19:03.381Z</updated>
-    
-    
-    <summary type="html">&lt;h2 id=&quot;1-新建项目yangguang&quot;&gt;&lt;a href=&quot;#1-新建项目yangguang&quot; class=&quot;headerlink&quot; title=&quot;1.新建项目yangguang&quot;&gt;&lt;/a&gt;1.新建项目yangguang&lt;/h2&gt;&lt;h3 id=&quot;1-1-新建项目&quot;&gt;&lt;a href=&quot;#1-1-新建项目&quot; class=&quot;headerlink&quot; title=&quot;1.1 新建项目&quot;&gt;&lt;/a&gt;1.1 新建项目&lt;/h3&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;scrapy startproject yangguang&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;cd&lt;/span&gt; yangguang &lt;span class=&quot;comment&quot;&gt;# 进入新建项目列表&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-
-
-&lt;h3 id=&quot;1-2-新建爬虫文件&quot;&gt;&lt;a href=&quot;#1-2-新建爬虫文件&quot; class=&quot;headerlink&quot; title=&quot;1.2 新建爬虫文件&quot;&gt;&lt;/a&gt;1.2 新建爬虫文件&lt;/h3&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;scrapy genspider yg wz.sun0769.com&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-
-
-&lt;h3 id=&quot;1-3-初始化&quot;&gt;&lt;a href=&quot;#1-3-初始化&quot; class=&quot;headerlink&quot; title=&quot;1.3 初始化&quot;&gt;&lt;/a&gt;1.3 初始化&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;更改&lt;code&gt;start_urls&lt;/code&gt; ：&lt;/li&gt;
-&lt;/ul&gt;
-&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;start_urls = [&lt;span class=&quot;string&quot;&gt;&amp;#x27;http://wz.sun0769.com/political/index/politicsNewest?id=1&amp;amp;page=1/&amp;#x27;&lt;/span&gt;]&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-
-&lt;ul&gt;
-&lt;li&gt;在settings.py文件中添加日志过滤配置：&lt;/li&gt;
-&lt;/ul&gt;
-&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;LOG_LEVEL = &lt;span class=&quot;string&quot;&gt;&amp;quot;WARNING&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;ul&gt;
-&lt;li&gt;（重要！！！）在settings.py文件中添加下载限速配置（笔者由于下载过快直接导致整个宿舍的ip被网站封了……）：&lt;/li&gt;
-&lt;/ul&gt;
-&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# 0.5是每次下载间隔0.5s&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;DOWNLOAD_DELAY = &lt;span class=&quot;number&quot;&gt;0.5&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;ul&gt;
-&lt;li&gt;写入访问请求头的用户代理（每个网站都不同，打开netWork随便选中一个链接都可看到）：&lt;/li&gt;
-&lt;/ul&gt;
-&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;USER_AGENT = &lt;span class=&quot;string&quot;&gt;&amp;#x27;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.132 Safari/537.36&amp;#x27;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
-    
-    
-    
-    <category term="学习" scheme="http://kunpw.cn/categories/%E5%AD%A6%E4%B9%A0/"/>
-    
-    
-    <category term="Scrapy" scheme="http://kunpw.cn/tags/Scrapy/"/>
-    
-    <category term="Python" scheme="http://kunpw.cn/tags/Python/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>爬虫之Scrapy（1.简要入门）</title>
-    <link href="http://kunpw.cn/2020/09/10/Python/scrapy%E7%AE%80%E8%A6%81%E4%BD%BF%E7%94%A8%E5%85%A5%E9%97%A8/"/>
-    <id>http://kunpw.cn/2020/09/10/Python/scrapy%E7%AE%80%E8%A6%81%E4%BD%BF%E7%94%A8%E5%85%A5%E9%97%A8/</id>
-    <published>2020-09-10T14:38:39.662Z</published>
-    <updated>2020-10-17T09:28:39.124Z</updated>
-    
-    
-    <summary type="html">&lt;h2 id=&quot;1-安装scrapy&quot;&gt;&lt;a href=&quot;#1-安装scrapy&quot; class=&quot;headerlink&quot; title=&quot;1.安装scrapy&quot;&gt;&lt;/a&gt;1.安装scrapy&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;在cmd下一条语句即可完成安装；&lt;/li&gt;
-&lt;/ul&gt;
-&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;pip install scrapy&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-
-
-&lt;blockquote&gt;
-&lt;p&gt;据说在安装过程中可能遇到各种问题，由于我自己并没有遇到，所以略过，出现问题请自行百度&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;直接在命令行输入&lt;code&gt;scrapy&lt;/code&gt;可以查看相关指令：&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img src=&quot;https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/089.png&quot; alt=&quot;image-20200909084009265&quot;&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;输入&lt;code&gt;scrapy bench&lt;/code&gt;用来验证安装是否成功，出现error则未成功，请自行百度解决方法；&lt;/li&gt;
-&lt;/ul&gt;</summary>
-    
-    
-    
-    <category term="学习" scheme="http://kunpw.cn/categories/%E5%AD%A6%E4%B9%A0/"/>
-    
-    
-    <category term="Scrapy" scheme="http://kunpw.cn/tags/Scrapy/"/>
-    
-    <category term="Python" scheme="http://kunpw.cn/tags/Python/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>hero等静态网站通过外部cdn引用图片</title>
-    <link href="http://kunpw.cn/2020/09/10/hero%20Img%E9%80%9A%E8%BF%87%E5%85%8D%E8%B4%B9cdn%E6%98%BE%E7%A4%BA/"/>
-    <id>http://kunpw.cn/2020/09/10/hero%20Img%E9%80%9A%E8%BF%87%E5%85%8D%E8%B4%B9cdn%E6%98%BE%E7%A4%BA/</id>
-    <published>2020-09-10T14:10:32.903Z</published>
-    <updated>2020-09-10T16:13:37.473Z</updated>
-    
-    
-    <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;hexo在上传静态网页的时候markdown文本中的图片却一直无法显示，这个问题如何解决呢？&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&quot;1-原因&quot;&gt;&lt;a href=&quot;#1-原因&quot; class=&quot;headerlink&quot; title=&quot;1.原因&quot;&gt;&lt;/a&gt;1.原因&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;hexo只能上传md文本资源，并且最终转化为静态网页，而同级目录下的Img图片资源却无法上传至服务器；&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&quot;2-解决办法&quot;&gt;&lt;a href=&quot;#2-解决办法&quot; class=&quot;headerlink&quot; title=&quot;2.解决办法&quot;&gt;&lt;/a&gt;2.解决办法&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;通过使用外部cdn引用图片即可完美地解决这个问题！但是像七牛云那些大型cdn网站都需要付费使用，这里给大家推荐一个免费且超级好用的cdn加速器：&lt;a href=&quot;https://www.jsdelivr.com/&quot;&gt;https://www.jsdelivr.com&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;要使用外部cdn引用，必须先将图片从自己个人电脑上传至网站服务器上，这里我们选择github服务器；&lt;/li&gt;
-&lt;/ul&gt;</summary>
-    
-    
-    
-    <category term="学习" scheme="http://kunpw.cn/categories/%E5%AD%A6%E4%B9%A0/"/>
-    
-    
-    <category term="个性化设置" scheme="http://kunpw.cn/tags/%E4%B8%AA%E6%80%A7%E5%8C%96%E8%AE%BE%E7%BD%AE/"/>
-    
-    <category term="hexo" scheme="http://kunpw.cn/tags/hexo/"/>
-    
-    <category term="github" scheme="http://kunpw.cn/tags/github/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>vue（3.开发实例演示(含webpack)）</title>
-    <link href="http://kunpw.cn/2020/09/06/vue/3.vue%E5%BC%80%E5%8F%91%E5%AE%9E%E4%BE%8B%E6%BC%94%E7%A4%BA/"/>
-    <id>http://kunpw.cn/2020/09/06/vue/3.vue%E5%BC%80%E5%8F%91%E5%AE%9E%E4%BE%8B%E6%BC%94%E7%A4%BA/</id>
-    <published>2020-09-06T03:44:27.588Z</published>
-    <updated>2020-09-23T03:11:01.418Z</updated>
-    
-    
-    <summary type="html">&lt;h2 id=&quot;1-解剖初始化模板&quot;&gt;&lt;a href=&quot;#1-解剖初始化模板&quot; class=&quot;headerlink&quot; title=&quot;1.解剖初始化模板&quot;&gt;&lt;/a&gt;1.解剖初始化模板&lt;/h2&gt;&lt;h3 id=&quot;1-1-vue文件&quot;&gt;&lt;a href=&quot;#1-1-vue文件&quot; class=&quot;headerlink&quot; title=&quot;1.1 vue文件&quot;&gt;&lt;/a&gt;1.1 vue文件&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;如图所示，对于一个新建的vue文件而言，其中标签分为三个部分：&lt;ul&gt;
-&lt;li&gt;template标签：这一块模板区域用于编写html代码块，其实就是component组建中的template属性内容，用作模板显示，而这个模板component的名字就是该vue文件名，使用时导入即可；&lt;/li&gt;
-&lt;li&gt;script标签：默认导出；&lt;/li&gt;
-&lt;li&gt;style标签：scoped属性相当于private，确保其中的样式只在本style样式中有效；&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img src=&quot;https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/063.png&quot; alt=&quot;image-20200904130511003&quot;&gt;&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="学习" scheme="http://kunpw.cn/categories/%E5%AD%A6%E4%B9%A0/"/>
-    
-    
-    <category term="vue" scheme="http://kunpw.cn/tags/vue/"/>
-    
-    <category term="webpack" scheme="http://kunpw.cn/tags/webpack/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Vue（2.开发环境配置(含node.js)）</title>
-    <link href="http://kunpw.cn/2020/09/06/vue/2.Vue%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/"/>
-    <id>http://kunpw.cn/2020/09/06/vue/2.Vue%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</id>
-    <published>2020-09-06T03:44:24.267Z</published>
-    <updated>2020-09-23T03:10:40.838Z</updated>
-    
-    
-    <summary type="html">&lt;h2 id=&quot;1-Node-js下载&quot;&gt;&lt;a href=&quot;#1-Node-js下载&quot; class=&quot;headerlink&quot; title=&quot;1.Node.js下载&quot;&gt;&lt;/a&gt;1.Node.js下载&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;http://nodejs.cn/download/&quot;&gt;http://nodejs.cn/download/&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;直接选择.msi 64位安装包下载并且直接安装即可，安装过程略&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img src=&quot;https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/048.png&quot; alt=&quot;image-20200903133908554&quot;&gt;&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="学习" scheme="http://kunpw.cn/categories/%E5%AD%A6%E4%B9%A0/"/>
-    
-    
-    <category term="vue" scheme="http://kunpw.cn/tags/vue/"/>
-    
-    <category term="环境配置" scheme="http://kunpw.cn/tags/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/"/>
-    
-    <category term="node.js" scheme="http://kunpw.cn/tags/node-js/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Vue（1.基础入门）</title>
-    <link href="http://kunpw.cn/2020/09/06/vue/1.Vue%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/"/>
-    <id>http://kunpw.cn/2020/09/06/vue/1.Vue%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/</id>
-    <published>2020-09-06T03:44:20.193Z</published>
-    <updated>2020-09-23T03:10:29.304Z</updated>
-    
-    
-    <summary type="html">&lt;h2 id=&quot;1-简介&quot;&gt;&lt;a href=&quot;#1-简介&quot; class=&quot;headerlink&quot; title=&quot;1.简介&quot;&gt;&lt;/a&gt;1.简介&lt;/h2&gt;&lt;h3 id=&quot;1-1-概念介绍&quot;&gt;&lt;a href=&quot;#1-1-概念介绍&quot; class=&quot;headerlink&quot; title=&quot;1.1 概念介绍&quot;&gt;&lt;/a&gt;1.1 概念介绍&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;Vue 是一款渐进式JavaScript框架，所谓渐进式就是逐步实现新特性的意思，如实现模块化开发、路由、状态管理等新特性。其特点是综合了Angular（模块化）和React(虚拟DOM）的优点，与其它大型框架不同的是，Vue被设计为可以自底向上逐层应用。Vue的核心库只关注视图层，不仅易于上手，还便于与第三方库(如: vue-router，vue-resource，vuex）或既有项目整合。&lt;/li&gt;
-&lt;/ul&gt;</summary>
-    
-    
-    
-    <category term="学习" scheme="http://kunpw.cn/categories/%E5%AD%A6%E4%B9%A0/"/>
-    
-    
-    <category term="vue" scheme="http://kunpw.cn/tags/vue/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>JavaScript</title>
-    <link href="http://kunpw.cn/2020/09/06/javascript%EF%BC%88%E5%90%ABjQuery%EF%BC%89/"/>
-    <id>http://kunpw.cn/2020/09/06/javascript%EF%BC%88%E5%90%ABjQuery%EF%BC%89/</id>
-    <published>2020-09-06T03:18:28.777Z</published>
-    <updated>2020-09-10T16:09:58.731Z</updated>
-    
-    
-    <summary type="html">&lt;h2 id=&quot;1-引入script&quot;&gt;&lt;a href=&quot;#1-引入script&quot; class=&quot;headerlink&quot; title=&quot;1.引入script&quot;&gt;&lt;/a&gt;1.引入script&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;内部写入；&lt;/li&gt;
-&lt;li&gt;外部引入；&lt;/li&gt;
-&lt;/ul&gt;
-&lt;figure class=&quot;highlight html&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;head&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;meta&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;charset&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&amp;quot;UTF-8&amp;quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;title&lt;/span&gt;&amp;gt;&lt;/span&gt;Title&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;title&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;comment&quot;&gt;&amp;lt;!--1.在html页面内部写入js代码    --&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;comment&quot;&gt;&amp;lt;!--script标签内，写js代码    --&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;comment&quot;&gt;&amp;lt;!--    &amp;lt;script&amp;gt;--&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;comment&quot;&gt;&amp;lt;!--        alert(&amp;#x27;hello,world&amp;#x27;);--&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;comment&quot;&gt;&amp;lt;!--    &amp;lt;/script&amp;gt;--&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;comment&quot;&gt;&amp;lt;!--2.外部导入    --&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;comment&quot;&gt;&amp;lt;!--默认type=&amp;quot;text/javascript&amp;quot; 可以不用写出     --&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;script&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;src&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&amp;quot;js/helloworld.js&amp;quot;&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;type&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&amp;quot;text/javascript&amp;quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;script&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;head&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
-    
-    
-    
-    <category term="学习" scheme="http://kunpw.cn/categories/%E5%AD%A6%E4%B9%A0/"/>
-    
-    
-    <category term="javascript" scheme="http://kunpw.cn/tags/javascript/"/>
-    
-    <category term="jQuery" scheme="http://kunpw.cn/tags/jQuery/"/>
     
   </entry>
   

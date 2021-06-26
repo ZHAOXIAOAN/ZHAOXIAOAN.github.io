@@ -1,0 +1,1095 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.1.1">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/MuyunHui.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/MuyunHui.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/MuyunHui.png">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
+  <link rel="stylesheet" href="//cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-flash.min.css">
+  <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+
+<script class="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"kunpw.cn","root":"/","scheme":"Gemini","version":"8.0.0","exturl":false,"sidebar":{"display":"always","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"valine","storage":true,"lazyload":false,"nav":null,"activeClass":"valine"},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
+  </script>
+
+  <meta name="description" content="第三章.分布式程序设计语言1.分布式程序设计语言概述1.1 分布式应用程序的分类 在分布式计算系统中，对应用程序进行程序设计的层面有四：减少单个计算的周转时间、增加可靠性和可用性、使系统某些部分提供特殊功能、固有的分布式应用。  分布式应用程序分类：  并行、高性能应用程序：  粒度是在通信之间的计算时间的长短，并行应用程序可按粒度划分： 大粒度并行应用程序用大部分时间进行计算，而不经常通信； 细">
+<meta property="og:type" content="article">
+<meta property="og:title" content="分布式系统设计学习笔记（二）分布式程序设计语言">
+<meta property="og:url" content="http://kunpw.cn/2021/03/25/%E5%88%86%E5%B8%83%E5%BC%8F%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/%E7%AC%AC%E4%B8%89%E7%AB%A0.%E5%88%86%E5%B8%83%E5%BC%8F%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80/index.html">
+<meta property="og:site_name" content="朝小闇的博客">
+<meta property="og:description" content="第三章.分布式程序设计语言1.分布式程序设计语言概述1.1 分布式应用程序的分类 在分布式计算系统中，对应用程序进行程序设计的层面有四：减少单个计算的周转时间、增加可靠性和可用性、使系统某些部分提供特殊功能、固有的分布式应用。  分布式应用程序分类：  并行、高性能应用程序：  粒度是在通信之间的计算时间的长短，并行应用程序可按粒度划分： 大粒度并行应用程序用大部分时间进行计算，而不经常通信； 细">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/DistributedSystem/008.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/DistributedSystem/009.png">
+<meta property="article:published_time" content="2021-03-25T06:32:29.527Z">
+<meta property="article:modified_time" content="2021-03-25T06:34:49.871Z">
+<meta property="article:author" content="Zhaoxiaoan">
+<meta property="article:tag" content="理论学习">
+<meta property="article:tag" content="教材">
+<meta property="article:tag" content="分布式系统设计">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/DistributedSystem/008.png">
+
+
+<link rel="canonical" href="http://kunpw.cn/2021/03/25/%E5%88%86%E5%B8%83%E5%BC%8F%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/%E7%AC%AC%E4%B8%89%E7%AB%A0.%E5%88%86%E5%B8%83%E5%BC%8F%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80/">
+
+
+<script data-pjax class="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>分布式系统设计学习笔记（二）分布式程序设计语言 | 朝小闇的博客</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  body { margin-top: 2rem; }
+
+  .use-motion .menu-item,
+  .use-motion .sidebar,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header {
+    visibility: visible;
+  }
+
+  .use-motion .header,
+  .use-motion .site-brand-container .toggle,
+  .use-motion .footer { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle,
+  .use-motion .custom-logo-image {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line {
+    transform: scaleX(1);
+  }
+
+  .search-pop-overlay, .sidebar-nav { display: none; }
+  .sidebar-panel { display: block; }
+  </style>
+</noscript>
+
+  
+	<script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+  
+
+<link rel="alternate" href="/atom.xml" title="朝小闇的博客" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">朝小闇的博客</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">海上月是天上月，眼前人是心上人</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">34</span></a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">7</span></a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">29</span></a>
+
+  </li>
+        <li class="menu-item menu-item-essays">
+
+    <a href="/essays" rel="section"><i class="fa fa-heart fa-fw"></i>随笔</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <section class="post-toc-wrap sidebar-panel">
+          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E4%B8%89%E7%AB%A0-%E5%88%86%E5%B8%83%E5%BC%8F%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80"><span class="nav-text">第三章.分布式程序设计语言</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E5%88%86%E5%B8%83%E5%BC%8F%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80%E6%A6%82%E8%BF%B0"><span class="nav-text">1.分布式程序设计语言概述</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-1-%E5%88%86%E5%B8%83%E5%BC%8F%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F%E7%9A%84%E5%88%86%E7%B1%BB"><span class="nav-text">1.1 分布式应用程序的分类</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-2-%E5%88%86%E5%B8%83%E5%BC%8F%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%92%8C%E9%A1%BA%E5%BA%8F%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-text">1.2 分布式程序设计和顺序程序设计的区别</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-3-%E5%88%86%E5%B8%83%E5%BC%8F%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80%E7%9A%84%E5%88%86%E7%B1%BB"><span class="nav-text">1.3 分布式程序设计语言的分类</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E5%B9%B6%E8%A1%8C%E6%80%A7%E7%9A%84%E6%94%AF%E6%8C%81"><span class="nav-text">2.并行性的支持</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-%E5%B9%B6%E8%A1%8C%E6%80%A7%E7%9A%84%E6%A6%82%E5%BF%B5"><span class="nav-text">2.1 并行性的概念</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-%E5%B9%B6%E8%A1%8C%E6%80%A7%E7%9A%84%E8%A1%A8%E7%A4%BA"><span class="nav-text">2.2 并行性的表示</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-3-%E5%B9%B6%E8%A1%8C%E8%AE%A1%E7%AE%97%E5%88%B0%E7%89%A9%E7%90%86%E5%A4%84%E7%90%86%E6%9C%BA%E7%9A%84%E5%8F%98%E6%8D%A2"><span class="nav-text">2.3 并行计算到物理处理机的变换</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E8%BF%9B%E7%A8%8B%E9%80%9A%E4%BF%A1%E5%92%8C%E5%90%8C%E6%AD%A5%E7%9A%84%E6%94%AF%E6%8C%81"><span class="nav-text">3.进程通信和同步的支持</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#3-1-%E6%8A%A5%E6%96%87%E4%BC%A0%E9%80%92"><span class="nav-text">3.1 报文传递</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-2-%E5%85%B1%E4%BA%AB%E6%95%B0%E6%8D%AE"><span class="nav-text">3.2 共享数据</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-3-%E9%9D%9E%E7%A1%AE%E5%AE%9A%E6%80%A7%E7%9A%84%E8%A1%A8%E7%A4%BA%E5%92%8C%E6%8E%A7%E5%88%B6"><span class="nav-text">3.3 非确定性的表示和控制</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-%E5%88%86%E5%B8%83%E5%BC%8F%E6%8E%A7%E5%88%B6%E6%8F%8F%E8%BF%B0%E8%AF%AD%E8%A8%80DCDL"><span class="nav-text">4.分布式控制描述语言DCDL</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#4-1-DCDL%E4%B8%AD%E5%B9%B6%E8%A1%8C%E6%80%A7%E7%9A%84%E8%A1%A8%E7%A4%BA"><span class="nav-text">4.1 DCDL中并行性的表示</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-2-%E9%80%89%E6%8B%A9%E8%AF%AD%E5%8F%A5"><span class="nav-text">4.2 选择语句</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-3-%E9%87%8D%E5%A4%8D%E8%AF%AD%E5%8F%A5"><span class="nav-text">4.3 重复语句</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-4-%E8%AF%AD%E5%8F%A5%E5%B9%B6%E5%8F%91%EF%BC%88%E5%B9%B6%E8%A1%8C%EF%BC%89%E7%9A%84%E6%9D%A1%E4%BB%B6"><span class="nav-text">4.4 语句并发（并行）的条件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-5-DCDL%E4%B8%AD%E7%9A%84%E9%80%9A%E4%BF%A1"><span class="nav-text">4.5 DCDL中的通信</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-6-DCDL%E4%B8%AD%E7%9A%84%E9%80%9A%E4%BF%A1%E5%AE%B9%E9%94%99"><span class="nav-text">4.6 DCDL中的通信容错</span></a></li></ol></li></ol></li></ol></div>
+      </section>
+      <!--/noindex-->
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Zhaoxiaoan"
+      src="/images/PubuLan.png">
+  <p class="site-author-name" itemprop="name">Zhaoxiaoan</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">29</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">34</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+
+
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/ZHAOXIAOAN" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;ZHAOXIAOAN" rel="noopener external nofollow noreferrer" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+  </div>
+
+
+
+      </section><div>
+  <canvas id="canvasDiyBlock" style="width:60%;">当前浏览器不支持canvas，请更换浏览器后再试</canvas><script src="/js/custom/clock.js"></script>
+</div>
+
+
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+      
+
+      
+
+    
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://kunpw.cn/2021/03/25/%E5%88%86%E5%B8%83%E5%BC%8F%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/%E7%AC%AC%E4%B8%89%E7%AB%A0.%E5%88%86%E5%B8%83%E5%BC%8F%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/PubuLan.png">
+      <meta itemprop="name" content="Zhaoxiaoan">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="朝小闇的博客">
+    </span>
+
+    
+    
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          分布式系统设计学习笔记（二）分布式程序设计语言
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2021-03-25 14:32:29 / 修改时间：14:34:49" itemprop="dateCreated datePublished" datetime="2021-03-25T14:32:29+08:00">2021-03-25</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%88%86%E5%B8%83%E5%BC%8F%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/" itemprop="url" rel="index"><span itemprop="name">分布式系统设计</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2021/03/25/%E5%88%86%E5%B8%83%E5%BC%8F%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/%E7%AC%AC%E4%B8%89%E7%AB%A0.%E5%88%86%E5%B8%83%E5%BC%8F%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2021/03/25/%E5%88%86%E5%B8%83%E5%BC%8F%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/%E7%AC%AC%E4%B8%89%E7%AB%A0.%E5%88%86%E5%B8%83%E5%BC%8F%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>6.8k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>6 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h2 id="第三章-分布式程序设计语言"><a href="#第三章-分布式程序设计语言" class="headerlink" title="第三章.分布式程序设计语言"></a>第三章.分布式程序设计语言</h2><h3 id="1-分布式程序设计语言概述"><a href="#1-分布式程序设计语言概述" class="headerlink" title="1.分布式程序设计语言概述"></a>1.分布式程序设计语言概述</h3><h4 id="1-1-分布式应用程序的分类"><a href="#1-1-分布式应用程序的分类" class="headerlink" title="1.1 分布式应用程序的分类"></a>1.1 分布式应用程序的分类</h4><blockquote>
+<p>在分布式计算系统中，对应用程序进行程序设计的层面有四：减少单个计算的周转时间、增加可靠性和可用性、使系统某些部分提供特殊功能、固有的分布式应用。</p>
+</blockquote>
+<p>分布式应用程序分类：</p>
+<ul>
+<li><p>并行、高性能应用程序：</p>
+<ul>
+<li>粒度是在通信之间的计算时间的长短，并行应用程序可按粒度划分：<ul>
+<li>大粒度并行应用程序用大部分时间进行计算，而不经常通信；</li>
+<li>细粒度并行应用程序经常通信，适合紧密耦合分布计算系统；</li>
+<li>松散耦合分布计算系统通信开销非常大，只适合大粒度并行计算，但大粒度并行计算也可适用紧密耦合分布计算系统；</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>容错应用程序：</p>
+<ul>
+<li>分布计算系统具有允许部分失效的特性，一个处理机的故障不影响其它处理机的正常工作，即可靠性高；</li>
+<li>除此之外，程序和数据还可在若干处理机上复制，由此进一步增加可靠性；</li>
+<li>抵御自然灾害，需要使用处理机在地域上松散耦合；</li>
+</ul>
+</li>
+<li><p>具有专用功能的应用程序：</p>
+<ul>
+<li>每个服务可以使用一个或多个专用处理机，用户通过网络请求这些服务；</li>
+<li>易于增加新功能或改进现有功能，通过增加新的处理机即可实现；</li>
+</ul>
+</li>
+<li><p>固有的分布式应用程序：</p>
+<ul>
+<li>有些应用程序本身就是分布的，这种应用程序必须在分布式硬件上运行，如电子邮件；</li>
+</ul>
+</li>
+</ul>
+<h4 id="1-2-分布式程序设计和顺序程序设计的区别"><a href="#1-2-分布式程序设计和顺序程序设计的区别" class="headerlink" title="1.2 分布式程序设计和顺序程序设计的区别"></a>1.2 分布式程序设计和顺序程序设计的区别</h4><blockquote>
+<p>在分布计算系统上实现这些应用程序的活动叫做分布式程序设计。</p>
+</blockquote>
+<p>分布式程序设计和顺序程序设计的三个区别：</p>
+<ul>
+<li>使用多个处理机：<ul>
+<li>系统具有把一个程序的不同部分分配到不同处理机上执行的能力；</li>
+</ul>
+</li>
+<li>处理机合作：<ul>
+<li>各个进程必须能相互通信和同步；</li>
+</ul>
+</li>
+<li>处理部分失效：<ul>
+<li>能对系统的部分失效进行检测并恢复；</li>
+</ul>
+</li>
+</ul>
+<h4 id="1-3-分布式程序设计语言的分类"><a href="#1-3-分布式程序设计语言的分类" class="headerlink" title="1.3 分布式程序设计语言的分类"></a>1.3 分布式程序设计语言的分类</h4><ol>
+<li>按并行模式来分：<ul>
+<li>顺序进程并行语言：<ul>
+<li>基本模型：一组顺序进程，并行运行，并能通过报文传递进行通信；</li>
+<li>语言：C、C++、FORTRUN、SR、Ada、CSP……</li>
+</ul>
+</li>
+<li>具有内在并行性的语言：<ul>
+<li>函数式语言：无副作用，允许以任意次序（包括并行）计算表达式；</li>
+<li>逻辑语言；</li>
+<li>面向对象语言；</li>
+<li>这些模型中并行的粒度比基本的通信顺序进程模型中小很多；</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>按通信模型来分；</li>
+<li>容错模型和技术：<ul>
+<li>处理机故障：提供故障检测机制；</li>
+<li>故障处理模型：<ul>
+<li>理想情况，系统对程序员隐匿全部处理机故障；</li>
+<li>系统给程序员提供高层机制，使程序员能够描述哪些进程和数据是重要的，以及发生崩溃后怎样恢复；</li>
+</ul>
+</li>
+<li>实现可靠性：<ul>
+<li>程序设计容错：<ul>
+<li>向前恢复：试图确定错误所在，并在此基础上改正包含错误的系统状态，高级语言中的异常处理机制提供了此系统结构；</li>
+<li>向后恢复：通过把系统恢复到错误发生前的状态来改正系统状态，恢复阻塞方案提供了这种系统结构；</li>
+</ul>
+</li>
+<li>通信容错：<ul>
+<li>通信容错依赖于使用的通信方式及故障类型；</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<a id="more"></a>
+
+<h3 id="2-并行性的支持"><a href="#2-并行性的支持" class="headerlink" title="2.并行性的支持"></a>2.并行性的支持</h3><h4 id="2-1-并行性的概念"><a href="#2-1-并行性的概念" class="headerlink" title="2.1 并行性的概念"></a>2.1 并行性的概念</h4><blockquote>
+<p>因为分布计算系统有多个处理机，所以可以把程序分成若干部分放到多个处理机上同时运行，这就是并行性。</p>
+</blockquote>
+<ul>
+<li>伪并行性：把程序表示为一组并行运行的进程，但并不一定在不同的处理机上同时运行。例如一瞬间只运行一部分可以独立运行的进程。</li>
+</ul>
+<h4 id="2-2-并行性的表示"><a href="#2-2-并行性的表示" class="headerlink" title="2.2 并行性的表示"></a>2.2 并行性的表示</h4><blockquote>
+<p>表示并行性的一个重要因素是语言的并行单位，在顺序语言中，并行单位是整个程序，但在分布式程序设计语言中，并行单位可以是进程、对象、语句、表达式或逻辑语句中的子句。</p>
+</blockquote>
+<ol>
+<li>进程并行：一个进程是一个逻辑处理机，顺序地执行代码，并具有自己的状态和数据的过程<ul>
+<li>隐式创建进程：先说明进程类型，以说明该类型的变量的方式创建这类进程。进程总数在编译时确定，把进程变换到处理机比较容易，但必须提前知道进程数，限制了应用程序的类别；</li>
+<li>显式创建进程：可以传参用于设置进程间的通信通道，进程创建不使用参数时，必须显式传参，即需要一个机制建立发送该参数的通信通道；</li>
+<li>需要某些设施防止进程试图与已结束的进程通信；</li>
+</ul>
+</li>
+<li>对象并行：对象是包含有数据和行为的完整单元，与其它单元仅能通过某种报文传递的方式相互作用；</li>
+<li>语句并行：语句被分成组，且并行执行；</li>
+<li>函数并行：</li>
+<li>子句并行：</li>
+</ol>
+<h4 id="2-3-并行计算到物理处理机的变换"><a href="#2-3-并行计算到物理处理机的变换" class="headerlink" title="2.3 并行计算到物理处理机的变换"></a>2.3 并行计算到物理处理机的变换</h4><blockquote>
+<p>如何把并行计算分布于可利用的处理机上？把计算对处理机的分配叫做<strong>变换</strong>。</p>
+</blockquote>
+<p>可编程的变换，即用户控制的变换由两步组成：</p>
+<ul>
+<li>把并行单元变换到物理的处理机上；</li>
+<li>使用局部变换对同一处理机上的单元进行调度，通常使用分配给并行单元的优先权；</li>
+<li>把并行单元分配给处理机有三种分配方式：<ul>
+<li>编译时确定处理机；</li>
+<li>运行时确定处理机；</li>
+<li>完全不确定；</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-进程通信和同步的支持"><a href="#3-进程通信和同步的支持" class="headerlink" title="3.进程通信和同步的支持"></a>3.进程通信和同步的支持</h3><blockquote>
+<p>在各处理机上并行运行的一个程序的不同部分如何合作，包括通信和同步两种相互作用。</p>
+</blockquote>
+<p>进程通信的表示有两类：共享数据和报文传递。</p>
+<p>同步相关的问题是<strong>非确定性</strong>，一个进程可能要等待来自其它一组进程中任何一个进程而不是指定进程的信息，它预先并不知晓要接收来自哪个组或者哪个进程的报文信息。</p>
+<h4 id="3-1-报文传递"><a href="#3-1-报文传递" class="headerlink" title="3.1 报文传递"></a>3.1 报文传递</h4><blockquote>
+<p>基本原语是从一个进程（发送者）到另一个进程（接收者）的点到点报文。</p>
+</blockquote>
+<p>发送者：通过发送报文或调用远程过程<strong>显式</strong>地发动相互作用；</p>
+<p>接收者：</p>
+<ul>
+<li>显式接收，指明接收哪些报文以及报文到达时采取的动作；<ul>
+<li>显式报文接收使接收者能对报文的接收进行更多的控制，以及可能实现精确控制；</li>
+<li>某些语言提供接收次序的控制，报文可按照报文的类型、发送者或内容改变这个顺序，如文件服务员可能需要先处理读请求；</li>
+<li>如果语言不支持有条件或有序接收，那么需要此服务的应用程序就需要记录已被接收但还未处理的请求；</li>
+</ul>
+</li>
+<li>隐式接收，在接收者内自动调用程序，通常在接收进程中创建一个新的线程；<ul>
+<li>隐式接收在命名方面总是<strong>非对称</strong>的；</li>
+</ul>
+</li>
+</ul>
+<p>另一个问题是相互作用的进程双方的寻址（<strong>命名</strong>），即发送者将报文发给谁，接收者又从何处接收报文？双方的命名分为直接命名和间接命名：</p>
+<ul>
+<li>直接命名：指示一个指定的进程，如果发送者和接收者相互命名，则该命名<strong>对称</strong>；<ul>
+<li>对称的直接命名方案不能表达非确定性行为，因而使用这些方案的语言需要具有单独的非确定性机构；</li>
+</ul>
+</li>
+<li>间接命名：包括一个中间对象邮箱，即<ul>
+<li>邮箱就是全局名字，发送者发送报文给邮箱，接收者也从邮箱接收报文；</li>
+<li>将邮箱作为值处理，该值作为报文的一部分传送，这种可选设施允许表达高度灵活的通信模式；</li>
+</ul>
+</li>
+</ul>
+<p><strong>报文传递通信模式</strong>有以下几种：</p>
+<ul>
+<li>同步和异步点到点报文：点到点报文传送系统的设计问题是同步方式还是异步方式，本质是单向通信，有些麻烦<ul>
+<li>同步报文传送：发送者在接收者接收报文前一直阻塞；<ul>
+<li>优点：接收者仅需为每个发送者缓冲最多一个报文，附加的流控制不改变原语语义；</li>
+<li>缺点：不灵活，发送者总是要等待接收者接收报文后才能继续工作；</li>
+</ul>
+</li>
+<li>异步报文传送：发送者发出报文后即可恢复工作，不阻塞等待；<ul>
+<li>优点：报文传送按序时，使用流控制可以保持发送者和接收者的同步但可能发生死锁；</li>
+<li>缺点：缓冲器可能溢出，两个解决方案，丢弃或者流控制，后者将阻塞发送者直到接收者接收某些报文为止；</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>会合：双向通信<ul>
+<li>Ada语言中，会合模型基于三个概念：<ul>
+<li>项说明：属于服务器程序，在语法上像过程说明，一个项有一个名字和零或多个形式参数；</li>
+<li>项调用：属于客户端程序，类似过程调用语句，给该项和包含该项的进程命名，并供给实际参数；</li>
+<li>接受语句：属于服务器程序，可以包含一组语句，在调用该项时执行；</li>
+</ul>
+</li>
+<li>当进程S调用进程R的一项，R为此项执行accept语句时，在S和R之间发生的相互作用叫做会合：<ul>
+<li>会合时进程同步，并且R执行接受语句，并在执行语句时访问该项中由S提供的输入参数；</li>
+<li>R可以给输出参数赋值，然后再将输出参数传送回S；</li>
+<li>R执行接受语句后，S和R继续并行工作，S不再阻塞，R仍可为S的请求工作；</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>远程过程调用（RPC）：双向通信<ul>
+<li>当进程S调用进程R的过程P时，由S提供的P的输入参数被送给R；</li>
+<li>当R收到调用请求时，执行过程P，并把输出参数送回给S；</li>
+<li>执行P期间，S阻塞，直到输出参数返回；</li>
+<li>RPC通常但不一定是隐性的，并会在接收者中创建一个新的控制线程；</li>
+<li>透明和非透明RPC；</li>
+<li>基本的RPC有缺陷如下：<ul>
+<li>通信开销：客户使用相同数据调用几个过程时，RPC不支持远程对象，客户每次调用都要传送一次该数据；</li>
+<li>缺乏并行性：顺序执行，调用者被挂起直到获得结果；</li>
+<li>缺乏灵活性：RPC客户只能使用有限的几种服务，新的过程必须由程序员准备；</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>一到多报文传送：即广播或组通信，对操作系统内核及语言运行时系统有效<ul>
+<li>相较于点对点通信优点：<ul>
+<li>向多个进程进程发送数据时，一个小组广播比多个点对点报文快；</li>
+<li>能保证报文的次序；</li>
+<li>广播以同一次序传送给所有目的地，对于复制数据的一致性更新很有效；</li>
+</ul>
+</li>
+<li>基于CSP建立的广播顺序进程（BSP）系统中，原语必须具有可靠性，且广播异步，发送者不必等待所有其余进程准备好接收报文，BSP定义了两种广播：<ul>
+<li>非缓冲广播报文仅被已准备好接收报文的那些进程接收；</li>
+<li>缓冲广播报文被接收进程所在的机器缓冲，所以每个进程最终都会接收该报文；</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="3-2-共享数据"><a href="#3-2-共享数据" class="headerlink" title="3.2 共享数据"></a>3.2 共享数据</h4><blockquote>
+<p>两个进程访问同一个变量，可以实现另一种通信方式，一个进程对此变量进行设置，另一个对它进行读操作。</p>
+</blockquote>
+<p>同机器上两个进程：变量在本机器上存储，可以直接实现通信；很多分布式程序设计语言使用共享变量进行同一处理机上伪并行通信。</p>
+<p>不同机器上两个进程：可以向存有该变量的机器发送报文，访问该变量，与报文传送比较：</p>
+<ul>
+<li>优点：<ul>
+<li>报文一般在指定两个进程之间传递信息，共享数据可以被所有进程访问；</li>
+<li>对共享数据赋值能立即起作用，而报文从发送到接收有一个可觉察的延迟；</li>
+</ul>
+</li>
+<li>缺点：<ul>
+<li>共享数据要求防止对个进程同时修改同一数据；</li>
+</ul>
+</li>
+</ul>
+<p>两种分布进程的共享数据方法：适用于实现原子事物处理的语言</p>
+<ul>
+<li>分布式程序可以使用对象实现数据共享，两个进程可以通过调用对给定对象的操作间接地相互通信，因为对象控制对其管理的数据访问，所以还可以实现其它访问该数据的进程的同步；</li>
+<li>分布式数据结构：<ul>
+<li>可由若干进程同时处理，首先在Linda语言中引入，使用元组空间（Tuple Space）TS概念实现，TS在概念上是一个共享存储器，是为程序的所有进程共享的全局存储器，其基本单位是元组，数据结构有序；</li>
+<li>如<code>[&quot;jones&quot;,31,true]</code>是一个有三个段的元组，元组结构为一个字符串、一个整数和一个布尔值；</li>
+<li>对TS定义了三个<strong>原子</strong>操作：元组没有地址，对它的寻址是根据其内容进行的<ul>
+<li>out：向TS中加入一个元组，<code>out(&quot;jones&quot;,31,true)</code>；</li>
+<li>read：读取TS中的一个元组，<code>read(&quot;jones&quot;,var age, var married)</code>；</li>
+<li>in：读取TS中的一个元组并删除，<code>in(&quot;jones&quot;,var age, var married)</code>；</li>
+<li><code>read</code>和<code>in</code>匹配符合的元组，匹配多个则可任选一个，匹配不到则阻塞该操作和调用该操作的进程，直到另一个进程使用<code>out</code>添加一个匹配的元组为止；</li>
+<li>没有修改操作，要修改必须删除再添加，且原子操作即使同时被两个进程删除依然会呈现次序，只有一个会成功，另一个被阻塞；</li>
+</ul>
+</li>
+<li>TS的分布实现中，运行时系统处理元组在处理机上的分布具有以下几种策略：<ul>
+<li>在所有处理机上复制整个TS；</li>
+<li>以散列方式把元组放到指定处理机上；</li>
+<li>把元组存储到执行过<code>out</code>操作的处理机上；</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>共享的逻辑变量：逻辑变量具有单赋值性质，最初未赋值，一旦赋值则不能修改<ul>
+<li><code>goal_1(X,Y),goal_2(X,Y),goal_3(X)</code><ul>
+<li>变量X是这三个进程的通信通道，最初未赋值，一旦被某个进程赋值，则另外两个进程可使用此值；</li>
+<li>使用P1、P2、P3并行运行，则Y是P1、P2的通信通道，如果Y用于从P1向P2发送一个报文，那么P2会挂起直到P1给Y赋值；</li>
+</ul>
+</li>
+<li>共享变量实现<strong>挂起</strong>操作有几个方法，一般是为变量限制进程赋值，即设置权限；</li>
+<li>由于赋值不能取消，共享逻辑变量似乎只能传送单个报文，事实上把逻辑变量和其它未赋值的变量结合用作下一步通信通道；</li>
+<li>使用共享逻辑变量实现的技术包括界缓冲器流、一到多的流、不完全报文；</li>
+<li>缺点：<ul>
+<li>因为仅有一个进程可附加一个通过逻辑变量实现的流，而客户-服务器模型是多到一通信，为了在并行逻辑语言中实现这一点，每个客户必须由自己的输出流，如此有二法构造服务器：<ul>
+<li>服务器为每个客户使用单独的输入流，接收通过每个流发送的报文，这要求服务器知道所有客户的标识，限制了客户的数量；</li>
+<li>合并所有客户的输出流，把它作为单一的输入流提供给服务器，这样的逻辑操作可用并行语言来表示；</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="3-3-非确定性的表示和控制"><a href="#3-3-非确定性的表示和控制" class="headerlink" title="3.3 非确定性的表示和控制"></a>3.3 非确定性的表示和控制</h4><blockquote>
+<p>进程之间的相互作用模式并非是确定的，有时还取决于运行时条件，因此需要研究如何表示和控制非确定性模型。</p>
+</blockquote>
+<p>通过一个信口间接接收的报文可能是由任意 一个进程发送的，这种原语提供了表示非确定性的方法，但是并未提供控制的方法，大多数的程序设计语言使用<strong>分开的非确定性的结构</strong>，有以下两种结构类型（下面这段我也有点懵……）：</p>
+<ul>
+<li>选择语句：用于很多算法语言<ul>
+<li>由保护命令如下组成：保护-&gt;语句；<ul>
+<li>保护Guard由一个<strong>布尔表达式</strong>和某一类<strong>通信请求</strong>组成，布尔表达式必须无副作用（可能被多次使用）<ul>
+<li>在CSP中，一个保护可以包含从指定进程P中显式接收一个报文，如此一个<strong>请求</strong>可以成功（P已发送一个报文），也可以失败（P仍然生存并且未发送这个报文）；</li>
+<li><strong>保护</strong>本身可以成功（表达式为真请求也成功）</li>
+<li>失败（表达式为假或请求失败）</li>
+<li>挂起（表达式为真且请求挂起），此时选择语句整体受阻直到它的所有保护失败（整个选择语句失败没有影响）或某些保护成功（非确定性地选择一个成功的保护并执行相应的语句）</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>保护的（Guarded）Horn子句：用于大多数并行逻辑程序设计语言，逻辑程序本质上就不是确定的<ul>
+<li>并行逻辑语言不是对一个给定的谓词一个又一个试验子句，失败时回溯；</li>
+<li>而是并行地搜索所有子句，并在并行执行期间直到有一个并行执行提交前不允许任何赋值对外部是可见的，即<strong>OR不可见性</strong>；</li>
+<li>且不能无限进行，因为并行工作的搜索路径随证明的长度而指数增长；</li>
+</ul>
+</li>
+</ul>
+<h3 id="4-分布式控制描述语言DCDL"><a href="#4-分布式控制描述语言DCDL" class="headerlink" title="4.分布式控制描述语言DCDL"></a>4.分布式控制描述语言DCDL</h3><blockquote>
+<p>DCDL是一种面向语句和顺序的命令型语句，是一种框架控制驱动语言，用于描述一些控制结构，如并行的表示、进程间通信和同步、容错设计。</p>
+</blockquote>
+<p>DCDL通用符号：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/DistributedSystem/008.png" alt="image-20210325124307053"></p>
+<h4 id="4-1-DCDL中并行性的表示"><a href="#4-1-DCDL中并行性的表示" class="headerlink" title="4.1 DCDL中并行性的表示"></a>4.1 DCDL中并行性的表示</h4><blockquote>
+<p>DCDL的并行单元是语句，并行语句可以用有向无环图（DAG）优先图来表示，节点代表语句，有向边代表优先关系，在优先图中不存在冗余的连接。</p>
+</blockquote>
+<p><img src="https://cdn.jsdelivr.net/gh/ZHAOXIAOAN/CDNBlog/Img/DistributedSystem/009.png" alt="image-20210325131531622"></p>
+<p><strong>冗余</strong>：如图，因为S1到S2，S2到S4，所以S1到S4的连接是冗余的。</p>
+<p>DCDL语句表示：</p>
+<ul>
+<li>并行语句：<code>S1||S2||···||Sn</code>；</li>
+<li>顺序语句：<code>S1;S2;···;Sn</code>；</li>
+<li>因此上述优先图可以表示为<code>S1;[S2;[S3||S4];S5;S6]||S7</code>；</li>
+<li>语句$$S_j$$（1&lt;=j&lt;=n）可以是一个命令列表，保护列表：<code>G-&gt;C</code>中G是一个布尔表达式列表组成的保护，C是一个命令列表，当保护执行成功时，该命令才可被执行；</li>
+</ul>
+<h4 id="4-2-选择语句"><a href="#4-2-选择语句" class="headerlink" title="4.2 选择语句"></a>4.2 选择语句</h4><blockquote>
+<p>选择语句选择其组成的被保护的命令之一执行，如果多于一个命令可被选择，选择将是不确定的。</p>
+</blockquote>
+<p>选择语句表示：<code>[G1→C1ꪼG2→C2ꪼ···ꪼGn→Cn]</code></p>
+<ul>
+<li><code>[x&gt;=y→m:=xꪼy&gt;=x→m:=y]</code>：如果x&gt;=y，将x赋予m，如果y&gt;=x，将y赋予m；如果x&gt;=y并且y&gt;=x，则将x或y之一赋予m；</li>
+</ul>
+<h4 id="4-3-重复语句"><a href="#4-3-重复语句" class="headerlink" title="4.3 重复语句"></a>4.3 重复语句</h4><blockquote>
+<p>一个重复语句指定其组成选择语句的交互次数，这些语句带保护或不带保护。</p>
+</blockquote>
+<p>重复语句形式：</p>
+<ul>
+<li><code>*[带保护的选择语句]</code>：<ul>
+<li>所有保护都经过时，重复语句终止；</li>
+</ul>
+</li>
+<li><code>*[不带保护的选择语句]</code>：<ul>
+<li>执行不终止；</li>
+</ul>
+</li>
+<li><code>(n)[选择语句]</code>：<ul>
+<li>重复n次才终止；</li>
+</ul>
+</li>
+</ul>
+<h4 id="4-4-语句并发（并行）的条件"><a href="#4-4-语句并发（并行）的条件" class="headerlink" title="4.4 语句并发（并行）的条件"></a>4.4 语句并发（并行）的条件</h4><blockquote>
+<p>两个语句并发执行时，可能产生与顺序执行不同的结果。</p>
+</blockquote>
+<p>定义符号：</p>
+<ul>
+<li>R(Si)，Si的读集，即在Si中被引用的所有变量的集合；</li>
+<li>W(Si)，Si的写集，即在Si中被修改的所有变量的集合；</li>
+</ul>
+<p>对于两个并发执行的语句S1和S2，必须满足三个条件才能使它们并发执行的结果与它们以任意次序顺序执行的结果相同：</p>
+<ul>
+<li>R(S1)∩W(S2)=∅；</li>
+<li>R(S2)∩W(S1)=∅；</li>
+<li>W(S1)∩W(S2)=∅；</li>
+</ul>
+<p>使用<code>S1||S2</code>表示语句S1和S2满足这三个条件，可以并行或并发执行。</p>
+<h4 id="4-5-DCDL中的通信"><a href="#4-5-DCDL中的通信" class="headerlink" title="4.5 DCDL中的通信"></a>4.5 DCDL中的通信</h4><blockquote>
+<p>DCDL采用异步点对点报文传递，报文通过异步静态通道传递给指定的接收方进程。</p>
+</blockquote>
+<p>命令：</p>
+<ul>
+<li>发送命令：<code>send message_list to destination</code>，destination是一个进程名或一组进程的关键字all</li>
+<li>接收命令：<code>receive message_list from source</code>，source是一个进程名，支持显式和隐式的报文接收，隐式接收为<code>receive message_list</code>；</li>
+</ul>
+<p>异步静态通道是两个进程间的一个FIFO队列，且异步通信可以模拟为<strong>同步通信</strong>，同步通信如下：</p>
+<ul>
+<li>发送方：<ul>
+<li><code>send message_list to destination</code></li>
+<li><code>reseive empty_signal from destination</code></li>
+</ul>
+</li>
+<li>接收方：<ul>
+<li><code>receive message_list from sender</code></li>
+<li><code>send empty_signal to sender</code></li>
+</ul>
+</li>
+</ul>
+<h4 id="4-6-DCDL中的通信容错"><a href="#4-6-DCDL中的通信容错" class="headerlink" title="4.6 DCDL中的通信容错"></a>4.6 DCDL中的通信容错</h4><blockquote>
+<p>最简单的通信容错是使用故障-停止模型的报文传递，一个处理机要么正常工作，要么完全停止。</p>
+</blockquote>
+
+    </div>
+
+    
+    
+    
+
+  
+         <div>
+           <div>
+  
+    <div style="text-align:center;color:#bfbfbf;font-size:16px;">
+      <span>-------- 本文结束 </span>
+      <i class="fa fa-paw"></i>
+      <span> 感谢阅读 --------</span>
+    </div>
+  
+</div>
+
+         </div>
+       
+      
+  <div class="popular-posts-header">相关文章推荐# Custom header, leave empty to use the default one</div>
+  <ul class="popular-posts">
+    <li class="popular-posts-item">
+      <div class="popular-posts-title"><a href="\2021\03\04\分布式系统设计\第二章.进程通信\" rel="bookmark">分布式系统设计学习笔记（一）进程通信</a></div>
+    </li>
+    <li class="popular-posts-item">
+      <div class="popular-posts-title"><a href="\2020\12\01\计算机网络自顶向下方法\第五章.网络层：控制平面\" rel="bookmark">计算机网络自顶向下方法学习笔记（五）网络层：控制平面</a></div>
+    </li>
+    <li class="popular-posts-item">
+      <div class="popular-posts-title"><a href="\2020\09\30\计算机网络自顶向下方法\第一章.因特网\" rel="bookmark">计算机网络自顶向下方法学习笔记（一）因特网</a></div>
+    </li>
+    <li class="popular-posts-item">
+      <div class="popular-posts-title"><a href="\2020\11\18\计算机网络自顶向下方法\第四章.网络层：数据平面\" rel="bookmark">计算机网络自顶向下方法学习笔记（四）网络层：数据平面</a></div>
+    </li>
+    <li class="popular-posts-item">
+      <div class="popular-posts-title"><a href="\2020\10\14\计算机网络自顶向下方法\第二章.应用层\" rel="bookmark">计算机网络自顶向下方法学习笔记（二）应用层</a></div>
+    </li>
+  </ul>
+
+
+
+
+
+    <footer class="post-footer">
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>Zhaoxiaoan
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="http://kunpw.cn/2021/03/25/%E5%88%86%E5%B8%83%E5%BC%8F%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/%E7%AC%AC%E4%B8%89%E7%AB%A0.%E5%88%86%E5%B8%83%E5%BC%8F%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80/" title="分布式系统设计学习笔记（二）分布式程序设计语言">http://kunpw.cn/2021/03/25/分布式系统设计/第三章.分布式程序设计语言/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener external nofollow noreferrer" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/%E7%90%86%E8%AE%BA%E5%AD%A6%E4%B9%A0/" rel="tag"><i class="fa fa-tag"></i> 理论学习</a>
+              <a href="/tags/%E6%95%99%E6%9D%90/" rel="tag"><i class="fa fa-tag"></i> 教材</a>
+              <a href="/tags/%E5%88%86%E5%B8%83%E5%BC%8F%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/" rel="tag"><i class="fa fa-tag"></i> 分布式系统设计</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2021/03/24/embeddedSystem/%E7%AC%94%E8%AE%B0%E6%95%B4%E7%90%86%EF%BC%88%E4%B8%80%EF%BC%89/" rel="prev" title="嵌入式系统笔记整理（一）">
+                  <i class="fa fa-chevron-left"></i> 嵌入式系统笔记整理（一）
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/Spring/article01" rel="next" title="Spring实战(一)——Spring基础（含Spring实战第五版源码和pdf）">
+                  Spring实战(一)——Spring基础（含Spring实战第五版源码和pdf） <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+
+  
+  
+  
+
+
+
+      
+    <div class="comments" id="valine-comments"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      const activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      const commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      
+
+      
+
+<span id="timeDate" style="color: green;">载入天数...</span>
+<span id="times" style="color: green;">载入时分秒...</span>
+<script>
+    var now = new Date();
+    function createtime() {
+        var grt= new Date("09/06/2020 13:38:49");//在此处修改你的建站时间，格式：月/日/年 时:分:秒
+        now.setTime(now.getTime()+250);
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
+        document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 ";
+        document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
+    }
+setInterval("createtime()",250);
+</script>
+
+
+
+<div>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<span id="busuanzi_container_site_pv" style='display:none'>
+    本站总访问量 <span id="busuanzi_value_site_pv"></span> 次
+    <span class="post-meta-divider">|</span>
+</span>
+<span id="busuanzi_container_site_uv" style='display:none'>
+    有<span id="busuanzi_value_site_uv"></span>人看过我的博客啦
+</span>
+</div>
+
+<div class="copyright">
+  
+  &copy; 2020 – 
+  <span itemprop="copyrightYear">2021</span>
+  <a src="https://beian.miit.gov.cn">湘ICP备2021000832号</a>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Zhaoxiaoan</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+      <span>站点总字数：</span>
+    <span title="站点总字数">301k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span>站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">4:33</span>
+  </span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener external nofollow noreferrer" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" class="theme-link" rel="noopener external nofollow noreferrer" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="//cdn.jsdelivr.net/npm/animejs@3.2.0/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/@next-theme/pjax@0.4.0/pjax.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+  <script>
+var pjax = new Pjax({
+  selectors: [
+    'head title',
+    '.page-configurations',
+    '.main-inner',
+    '.post-toc-wrap',
+    '.languages',
+    '.pjax'
+  ],
+  analytics: false,
+  cacheBust: false,
+  scrollRestoration: false,
+  scrollTo: !CONFIG.bookmark.enable
+});
+
+document.addEventListener('pjax:success', () => {
+  pjax.executeScripts(document.querySelectorAll('script[data-pjax], .pjax script'));
+  NexT.boot.refresh();
+  // Define Motion Sequence & Bootstrap Motion.
+  if (CONFIG.motion.enable) {
+    NexT.motion.integrator
+      .init()
+      .add(NexT.motion.middleWares.subMenu)
+      .add(NexT.motion.middleWares.postList)
+      .bootstrap();
+  }
+  const hasTOC = document.querySelector('.post-toc');
+  document.querySelector('.sidebar-inner').classList.toggle('sidebar-nav-active', hasTOC);
+  document.querySelector(hasTOC ? '.sidebar-nav-toc' : '.sidebar-nav-overview').click();
+  NexT.utils.updateSidebarPosition();
+});
+</script>
+
+
+  
+
+
+
+
+  <script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script data-pjax async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+
+
+
+    <div class="pjax">
+  
+
+  
+<script>
+NexT.utils.loadComments('#valine-comments', () => {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js', () => {
+    new Valine(Object.assign({
+      el  : '#valine-comments',
+      path: "/2021/03/25/%E5%88%86%E5%B8%83%E5%BC%8F%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/%E7%AC%AC%E4%B8%89%E7%AB%A0.%E5%88%86%E5%B8%83%E5%BC%8F%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80/",
+    }, {"enable":true,"appId":"9JxB7GVqlwRNk6oWQAWRFukK-MdYXbMMI","appKey":"0FRspDasEAKCPOgl62bwPGJ6","placeholder":"评论区走一波","avatar":"mm","meta":["nick","mail","link"],"pageSize":10,"lang":"zh-cn","visitor":false,"comment_count":true,"recordIP":false,"serverURLs":null,"enableQQ":false,"requiredFields":[],"emoticonUrl":["https://cdn.jsdelivr.net/npm/alus@latest","https://cdn.jsdelivr.net/gh/MiniValine/qq@latest","https://cdn.jsdelivr.net/gh/MiniValine/Bilibilis@latest","https://cdn.jsdelivr.net/gh/MiniValine/tieba@latest","https://cdn.jsdelivr.net/gh/MiniValine/twemoji@latest","https://cdn.jsdelivr.net/gh/MiniValine/weibo@latest"]}
+    ));
+  }, window.Valine);
+});
+</script>
+
+
+
+<script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+<script type="text/javascript">
+jinrishici.load(function(result) {
+	var jrsc_plac =  result.data.content + "\n「" + result.data.origin.title + "」" + result.data.origin.dynasty + " · " + result.data.origin.author
+	document.getElementById("veditor").setAttribute("placeholder",jrsc_plac);
+});
+</script>
+
+
+  <script async src="/js/cursor/fireworks.js"></script>
+
+
+
+
+  <script src="/js/write/activate-power-mode.min.js"></script>
+  <script>
+    POWERMODE.colorful = true;
+    POWERMODE.shake = false;
+    document.body.addEventListener('input', POWERMODE);
+  </script>
+
+
+    </div>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/hijiki.model.json"},"display":{"position":"left","width":150,"height":300},"mobile":{"show":true},"react":{"opacity":1},"log":false});</script></body>
+</html>
